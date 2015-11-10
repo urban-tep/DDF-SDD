@@ -1,0 +1,37 @@
+.. _group___cloud:
+
+Cloud
+-----
+
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/groups/group___cloud.iuml
+
+
+
+
+Sub-Modules
+^^^^^^^^^^^
+.. toctree::
+  :maxdepth: 1
+
+  group___one_client
+  group___cloud_appliance
+  group___cloud_provider
+  group___one_cloud_appliance
+  group___one_cloud_provider
+  group___one_v_m_template
+  group___virtual_machine_template
+
+
+Software Packages
+^^^^^^^^^^^^^^^^^
+- :ref:`namespace_terradue_1_1_open_nebula`
+- :ref:`namespace_terradue_1_1_cloud`
+- :ref:`namespace_terradue_1_1_hadoop`
+

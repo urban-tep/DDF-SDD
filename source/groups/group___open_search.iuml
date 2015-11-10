@@ -1,0 +1,6 @@
+@startuml
+folder "OpenSearch" [[../computational/components/group___open_search.html]] {
+[group___open_search_engine]
+[group___open_searchable]
+}
+@enduml

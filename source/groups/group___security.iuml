@@ -1,0 +1,6 @@
+@startuml
+folder "Security" [[../computational/components/group___security.html]] {
+[group___auth___umsso]
+[group___authentication]
+}
+@enduml

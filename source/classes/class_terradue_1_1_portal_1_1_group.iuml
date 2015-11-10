@@ -1,0 +1,9 @@
+@startuml
+set namespaceSeparator ::
+class Terradue::Portal::Group {
+[[../information/classes/class_terradue_1_1_portal_1_1_group.html]]
+ +Name:override string
+ +Description:string
+ +Priority:int
+}
+@enduml

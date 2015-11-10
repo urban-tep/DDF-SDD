@@ -1,0 +1,22 @@
+.. _namespace_terradue_1_1_g_d_a_l_1_1_native:
+
+Terradue::GDAL::Native
+----------------------
+
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/namespaces/namespace_terradue_1_1_g_d_a_l_1_1_native.iuml
+
+
+
+Software Page : ` <>`_
+
+Version : 
+
+License : ` <>`_
+

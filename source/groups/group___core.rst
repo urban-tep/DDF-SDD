@@ -1,0 +1,39 @@
+.. _group___core:
+
+Core
+----
+
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/groups/group___core.iuml
+
+
+
+
+Sub-Modules
+^^^^^^^^^^^
+.. toctree::
+  :maxdepth: 1
+
+  group___computing_resource
+  group___authorisation
+  group___persistence
+  group___context
+  group___web_context
+  group___scheduler
+  group___series
+  group___service
+  group___task
+  group___wps_service
+  group___wps_provider
+
+
+Software Packages
+^^^^^^^^^^^^^^^^^
+- :ref:`namespace_terradue_1_1_portal`
+

@@ -1,0 +1,35 @@
+.. _group___wps_service:
+
+WPS Service
+-----------
+
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/groups/group___wps_service.iuml
+
+This component is an extension of :ref:`Service <group___service>` for providing with WPS process as processing offerings. Practically, it get services offered in the :ref:`WPS Provider <group___wps_provider>` associated and then for each process exposed, retrieve the DescribeProcess() from :ref:`WPS Provider <group___wps_provider>` to describe the process with input and ouput parameters.
+
+""
+
+Dependencies
+^^^^^^^^^^^^
+- extends :ref:`Service <group___service>` for WPS specific offerings
+
+- exports WPS Service as a service resource as a :ref:`OWS Context <group___o_w_s_context>` model.
+
+
+Interfaces
+^^^^^^^^^^
+- implements :ref:`OpenSearchable <group___open_searchable>` interface to search WPS Service in OpenSearch.
+
+
+
+Classes
+^^^^^^^
+- :ref:`class_terradue_1_1_portal_1_1_wps_process_offering`
+

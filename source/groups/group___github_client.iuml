@@ -1,0 +1,3 @@
+@startuml
+	[GithubClient] as group___github_client [[../computational/components/group___github_client.html]]
+@enduml

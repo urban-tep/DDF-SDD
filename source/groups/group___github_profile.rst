@@ -1,0 +1,23 @@
+.. _group___github_profile:
+
+GithubProfile
+-------------
+
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/groups/group___github_profile.iuml
+
+This component defines a the github profile of a user. It is used to link the user profile to his Github account, and also stores user tokens to enable authentication.
+
+Dependencies
+^^^^^^^^^^^^
+- calls :ref:`Persistence of Data <group___persistence>` to store the references and access token to the profile
+
+- uses :ref:`GithubClient <group___github_client>` to perform operations to the API.
+
+

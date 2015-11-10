@@ -1,0 +1,12 @@
+@startuml
+folder "Core" [[../computational/components/group___core.html]] {
+[group___authorisation]
+[group___persistence]
+[group___context]
+[group___web_context]
+[group___series]
+[group___service]
+[group___wps_service]
+[group___wps_provider]
+}
+@enduml

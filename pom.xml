@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.terradue</groupId>
+		<artifactId>t2-parent</artifactId>
+		<version>14</version>
+	</parent>
+
+	<groupId>com.terradue.doc</groupId>
+	<artifactId>esa-tep-urban-sdd</artifactId>
+	<packaging>rpm</packaging>
+	<description>Urban Thematic Exploitation Platform Software Design Document</description>
+	<version>0.1-SNAPSHOT</version>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>com.terradue.infra</groupId>
+			<artifactId>corporate-doc</artifactId>
+			<type>zip</type>
+			<classifier>plantuml</classifier>
+			<version>1.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.6.1</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>_build</directory>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.7</version>
+				<executions>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<extensions>true</extensions>
+				<executions>
+					<execution>
+						<id>generate-doc</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>make</executable>
+							<arguments>
+								<argument>clean</argument>
+								<argument>html</argument>
+								<argument>pdf</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.google.code.maven-replacer-plugin</groupId>
+				<artifactId>replacer</artifactId>
+				<version>1.5.3</version>
+				<executions>
+					<execution>
+						<id>target-top</id>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>    
+						<configuration>
+							<filesToInclude>${basedir}/_build/html/**/*.svg</filesToInclude>
+							<replacements>
+								<replacement>
+									<token><![CDATA[<a]]></token>
+									<value><![CDATA[<a target="_top"]]></value>
+								</replacement>         
+							</replacements>
+						</configuration>               
+					</execution>
+				</executions>
+
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>rpm</id> <!-- this is used for inheritance merges -->
+						<phase>prepare-package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptors>
+								<descriptor>${basedir}/src/assembly/package-html.xml</descriptor>
+							</descriptors>
+							<appendAssemblyId>true</appendAssemblyId>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>rpm-maven-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<copyright>${inceptionYear}, Terradue</copyright>
+					<distribution>Terradue ${inceptionYear}</distribution>
+					<group>tag</group>
+					<packager>Terradue</packager>
+					<name>${project.artifactId}</name>
+					<defaultUsername>root</defaultUsername>
+					<defaultGroupname>root</defaultGroupname>
+					<defaultDirmode>755</defaultDirmode>
+					<defaultFilemode>644</defaultFilemode>
+					<defineStatements>
+						<defineStatement>__jar_repack 0</defineStatement>
+						<defineStatement>__os_install_post %{nil}</defineStatement>
+					</defineStatements>
+					<mappings>
+						<mapping>
+							<directory>/var/www/html/esa-tep-urban-ddf/</directory>
+							<filemode>755</filemode>
+							<sources>
+								<source>
+									<location>${basedir}/_build/html</location>
+								</source>
+							</sources>
+						</mapping>
+					</mappings>
+					<provides>
+						<provide>${project.artifactId}</provide>
+					</provides>
+					<requires>
+						<require>httpd &gt;= 2.0</require>
+					</requires>
+					<needarch>noarch</needarch>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.terradue</groupId>
+				<artifactId>rpmdeploy-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+

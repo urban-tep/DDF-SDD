@@ -1,0 +1,3 @@
+@startuml
+	[Cloud Provider] as group___cloud_provider [[../computational/components/group___cloud_provider.html]]
+@enduml

@@ -1,0 +1,32 @@
+.. _group___open_search:
+
+OpenSearch
+----------
+
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/groups/group___open_search.iuml
+
+
+
+
+Sub-Modules
+^^^^^^^^^^^
+.. toctree::
+  :maxdepth: 1
+
+  group___open_search_engine
+  group___open_searchable
+
+
+Software Packages
+^^^^^^^^^^^^^^^^^
+- :ref:`namespace_terradue_1_1_open_search`
+- :ref:`namespace_terradue_1_1_open_search_1_1_data_analyzer`
+- :ref:`namespace_terradue_1_1_open_search_1_1_geo_json`
+

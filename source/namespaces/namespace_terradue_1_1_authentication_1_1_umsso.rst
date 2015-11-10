@@ -1,0 +1,28 @@
+.. _namespace_terradue_1_1_authentication_1_1_umsso:
+
+Terradue::Authentication::Umsso
+-------------------------------
+
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/namespaces/namespace_terradue_1_1_authentication_1_1_umsso.iuml
+
+:ref:`Terradue.Authentication.Umsso <namespace_terradue_1_1_authentication_1_1_umsso>` Software Package
+
+Software Page : `Terradue.Authentication.Umsso <https://git.terradue.com/sugar/terradue-authentication-umsso>`_
+
+Version : 1.2.3
+
+
+License : `incubating <https://git.terradue.com/sugar/terradue-authentication-umsso/master/LICENSE.txt>`_
+
+
+
+Requires :
+- :ref:`namespace_terradue_1_1_portal`
+

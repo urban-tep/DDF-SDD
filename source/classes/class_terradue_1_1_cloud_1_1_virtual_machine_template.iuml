@@ -1,0 +1,6 @@
+@startuml
+set namespaceSeparator ::
+class Terradue::Cloud::VirtualMachineTemplate {
+[[../information/classes/class_terradue_1_1_cloud_1_1_virtual_machine_template.html]]
+}
+@enduml

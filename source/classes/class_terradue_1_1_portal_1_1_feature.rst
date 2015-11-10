@@ -1,0 +1,40 @@
+.. _class_terradue_1_1_portal_1_1_feature:
+
+Terradue::Portal::Feature
+-------------------------
+
+:ref:`Feature <class_terradue_1_1_portal_1_1_feature>`. 
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/classes/class_terradue_1_1_portal_1_1_feature.iuml
+
+
+
+Properties
+^^^^^^^^^^
+
+.. cssclass:: propertiestable
+
++--------+-------------+------------------------------------------------------------------------+
+| Type   | Name        | Summary                                                                |
++========+=============+========================================================================+
+| string | Title       | Gets or sets the title.                                                |
++--------+-------------+------------------------------------------------------------------------+
+| string | Description | Gets or sets the description.                                          |
++--------+-------------+------------------------------------------------------------------------+
+| string | Image       | Gets or sets the image.                                                |
++--------+-------------+------------------------------------------------------------------------+
+| string | ImageStyle  | Gets or sets the image style, used to customize the image apperance.   |
++--------+-------------+------------------------------------------------------------------------+
+| string | ButtonText  | Gets or sets the button text.                                          |
++--------+-------------+------------------------------------------------------------------------+
+| string | ButtonLink  | Gets or sets the button link.                                          |
++--------+-------------+------------------------------------------------------------------------+
+| int    | Position    | Gets or sets the position.                                             |
++--------+-------------+------------------------------------------------------------------------+
+

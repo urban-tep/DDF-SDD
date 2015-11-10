@@ -1,0 +1,6 @@
+@startuml
+folder "Community" [[../computational/components/group___community.html]] {
+[group___github_client]
+[group___github_profile]
+}
+@enduml

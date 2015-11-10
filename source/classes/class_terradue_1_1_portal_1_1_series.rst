@@ -1,0 +1,44 @@
+.. _class_terradue_1_1_portal_1_1_series:
+
+Terradue::Portal::Series
+------------------------
+
+Represents a series of data sets that are available from a catalogue.
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/classes/class_terradue_1_1_portal_1_1_series.iuml
+
+
+
+Properties
+^^^^^^^^^^
+
+.. cssclass:: propertiestable
+
++--------+-------------------------+------------------------------------------------------------------------------------------------------------+
+| Type   | Name                    | Summary                                                                                                    |
++========+=========================+============================================================================================================+
+| string | Description             | Gets the detailed description of the series.                                                               |
++--------+-------------------------+------------------------------------------------------------------------------------------------------------+
+| string | CatalogueDescriptionUrl | Gets the :ref:`OpenSearch <namespace_terradue_1_1_portal_1_1_open_search>` description URL of the series.  |
++--------+-------------------------+------------------------------------------------------------------------------------------------------------+
+
+Methods
+^^^^^^^
+
+.. cssclass:: propertiestable
+
+===================== =============================== ===========================================================================================================
+Type                  Name                            Summary
+===================== =============================== ===========================================================================================================
+OpenSearchDescription GetLocalOpenSearchDescription() Generates the corresponding :ref:`OpenSearch <namespace_terradue_1_1_portal_1_1_open_search>` description.
+
+Series                FromOpenSearchUrl()             From the open search URL. 
+
+===================== =============================== ===========================================================================================================
+

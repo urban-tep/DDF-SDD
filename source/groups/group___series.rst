@@ -1,0 +1,35 @@
+.. _group___series:
+
+Series
+------
+
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/groups/group___series.iuml
+
+This component represents a dataset series. Practically it is a non-final component that can be extended to implement other collections.
+
+""
+
+Dependencies
+^^^^^^^^^^^^
+- :ref:`Persistence of Data <group___persistence>` stores persistently the series information in the database
+
+- :ref:`Authorisation <group___authorisation>` controls the access on the series
+
+
+Interfaces
+^^^^^^^^^^
+- proxy data series items via IOpenSearchable
+
+
+
+Classes
+^^^^^^^
+- :ref:`class_terradue_1_1_portal_1_1_series`
+

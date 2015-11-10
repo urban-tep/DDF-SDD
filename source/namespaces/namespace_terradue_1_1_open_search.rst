@@ -1,0 +1,23 @@
+.. _namespace_terradue_1_1_open_search:
+
+Terradue::OpenSearch
+--------------------
+
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/namespaces/namespace_terradue_1_1_open_search.iuml
+
+DotNetOpenSearch Software Package
+
+Software Page : `DotNetOpenSearch <https://github.com/Terradue/DotNetOpenSearch>`_
+
+Version : 1.11.14
+
+
+License : `GPLv3 <https://github.com/DotNetOpenSearch/Terradue.OpenSearch/blob/master/LICENSE.txt>`_
+

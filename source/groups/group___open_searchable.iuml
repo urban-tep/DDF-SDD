@@ -1,0 +1,3 @@
+@startuml
+interface "OpenSearchable" as group___open_searchable [[../computational/components/group___open_searchable.html]]
+@enduml

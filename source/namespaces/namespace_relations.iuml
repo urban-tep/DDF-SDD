@@ -1,0 +1,21 @@
+@startuml
+namespace_terradue_1_1_authentication_1_1_umsso  ..>  namespace_terradue_1_1_portal : requires
+namespace_terradue_1_1_cloud  ..>  namespace_terradue_1_1_portal : requires
+namespace_terradue_1_1_cloud  ..>  namespace_terradue_1_1_open_nebula : requires
+namespace_terradue_1_1_cloud  ..>  namespace_terradue_1_1_hadoop : requires
+namespace_terradue_1_1_github  ..>  namespace_terradue_1_1_portal : requires
+namespace_terradue_1_1_news  ..>  namespace_terradue_1_1_open_search : requires
+namespace_terradue_1_1_news  ..>  namespace_terradue_1_1_open_search_1_1_tumblr : requires
+namespace_terradue_1_1_news  ..>  namespace_terradue_1_1_open_search_1_1_twitter : requires
+namespace_terradue_1_1_news  ..>  namespace_terradue_1_1_service_model_1_1_ogc_1_1_ows_context : requires
+namespace_terradue_1_1_news  ..>  namespace_terradue_1_1_portal : requires
+namespace_terradue_1_1_open_search_1_1_data_analyzer  ..>  namespace_terradue_1_1_open_search : requires
+namespace_terradue_1_1_open_search_1_1_data_analyzer  ..>  namespace_terradue_1_1_g_d_a_l_1_1_native : requires
+namespace_terradue_1_1_open_search_1_1_geo_json  ..>  namespace_terradue_1_1_open_search : requires
+namespace_terradue_1_1_open_search_1_1_geo_json  ..>  namespace_terradue_1_1_geo_json : requires
+namespace_terradue_1_1_portal  ..>  namespace_terradue_1_1_open_search : requires
+namespace_terradue_1_1_sandbox  ..>  namespace_terradue_1_1_portal : requires
+namespace_terradue_1_1_sandbox  ..>  namespace_terradue_1_1_cloud : requires
+namespace_terradue_1_1_sandbox  ..>  namespace_terradue_1_1_hadoop : requires
+namespace_terradue_1_1_web_service_1_1_model  ..>  namespace_terradue_1_1_portal : requires
+@enduml

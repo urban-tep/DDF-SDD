@@ -1,0 +1,32 @@
+.. _class_terradue_1_1_portal_1_1_group:
+
+Terradue::Portal::Group
+-----------------------
+
+Represents a user group
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/classes/class_terradue_1_1_portal_1_1_group.iuml
+
+
+
+Properties
+^^^^^^^^^^
+
+.. cssclass:: propertiestable
+
++-----------------+-------------+---------------------------------------------------------------+
+| Type            | Name        | Summary                                                       |
++=================+=============+===============================================================+
+| override string | Name        | Gets or sets the name, the unique identifier, of this group.  |
++-----------------+-------------+---------------------------------------------------------------+
+| string          | Description | Gets or sets the long description of this group.              |
++-----------------+-------------+---------------------------------------------------------------+
+| int             | Priority    | Gets or sets the optional privilege level of this group.      |
++-----------------+-------------+---------------------------------------------------------------+
+

@@ -1,0 +1,3 @@
+@startuml
+	[OpenNebula Virtual Machine Template] as group___one_v_m_template [[../computational/components/group___one_v_m_template.html]]
+@enduml

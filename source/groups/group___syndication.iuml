@@ -1,0 +1,3 @@
+@startuml
+	[Syndication Feed] as group___syndication [[../computational/components/group___syndication.html]]
+@enduml

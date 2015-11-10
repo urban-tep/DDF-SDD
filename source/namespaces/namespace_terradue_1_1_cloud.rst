@@ -1,0 +1,38 @@
+.. _namespace_terradue_1_1_cloud:
+
+Terradue::Cloud
+---------------
+
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/namespaces/namespace_terradue_1_1_cloud.iuml
+
+:ref:`Terradue.Cloud <namespace_terradue_1_1_cloud>` Software Package
+
+Software Page : `Terradue.Cloud <https://git.terradue.com/sugar/terradue-cloud>`_
+
+Version : 1.2.14
+
+
+License : `incubating <https://git.terradue.com/sugar/terradue-cloud>`_
+
+
+
+Requires :
+- :ref:`namespace_terradue_1_1_portal`
+- :ref:`namespace_terradue_1_1_open_nebula`
+- :ref:`namespace_terradue_1_1_hadoop`
+
+
+
+Classes
+^^^^^^^
+- :ref:`class_terradue_1_1_cloud_1_1_cloud_appliance`
+- :ref:`class_terradue_1_1_cloud_1_1_cloud_provider`
+- :ref:`class_terradue_1_1_cloud_1_1_virtual_machine_template`
+

@@ -1,0 +1,8 @@
+@startuml
+package "Terradue::OpenSearch::Twitter" <<Frame>> {
+  class "Library" as namespace_terradue_1_1_open_search_1_1_twitter << (L, cyan) >> [[../technology/packages/namespace_terradue_1_1_open_search_1_1_twitter.html]] {
+     version : 
+     license : 
+  }
+}
+@enduml

@@ -1,0 +1,23 @@
+.. _namespace_terradue_1_1_metadata_1_1_earth_observation:
+
+Terradue::Metadata::EarthObservation
+------------------------------------
+
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/namespaces/namespace_terradue_1_1_metadata_1_1_earth_observation.iuml
+
+DotNetEarthObservation Software Package
+
+Software Page : `DotNetEarthObservation <https://github.com/Terradue/DotNetEarthObservation>`_
+
+Version : 1.3.4
+
+
+License : `GPLv3 <https://github.com/Terradue/Terradue.Metadata.EarthObservation/blob/master/LICENSE.txt>`_
+

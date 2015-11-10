@@ -1,0 +1,3 @@
+@startuml
+interface "SQL interface to RDBMS" as group___s_q_l_connector [[../computational/components/group___s_q_l_connector.html]]
+@enduml

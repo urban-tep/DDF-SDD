@@ -1,0 +1,3 @@
+@startuml
+	[Service] as group___service [[../computational/components/group___service.html]]
+@enduml

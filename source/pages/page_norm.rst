@@ -1,0 +1,35 @@
+.. _norm:
+
+Normative References
+--------------------
+
+
+
+`OpenSearch 1.1 <http://www.opensearch.org/Specifications/OpenSearch/1.1>`_
+
+- :ref:`Atom <group___atom>`
+- :ref:`OpenSearchable <group___open_searchable>`
+- :ref:`OpenSearchEngine <group___open_search_engine>`
+
+`The Atom Syndication Format RFC4287 <https://tools.ietf.org/html/rfc4287>`_
+
+- :ref:`Atom <group___atom>`
+- :ref:`Syndication <group___syndication>`
+
+EO op UM-SSO Interface Control Document [SIE-EO-OP-UM-SSO-ICD-002] 
+
+- :ref:`Auth_Umsso <group___auth___umsso>`
+
+`OGC OWS Context Conceptual Model <https://portal.opengeospatial.org/files/?artifact_id=55182>`_
+
+- :ref:`OWSContext <group___o_w_s_context>`
+
+`OGC OWS Context Atom Encoding Standard <https://portal.opengeospatial.org/files/?artifact_id=55183>`_
+
+- :ref:`OWSContext <group___o_w_s_context>`
+
+`OGC Web Processing Service 1.0 <http://portal.opengeospatial.org/files/?artifact_id=24151>`_
+
+- :ref:`WPS <group___w_p_s>`
+
+

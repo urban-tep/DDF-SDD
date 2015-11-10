@@ -1,0 +1,3 @@
+@startuml
+	[OpenNebula Cloud Provider] as group___one_cloud_provider [[../computational/components/group___one_cloud_provider.html]]
+@enduml

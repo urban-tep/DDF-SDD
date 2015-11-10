@@ -1,0 +1,3 @@
+@startuml
+	[Persistence of Data] as group___persistence [[../computational/components/group___persistence.html]]
+@enduml

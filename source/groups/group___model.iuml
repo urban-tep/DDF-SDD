@@ -1,0 +1,8 @@
+@startuml
+folder "Model" [[../computational/components/group___model.html]] {
+[group___o_w_s_context_atom_feed]
+[group___o_w_s_context]
+[group___atom]
+[group___syndication]
+}
+@enduml

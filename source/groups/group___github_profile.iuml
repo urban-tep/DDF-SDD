@@ -1,0 +1,3 @@
+@startuml
+	[GithubProfile] as group___github_profile [[../computational/components/group___github_profile.html]]
+@enduml

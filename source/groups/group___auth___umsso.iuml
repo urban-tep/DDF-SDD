@@ -1,0 +1,3 @@
+@startuml
+	[UM-SSO plugin] as group___auth___umsso [[../computational/components/group___auth___umsso.html]]
+@enduml

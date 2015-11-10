@@ -1,0 +1,3 @@
+@startuml
+	[OpenSearch Engine] as group___open_search_engine [[../computational/components/group___open_search_engine.html]]
+@enduml

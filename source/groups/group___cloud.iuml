@@ -1,0 +1,11 @@
+@startuml
+folder "Cloud" [[../computational/components/group___cloud.html]] {
+[group___one_client]
+[group___cloud_appliance]
+[group___cloud_provider]
+[group___one_cloud_appliance]
+[group___one_cloud_provider]
+[group___one_v_m_template]
+[group___virtual_machine_template]
+}
+@enduml

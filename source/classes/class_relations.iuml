@@ -1,0 +1,21 @@
+@startuml
+Terradue::Cloud::CloudAppliance  *-- "1" Terradue::Cloud::CloudProvider : has
+Terradue::Cloud::CloudAppliance  *-- "1" Terradue::Cloud::VirtualMachineTemplate : is specified by 
+Terradue::Cloud::CloudAppliance  --|>  Terradue::Portal::Entity : implements
+Terradue::Cloud::CloudProvider  --|>  Terradue::Portal::Entity : implements
+Terradue::Portal::Feature  --|>  Terradue::Portal::Entity : implements
+Terradue::Portal::Group  --|>  Terradue::Portal::Entity : implements
+Terradue::Portal::Series  --|>  Terradue::Portal::Entity : implements
+Terradue::Portal::Service  --|>  Terradue::Portal::Entity : implements
+Terradue::Portal::User  --|>  Terradue::Portal::Entity : implements
+Terradue::Portal::WpsProcessOffering  *-- "1" Terradue::Portal::WpsProvider : has
+Terradue::Portal::WpsProcessOffering  --|>  Terradue::Portal::Service : implements
+Terradue::ServiceModel::Ogc::OwsModel::OwcCreator  *-- "1" Terradue::ServiceModel::Ogc::OwsModel::OwcApplication : created on 
+Terradue::ServiceModel::Ogc::OwsModel::OwcCreator  *-- "1" Terradue::ServiceModel::Ogc::OwsModel::OwcDisplay : displayed on 
+Terradue::ServiceModel::Ogc::OwsModel::OwcOffering  *-- "*" Terradue::ServiceModel::Ogc::OwsModel::OwcOperation : offers 
+Terradue::ServiceModel::Ogc::OwsModel::OwcOffering  *-- "*" Terradue::ServiceModel::Ogc::OwsModel::OwcContent : offers 
+Terradue::ServiceModel::Ogc::OwsModel::OwcOperation  *-- "1" Terradue::ServiceModel::Ogc::OwsModel::OwcContent : is invoked with 
+Terradue::ServiceModel::Ogc::OwsModel::OwcResource  *-- "*" Terradue::ServiceModel::Ogc::OwsModel::OwcOffering : exposes 
+Terradue::ServiceModel::Ogc::OwsModel::OwsContext  *-- "1" Terradue::ServiceModel::Ogc::OwsModel::OwcCreator : references 
+Terradue::ServiceModel::Ogc::OwsModel::OwsContext  *-- "*" Terradue::ServiceModel::Ogc::OwsModel::OwcResource : contains 
+@enduml

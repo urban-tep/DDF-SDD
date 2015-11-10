@@ -1,0 +1,14 @@
+@startuml
+set namespaceSeparator ::
+class Terradue::Portal::WpsProvider {
+[[../information/classes/class_terradue_1_1_portal_1_1_wps_provider.html]]
+ +Proxy:bool
+ +StoreProcessOfferings()
+ +GetWpsProcessOfferingsFromUrl()
+ +ExecuteTask()
+ +GetWPSCapabilitiesFromUrl()
+ +GetWPSDescribeProcessFromUrl()
+ #GetTaskResult()
+ -GetProcessOffering()
+}
+@enduml

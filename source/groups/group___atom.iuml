@@ -1,0 +1,3 @@
+@startuml
+	note right of group___syndication : [[../computational/components/group___atom.html (Atom Feed)]]
+@enduml

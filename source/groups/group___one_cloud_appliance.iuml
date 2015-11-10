@@ -1,0 +1,3 @@
+@startuml
+	[OpenNebula Cloud Applicance] as group___one_cloud_appliance [[../computational/components/group___one_cloud_appliance.html]]
+@enduml

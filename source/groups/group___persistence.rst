@@ -1,0 +1,31 @@
+.. _group___persistence:
+
+Persistence of Data
+-------------------
+
+
+
+.. uml::
+
+  !include includes/skins.iuml
+  skinparam backgroundColor #FFFFFF
+  skinparam componentStyle uml2
+  !include source/groups/group___persistence.iuml
+
+The component provides generic interaction with data that is persistently stored in a relational database. The data location and structure are defined in the classes that implement an entity and which represent real-world entities.
+
+""
+
+Interfaces
+^^^^^^^^^^
+- connects to :ref:`SQL interface to RDBMS <group___s_q_l_connector>`
+
+
+
+Classes
+^^^^^^^
+- :ref:`class_terradue_1_1_portal_1_1_entity_table_attribute`
+- :ref:`class_terradue_1_1_portal_1_1_entity_relationship_table_attribute`
+- :ref:`class_terradue_1_1_portal_1_1_entity_relationship_attribute`
+- :ref:`class_terradue_1_1_portal_1_1_entity_type`
+

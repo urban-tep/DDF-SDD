@@ -1,0 +1,3 @@
+@startuml
+	[Authorisation] as group___authorisation [[../computational/components/group___authorisation.html]]
+@enduml
