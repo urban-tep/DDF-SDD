@@ -18,7 +18,6 @@ The platform provides Data Access, Data Processing Services and PaaS (Platform a
 Users can therefore use their virtual hosts to efficiently access data and processing services, and immediately elaborate results by exploiting the analysis and visualization tools made available from the PaaS, or that they can directly install themselves in their virtual host. 
 In addition, users can also open their own accounts on a commercial ICT Provider, and directly provision their virtual hosts independently (through the Urban TEP Platform Services).
 
-
 .. toctree::
    :maxdepth: 2
    
