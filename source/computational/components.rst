@@ -8,7 +8,6 @@ The components list are described herafter individually grouped by their main pu
 .. toctree::
    :maxdepth: 1
    
-   Cloud <../groups/group___cloud>
    Community <../groups/group___community>
    Core <../groups/group___core>
    Model <../groups/group___model>

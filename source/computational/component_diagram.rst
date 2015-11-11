@@ -20,16 +20,7 @@
    !include source/groups/group___authorisation.iuml
    !include source/groups/group___context.iuml
    
-   !include source/groups/group___cloud_appliance.iuml
-   !include source/groups/group___cloud_provider.iuml
-   !include source/groups/group___virtual_machine_template.iuml
-   !include source/groups/group___one_cloud_appliance.iuml
-   !include source/groups/group___one_cloud_provider.iuml
-   !include source/groups/group___one_v_m_template.iuml
-   !include source/groups/group___cloud_wps_factory.iuml
    !include source/groups/group___data_package.iuml
-   !include source/groups/group___one_client.iuml
-   !include source/groups/group___open_nebula_x_m_l_r_p_c.iuml
    !include source/groups/group___persistence.iuml
    !include source/groups/group___tep_user.iuml
    

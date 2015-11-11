@@ -19,8 +19,6 @@ Packages list
    :maxdepth: 1
    
    Terradue::Authentication::Umsso <../namespaces//namespace_terradue_1_1_authentication_1_1_umsso>
-   Terradue::Cloud <../namespaces//namespace_terradue_1_1_cloud>
-   Terradue::Sandbox <../namespaces//namespace_terradue_1_1_sandbox>
    Terradue::GeoJson <../namespaces//namespace_terradue_1_1_geo_json>
    Terradue::GDAL::Native <../namespaces//namespace_terradue_1_1_g_d_a_l_1_1_native>
    Terradue::Github <../namespaces//namespace_terradue_1_1_github>
@@ -29,7 +27,6 @@ Packages list
    Terradue::ServiceModel::Ogc::OwsContext <../namespaces//namespace_terradue_1_1_service_model_1_1_ogc_1_1_ows_context>
    Terradue::ServiceModel::Syndication <../namespaces//namespace_terradue_1_1_service_model_1_1_syndication>
    Terradue::News <../namespaces//namespace_terradue_1_1_news>
-   Terradue::OpenNebula <../namespaces//namespace_terradue_1_1_open_nebula>
    Terradue::OpenSearch <../namespaces//namespace_terradue_1_1_open_search>
    Terradue::OpenSearch::DataAnalyzer <../namespaces//namespace_terradue_1_1_open_search_1_1_data_analyzer>
    Terradue::OpenSearch::GeoJson <../namespaces//namespace_terradue_1_1_open_search_1_1_geo_json>
