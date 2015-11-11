@@ -1,7 +1,5 @@
 @startuml
 folder "Tep" [[../computational/components/group___tep.html]] {
 [group___cloud_wps_factory]
-[group___data_package]
-[group___tep_user]
 }
 @enduml

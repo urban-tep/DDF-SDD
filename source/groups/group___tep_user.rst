@@ -68,76 +68,8 @@ This represents a user in TEP Urban platform.
 	endfooter
 	
 
-This component defines a user in the TEP GeoHazards platform. A user has a basic profile (defined in the platform) but is also linked to different external application with specific user profile (EO-SSO, Github, Cloud).
-
-
-
-.. uml::
-
-
-	
-	[*] --> PendingActivation : first time login
-	PendingActivation : User must confirm his UM-SSO email
-	PendingActivation : User cannot access secured services
-	
-	PendingActivation --> Enabled : email confirmation
-	Enabled : User can access secured services
-	
-	footer
-	GeoHazards TEP User state diagram
-	(c) Terradue Srl
-	endfooter
-	
-
-
-
-.. uml::
-
-
-	
-	start
-	if (secured service?) then (yes)
-	  if (UM-SSO logged?) then (yes)
-	    if (user in DB?) then (yes)
-	      if (user pending activation?) then (yes)
-	        :reinvite user to confirm email;
-	        stop
-	      endif
-	    else (no)
-	      :create user account in db;
-	      :set account status to **Pending Activation**;
-	      :send confirmation email to user;
-	      :invite user to confirm email;
-	      stop
-	    endif
-	  else (no)
-	    :redirect user to UM-SSO IDP;
-	    stop
-	  endif
-	endif
-	:process service;
-	stop
-	
-	footer
-	GeoHazards TEP User account activity diagram
-	(c) Terradue Srl
-	endfooter
-	
-
 Dependencies
 ^^^^^^^^^^^^
 - :ref:`Authentication <group___authentication>` authenticates the user
-
-- uses :ref:`Context <group___context>` to define the basic user profile (username, email, first name, last name, ...)
-
-- uses :ref:`GithubProfile <group___github_profile>` to define the github profile and link the user to his Github account
-
-- calls :ref:`Authentication <group___authentication>` to identify the user using EO-SSO
-
-- belongs to a Group to associate a user to existing groups
-
-- calls :ref:`GithubClient <group___github_client>` to contact Github interface in order to authenticate the user on Github and associate his public key
-
-- calls :ref:`OneClient <group___one_client>` to contact OpenNebula interface and associate the cloud user with the Tep user
 
 

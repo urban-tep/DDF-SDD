@@ -9,7 +9,6 @@
 
    !include source/groups/group___core.iuml
    !include source/groups/group___community.iuml
-   !include source/groups/group___cloud.iuml
    !include source/groups/group___security.iuml
    !include source/groups/group___open_search.iuml
    !include source/groups/group___model.iuml

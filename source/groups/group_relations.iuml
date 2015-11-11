@@ -7,12 +7,6 @@
 [group___cloud_appliance]  ..>  [group___authorisation] : []
 [group___cloud_provider]  ..>  [group___persistence] : []
 [group___cloud_provider]  ..>  [group___authorisation] : []
-[group___cloud_wps_factory]  ..>  [group___cloud_provider] : calls
-[group___cloud_wps_factory]  ..>  [group___one_client] : calls
-[group___cloud_wps_factory]  ..>  [group___wps_provider] : creates
-[group___cloud_wps_factory]  ..>  [group___wps_service] : creates
-[group___cloud_wps_factory]  ..>  [group___cloud_provider] : calls
-[group___cloud_wps_factory]  ..>  [group___one_client] : calls
 [group___cloud_wps_factory]  ..>  [group___wps_provider] : creates
 [group___cloud_wps_factory]  ..>  [group___wps_service] : creates
 [group___context]  ..>  [group___persistence] : []
@@ -39,11 +33,6 @@
 [group___service]  ..>  [group___persistence] : []
 [group___service]  ..>  [group___authorisation] : []
 [group___tep_user]  ..>  [group___authentication] : []
-[group___tep_user]  ..>  [group___context] : uses
-[group___tep_user]  ..>  [group___github_profile] : uses
-[group___tep_user]  ..>  [group___authentication] : calls
-[group___tep_user]  ..>  [group___github_client] : calls
-[group___tep_user]  ..>  [group___one_client] : calls
 [group___virtual_machine_template]  ..>  [group___cloud_provider] : []
 [group___web_context]  ..>  [group___context] : []
 [group___wps_provider]  ..>  [group___o_w_s_context] : exports

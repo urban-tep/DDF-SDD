@@ -12,7 +12,7 @@ Terradue::OpenSearch::DataAnalyzer
   skinparam componentStyle uml2
   !include source/namespaces/namespace_terradue_1_1_open_search_1_1_data_analyzer.iuml
 
-:ref:`Terradue.Cloud <namespace_terradue_1_1_cloud>` Software Package
+Terradue.Cloud Software Package
 
 Software Page : `DotNetOpenSearchDataAnalyzer <https://github.com/Terradue/DotNetOpenSearchDataAnalyzer>`_
 

@@ -12,12 +12,11 @@ Terradue::OpenNebula
   skinparam componentStyle uml2
   !include source/namespaces/namespace_terradue_1_1_open_nebula.iuml
 
-DotNet4One Software Package
-
-Software Page : `DotNet4One <https://github.com/Terradue/DotNet4One>`_
-
-Version : 1.0.0
 
 
-License : `GPLv3 <https://github.com/Terradue/DotNet4One/blob/master/LICENSE>`_
+Software Page : ` <>`_
+
+Version : 
+
+License : ` <>`_
 

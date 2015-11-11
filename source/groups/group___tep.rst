@@ -21,6 +21,4 @@ Sub-Modules
   :maxdepth: 1
 
   group___cloud_wps_factory
-  group___data_package
-  group___tep_user
 
