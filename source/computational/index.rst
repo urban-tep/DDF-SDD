@@ -8,6 +8,6 @@ Contents:
    
    Level of abstraction <abstraction>
    Components Schema <schema>
-   Computational Components <components>
+   Subsystems Components <subsystems>
    Interfaces <interfaces>
    Service Model <servicemodel>

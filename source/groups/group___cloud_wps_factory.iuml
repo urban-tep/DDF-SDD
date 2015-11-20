@@ -1,3 +1,0 @@
-@startuml
-	[CloudWpsFactory] as group___cloud_wps_factory [[../computational/components/group___cloud_wps_factory.html]]
-@enduml

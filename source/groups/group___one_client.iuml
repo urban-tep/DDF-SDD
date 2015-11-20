@@ -1,3 +1,0 @@
-@startuml
-	[OneClient] as group___one_client [[../computational/components/group___one_client.html]]
-@enduml

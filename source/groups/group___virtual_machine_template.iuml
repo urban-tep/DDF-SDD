@@ -1,3 +1,0 @@
-@startuml
-	[Virtual Machine Template] as group___virtual_machine_template [[../computational/components/group___virtual_machine_template.html]]
-@enduml

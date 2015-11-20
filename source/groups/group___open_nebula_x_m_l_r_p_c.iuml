@@ -1,3 +1,0 @@
-@startuml
-interface "OpenNebula XML-RPC Interface" as group___open_nebula_x_m_l_r_p_c [[../computational/components/group___open_nebula_x_m_l_r_p_c.html]]
-@enduml

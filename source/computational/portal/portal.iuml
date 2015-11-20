@@ -1,0 +1,64 @@
+@startuml
+
+folder "Portal" [[../computational/portal/index.html]] {
+  folder "Core" {
+
+  }
+  folder "Community" {
+
+  }
+  folder "Security" {
+
+  }
+  folder "OpenSearch" {
+
+  }
+  folder "Model" {
+
+  }
+  folder "Tep" {
+  
+  }
+}
+
+  !include ../../groups/group___core.iuml
+   !include ../../groups/group___community.iuml
+   !include ../../groups/group___security.iuml
+   !include ../../groups/group___open_search.iuml
+   !include ../../groups/group___model.iuml
+   !include ../../groups/group___tep.iuml
+
+   !include ../../groups/group___auth___umsso.iuml
+   !include ../../groups/group___authentication.iuml
+   !include ../../groups/group___authorisation.iuml
+   !include ../../groups/group___context.iuml
+   
+   !include ../../groups/group___data_package.iuml
+   !include ../../groups/group___persistence.iuml
+   !include ../../groups/group___tep_user.iuml
+   
+   !include ../../groups/group___series.iuml
+   !include ../../groups/group___service.iuml
+   !include ../../groups/group___s_q_l_connector.iuml
+   !include ../../groups/group___web_context.iuml
+   !include ../../groups/group___w_p_s.iuml
+   !include ../../groups/group___wps_provider.iuml
+   !include ../../groups/group___wps_service.iuml
+
+   !include ../../groups/group___o_w_s_context_atom_feed.iuml
+   !include ../../groups/group___o_w_s_context.iuml
+
+   !include ../../groups/group___syndication.iuml
+
+   !include ../../groups/group___github_profile.iuml
+   !include ../../groups/group___github_client.iuml
+   
+
+   !include ../../groups/group___atom.iuml
+   !include ../../groups/group___open_search_engine.iuml
+   !include ../../groups/group___open_searchable.iuml
+
+   !include ../../groups/group_relations.iuml
+ 
+   
+@enduml

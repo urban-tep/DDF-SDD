@@ -1,3 +1,0 @@
-@startuml
-	[Cloud Applicance] as group___cloud_appliance [[../computational/components/group___cloud_appliance.html]]
-@enduml

@@ -1,8 +1,0 @@
-@startuml
-set namespaceSeparator ::
-class Terradue::TepQW::Controller::CloudWpsFactory {
-[[../information/classes/class_terradue_1_1_tep_q_w_1_1_controller_1_1_cloud_wps_factory.html]]
- +GetWPSFromVMs()
- +CreateWpsProcessOfferingForOne()
-}
-@enduml
