@@ -1,0 +1,14 @@
+@startuml
+
+folder "DLR Processing Center" [[../computational/dlr-pc/index.html]] {
+  
+  [component #1]
+  [component #2]
+  [component #3]
+
+  [component #1] -- [component #2]
+}
+
+ 
+   
+@enduml

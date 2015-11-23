@@ -1,11 +1,10 @@
 .. uml::
 
+   !define DIAG_NAME Component Diagram
+
    !include includes/skins.iuml
 
    skinparam backgroundColor #FFFFFF
    skinparam componentStyle uml2
 
-   !include source/computational/portal/portal.iuml
-   !include source/computational/bc-pc/pc.iuml
    !include source/computational/it4i-pc/pc.iuml
-   !include source/computational/dlr-pc/pc.iuml
