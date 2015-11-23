@@ -93,6 +93,9 @@ pygments_style = 'sphinx'
 github_repo = "https://github.com/urban-tep/DDF-SDD"
 github_branch = "master"
 
+# requirements trace
+req_include_reqs = True
+
 # -- Options for HTML output ---------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  Major themes that come with
