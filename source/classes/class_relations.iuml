@@ -1,8 +1,4 @@
 @startuml
-Terradue::Cloud::CloudAppliance  *-- "1" Terradue::Cloud::CloudProvider : has
-Terradue::Cloud::CloudAppliance  *-- "1" Terradue::Cloud::VirtualMachineTemplate : is specified by 
-Terradue::Cloud::CloudAppliance  --|>  Terradue::Portal::Entity : implements
-Terradue::Cloud::CloudProvider  --|>  Terradue::Portal::Entity : implements
 Terradue::Portal::Feature  --|>  Terradue::Portal::Entity : implements
 Terradue::Portal::Group  --|>  Terradue::Portal::Entity : implements
 Terradue::Portal::Series  --|>  Terradue::Portal::Entity : implements

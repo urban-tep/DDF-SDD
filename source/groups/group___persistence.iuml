@@ -1,3 +1,3 @@
 @startuml
-	[Persistence of Data] as group___persistence [[../computational/components/group___persistence.html]]
+	[Persistence of Data] as group___persistence [[../groups/group___persistence.html]]
 @enduml

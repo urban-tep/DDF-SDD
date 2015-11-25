@@ -1,7 +1,7 @@
 .. _group___tep_user:
 
-Urban TEP User
---------------
+Tep User
+--------
 
 
 
@@ -12,7 +12,7 @@ Urban TEP User
   skinparam componentStyle uml2
   !include source/groups/group___tep_user.iuml
 
-This represents a user in TEP Urban platform.
+This component defines a user in the TEP GeoHazards platform. A user has a basic profile (defined in the platform) but is also linked to different external application with specific user profile (EO-SSO, Github, Cloud).
 
 
 
@@ -21,14 +21,14 @@ This represents a user in TEP Urban platform.
 
 	
 	[*] --> PendingActivation : first time login
-	PendingActivation : User must confirm its UM-SSO email
+	PendingActivation : User must confirm his UM-SSO email
 	PendingActivation : User cannot access secured services
 	
 	PendingActivation --> Enabled : email confirmation
 	Enabled : User can access secured services
 	
 	footer
-	Urban TEP User state diagram
+	GeoHazards TEP User state diagram
 	(c) Terradue Srl
 	endfooter
 	
@@ -44,32 +44,42 @@ This represents a user in TEP Urban platform.
 	  if (UM-SSO logged?) then (yes)
 	    if (user in DB?) then (yes)
 	      if (user pending activation?) then (yes)
-	        :reinvite user to confirm email
+	        :reinvite user to confirm email;
 	        stop
 	      endif
 	    else (no)
-	      :create user account in db
-	      :set account status to **Pending Activation**
-	      :send confirmation email to user
-	      :invite user to confirm email
+	      :create user account in db;
+	      :set account status to **Pending Activation**;
+	      :send confirmation email to user;
+	      :invite user to confirm email;
 	      stop
 	    endif
 	  else (no)
-	    :redirect user to UM-SSO IDP
+	    :redirect user to UM-SSO IDP;
 	    stop
 	  endif
 	endif
-	:process service
+	:process service;
 	stop
 	
 	footer
-	Urban TEP User account activity diagram
+	GeoHazards TEP User account activity diagram
 	(c) Terradue Srl
 	endfooter
 	
 
 Dependencies
 ^^^^^^^^^^^^
-- :ref:`Authentication <group___authentication>` authenticates the user
+- uses :ref:`Context <group___context>` to define the basic user profile (username, email, first name, last name, ...)
+
+- uses :ref:`GithubProfile <group___github_profile>` to define the github profile and link the user to his Github account
+
+- calls :ref:`Authentication <group___authentication>` to identify the user using EO-SSO
+
+- belongs to a Group to associate a user to existing groups
+
+- calls :ref:`GithubClient <group___github_client>` to contact Github interface in order to authenticate the user on Github and associate his public key
+
+- calls OneClient to contact OpenNebula interface and associate the cloud user with the Tep user
 
 

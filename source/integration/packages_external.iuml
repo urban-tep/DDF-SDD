@@ -1,0 +1,37 @@
+@startuml
+package "External" <<Frame>> {
+  class "Apache::Http::Server" as namespace_apache_1_1_http_1_1_server
+  class "Apel::Client" as namespace_apel_1_1_client
+  class "Apel::Server" as namespace_apel_1_1_server
+  class "Elasticsearch" as namespace_elasticsearch
+  class "GeoAPI" as namespace_geo_a_p_i
+  class "GeoServer" as namespace_geo_server
+  class "Mono" as namespace_mono
+  class "MySql::Data" as namespace_my_sql_1_1_data
+  class "NetTopologySuite" as namespace_net_topology_suite
+  class "Newtonsoft::Json" as namespace_newtonsoft_1_1_json
+  class "ServiceStack" as namespace_service_stack
+  class "Shibboleth::ServiceProvider" as namespace_shibboleth_1_1_service_provider
+  class "TweetSharp" as namespace_tweet_sharp
+  class "log4net" as namespacelog4net
+  class "xmlrpcnet" as namespacexmlrpcnet
+}
+
+  !include ../../source/namespaces/namespace_apache_1_1_http_1_1_server.iuml
+  !include ../../source/namespaces/namespace_apel_1_1_client.iuml
+  !include ../../source/namespaces/namespace_apel_1_1_server.iuml
+  !include ../../source/namespaces/namespace_elasticsearch.iuml
+  !include ../../source/namespaces/namespace_geo_a_p_i.iuml
+  !include ../../source/namespaces/namespace_geo_server.iuml
+  !include ../../source/namespaces/namespace_mono.iuml
+  !include ../../source/namespaces/namespace_my_sql_1_1_data.iuml
+  !include ../../source/namespaces/namespace_net_topology_suite.iuml
+  !include ../../source/namespaces/namespace_newtonsoft_1_1_json.iuml
+  !include ../../source/namespaces/namespace_service_stack.iuml
+  !include ../../source/namespaces/namespace_shibboleth_1_1_service_provider.iuml
+  !include ../../source/namespaces/namespace_tweet_sharp.iuml
+  !include ../../source/namespaces/namespacelog4net.iuml
+  !include ../../source/namespaces/namespacexmlrpcnet.iuml
+
+
+@enduml

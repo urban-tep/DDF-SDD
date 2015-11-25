@@ -1,0 +1,8 @@
+@startuml
+  class "Elasticsearch" as namespace_elasticsearch << (S, #86A136) >> [[../namespaces/namespace_elasticsearch.html]] {
+     version : 1.7.0 
+     lang : Java 
+     license : Apache 2
+     nature : OSS 
+  }
+@enduml

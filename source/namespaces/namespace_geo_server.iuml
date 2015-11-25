@@ -1,0 +1,8 @@
+@startuml
+  class "GeoServer" as namespace_geo_server << (S, #86A136) >> [[../namespaces/namespace_geo_server.html]] {
+     version : 2.8.0 
+     lang : Java 
+     license : GPL-v2
+     nature : OSS 
+  }
+@enduml

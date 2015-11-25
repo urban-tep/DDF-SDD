@@ -1,0 +1,8 @@
+@startuml
+  class "xmlrpcnet" as namespacexmlrpcnet << (L, #86A136) >> [[../namespaces/namespacexmlrpcnet.html]] {
+     version : 3.0.0 
+     lang : C#
+     license : MIT
+     nature : .Net OSS 
+  }
+@enduml

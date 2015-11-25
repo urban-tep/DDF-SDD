@@ -1,3 +1,3 @@
 @startuml
-	[OWS Context] as group___o_w_s_context [[../computational/components/group___o_w_s_context.html]]
+	[OWS Context] as group___o_w_s_context [[../groups/group___o_w_s_context.html]]
 @enduml

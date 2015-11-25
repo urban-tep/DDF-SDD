@@ -1,7 +1,7 @@
 @startuml
 set namespaceSeparator ::
 class Terradue::Portal::Series {
-[[../information/classes/class_terradue_1_1_portal_1_1_series.html]]
+[[../classes/class_terradue_1_1_portal_1_1_series.html]]
  +Description:string
  +CatalogueDescriptionUrl:string
  +GetLocalOpenSearchDescription()

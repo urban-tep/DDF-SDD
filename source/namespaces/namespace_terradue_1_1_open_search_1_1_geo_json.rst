@@ -21,6 +21,8 @@ Version : 1.3.3
 
 License : `GPLv3 <https://github.com/Terradue/DotNetOpenSearchGeoJson/blob/master/LICENSE.txt>`_
 
+Nature : 
+
 
 
 Requires :

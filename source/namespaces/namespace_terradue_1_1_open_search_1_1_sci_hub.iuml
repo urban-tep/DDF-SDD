@@ -1,0 +1,8 @@
+@startuml
+  class "Terradue::OpenSearch::SciHub" as namespace_terradue_1_1_open_search_1_1_sci_hub << (L, #27556C) >> [[../namespaces/namespace_terradue_1_1_open_search_1_1_sci_hub.html]] {
+     version : 1.0.6 
+     lang : C#
+     license : GPLv3
+     nature : OSS
+  }
+@enduml

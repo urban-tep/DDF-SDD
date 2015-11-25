@@ -1,0 +1,8 @@
+@startuml
+  class "Terradue::Tep" as namespace_terradue_1_1_tep << (L, #27556C) >> [[../namespaces/namespace_terradue_1_1_tep.html]] {
+     version : 1.0.0 
+     lang : C#
+     license : incubating
+     nature : OSS
+  }
+@enduml

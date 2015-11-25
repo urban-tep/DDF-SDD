@@ -1,0 +1,8 @@
+@startuml
+  class "TweetSharp" as namespace_tweet_sharp << (L, #86A136) >> [[../namespaces/namespace_tweet_sharp.html]] {
+     version : 2.3.1 
+     lang : C#
+     license : 
+     nature : .Net OSS 
+  }
+@enduml

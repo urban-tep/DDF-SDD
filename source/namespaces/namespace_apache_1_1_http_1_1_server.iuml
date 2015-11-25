@@ -1,0 +1,8 @@
+@startuml
+  class "Apache::Http::Server" as namespace_apache_1_1_http_1_1_server << (S, #86A136) >> [[../namespaces/namespace_apache_1_1_http_1_1_server.html]] {
+     version : 2.2 
+     lang : C 
+     license : Apache-2
+     nature : OSS 
+  }
+@enduml

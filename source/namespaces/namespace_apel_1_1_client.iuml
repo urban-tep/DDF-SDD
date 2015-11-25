@@ -1,0 +1,8 @@
+@startuml
+  class "Apel::Client" as namespace_apel_1_1_client << (L, #86A136) >> [[../namespaces/namespace_apel_1_1_client.html]] {
+     version : 1.5.0 
+     lang : Python 
+     license : Apache-2
+     nature : OSS 
+  }
+@enduml

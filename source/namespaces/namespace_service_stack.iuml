@@ -1,0 +1,8 @@
+@startuml
+  class "ServiceStack" as namespace_service_stack << (L, #AA3C39) >> [[../namespaces/namespace_service_stack.html]] {
+     version : 3.9.71 
+     lang : C#
+     license : terms
+     nature : .Net COTS 
+  }
+@enduml

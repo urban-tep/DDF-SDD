@@ -1,0 +1,8 @@
+@startuml
+  class "log4net" as namespacelog4net << (L, #86A136) >> [[../namespaces/namespacelog4net.html]] {
+     version : 2.0.4 
+     lang : C#
+     license : Apache v2
+     nature : .Net OSS 
+  }
+@enduml

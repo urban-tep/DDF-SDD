@@ -1,3 +1,3 @@
 @startuml
-	[WPS Provider] as group___wps_provider [[../computational/components/group___wps_provider.html]]
+	[WPS Provider] as group___wps_provider [[../groups/group___wps_provider.html]]
 @enduml

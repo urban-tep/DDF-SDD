@@ -21,6 +21,8 @@ Version : 1.1.3
 
 License : `incubating <https://git.terradue.com/sugar/terradue-webservice-model>`_
 
+Nature : 
+
 
 
 Requires :

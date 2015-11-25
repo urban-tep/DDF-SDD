@@ -1,5 +1,5 @@
 @startuml
-folder "Core" [[../computational/components/group___core.html]] {
+folder "Core" [[../groups/group___core.html]] {
 [group___authorisation]
 [group___persistence]
 [group___context]

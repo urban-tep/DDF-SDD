@@ -21,3 +21,5 @@ Version : 1.0.0
 
 License : `GPLv3 <https://github.com/Terradue/DotNetSyndication/blob/master/LICENSE>`_
 
+Nature : 
+

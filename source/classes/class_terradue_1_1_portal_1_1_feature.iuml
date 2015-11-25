@@ -1,7 +1,7 @@
 @startuml
 set namespaceSeparator ::
 class Terradue::Portal::Feature {
-[[../information/classes/class_terradue_1_1_portal_1_1_feature.html]]
+[[../classes/class_terradue_1_1_portal_1_1_feature.html]]
  +Title:string
  +Description:string
  +Image:string

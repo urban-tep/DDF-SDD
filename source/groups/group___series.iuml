@@ -1,3 +1,3 @@
 @startuml
-	[Series] as group___series [[../computational/components/group___series.html]]
+	[Series] as group___series [[../groups/group___series.html]]
 @enduml

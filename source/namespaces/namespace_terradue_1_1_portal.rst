@@ -21,10 +21,13 @@ Version : 2.6.42
 
 License : `incubating <https://git.terradue.com/sugar/terradue-portal>`_
 
+Nature : 
+
 
 
 Requires :
 - :ref:`namespace_terradue_1_1_open_search`
+- :ref:`namespace_my_sql_1_1_data`
 
 
 

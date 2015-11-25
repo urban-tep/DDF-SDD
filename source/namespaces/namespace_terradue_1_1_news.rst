@@ -12,7 +12,7 @@ Terradue::News
   skinparam componentStyle uml2
   !include source/namespaces/namespace_terradue_1_1_news.iuml
 
-:ref:`Terradue.News <namespace_terradue_1_1_news>` Software Package
+:ref:`Terradue <namespace_terradue>` .Net Library to handle multi-source news (Atom/RSS, Twitter, Tumblr...)
 
 Software Page : `Terradue.New <https://git.terradue.com/sugar/terradue-news>`_
 
@@ -20,6 +20,8 @@ Version : 1.0.11
 
 
 License : `incubating <https://git.terradue.com/sugar/terradue-news>`_
+
+Nature : 
 
 
 

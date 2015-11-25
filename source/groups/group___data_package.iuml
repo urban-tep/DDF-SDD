@@ -1,4 +1,3 @@
 @startuml
-folder "Data Package" [[../computational/components/group___data_package.html]] {
-}
+	[Data Package] as group___data_package [[../groups/group___data_package.html]]
 @enduml
