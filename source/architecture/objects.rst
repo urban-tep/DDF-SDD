@@ -17,9 +17,9 @@ Herafter, all business objects are described individually
   Service <../classes/class_terradue_1_1_portal_1_1_service>
   User <../classes/class_terradue_1_1_portal_1_1_user>
   TEP Group <../classes/class_terradue_1_1_tep_1_1_controller_1_1_group_tep>
-  TEP User <../classes/class_terradue_1_1_tep_1_1_controller_1_1_role_tep>
-  TEP Role <../classes/class_terradue_1_1_tep_1_1_controller_1_1_user_tep>
-  Thematic Application <../classes/class_terradue_1_1_tep_1_1_controller_1_1_thematic_application>
+  TEP Role <objects/teprole>
+  TEP User <../classes/class_terradue_1_1_tep_1_1_controller_1_1_user_tep>
+  Thematic Application <objects/thematicapplication>
   WpsProcessOffering <../classes/class_terradue_1_1_portal_1_1_wps_process_offering>
   WpsProvider <../classes/class_terradue_1_1_portal_1_1_wps_provider>
 
