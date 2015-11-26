@@ -1,6 +1,5 @@
 @startuml
-set namespaceSeparator ::
-class Terradue::Portal::User {
+class User {
 [[../classes/class_terradue_1_1_portal_1_1_user.html]]
  +AccountStatus:int
 }

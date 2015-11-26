@@ -1,7 +1,7 @@
 .. _class_terradue_1_1_portal_1_1_series:
 
-Terradue::Portal::Series
-------------------------
+Series
+------
 
 Represents a series of data sets that are available from a catalogue.
 

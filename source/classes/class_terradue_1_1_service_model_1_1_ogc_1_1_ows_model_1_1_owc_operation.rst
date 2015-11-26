@@ -1,7 +1,7 @@
 .. _class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_owc_operation:
 
-Terradue::ServiceModel::Ogc::OwsModel::OwcOperation
----------------------------------------------------
+OwcOperation
+------------
 
 Definition of the operation either to get the information or to get the capabilities. Note that service specific extension requirements may mandate more than one owc:operation. 
 

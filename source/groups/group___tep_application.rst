@@ -23,3 +23,8 @@ Dependencies
 - delegates :ref:`Service <group___tep_service>` for the processing service management in the application with the defintion of the service references .
 
 
+
+Classes
+^^^^^^^
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_thematic_application`
+

@@ -1,7 +1,7 @@
 .. _class_terradue_1_1_portal_1_1_entity:
 
-Terradue::Portal::Entity
-------------------------
+Entity
+------
 
 Abstract base class of all entity types that usually correspond to real-world entities.
 

@@ -1,6 +1,5 @@
 @startuml
-set namespaceSeparator ::
-class Terradue::Portal::Entity {
+class Entity {
 [[../classes/class_terradue_1_1_portal_1_1_entity.html]]
  +Id:int
  +Identifier:string

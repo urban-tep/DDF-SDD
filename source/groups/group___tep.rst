@@ -15,11 +15,6 @@ Tep Modules
 This is a super component that encloses all Thematic Exploitation Platform related functional compoenents. Their main functionnalities are targeted to ebhance the basic :ref:`Core <group___core>` functionalities for the thematic usage of the plaform. 
 
 
-Classes
-^^^^^^^
-- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_group_tep`
-
-
 Sub-Modules
 ^^^^^^^^^^^
 .. toctree::

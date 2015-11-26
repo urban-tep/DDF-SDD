@@ -1,6 +1,5 @@
 @startuml
-set namespaceSeparator ::
-class Terradue::ServiceModel::Ogc::OwsModel::OwcContent {
+class OwcContent {
 [[../classes/class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_owc_content.html]]
 }
 @enduml

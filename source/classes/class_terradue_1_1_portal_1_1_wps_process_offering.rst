@@ -1,7 +1,7 @@
 .. _class_terradue_1_1_portal_1_1_wps_process_offering:
 
-Terradue::Portal::WpsProcessOffering
-------------------------------------
+WpsProcessOffering
+------------------
 
 Represents a WPS process offering on a remote WPS server.
 
@@ -25,6 +25,18 @@ Properties
 +=================================================================+==================+===============================================================================================+
 | string                                                          | RemoteIdentifier | Gets or sets the remote identifier of the process offering on the WPSProvider it belongs to.  |
 +-----------------------------------------------------------------+------------------+-----------------------------------------------------------------------------------------------+
-| :ref:`WpsProvider <class_terradue_1_1_portal_1_1_wps_provider>` | Provider         | Gets or sets the WPS provider to which the WPS process offering belongs.                      |
+| :ref:`WpsProvider <class_terradue_1_1_portal_1_1_wps_provider>` | Provider         | WPS provider to which the WPS process offering belongs.                                       |
 +-----------------------------------------------------------------+------------------+-----------------------------------------------------------------------------------------------+
+
+Methods
+^^^^^^^
+
+.. cssclass:: propertiestable
+
+============= =========== ==================
+Type          Name        Summary
+============= =========== ==================
+override void BuildTask() Builds the task. 
+
+============= =========== ==================
 

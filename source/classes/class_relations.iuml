@@ -1,17 +1,28 @@
 @startuml
-Terradue::Portal::Feature  --|>  Terradue::Portal::Entity : implements
-Terradue::Portal::Group  --|>  Terradue::Portal::Entity : implements
-Terradue::Portal::Series  --|>  Terradue::Portal::Entity : implements
-Terradue::Portal::Service  --|>  Terradue::Portal::Entity : implements
-Terradue::Portal::User  --|>  Terradue::Portal::Entity : implements
-Terradue::Portal::WpsProcessOffering  *-- "1" Terradue::Portal::WpsProvider : has
-Terradue::Portal::WpsProcessOffering  --|>  Terradue::Portal::Service : implements
-Terradue::ServiceModel::Ogc::OwsModel::OwcCreator  *-- "1" Terradue::ServiceModel::Ogc::OwsModel::OwcApplication : created on 
-Terradue::ServiceModel::Ogc::OwsModel::OwcCreator  *-- "1" Terradue::ServiceModel::Ogc::OwsModel::OwcDisplay : displayed on 
-Terradue::ServiceModel::Ogc::OwsModel::OwcOffering  *-- "*" Terradue::ServiceModel::Ogc::OwsModel::OwcOperation : offers 
-Terradue::ServiceModel::Ogc::OwsModel::OwcOffering  *-- "*" Terradue::ServiceModel::Ogc::OwsModel::OwcContent : offers 
-Terradue::ServiceModel::Ogc::OwsModel::OwcOperation  *-- "1" Terradue::ServiceModel::Ogc::OwsModel::OwcContent : is invoked with 
-Terradue::ServiceModel::Ogc::OwsModel::OwcResource  *-- "*" Terradue::ServiceModel::Ogc::OwsModel::OwcOffering : exposes 
-Terradue::ServiceModel::Ogc::OwsModel::OwsContext  *-- "1" Terradue::ServiceModel::Ogc::OwsModel::OwcCreator : references 
-Terradue::ServiceModel::Ogc::OwsModel::OwsContext  *-- "*" Terradue::ServiceModel::Ogc::OwsModel::OwcResource : contains 
+Feature  --|>  Entity : implements
+Group  --|>  Entity : implements
+Series  --|>  Entity : implements
+Service  --|>  Entity : implements
+User  --|>  Entity : implements
+WpsProcessOffering  *-- "1" WpsProvider : has
+WpsProcessOffering  --|>  Service : implements
+OwcCreator  *-- "1" OwcApplication : created on 
+OwcCreator  *-- "1" OwcDisplay : displayed on 
+OwcOffering  *-- "*" OwcOperation : offers 
+OwcOffering  *-- "*" OwcContent : offers 
+OwcOperation  *-- "1" OwcContent : is invoked with 
+OwcResource  *-- "*" OwcOffering : exposes 
+OwsContext  *-- "1" OwcCreator : references 
+OwsContext  *-- "*" OwcResource : contains 
+Collection  --|>  Series : implements
+DataPackage  *-- "1" UserTep : has
+DataPackage  *-- "*" Collection : has
+GroupTep  *-- "*" UserTep : has
+GroupTep  --|>  Group : implements
+RoleTep  --|>  Entity : implements
+ThematicApplication  *-- "*" Collection : has
+ThematicApplication  *-- "*" WpsProcessOffering : has
+ThematicApplication  --|>  Entity : implements
+UserTep  *-- "*" GroupTep : has
+UserTep  --|>  User : implements
 @enduml

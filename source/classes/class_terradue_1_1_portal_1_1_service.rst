@@ -1,7 +1,7 @@
 .. _class_terradue_1_1_portal_1_1_service:
 
-Terradue::Portal::Service
--------------------------
+Service
+-------
 
 Abstract base class for processing services.
 

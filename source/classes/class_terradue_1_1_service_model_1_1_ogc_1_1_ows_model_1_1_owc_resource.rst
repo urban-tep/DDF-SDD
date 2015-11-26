@@ -1,7 +1,7 @@
 .. _class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_owc_resource:
 
-Terradue::ServiceModel::Ogc::OwsModel::OwcResource
---------------------------------------------------
+OwcResource
+-----------
 
 This class describes the resource elements which supply the information layers used in the Context Document. Resource, while it can be used bare, is typically classified by owc:MediaCode indicating the type of information encoded in the resource. The resource offers multiple ways to pass a configured resource, in-line content, by absolute URI and by service Content which needs to be interpreted by an intelligent client. While there may be limitations in the individual encoding, each of these types shall be semantically equivalent, i.e. alternative representations of the same information (they can for example have different resolutions but should not show fundamentally different information). 
 

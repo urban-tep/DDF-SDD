@@ -1,6 +1,5 @@
 @startuml
-set namespaceSeparator ::
-class Terradue::Portal::WpsProvider {
+class WpsProvider {
 [[../classes/class_terradue_1_1_portal_1_1_wps_provider.html]]
  +Proxy:bool
  +StoreProcessOfferings()

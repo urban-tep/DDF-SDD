@@ -1,7 +1,7 @@
 .. _class_terradue_1_1_portal_1_1_feature:
 
-Terradue::Portal::Feature
--------------------------
+Feature
+-------
 
 :ref:`Feature <class_terradue_1_1_portal_1_1_feature>`. 
 

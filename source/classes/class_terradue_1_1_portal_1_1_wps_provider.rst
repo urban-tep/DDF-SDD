@@ -1,7 +1,7 @@
 .. _class_terradue_1_1_portal_1_1_wps_provider:
 
-Terradue::Portal::WpsProvider
------------------------------
+WpsProvider
+-----------
 
 Represents a remote provider of a Web Processing :ref:`Service <class_terradue_1_1_portal_1_1_service>`.
 

@@ -1,0 +1,7 @@
+@startuml
+class ThematicApplication {
+[[../classes/class_terradue_1_1_tep_1_1_controller_1_1_thematic_application.html]]
+ +Description:string
+ +Features:List< string >
+}
+@enduml

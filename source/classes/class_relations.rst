@@ -25,3 +25,26 @@ Class Relationships
 
 - :ref:`class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_ows_context` contains :ref:`OwcResource <class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_owc_resource>` that describe resources and their access parameters and configuration
 
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_data_package` The owner.
+
+
+
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_data_package` The colelctions.
+
+
+
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_group_tep` The members.
+
+
+
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_thematic_application` The collections.
+
+
+
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_thematic_application` The WPS services.
+
+
+
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_user_tep` 
+
+

@@ -1,7 +1,7 @@
 .. _class_terradue_1_1_portal_1_1_user:
 
-Terradue::Portal::User
-----------------------
+User
+----
 
 :ref:`User <class_terradue_1_1_portal_1_1_user>`. 
 

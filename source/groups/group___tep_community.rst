@@ -23,3 +23,10 @@ Dependencies
 - uses :ref:`Authorisation <group___authorisation>` to manage the users in the groupswith their roles and their access accordingly.
 
 
+
+Classes
+^^^^^^^
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_group_tep`
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_role_tep`
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_user_tep`
+
