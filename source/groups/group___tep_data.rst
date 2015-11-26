@@ -16,7 +16,8 @@ This component is in charge of all the data management in the platform.
 
 It implements the mechanism to search for Collection and Data Packages via an OpenSearchable interface.
 
-
+User Data Packages 
+^^^^^^^^^^^^^^^^^^^
 
 Each user of the platform may define a DataPackage to save a set of dataset that he preselected. The 2 following state diagram shows the lifecycle of those data packages in creation and update.
 
@@ -69,6 +70,28 @@ Each user of the platform may define a DataPackage to save a set of dataset that
 	
 	
 
+Persistence 
+^^^^^^^^^^^^
+
+When a dataset is processed with a remote processing (e.g. WPS), the results of this data may be located in a temporary storage. The user would want to keep that result and its metadata. The :ref:`Data <group___tep_data>` components integrates the function to "copy" the results and its metadata to a persistent storage on one for the files and on a catalogue index for the metadata.
+
+Analysis and Visualization 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When a dataset is processed with a remote processing (e.g. WPS), the results of this data may be located in a place where there is no other function than downloading the data directly on its local machine to visualize or analyze it. The :ref:`Data <group___tep_data>` components integrates functions to "export" the results and its metadata to an external tools or server that shall enhance the results for better visualization and analysis. The following export capabilities are implemented:
+
+
+
+- <<unknown>> raster and vector import. If the results include standard vector files (e.g. shapefile, geojson, csv with WKT, ...) or raster files such as geolocated images (geotiff, png with world files...), the  components shall propose to the user to export them to geoserver that will resturn a new WS layer that the web visualization widget shall display
+- <<unknown>> ???
+
+.. req:: TS-FUN-010
+	:show:
+
+	The GeoNode export function allows user to upload their data to PUMA.
+
+
+
 Dependencies
 ^^^^^^^^^^^^
 - uses :ref:`Authorisation <group___authorisation>` to manage the users in the groups with their roles and their access accordingly.
@@ -81,4 +104,5 @@ Classes
 ^^^^^^^
 - :ref:`class_terradue_1_1_tep_1_1_controller_1_1_collection`
 - :ref:`class_terradue_1_1_tep_1_1_controller_1_1_data_package`
+- :ref:`class_terradue_1_1_tep_1_1_filters`
 

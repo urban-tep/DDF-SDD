@@ -25,7 +25,7 @@ This is the container for all the web pages and widgets component.
 Sub-Modules
 ^^^^^^^^^^^
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 0
 
   group___web_pages
   group___geo_browser

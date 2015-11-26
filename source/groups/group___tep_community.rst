@@ -18,6 +18,48 @@ Thematic Group simplifies management of the user community and help focus the us
 
 For instance, an instituion may create its own thematic group with its selected members and experts. It may also have business relationship with a data or ICT provider that are representated as a role within the group.
 
+.. req:: TS-DES-020
+	:show:
+
+	TEP end user rights are enforced by this component with the support of the Authorization component.
+
+
+
+.. req:: TS-DES-030
+	:show:
+
+	TEP data provider rights are enforced by this component with the support of the Authorization component.
+
+
+
+.. req:: TS-DES-040
+	:show:
+
+	TEP Content Authority rights are enforced by this component with the support of the Authorization component.
+
+
+
+.. req:: TS-DES-050
+	:show:
+
+	TEP Resource Administrator rights are enforced by this component with the support of the Authorization component.
+
+
+
+.. req:: TS-DES-060
+	:show:
+
+	TEP expert user rights are enforced by this component with the support of the Authorization component.
+
+
+
+.. req:: TS-DES-080
+	:show:
+
+	TEP ICT provider rights are enforced by this component with the support of the Authorization component.
+
+
+
 Dependencies
 ^^^^^^^^^^^^
 - uses :ref:`Authorisation <group___authorisation>` to manage the users in the groupswith their roles and their access accordingly.

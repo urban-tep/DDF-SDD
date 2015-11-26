@@ -18,7 +18,7 @@ Security
 Sub-Modules
 ^^^^^^^^^^^
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 0
 
   group___auth___umsso
   group___authentication

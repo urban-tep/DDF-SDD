@@ -1,6 +1,11 @@
 Implementation choices
 ======================
 
+.. req:: TS-DES-120
+  :show:
+
+  This section describes the implementation choices and the development framework to be infrastructure independent.
+
 Modular Software
 ----------------
 

@@ -21,7 +21,7 @@ Version : 1.0.6
 
 License : `GPLv3 <https://github.com/Terradue/DotNetOgcOwsContext/blob/master/LICENSE>`_
 
-Nature : 
+Nature : OSS
 
 
 

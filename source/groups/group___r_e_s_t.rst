@@ -28,6 +28,8 @@ Dependencies
 
 - CRUD :ref:`Service <group___tep_service>`
 
+- uses :ref:`Context <group___context>` to setup the HTTP session
+
 
 Interfaces
 ^^^^^^^^^^

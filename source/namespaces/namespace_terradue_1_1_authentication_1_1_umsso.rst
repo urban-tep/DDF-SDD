@@ -21,7 +21,7 @@ Version : 1.2.3
 
 License : `incubating <https://git.terradue.com/sugar/terradue-authentication-umsso/master/LICENSE.txt>`_
 
-Nature : 
+Nature : OSS
 
 
 

@@ -18,7 +18,7 @@ This is a super component that encloses all Thematic Exploitation Platform relat
 Sub-Modules
 ^^^^^^^^^^^
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 0
 
   group___tep_accounting
   group___tep_application

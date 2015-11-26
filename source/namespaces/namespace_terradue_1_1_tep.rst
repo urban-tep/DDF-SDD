@@ -21,7 +21,7 @@ Version : 1.0.0
 
 License : `incubating <https://git.terradue.com/sugar/Terradue.Tep>`_
 
-Nature : 
+Nature : OSS
 
 
 

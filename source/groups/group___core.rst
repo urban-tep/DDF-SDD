@@ -24,7 +24,7 @@ Classes
 Sub-Modules
 ^^^^^^^^^^^
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 0
 
   group___computing_resource
   group___persistence

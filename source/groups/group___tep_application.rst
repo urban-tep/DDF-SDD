@@ -16,6 +16,13 @@ This component manages the TEP applications
 
 Thematic Application brings a simple way to define an application of a specific aspect of the thematic. It specifies togheter the form of the application, its features such as the map and the layers, its data and services.
 
+.. req:: TS-DES-110
+	:show:
+
+	Data flow along with services are built into the Thematic Application inside this component. 
+
+
+
 Dependencies
 ^^^^^^^^^^^^
 - delegates :ref:`Data <group___tep_data>` for the data management in the application with the definition of the collection and data packages references.

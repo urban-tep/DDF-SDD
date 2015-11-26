@@ -21,7 +21,7 @@ Version : 2.6.42
 
 License : `incubating <https://git.terradue.com/sugar/terradue-portal>`_
 
-Nature : 
+Nature : OSS
 
 
 

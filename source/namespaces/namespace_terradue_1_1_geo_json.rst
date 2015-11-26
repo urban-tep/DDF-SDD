@@ -21,5 +21,5 @@ Version : 1.5.6
 
 License : `GPLv3 <https://github.com/Terradue/DotNetGeoJson/blob/master/LICENSE.txt>`_
 
-Nature : 
+Nature : OSS
 

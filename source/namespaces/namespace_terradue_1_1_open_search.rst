@@ -21,7 +21,7 @@ Version : 1.11.14
 
 License : `GPLv3 <https://github.com/DotNetOpenSearch/Terradue.OpenSearch/blob/master/LICENSE.txt>`_
 
-Nature : 
+Nature : OSS
 
 
 

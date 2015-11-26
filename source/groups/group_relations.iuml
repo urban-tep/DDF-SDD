@@ -19,6 +19,7 @@
 [group___r_e_s_t]  ..>  [group___tep_contents] : CRUD
 [group___r_e_s_t]  ..>  [group___tep_data] : CRUD
 [group___r_e_s_t]  ..>  [group___tep_service] : CRUD
+[group___r_e_s_t]  ..>  [group___context] : uses
 [group___r_e_s_t]  --  [group___t2_a_p_i] : implements
 [group___series]  --(  [group___open_search] : connects
 [group___series]  ..>  [group___persistence] : []

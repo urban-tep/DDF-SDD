@@ -18,7 +18,7 @@ Web Services
 Sub-Modules
 ^^^^^^^^^^^
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 0
 
   group___r_e_s_t
 

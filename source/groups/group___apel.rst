@@ -18,7 +18,7 @@ Apel
 Sub-Modules
 ^^^^^^^^^^^
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 0
 
   group___apel_server
   group___apel_accounting

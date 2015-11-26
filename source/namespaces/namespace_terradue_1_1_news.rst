@@ -21,7 +21,7 @@ Version : 1.0.11
 
 License : `incubating <https://git.terradue.com/sugar/terradue-news>`_
 
-Nature : 
+Nature : OSS
 
 
 

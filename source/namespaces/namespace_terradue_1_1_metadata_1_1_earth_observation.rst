@@ -21,7 +21,7 @@ Version : 1.3.4
 
 License : `GPLv3 <https://github.com/Terradue/Terradue.Metadata.EarthObservation/blob/master/LICENSE.txt>`_
 
-Nature : 
+Nature : OSS
 
 
 

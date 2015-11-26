@@ -21,7 +21,7 @@ Version : 1.0.4
 
 License : `incubating <https://git.terradue.com/sugar/terradue-github>`_
 
-Nature : 
+Nature : OSS
 
 
 
