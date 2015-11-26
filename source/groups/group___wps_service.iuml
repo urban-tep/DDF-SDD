@@ -1,3 +1,0 @@
-@startuml
-	[WPS Service] as group___wps_service [[../groups/group___wps_service.html]]
-@enduml

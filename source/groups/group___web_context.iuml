@@ -1,3 +1,0 @@
-@startuml
-	[WebContext] as group___web_context [[../groups/group___web_context.html]]
-@enduml

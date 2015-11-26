@@ -1,4 +1,4 @@
-.. _design_portal_components_list :
+.. _design_components_list :
 
 Portal Computational Components
 ===============================
@@ -10,10 +10,9 @@ The portal and information system components list are described herafter individ
 .. toctree::
    :maxdepth: 1
    
-   Apel <../../groups/group___apel>
+   Community <../../groups/group___community>
    Core <../../groups/group___core>
+   Model <../../groups/group___model>
+   OpenSearch <../../groups/group___open_search>
    Security <../../groups/group___security>
    Tep <../../groups/group___tep>
-   Urban Site <../../groups/group___urban_site>
-   Web Services <../../groups/group___web_services>
-   

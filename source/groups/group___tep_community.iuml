@@ -1,0 +1,3 @@
+@startuml
+	[Community] as group___tep_community [[../groups/group___tep_community.html]]
+@enduml

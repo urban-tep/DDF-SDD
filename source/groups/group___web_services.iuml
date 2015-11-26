@@ -1,0 +1,5 @@
+@startuml
+folder "Web Services" [[../groups/group___web_services.html]] {
+	!include group___r_e_s_t.iuml
+}
+@enduml

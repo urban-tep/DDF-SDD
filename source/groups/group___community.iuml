@@ -1,6 +1,0 @@
-@startuml
-folder "Community" [[../groups/group___community.html]] {
-[group___github_client]
-[group___github_profile]
-}
-@enduml

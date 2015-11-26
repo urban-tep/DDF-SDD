@@ -22,6 +22,7 @@ Sub-Modules
 
   group___auth___umsso
   group___authentication
+  group___authorisation
 
 
 Software Packages

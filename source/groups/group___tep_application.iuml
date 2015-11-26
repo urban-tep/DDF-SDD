@@ -1,0 +1,3 @@
+@startuml
+	[Application] as group___tep_application [[../groups/group___tep_application.html]]
+@enduml

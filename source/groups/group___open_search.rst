@@ -12,16 +12,12 @@ OpenSearch
   skinparam componentStyle uml2
   !include source/groups/group___open_search.iuml
 
+This is the internal interface for any real world entity to be processed in OpenSearch Engine
 
+Normative References
+^^^^^^^^^^^^^^^^^^^^
+- `OpenSearch 1.1 <http://www.opensearch.org/Specifications/OpenSearch/1.1>`_
 
-
-Sub-Modules
-^^^^^^^^^^^
-.. toctree::
-  :maxdepth: 1
-
-  group___open_search_engine
-  group___open_searchable
 
 
 Software Packages

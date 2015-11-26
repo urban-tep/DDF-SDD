@@ -1,0 +1,7 @@
+@startuml
+folder "Urban Site" [[../groups/group___urban_site.html]] {
+	!include group___web_pages.iuml
+	!include group___geo_browser.iuml
+	!include group___catalogue_editor.iuml
+}
+@enduml

@@ -1,12 +1,8 @@
 @startuml
 folder "Core" [[../groups/group___core.html]] {
-[group___authorisation]
-[group___persistence]
-[group___context]
-[group___web_context]
-[group___series]
-[group___service]
-[group___wps_service]
-[group___wps_provider]
+	!include group___persistence.iuml
+	!include group___context.iuml
+	!include group___series.iuml
+	!include group___core_w_p_s.iuml
 }
 @enduml

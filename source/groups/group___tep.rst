@@ -1,7 +1,7 @@
 .. _group___tep:
 
-Tep
----
+Tep Modules
+-----------
 
 
 
@@ -12,7 +12,12 @@ Tep
   skinparam componentStyle uml2
   !include source/groups/group___tep.iuml
 
-This is a super component that encloses all Thematic Exploitation Platform related functional compoenents. Their main functionnalities are targeted to the themetic usage of the plaform. 
+This is a super component that encloses all Thematic Exploitation Platform related functional compoenents. Their main functionnalities are targeted to ebhance the basic :ref:`Core <group___core>` functionalities for the thematic usage of the plaform. 
+
+
+Classes
+^^^^^^^
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_group_tep`
 
 
 Sub-Modules
@@ -20,9 +25,12 @@ Sub-Modules
 .. toctree::
   :maxdepth: 1
 
-  group___data_package
-  group___cloud_wps_factory
-  group___tep_user
+  group___tep_accounting
+  group___tep_application
+  group___tep_community
+  group___tep_contents
+  group___tep_data
+  group___tep_service
 
 
 Software Packages

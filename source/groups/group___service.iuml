@@ -1,3 +1,0 @@
-@startuml
-	[Service] as group___service [[../groups/group___service.html]]
-@enduml

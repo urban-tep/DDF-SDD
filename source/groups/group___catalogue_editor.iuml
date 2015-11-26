@@ -1,0 +1,3 @@
+@startuml
+	[Catalogue Editor] as group___catalogue_editor [[../groups/group___catalogue_editor.html]]
+@enduml

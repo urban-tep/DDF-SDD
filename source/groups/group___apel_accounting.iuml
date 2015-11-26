@@ -1,0 +1,3 @@
+@startuml
+interface "Apel Accounting" as group___apel_accounting [[../groups/group___apel_accounting.html]]
+@enduml

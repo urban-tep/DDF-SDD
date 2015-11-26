@@ -15,13 +15,18 @@ Core
 
 
 
+Classes
+^^^^^^^
+- :ref:`class_terradue_1_1_portal_1_1_user`
+- :ref:`class_terradue_1_1_portal_1_1_wps_process_offering`
+
+
 Sub-Modules
 ^^^^^^^^^^^
 .. toctree::
   :maxdepth: 1
 
   group___computing_resource
-  group___authorisation
   group___persistence
   group___context
   group___web_context
@@ -29,8 +34,7 @@ Sub-Modules
   group___series
   group___service
   group___task
-  group___wps_service
-  group___wps_provider
+  group___core_w_p_s
 
 
 Software Packages

@@ -1,0 +1,3 @@
+@startuml
+interface "T2 API" as group___t2_a_p_i [[../groups/group___t2_a_p_i.html]]
+@enduml

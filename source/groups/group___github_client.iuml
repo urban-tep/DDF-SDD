@@ -1,3 +1,0 @@
-@startuml
-	[GithubClient] as group___github_client [[../groups/group___github_client.html]]
-@enduml

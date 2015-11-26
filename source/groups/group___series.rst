@@ -12,9 +12,7 @@ Series
   skinparam componentStyle uml2
   !include source/groups/group___series.iuml
 
-This component represents a dataset series. Practically it is a non-final component that can be extended to implement other collections.
-
-""
+This component manages all types of dataset series. It implements the machnaism to search for the dataset defined in the series via an OpenSearchable interface.
 
 Dependencies
 ^^^^^^^^^^^^
@@ -25,7 +23,7 @@ Dependencies
 
 Interfaces
 ^^^^^^^^^^
-- proxy data series items via IOpenSearchable
+- connects to :ref:`OpenSearch <group___open_search>` interfaces defined in the series to proxy the queries
 
 
 

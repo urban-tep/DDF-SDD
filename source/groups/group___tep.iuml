@@ -1,6 +1,10 @@
 @startuml
-folder "Tep" [[../groups/group___tep.html]] {
-[group___data_package]
-[group___tep_user]
+folder "Tep Modules" [[../groups/group___tep.html]] {
+	!include group___tep_accounting.iuml
+	!include group___tep_application.iuml
+	!include group___tep_community.iuml
+	!include group___tep_contents.iuml
+	!include group___tep_data.iuml
+	!include group___tep_service.iuml
 }
 @enduml

@@ -1,0 +1,3 @@
+@startuml
+	[Accounting] as group___tep_accounting [[../groups/group___tep_accounting.html]]
+@enduml

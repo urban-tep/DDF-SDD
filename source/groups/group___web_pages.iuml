@@ -1,0 +1,3 @@
+@startuml
+	[Web Pages] as group___web_pages [[../groups/group___web_pages.html]]
+@enduml

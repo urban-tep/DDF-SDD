@@ -1,3 +1,0 @@
-@startuml
-interface "Web Processing Services Interface" as group___w_p_s [[../groups/group___w_p_s.html]]
-@enduml

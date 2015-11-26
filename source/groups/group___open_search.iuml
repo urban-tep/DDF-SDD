@@ -1,6 +1,3 @@
 @startuml
-folder "OpenSearch" [[../groups/group___open_search.html]] {
-[group___open_search_engine]
-[group___open_searchable]
-}
+interface "OpenSearch" as group___open_search [[../groups/group___open_search.html]]
 @enduml

@@ -14,8 +14,6 @@ Authorisation
 
 It provides with the functions to define privileges for users or groups on entities for which restrictions are useful, such as entities that represent resources (computing resources or processing services etc.).
 
-""
-
 The authorisation consists of two phases:
 
 - a generic phase where the current user's access privileges are compared to the necessary privileges for the accessed resource
@@ -66,10 +64,11 @@ Dependencies
 ^^^^^^^^^^^^
 - :ref:`Persistence of Data <group___persistence>` reads/writes the privileges persistently
 
+- uses :ref:`Context <group___context>` to identify the user and the session
+
 
 
 Classes
 ^^^^^^^
 - :ref:`class_terradue_1_1_portal_1_1_group`
-- :ref:`class_terradue_1_1_portal_1_1_user`
 

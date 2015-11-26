@@ -1,0 +1,3 @@
+@startuml
+	[REST handler] as group___r_e_s_t [[../groups/group___r_e_s_t.html]]
+@enduml

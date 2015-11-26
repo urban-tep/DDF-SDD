@@ -1,3 +1,0 @@
-@startuml
-interface "OpenSearchable" as group___open_searchable [[../groups/group___open_searchable.html]]
-@enduml

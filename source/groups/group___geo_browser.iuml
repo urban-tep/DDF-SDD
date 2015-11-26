@@ -1,0 +1,3 @@
+@startuml
+	[GeoBrowser] as group___geo_browser [[../groups/group___geo_browser.html]]
+@enduml
