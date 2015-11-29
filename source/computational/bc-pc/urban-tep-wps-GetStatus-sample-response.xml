@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wps:ExecuteResponse service="WPS" version="1.0.0"
+                     xml:lang="en"
+                     xmlns:bc="http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd"
+                     xmlns:ows="http://www.opengis.net/ows/1.1"
+                     xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                     xmlns:wps="http://www.opengis.net/wps/1.0.0"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <wps:Status creationTime="2015-11-25T12:19:30.557+01:00">
+    <wps:ProcessSucceeded>The request has been processed successfully.</wps:ProcessSucceeded>
+  </wps:Status>
+  <wps:ProcessOutputs>
+    <wps:Output>
+      <ows:Identifier>productionResults</ows:Identifier>
+      <wps:Reference href="http://www.brockmann-consult.de:80/calwps/staging/calwpstest/20151125120400_L3_d7ffdd58a1868/L3_2009-06-01_2009-06-03.nc" mimeType="binary"/>
+    </wps:Output>
+    <wps:Output>
+      <ows:Identifier>productionResults</ows:Identifier>
+      <wps:Reference href="http://www.brockmann-consult.de:80/calwps/staging/calwpstest/20151125120400_L3_d7ffdd58a1868/TEP_seasonality_test.zip" mimeType="binary"/>
+    </wps:Output>
+  </wps:ProcessOutputs>
+</wps:ExecuteResponse>

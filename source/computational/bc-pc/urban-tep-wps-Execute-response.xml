@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wps:ExecuteResponse statusLocation="http://www.brockmann-consult.de/calwps/wps?Service=WPS&amp;Request=GetStatus&amp;JobId=20151125120400_L3_d7ffdd58a1868"
+                     service="WPS"
+                     version="1.0.0"
+                     xml:lang="en"
+                     xmlns:bc="http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd"
+                     xmlns:ows="http://www.opengis.net/ows/1.1"
+                     xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                     xmlns:wps="http://www.opengis.net/wps/1.0.0"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <wps:Status creationTime="2015-11-25T12:04:07.341+01:00">
+    <wps:ProcessAccepted>The request has been accepted. The status of the process can be found in the URL.</wps:ProcessAccepted>
+  </wps:Status>
+</wps:ExecuteResponse>

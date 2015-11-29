@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<wps:Execute service="WPS"
+             version="1.0.0"
+             xmlns:wps="http://www.opengis.net/wps/1.0.0"
+             xmlns:ows="http://www.opengis.net/ows/1.1"
+             xmlns:cal="http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <ows:Identifier>beam-buildin~1.0~urban-tep-indices-meris-l1b</ows:Identifier>
+
+  <wps:DataInputs>
+    <wps:Input>
+      <ows:Identifier>productionType</ows:Identifier>
+      <wps:Data>
+	<wps:LiteralData>L3</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>productionName</ows:Identifier>
+      <wps:Data>
+	<wps:LiteralData>TEP seasonality test</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>inputDataSetName</ows:Identifier>
+      <wps:Data>
+	<wps:LiteralData>MERIS FSG v2013 L1b 2002-2012</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>minDate</ows:Identifier>
+      <wps:Data>
+	<wps:LiteralData>2009-06-01</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>maxDate</ows:Identifier>
+      <wps:Data>
+	<wps:LiteralData>2009-06-03</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>periodLength</ows:Identifier>
+      <wps:Data>
+	<wps:LiteralData>3</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>regionWKT</ows:Identifier>
+      <wps:Data>
+	<wps:LiteralData>POLYGON((5 47,5 55,15 55,15 47,5 47))</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+
+    <wps:Input>
+      <ows:Identifier>calvalus.l3.parameters</ows:Identifier>
+      <wps:Data>
+	<wps:ComplexData>
+	  <cal:parameters>
+	    <cal:compositingType>MOSAICKING</cal:compositingType>
+	    <cal:planetaryGrid>org.esa.beam.binning.support.PlateCarreeGrid</cal:planetaryGrid>
+	    <cal:numRows>64800</cal:numRows>
+	    <cal:superSampling>1</cal:superSampling>
+	    <cal:maskExpr>!l1_flags.INVALID</cal:maskExpr>
+	    <cal:aggregators>
+	      <cal:aggregator>
+		<cal:type>MIN_MAX</cal:type>
+		<cal:varName>ndvi</cal:varName>
+	      </cal:aggregator>
+	      <cal:aggregator>
+		<cal:type>AVG</cal:type>
+		<cal:varName>evi2</cal:varName>
+	      </cal:aggregator>
+	      <cal:aggregator>
+		<cal:type>PERCENTILE</cal:type>
+		<cal:percentage>50</cal:percentage>
+		<cal:varName>msavi</cal:varName>
+	      </cal:aggregator>
+	      <cal:aggregator>
+		<cal:type>AVG</cal:type>
+		<cal:varName>tep4</cal:varName>
+	      </cal:aggregator>
+	      <cal:aggregator>
+		<cal:type>AVG</cal:type>
+		<cal:varName>tep5</cal:varName>
+	      </cal:aggregator>
+	      <cal:aggregator>
+		<cal:type>AVG</cal:type>
+		<cal:varName>tep6</cal:varName>
+	      </cal:aggregator>
+	    </cal:aggregators>
+	  </cal:parameters>
+	</wps:ComplexData>
+      </wps:Data>
+    </wps:Input>
+
+    <wps:Input>
+      <ows:Identifier>calvalus.output.format</ows:Identifier>
+      <wps:Data>
+	<wps:LiteralData>NetCDF4</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+
+    <wps:Input>
+      <ows:Identifier>calvalus.system.beam.pixelGeoCoding.useTiling</ows:Identifier>
+      <wps:Data>
+	<wps:LiteralData>true</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>calvalus.hadoop.mapreduce.job.queuename</ows:Identifier>
+      <wps:Data>
+	<wps:LiteralData>high</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+    <wps:Input>
+      <ows:Identifier>calvalus.hadoop.mapreduce.map.maxattempts</ows:Identifier>
+      <wps:Data>
+	<wps:LiteralData>2</wps:LiteralData>
+      </wps:Data>
+    </wps:Input>
+  </wps:DataInputs>
+  <wps:ResponseForm>
+    <wps:ResponseDocument storeExecuteResponse="true" status="true">
+      <wps:Output>
+	<ows:Identifier>productionResults</ows:Identifier>
+      </wps:Output>
+    </wps:ResponseDocument>
+  </wps:ResponseForm>
+</wps:Execute>

@@ -1,0 +1,1485 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wps:ProcessDescriptions service="WPS" version="1.0.0"
+                         xml:lang="en"
+                         xmlns:bc="http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd"
+                         xmlns:ows="http://www.opengis.net/ows/1.1"
+                         xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                         xmlns:wps="http://www.opengis.net/wps/1.0.0"
+                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+  <wps:ProcessDescription storeSupported="true" statusSupported="true" wps:processVersion="5.0">
+    <ows:Identifier>beam-bin~5.0~pconvert</ows:Identifier>
+    <ows:Title>beam-bin~5.0~pconvert</ows:Title>
+    <ows:Abstract>
+      &lt;p&gt;Performs image conversion.&lt;/p&gt;
+    </ows:Abstract>
+    <wps:DataInputs>
+      <wps:Input>
+	<ows:Identifier>productionName</ows:Identifier>
+	<ows:Title>Production name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>processorParameters</ows:Identifier>
+	<ows:Title>Processor parameters</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>-f png -p meris-l1b-tristimulus.rgb</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>inputDataSetName</ows:Identifier>
+	<ows:Title>Input data set name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">MERIS RRG r03 L1b 2002-2012</wps:Range>
+	    <wps:Range xsi:type="xs:string">MERIS FSG v2013 L1b 2002-2012</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>minDate</ows:Identifier>
+	<ows:Title>Date from</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>maxDate</ows:Identifier>
+	<ows:Title>Date to</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>periodLength</ows:Identifier>
+	<ows:Title>Period length</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>regionWkt</ows:Identifier>
+	<ows:Title>Region WKT</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.l3.parameters</ows:Identifier>
+	<wps:ComplexData>
+	  <wps:Default>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.output.format</ows:Identifier>
+	<ows:Title>Calvalus output format</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">NetCDF</wps:Range>
+	    <wps:Range xsi:type="xs:string">BEAM-DIMAP</wps:Range>
+	    <wps:Range xsi:type="xs:string">GeoTIFF</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+    </wps:DataInputs>
+    <wps:ProcessOutputs>
+      <wps:Output>
+	<ows:Identifier>productionResults</ows:Identifier>
+	<ows:Title>URL to the production result(s)</ows:Title>
+	<wps:ComplexOutput>
+	  <wps:Default>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexOutput>
+      </wps:Output>
+    </wps:ProcessOutputs>
+  </wps:ProcessDescription>
+  <wps:ProcessDescription storeSupported="true" statusSupported="true" wps:processVersion="1.1">
+    <ows:Identifier>beam-buildin~1.0~BandMaths</ows:Identifier>
+    <ows:Title>beam-buildin~1.0~BandMaths</ows:Title>
+    <ows:Abstract>
+    &lt;p&gt;This band maths operator can be used to create a product with multiple bands 
+based on mathematical expression. All products specified as source must have the same 
+width and height, otherwise the operator will fail. The geo-coding information and metadata 
+for the target product is taken from the first source product.&lt;p&gt;</ows:Abstract>
+    <wps:DataInputs>
+      <wps:Input>
+	<ows:Identifier>productionName</ows:Identifier>
+	<ows:Title>Production name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>processorParameters</ows:Identifier>
+	<ows:Title>Processor parameters</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>
+
+            &lt;parameters&gt;
+            &lt;targetBands&gt;
+            &lt;targetBand&gt;
+            &lt;name&gt;somename&lt;/name&gt;
+            &lt;type&gt;float32&lt;/type&gt;
+            &lt;expression&gt;param1&lt;/expression&gt;
+            &lt;description&gt;use param1, param2, param3, param4 for subsequent Level 3 aggregation&lt;/description&gt;
+            &lt;unit&gt;none&lt;/unit&gt;
+            &lt;validExpression&gt;somebooleanexpression&lt;/validExpression&gt;
+            &lt;noDataValue&gt;somevalue&lt;/noDataValue&gt;
+            &lt;spectralBandIndex&gt;somenumber&lt;/spectralBandIndex&gt;
+            &lt;spectralWavelength&gt;somenumber&lt;/spectralWavelength&gt;
+            &lt;spectralBandwidth&gt;somenumber&lt;/spectralBandwidth&gt;
+            &lt;/targetBand&gt;
+            &lt;/targetBands&gt;
+            &lt;variables&gt;
+            &lt;variable&gt;
+            &lt;name&gt;somevarname&lt;/name&gt;
+            &lt;type&gt;float32&lt;/type&gt;
+            &lt;value&gt;somevalue&lt;/value&gt;
+            &lt;/variable&gt;
+            &lt;/variables&gt;
+            &lt;/parameters&gt;
+	  </DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>inputDataSetName</ows:Identifier>
+	<ows:Title>Input data set name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues/>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>minDate</ows:Identifier>
+	<ows:Title>Date from</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>maxDate</ows:Identifier>
+	<ows:Title>Date to</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>periodLength</ows:Identifier>
+	<ows:Title>Period length</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>regionWkt</ows:Identifier>
+	<ows:Title>Region WKT</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.l3.parameters</ows:Identifier>
+	<wps:ComplexData>
+	  <wps:Default>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.output.format</ows:Identifier>
+	<ows:Title>Calvalus output format</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">NetCDF</wps:Range>
+	    <wps:Range xsi:type="xs:string">BEAM-DIMAP</wps:Range>
+	    <wps:Range xsi:type="xs:string">GeoTIFF</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+    </wps:DataInputs>
+    <wps:ProcessOutputs>
+      <wps:Output>
+	<ows:Identifier>productionResults</ows:Identifier>
+	<ows:Title>URL to the production result(s)</ows:Title>
+	<wps:ComplexOutput>
+	  <wps:Default>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexOutput>
+      </wps:Output>
+    </wps:ProcessOutputs>
+  </wps:ProcessDescription>
+  <wps:ProcessDescription storeSupported="true" statusSupported="true" wps:processVersion="1.0">
+    <ows:Identifier>beam-buildin~1.0~urban-tep-indices</ows:Identifier>
+    <ows:Title>beam-buildin~1.0~urban-tep-indices</ows:Title>
+    <ows:Abstract/>
+    <wps:DataInputs>
+      <wps:Input>
+	<ows:Identifier>productionName</ows:Identifier>
+	<ows:Title>Production name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>inputDataSetName</ows:Identifier>
+	<ows:Title>Input data set name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">LC CCI Surface Reflectance 7d of MERIS FR v2.0</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>minDate</ows:Identifier>
+	<ows:Title>Date from</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>maxDate</ows:Identifier>
+	<ows:Title>Date to</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>periodLength</ows:Identifier>
+	<ows:Title>Period length</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>regionWkt</ows:Identifier>
+	<ows:Title>Region WKT</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.l3.parameters</ows:Identifier>
+	<wps:ComplexData>
+	  <wps:Default>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.output.format</ows:Identifier>
+	<ows:Title>Calvalus output format</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">NetCDF</wps:Range>
+	    <wps:Range xsi:type="xs:string">BEAM-DIMAP</wps:Range>
+	    <wps:Range xsi:type="xs:string">GeoTIFF</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+    </wps:DataInputs>
+    <wps:ProcessOutputs>
+      <wps:Output>
+	<ows:Identifier>productionResults</ows:Identifier>
+	<ows:Title>URL to the production result(s)</ows:Title>
+	<wps:ComplexOutput>
+	  <wps:Default>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexOutput>
+      </wps:Output>
+    </wps:ProcessOutputs>
+  </wps:ProcessDescription>
+  <wps:ProcessDescription storeSupported="true" statusSupported="true" wps:processVersion="1.0">
+    <ows:Identifier>beam-buildin~1.0~urban-tep-indices-meris-l1b</ows:Identifier>
+    <ows:Title>beam-buildin~1.0~urban-tep-indices-meris-l1b</ows:Title>
+    <ows:Abstract/>
+    <wps:DataInputs>
+      <wps:Input>
+	<ows:Identifier>productionName</ows:Identifier>
+	<ows:Title>Production name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>inputDataSetName</ows:Identifier>
+	<ows:Title>Input data set name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">MERIS RRG r03 L1b 2002-2012</wps:Range>
+	    <wps:Range xsi:type="xs:string">MERIS FSG v2013 L1b 2002-2012</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>minDate</ows:Identifier>
+	<ows:Title>Date from</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>maxDate</ows:Identifier>
+	<ows:Title>Date to</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>periodLength</ows:Identifier>
+	<ows:Title>Period length</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>regionWkt</ows:Identifier>
+	<ows:Title>Region WKT</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.l3.parameters</ows:Identifier>
+	<wps:ComplexData>
+	  <wps:Default>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.output.format</ows:Identifier>
+	<ows:Title>Calvalus output format</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">NetCDF</wps:Range>
+	    <wps:Range xsi:type="xs:string">BEAM-DIMAP</wps:Range>
+	    <wps:Range xsi:type="xs:string">GeoTIFF</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+    </wps:DataInputs>
+    <wps:ProcessOutputs>
+      <wps:Output>
+	<ows:Identifier>productionResults</ows:Identifier>
+	<ows:Title>URL to the production result(s)</ows:Title>
+	<wps:ComplexOutput>
+	  <wps:Default>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexOutput>
+      </wps:Output>
+    </wps:ProcessOutputs>
+  </wps:ProcessDescription>
+  <wps:ProcessDescription storeSupported="true" statusSupported="true" wps:processVersion="1.8.4-SNAPSHOT">
+    <ows:Identifier>coastcolour-processing~1.8.4-SNAPSHOT~CoastColour.L1P</ows:Identifier>
+    <ows:Title>coastcolour-processing~1.8.4-SNAPSHOT~CoastColour.L1P</ows:Title>
+    <ows:Abstract>
+
+      &lt;p&gt;This processor performs the &lt;strong&gt;L1P&lt;/strong&gt; processing steps. The editable processor parameters are:&lt;br&gt;
+      &lt;ul&gt;
+      &lt;li&gt;doCalibration: Whether to apply correction from MERIS 2nd to 3rd reprocessing quality.&lt;br&gt;
+      Values: [true/false]. Default value: false&lt;/li&gt;
+      &lt;li&gt;doSmile: Whether to perform MERIS Smile-effect correction.&lt;br&gt;
+      Values: [true/false]. Default value: true&lt;/li&gt;
+      &lt;li&gt;doEqualization: Whether to perform removal of detector-to-detector systematic radiometric differences in MERIS L1b data products.&lt;br&gt;
+      Values: [true/false]. Default value: true&lt;/li&gt;
+      &lt;li&gt; Pixel Classification parameters (detection of e.g. clouds, land, and improved coastline):
+      &lt;ul&gt;
+      &lt;li&gt;ccCloudBufferWidth: The width of a cloud 'safety buffer' around a pixel which was classified as cloudy, [0,100]. Default value: 2&lt;/li&gt;
+      &lt;li&gt;ccCloudScreeningAmbiguous: Threshold of Cloud Probability Feature Value above which cloud is regarded as still ambiguous (i.e. a higher value results in fewer ambiguous clouds). Default value: 1.4&lt;/li&gt;
+      &lt;li&gt;ccCloudScreeningSure: Threshold of Cloud Probability Feature Value above which cloud is regarded as sure (i.e. a higher value results in fewer sure clouds). Default value: 1.8&lt;/li&gt;
+      &lt;li&gt;ccGlintCloudThresholdAddition: Value added to cloud screening ambiguous/sure thresholds in case of glint. Default value: 0.1&lt;/li&gt;
+      &lt;li&gt;ccOutputCloudProbabilityFeatureValue: Whether to write Cloud Probability Feature Value to the CC L1P target product.&lt;br&gt;
+      Values: [true/false]. Default value: false&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;b&gt;The output bands are:&lt;/b&gt;
+      &lt;ul&gt;
+      &lt;li&gt;radiance_&amp;lt;#&amp;gt; - Corrected radiance of all 15 MERIS bands.&lt;/li&gt;
+      &lt;li&gt;detector_index - MERIS L1b detector index.&lt;/li&gt;
+      &lt;li&gt;l1_flags - Level 1b classification and quality flags.&lt;/li&gt;
+      &lt;li&gt;l1p_flags - CoastColour L1P pixel classification.&lt;/li&gt;
+      &lt;/ul&gt;
+      Processor input: MERIS L1b products (RR, FR, FRS, RRG, FRG, FSG) as N1&lt;br&gt;
+      Processor output: MERIS L1P products in the selected format (NetCDF, GeoTIFF, or BEAM-DIMAP)
+      &lt;/p&gt;
+
+      &lt;p&gt;CHANGES to previous version (1.8.3):
+      &lt;ul&gt;
+      &lt;li&gt;
+      Added option 'ccGlintCloudThresholdAddition': Value added to cloud screening ambiguous/sure thresholds in case of glint.
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/p&gt;
+
+      &lt;p&gt;This version was provided by O.Danne.&lt;/p&gt;
+
+    </ows:Abstract>
+    <wps:DataInputs>
+      <wps:Input>
+	<ows:Identifier>productionName</ows:Identifier>
+	<ows:Title>Production name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>doCalibration</ows:Identifier>
+	<ows:Title>Applies correction from MERIS 2nd to 3rd reprocessing quality</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>false</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>doSmile</ows:Identifier>
+	<ows:Title>Whether to perform MERIS Smile-effect correction</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>true</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>doEqualization</ows:Identifier>
+	<ows:Title>Perform removal of detector-to-detector systematic radiometric differences in MERIS L1b
+        data products
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>true</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccIgnoreSeaIceClimatology</ows:Identifier>
+	<ows:Title>Whether to check for sea/lake ice also outside Sea Ice Climatology area</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>false</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccCloudBufferWidth</ows:Identifier>
+	<ows:Title>The width of a cloud 'safety buffer' around a pixel which was classified as cloudy,
+        [0,100]
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>2</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccCloudScreeningAmbiguous</ows:Identifier>
+	<ows:Title>Threshold of Cloud Probability Feature Value above which cloud is regarded as still
+        ambiguous (i.e. a higher value results in fewer ambiguous clouds)
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>1.4</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccCloudScreeningSure</ows:Identifier>
+	<ows:Title>Threshold of Cloud Probability Feature Value above which cloud is regarded as sure
+        (i.e. a higher value results in fewer sure clouds)
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>1.8</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccGlintCloudThresholdAddition</ows:Identifier>
+	<ows:Title>Value added to cloud screening ambiguous/sure thresholds in case of glint
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>0.1</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccOutputCloudProbabilityFeatureValue</ows:Identifier>
+	<ows:Title>Write Cloud Probability Feature Value to the CC L1P target product</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>false</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>inputDataSetName</ows:Identifier>
+	<ows:Title>Input data set name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">MERIS RRG r03 L1b 2002-2012</wps:Range>
+	    <wps:Range xsi:type="xs:string">MERIS FSG v2013 L1b 2002-2012</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>minDate</ows:Identifier>
+	<ows:Title>Date from</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>maxDate</ows:Identifier>
+	<ows:Title>Date to</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>periodLength</ows:Identifier>
+	<ows:Title>Period length</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>regionWkt</ows:Identifier>
+	<ows:Title>Region WKT</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.l3.parameters</ows:Identifier>
+	<wps:ComplexData>
+	  <wps:Default>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.output.format</ows:Identifier>
+	<ows:Title>Calvalus output format</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">NetCDF</wps:Range>
+	    <wps:Range xsi:type="xs:string">BEAM-DIMAP</wps:Range>
+	    <wps:Range xsi:type="xs:string">GeoTIFF</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+    </wps:DataInputs>
+    <wps:ProcessOutputs>
+      <wps:Output>
+	<ows:Identifier>productionResults</ows:Identifier>
+	<ows:Title>URL to the production result(s)</ows:Title>
+	<wps:ComplexOutput>
+	  <wps:Default>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexOutput>
+      </wps:Output>
+    </wps:ProcessOutputs>
+  </wps:ProcessDescription>
+  <wps:ProcessDescription storeSupported="true" statusSupported="true" wps:processVersion="1.8.4-SNAPSHOT">
+    <ows:Identifier>coastcolour-processing~1.8.4-SNAPSHOT~CoastColour.L1P.Icol</ows:Identifier>
+    <ows:Title>coastcolour-processing~1.8.4-SNAPSHOT~CoastColour.L1P.Icol</ows:Title>
+    <ows:Abstract>
+
+      &lt;p&gt;
+      The ICOL (Improved Contrast between Ocean and Land) processor enables adjacency correction of MERIS data at the radiance level.&lt;br&gt;
+      Processor input: MERIS L1b products (RR, FR, FRS, RRG, FRG, FSG)&lt;br&gt;
+      Processor output: MERIS L1P products in the selected format (NetCDF, GeoTIFF, or BEAM-DIMAP)&lt;br&gt;
+      &lt;b&gt;Do not apply this processor to MERIS L1B unless the input region is small. Use the L1P processor first, then apply L2R to the output set, then apply L2W.&lt;/b&gt;
+      &lt;/p&gt;
+
+      &lt;p&gt;CHANGES to previous version (1.8.3):
+      &lt;ul&gt;
+      &lt;li&gt;
+      Added option 'ccGlintCloudThresholdAddition': Value added to cloud screening ambiguous/sure thresholds in case of glint.
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/p&gt;
+
+      &lt;p&gt;This version was provided by O.Danne.&lt;/p&gt;
+
+    </ows:Abstract>
+    <wps:DataInputs>
+      <wps:Input>
+	<ows:Identifier>productionName</ows:Identifier>
+	<ows:Title>Production name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>doCalibration</ows:Identifier>
+	<ows:Title>Applies correction from MERIS 2nd to 3rd reprocessing quality</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>false</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>doSmile</ows:Identifier>
+	<ows:Title>Whether to perform MERIS Smile-effect correction</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>true</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>doEqualization</ows:Identifier>
+	<ows:Title>Perform removal of detector-to-detector systematic radiometric differences in MERIS L1b
+        data products
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>true</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccIgnoreSeaIceClimatology</ows:Identifier>
+	<ows:Title>Whether to check for sea/lake ice also outside Sea Ice Climatology area</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>false</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccCloudBufferWidth</ows:Identifier>
+	<ows:Title>The width of a cloud 'safety buffer' around a pixel which was classified as cloudy,
+        [0,100]
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>2</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccCloudScreeningAmbiguous</ows:Identifier>
+	<ows:Title>Threshold of Cloud Probability Feature Value above which cloud is regarded as still
+        ambiguous (i.e. a higher value results in fewer ambiguous clouds)
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>1.4</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccCloudScreeningSure</ows:Identifier>
+	<ows:Title>Threshold of Cloud Probability Feature Value above which cloud is regarded as sure
+        (i.e. a higher value results in fewer sure clouds)
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>1.8</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccGlintCloudThresholdAddition</ows:Identifier>
+	<ows:Title>Value added to cloud screening ambiguous/sure thresholds in case of glint
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>0.1</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccOutputCloudProbabilityFeatureValue</ows:Identifier>
+	<ows:Title>Write Cloud Probability Feature Value to the CC L1P target product</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>false</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>inputDataSetName</ows:Identifier>
+	<ows:Title>Input data set name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">MERIS RRG r03 L1b 2002-2012</wps:Range>
+	    <wps:Range xsi:type="xs:string">MERIS FSG v2013 L1b 2002-2012</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>minDate</ows:Identifier>
+	<ows:Title>Date from</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>maxDate</ows:Identifier>
+	<ows:Title>Date to</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>periodLength</ows:Identifier>
+	<ows:Title>Period length</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>regionWkt</ows:Identifier>
+	<ows:Title>Region WKT</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.l3.parameters</ows:Identifier>
+	<wps:ComplexData>
+	  <wps:Default>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.output.format</ows:Identifier>
+	<ows:Title>Calvalus output format</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">NetCDF</wps:Range>
+	    <wps:Range xsi:type="xs:string">BEAM-DIMAP</wps:Range>
+	    <wps:Range xsi:type="xs:string">GeoTIFF</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+    </wps:DataInputs>
+    <wps:ProcessOutputs>
+      <wps:Output>
+	<ows:Identifier>productionResults</ows:Identifier>
+	<ows:Title>URL to the production result(s)</ows:Title>
+	<wps:ComplexOutput>
+	  <wps:Default>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexOutput>
+      </wps:Output>
+    </wps:ProcessOutputs>
+  </wps:ProcessDescription>
+  <wps:ProcessDescription storeSupported="true" statusSupported="true" wps:processVersion="1.8.4-SNAPSHOT">
+    <ows:Identifier>coastcolour-processing~1.8.4-SNAPSHOT~CoastColour.L2R</ows:Identifier>
+    <ows:Title>coastcolour-processing~1.8.4-SNAPSHOT~CoastColour.L2R</ows:Title>
+    <ows:Abstract>
+
+      &lt;p&gt;This processor performs an atmospheric correction based on a Neural Network approach.&lt;br&gt;
+      Note that the processing steps of the L1P processor are implicitly included if processing starts from a MERIS L1b product. Please refer to  the   corresponding L1P processor parameters.
+      &lt;p&gt;&lt;strong&gt;L2R processing parameters&lt;/strong&gt;&lt;/p&gt;
+      &lt;ul&gt;
+      &lt;li&gt;useSnTMap: By default a climatology map is used. If set to 'false' the specified average values are used for the whole scene.&lt;br&gt;
+      Values: [true/false]. Default value: &lt;em&gt;true&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;averageSalinity: If no climatology is used, the average salinity [PSU] of the water in the region to be processed is taken. Default value: &lt;em&gt;35&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;averageTemperature: If no climatology is used, the average temperature [C] of the water in the region to be processed is taken. Default value: &lt;em&gt;15&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;useExtremeCaseMode: Whether to use aspecial set of NNs to finally derive water IOPs in extreme ranges&lt;br&gt;
+      Values: [true/false]. Default value: &lt;em&gt;true&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;landExpression: The arithmetic expression used for land masking. Default value:&lt;em&gt; l1p_flags.CC_LAND&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;cloudIceExpression: The arithmetic expression used for cloud/ice masking. Default value: &lt;em&gt;(l1p_flags.CC_CLOUD and not l1p_flags.CC_CLOUD_AMBIGUOUS) || l1p_flags.CC_SNOW_ICE&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;outputL2RToa: Writes the Top of Atmosphere reflectances to the CC L2R target product.&lt;br&gt;Values: [true/false]. Default value: &lt;em&gt;true&lt;/em&gt; &lt;/li&gt;
+      &lt;li&gt;outputL2RReflecAs: Select if water leaving reflectances shall be written as radiances or irradiances. The irradiances ( = radiances multiplied by PI) are compatible with the standard MERIS product.&lt;br&gt;
+      Default value: &lt;em&gt;RADIANCE_REFLECTANCES&lt;/em&gt; &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;b&gt;The output bands are:&lt;/b&gt;
+      &lt;ul&gt;
+      &lt;li&gt;reflec_&amp;lt;#&amp;gt; - Water leaving radiance reflectance, where &amp;lt;#&amp;gt is one of 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12 and 13.&lt;/li&gt;
+      &lt;li&gt;norm_refl_&amp;lt;#&amp;gt; - Normalised water leaving radiance reflectance, where &amp;lt;#&amp;gt is one of 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12 and 13.&lt;/li&gt;
+      &lt;li&gt;atm_tau_&amp;lt;λ&amp;gt; - Spectral aerosol optical depth at &amp;lt;λ&amp;gt;, where &amp;lt;λ&amp;gt; is one of 550, 778 and 865.&lt;/li&gt;
+      &lt;li&gt;ang_443_865 - Aerosol Angstrom coefficient at spectral wavelength 865.&lt;/li&gt;
+      &lt;li&gt;detector_index - MERIS L1B detector index.&lt;/li&gt;
+      &lt;li&gt;altitude - DEM altitude.&lt;/li&gt;
+      &lt;li&gt;l1_flags - Level 1b classification and quality flags.&lt;/li&gt;
+      &lt;li&gt;l1p_flags - CoastColour L1P pixel classification.&lt;/li&gt;
+      &lt;li&gt;l2r_flags - CoastColour L2R atmospheric correction quality flags.&lt;/li&gt;
+      &lt;/ul&gt;
+      Processor input: MERIS L1b and CoastColour L1P products &lt;br&gt;
+      Processor output: CoastColour L2R products in the selected format (NetCDF, GeoTIFF, or BEAM-DIMAP)
+      &lt;/p&gt;
+
+      &lt;p&gt;CHANGES to previous version (1.8.3):
+      &lt;ul&gt;
+      &lt;li&gt;
+      Added option 'ccGlintCloudThresholdAddition': Value added to cloud screening ambiguous/sure thresholds in case of glint.
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/p&gt;
+
+      &lt;p&gt;This version was provided by O.Danne.&lt;/p&gt;
+    </ows:Abstract>
+    <wps:DataInputs>
+      <wps:Input>
+	<ows:Identifier>productionName</ows:Identifier>
+	<ows:Title>Production name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>doCalibration</ows:Identifier>
+	<ows:Title>Applies correction from MERIS 2nd to 3rd reprocessing quality.</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>false</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>doSmile</ows:Identifier>
+	<ows:Title>Whether to perform MERIS Smile-effect correction</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>true</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>doEqualization</ows:Identifier>
+	<ows:Title>Perform removal of detector-to-detector systematic radiometric differences in MERIS L1b
+        data products
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>true</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccIgnoreSeaIceClimatology</ows:Identifier>
+	<ows:Title>Whether to check for sea/lake ice also outside Sea Ice Climatology area</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>false</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccCloudBufferWidth</ows:Identifier>
+	<ows:Title>The width of a cloud 'safety buffer' around a pixel which was classified as cloudy,
+        [0,100]
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>2</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccCloudScreeningAmbiguous</ows:Identifier>
+	<ows:Title>Threshold of Cloud Probability Feature Value above which cloud is regarded as still
+        ambiguous (i.e. a higher value results in fewer ambiguous clouds)
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>1.4</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccCloudScreeningSure</ows:Identifier>
+	<ows:Title>Threshold of Cloud Probability Feature Value above which cloud is regarded as sure
+        (i.e. a higher value results in fewer sure clouds)
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>1.8</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccGlintCloudThresholdAddition</ows:Identifier>
+	<ows:Title>Value added to cloud screening ambiguous/sure thresholds in case of glint
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>0.1</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>useSnTMap</ows:Identifier>
+	<ows:Title>By default a climatology map is used. If set to 'false' the specified average values
+        are used for the whole scene
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>true</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>averageSalinity</ows:Identifier>
+	<ows:Title>If no climatology is used, the average salinity [PSU] of the water in the region to be
+        processed is taken
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>35</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>averageTemperature</ows:Identifier>
+	<ows:Title>If no climatology is used, the average temperature [C] of the water in the region to be
+        processed is taken
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>15</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>useExtremeCaseMode</ows:Identifier>
+	<ows:Title>If set, a neural network for maximum range of concentrations and IOPs is used.
+        Otherwise a neural net with limited ranges but less noisy for low concentration ranges is used.
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>true</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>landExpression</ows:Identifier>
+	<ows:Title>The arithmetic expression used for land masking</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>l1p_flags.CC_LAND</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>cloudIceExpression</ows:Identifier>
+	<ows:Title>The arithmetic expression used for cloud/ice masking</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>(l1p_flags.CC_CLOUD and not l1p_flags.CC_CLOUD_AMBIGUOUS) || l1p_flags.CC_SNOW_ICE
+	  </DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>outputL2RToa</ows:Identifier>
+	<ows:Title>Writes the Top of Atmosphere reflectances to the CC L2R target product</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>false</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>outputL2RReflecAs</ows:Identifier>
+	<ows:Title>Select if water leaving reflectances shall be written as radiances or irradiances. The
+        irradiances ( = radiances multiplied by PI) are compatible with the standard MERIS product.
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>stringArray</ows:DataType>
+	  <DefaultValue>RADIANCE_REFLECTANCES</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>inputDataSetName</ows:Identifier>
+	<ows:Title>Input data set name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">MERIS RRG r03 L1b 2002-2012</wps:Range>
+	    <wps:Range xsi:type="xs:string">MERIS FSG v2013 L1b 2002-2012</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>minDate</ows:Identifier>
+	<ows:Title>Date from</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>maxDate</ows:Identifier>
+	<ows:Title>Date to</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>periodLength</ows:Identifier>
+	<ows:Title>Period length</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>regionWkt</ows:Identifier>
+	<ows:Title>Region WKT</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.l3.parameters</ows:Identifier>
+	<wps:ComplexData>
+	  <wps:Default>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.output.format</ows:Identifier>
+	<ows:Title>Calvalus output format</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">NetCDF</wps:Range>
+	    <wps:Range xsi:type="xs:string">BEAM-DIMAP</wps:Range>
+	    <wps:Range xsi:type="xs:string">GeoTIFF</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+    </wps:DataInputs>
+    <wps:ProcessOutputs>
+      <wps:Output>
+	<ows:Identifier>productionResults</ows:Identifier>
+	<ows:Title>URL to the production result(s)</ows:Title>
+	<wps:ComplexOutput>
+	  <wps:Default>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexOutput>
+      </wps:Output>
+    </wps:ProcessOutputs>
+  </wps:ProcessDescription>
+  <wps:ProcessDescription storeSupported="true" statusSupported="true" wps:processVersion="1.8.4-SNAPSHOT">
+    <ows:Identifier>coastcolour-processing~1.8.4-SNAPSHOT~CoastColour.L2W</ows:Identifier>
+    <ows:Title>coastcolour-processing~1.8.4-SNAPSHOT~CoastColour.L2W</ows:Title>
+    <ows:Abstract>
+
+      &lt;p&gt;
+      This processor computes water constituents and IOPs optimized for coastal zones.&lt;br&gt;
+      Important notes:
+      &lt;ul&gt;
+      &lt;li&gt;If the processing starts from a MERIS L1b product, both processing steps of the L1P &lt;strong&gt;and&lt;/strong&gt; L2R processors are implicitly included. Please refer to the corresponding L1P and L2R processor parameters.&lt;/li&gt;
+      &lt;li&gt;If the processing starts from a L1P product, the processing steps of the L2R processors are implicitly included. Please refer to the corresponding L2R processor parameters.&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;&lt;strong&gt;L2W processing parameters&lt;/strong&gt;&lt;/p&gt;
+      &lt;ul&gt;
+      &lt;li&gt;invalidPixelExpression: Expression defining pixels not considered for L2W processing.&lt;br&gt;
+      Default value: &lt;em&gt;l2r_flags.INPUT_INVALID&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;outputReflec: Whether to write the water leaving reflectance to the CC L2W target product.&lt;br&gt;
+      Values: [true/false]. Default value: &lt;em&gt;false&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;outputL2WReflecAs: Select if water leaving reflectances shall be written as radiances or irradiances. The irradiances ( = radiances multiplied by PI) are compatible with the standard MERIS product.&lt;br&gt;
+      Values: [RADIANCE_REFLECTANCES/IRRADIANCE_REFLECTANCES]. Default value: &lt;em&gt;RADIANCE_REFLECTANCES&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;outputKdSpectrum: Whether to write the output of downwelling irradiance attenuation coefficients (Kd) to the CC L2W target product. If disabled, only Kd_490 is added to the output. &lt;br&gt;
+      Values: [true/false]. Default value: false&lt;/li&gt;
+      &lt;li&gt;outputAOT550: Whether to write the Atmosphere optical thickness at 550 nm to the CC L2W target product.&lt;br&gt;
+      Values: [true/false]. Default value: false&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;&lt;b&gt;Output bands:&lt;/b&gt;
+      &lt;ul&gt;
+      &lt;li&gt;iop_a_total_443 - Total absorption coefficient of all water constituents at 443 nm.&lt;/li&gt;
+      &lt;li&gt;iop_a_ys_443 - Yellow substance absorption coefficient at 443 nm.&lt;/li&gt;
+      &lt;li&gt;iop_a_pig_443 - Pigment absorption coefficient at 443 nm.&lt;/li&gt;
+      &lt;li&gt;iop_bb_spm_443 - Backscattering of suspended particulate matter at 443 nm.&lt;/li&gt;
+      &lt;li&gt;iop_quality - Quality indicator for IOPs.&lt;/li&gt;
+      &lt;li&gt;conc_tsm - Total suspended matter dry weight concentration.&lt;/li&gt;
+      &lt;li&gt;conc_chl - Chlorophyll concentration.&lt;/li&gt;
+      &lt;li&gt;K_min - Minimum downwelling irradiance attenuation coefficient.&lt;/li&gt;
+      &lt;li&gt;Kd_&amp;lt;λ&amp;gt; - Downwelling irradiance attenuation coefficient at &amp;lt;λ&amp;gt;, where &amp;lt;λ&amp;gt; is one of 412, 443, 490, 510, 560, 620, 664 and 680&lt;/li&gt;
+      &lt;li&gt;atm_tau_550 - Atmosphere optical thickness at 550 nm.&lt;/li&gt;
+      &lt;li&gt;Z90_max - Maximum signal depth.&lt;/li&gt;
+      &lt;li&gt;turbidity - Turbidity in FNU (Formazine Nephelometric Unit).&lt;/li&gt;
+      &lt;li&gt;altitude - DEM altitude.&lt;/li&gt;
+      &lt;li&gt;l1_flags - Level 1b classification and quality flags.&lt;/li&gt;
+      &lt;li&gt;l1p_flags - CoastColour L1P pixel classification.&lt;/li&gt;
+      &lt;li&gt;l2r_flags - CoastColour L2R atmospheric correction quality flags.&lt;/li&gt;
+      &lt;li&gt;l2w_flags - CoastColour L2W water constituents and IOPs retrieval quality flags.&lt;/li&gt;
+      &lt;/ul&gt;
+      Processor input: MERIS L1b, CoastColour L1P, or CoastColour L2R products &lt;br&gt;
+      Processor output: CoastColour L2W products in the selected format (NetCDF, GeoTIFF, or BEAM-DIMAP)&lt;/p&gt;
+      &lt;/p&gt;
+
+      &lt;p&gt;CHANGES to previous version (1.8.3):
+      &lt;ul&gt;
+      &lt;li&gt;
+      Added option to write AOT (550 nm) to the L2W product.
+      &lt;/li&gt;
+      &lt;li&gt;
+      Added option 'ccGlintCloudThresholdAddition': Value added to cloud screening ambiguous/sure thresholds in case of glint.
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/p&gt;
+
+      &lt;p&gt;This version was provided by O.Danne.&lt;/p&gt;
+
+    </ows:Abstract>
+    <wps:DataInputs>
+      <wps:Input>
+	<ows:Identifier>productionName</ows:Identifier>
+	<ows:Title>Production name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>doCalibration</ows:Identifier>
+	<ows:Title>Applies correction from MERIS 2nd to 3rd reprocessing quality</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>false</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>doSmile</ows:Identifier>
+	<ows:Title>Whether to perform MERIS Smile-effect correction</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>true</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>doEqualization</ows:Identifier>
+	<ows:Title>Perform removal of detector-to-detector systematic radiometric differences in MERIS L1b
+        data products
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>true</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccIgnoreSeaIceClimatology</ows:Identifier>
+	<ows:Title>Whether to check for sea/lake ice also outside Sea Ice Climatology area</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>false</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccCloudBufferWidth</ows:Identifier>
+	<ows:Title>The width of a cloud 'safety buffer' around a pixel which was classified as cloudy,
+        [0,100]
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>2</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccCloudScreeningAmbiguous</ows:Identifier>
+	<ows:Title>Threshold of Cloud Probability Feature Value above which cloud is regarded as still
+        ambiguous (i.e. a higher value results in fewer ambiguous clouds)
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>1.4</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccCloudScreeningSure</ows:Identifier>
+	<ows:Title>Threshold of Cloud Probability Feature Value above which cloud is regarded as sure
+        (i.e. a higher value results in fewer sure clouds)
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>1.8</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>ccGlintCloudThresholdAddition</ows:Identifier>
+	<ows:Title>Value added to cloud screening ambiguous/sure thresholds in case of glint
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>0.1</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>useSnTMap</ows:Identifier>
+	<ows:Title>By default a climatology map is used. If set to 'false' the specified average values
+        are used for the whole scene
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>true</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>averageSalinity</ows:Identifier>
+	<ows:Title>If no climatology is used, the average salinity [PSU] of the water in the region to be
+        processed is taken
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>35</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>averageTemperature</ows:Identifier>
+	<ows:Title>If no climatology is used, the average temperature [C] of the water in the region to be
+        processed is taken
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>15</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>useExtremeCaseMode</ows:Identifier>
+	<ows:Title>If set, a neural network for maximum range of concentrations and IOPs is used.
+        Otherwise a neural net with limited ranges but less noisy for low concentration ranges is used.
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>true</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>landExpression</ows:Identifier>
+	<ows:Title>The arithmetic expression used for land masking</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>l1p_flags.CC_LAND</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>cloudIceExpression</ows:Identifier>
+	<ows:Title>The arithmetic expression used for cloud/ice masking</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>(l1p_flags.CC_CLOUD and not l1p_flags.CC_CLOUD_AMBIGUOUS) || l1p_flags.CC_SNOW_ICE
+	  </DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>invalidPixelExpression</ows:Identifier>
+	<ows:Title>Expression defining pixels not considered for L2W processing</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <DefaultValue>l2r_flags.INPUT_INVALID</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>outputReflec</ows:Identifier>
+	<ows:Title>Write the water leaving reflectance to the CC L2W target product</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>false</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>outputL2WReflecAs</ows:Identifier>
+	<ows:Title>Select if water leaving reflectances shall be written as radiances or irradiances. The
+        irradiances ( = radiances multiplied by PI) are compatible with the standard MERIS product.
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>stringArray</ows:DataType>
+	  <DefaultValue>RADIANCE_REFLECTANCES</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>outputKdSpectrum</ows:Identifier>
+	<ows:Title>Write the output of downwelling irradiance attenuation coefficients (Kd) to the CC L2W
+        target product. If disabled only Kd_490 is added to the output.
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>true</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>outputAOT550</ows:Identifier>
+	<ows:Title>Write AOT (550nm) to the CC L2W target product.
+	</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>boolean</ows:DataType>
+	  <DefaultValue>false</DefaultValue>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>inputDataSetName</ows:Identifier>
+	<ows:Title>Input data set name</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">MERIS RRG r03 L1b 2002-2012</wps:Range>
+	    <wps:Range xsi:type="xs:string">MERIS FSG v2013 L1b 2002-2012</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>minDate</ows:Identifier>
+	<ows:Title>Date from</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>maxDate</ows:Identifier>
+	<ows:Title>Date to</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>periodLength</ows:Identifier>
+	<ows:Title>Period length</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>regionWkt</ows:Identifier>
+	<ows:Title>Region WKT</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	</wps:LiteralData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.l3.parameters</ows:Identifier>
+	<wps:ComplexData>
+	  <wps:Default>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <Schema>http://www.brockmann-consult.de/calwps/calwpsL3Parameters-schema.xsd</Schema>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexData>
+      </wps:Input>
+      <wps:Input>
+	<ows:Identifier>calvalus.output.format</ows:Identifier>
+	<ows:Title>Calvalus output format</ows:Title>
+	<wps:LiteralData>
+	  <ows:DataType>string</ows:DataType>
+	  <ows:AllowedValues>
+	    <wps:Range xsi:type="xs:string">NetCDF</wps:Range>
+	    <wps:Range xsi:type="xs:string">BEAM-DIMAP</wps:Range>
+	    <wps:Range xsi:type="xs:string">GeoTIFF</wps:Range>
+	  </ows:AllowedValues>
+	</wps:LiteralData>
+      </wps:Input>
+    </wps:DataInputs>
+    <wps:ProcessOutputs>
+      <wps:Output>
+	<ows:Identifier>productionResults</ows:Identifier>
+	<ows:Title>URL to the production result(s)</ows:Title>
+	<wps:ComplexOutput>
+	  <wps:Default>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Default>
+	  <wps:Supported>
+	    <wps:Format>
+	      <ows:MimeType>binary</ows:MimeType>
+	    </wps:Format>
+	  </wps:Supported>
+	</wps:ComplexOutput>
+      </wps:Output>
+    </wps:ProcessOutputs>
+  </wps:ProcessDescription>
+</wps:ProcessDescriptions>
