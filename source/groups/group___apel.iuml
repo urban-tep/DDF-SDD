@@ -1,7 +1,6 @@
 @startuml
 folder "Apel" [[../groups/group___apel.html]] {
 	!include group___apel_server.iuml
-	!include group___apel_accounting.iuml
 	!include group___apel_reporting.iuml
 }
 @enduml

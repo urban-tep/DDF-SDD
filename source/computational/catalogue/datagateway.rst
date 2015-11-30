@@ -11,13 +11,13 @@ Data Gateway
   !include source/groups/datagateway.iuml
 
 
-Data Gateway purpose
---------------------
-
 .. req:: TS-FUN-100
   :show:
 
-  Data Gateway purpose
+  The data gateway mechanism is fully described in this section
+
+
+
 
 
 
