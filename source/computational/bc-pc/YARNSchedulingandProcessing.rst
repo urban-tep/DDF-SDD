@@ -73,4 +73,3 @@ Requirements for the design of BC YARN scheduling and processing component
   :show:
 
   (Processing statistics) The Scheduling and Processing maintains a history of jobs accessible for Urban TEP Processing and Ingestion Control for the purpose of reporting.
-

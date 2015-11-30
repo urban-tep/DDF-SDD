@@ -144,20 +144,24 @@ Requirements for the design of BC processing gateway/WPS
   (Authentication) A portal user belonging to the group *urbantep* is registered in the BC LDAP and authorized to use the WPS.
 
 .. req:: TS-ICD-210
+  :show:
 
-  The BC implementation of the WPS supports OGC WPS version 1.0 with functions GetCapabilities, DescribeProcess, Execute, and in addition GetStatus.
+  (GC Web Processing Service Interface) The BC implementation of the WPS supports OGC WPS version 1.0 with functions GetCapabilities, DescribeProcess, Execute, and in addition GetStatus.
 
-.( GC Web Processing Service Interface) . req:: TS-ICD-220 Result Access Interface
+.. req:: TS-ICD-220 Result Access Interface
+  :show:
 
   The Processing Request Gateway/WPS provides the result datasets stored in the staging area of Online Data Access via its HTTP(S) interface.
 
 .. req:: TS-ICD-230
+  :show:
 
-  The Processing Request Gateway/WPS provides a HTTP interface for the upload of processor bundles by well-known users.
+  (Processor and Reference Data Upload Interface) The Processing Request Gateway/WPS provides a HTTP interface for the upload of processor bundles by well-known users.
 
-.( rocessor and Reference Data Upload Interface) . req:: TS-ICD-310 OGC Web Processing Service	
+.. req:: TS-ICD-310 	
+  :show:
 
-  The BC implementation of the WPS supports OGC WPS version 1.0 with functions GetCapabilities, DescribeProcess, Execute, and in addition GetStatus.
+  (OGC Web Processing Service) The BC implementation of the WPS supports OGC WPS version 1.0 with functions GetCapabilities, DescribeProcess, Execute, and in addition GetStatus.
 
 .. req:: TS-FUN-671
   :show:

@@ -1,0 +1,3 @@
+@startuml
+	[Data Gateway] as datagateway [[datagateway.html]]
+@enduml

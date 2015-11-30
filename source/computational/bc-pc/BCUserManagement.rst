@@ -66,3 +66,4 @@ Requirements for the design of BC user management
 
   The Processing Request Gateway/WPS shall expose standard OGC WPS 1.0 interface with functions GetCapabilities, DescribeProcess, Execute, and GetStatus.
 
+

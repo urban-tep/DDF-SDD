@@ -91,7 +91,7 @@ Requirements for the design of BC Urban TEP Operating
 .. req:: TS-ICD-240
   :show:
 
-  (Email Interface) The Urban TEP Processing Centre Operating shall expose an email interface to:
+  (Email Interface) The Urban TEP Processing Centre Operating shall expose an email interface
 
 .. req:: TS-ICD-250
   :show:

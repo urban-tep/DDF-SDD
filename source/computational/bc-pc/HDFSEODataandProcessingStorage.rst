@@ -39,8 +39,8 @@ Computational service and functions
 
 The computational service of this component is that of a file system, i.e. the data storage in files, organisation in directories, the provision of access control rules, and the functions of reading files and writing files. The service is provided by two types of processes:
 
- * a namenode Unix process on the master serving the file system structure and data organisation
- * the datanode Unix processes on all nodes concurrently serving the file contents
+ * a namenode Unix process on the master node serving the file system structure and data organisation
+ * the datanode Unix processes on all cluster nodes concurrently serving the file contents
 
 Interfaces and interface items
 ------------------------------

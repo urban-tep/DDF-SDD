@@ -1,0 +1,3 @@
+@startuml
+	[Elasticsearch] as elasticsearch [[../computational/catalogue/elasticsearch.html]]
+@enduml
