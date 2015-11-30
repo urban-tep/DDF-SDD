@@ -42,22 +42,28 @@ Requirements
 
 
 .. req:: TS-ICD-210 OGC Web Processing Service Interface
+  :show:
 
   The Processing Request Gateway/WPS shall expose standard OGC WPS 1.0 interface with functions GetCapabilities, DescribeProcess, Execute, and GetStatus.
 
 .. req:: TS-ICD-220 Result Access Interface
+  :show:
 
   The Processing Request Gateway/WPS shall expose an HTTP(S) interface to access the processing results, as shown in Figure 4 1. The Online data access/FTP shall expose an (S)FTP interface to the same data. 
 
 .. req:: TS-ICD-230 Processor and Reference Data Upload Interface
+  :show:
 
   The Processing Request Gateway/WPS or the Online data access/FTP shall expose an HTTP(S) or (S)FTP interface to upload custom processors or reference data.
 
 .. req:: TS-ICD-250 Processor and Data Exchange Interface
+  :show:
 
   The Online data access/FTP shall expose an (S)FTP interface to exchange data and processors between processing centres.
 
 .. req:: TS-ICD-310 OGC Web Processing Service	
+  :show:
 
   The Processing Request Gateway/WPS shall expose standard OGC WPS 1.0 interface with functions GetCapabilities, DescribeProcess, Execute, and GetStatus.
+
 

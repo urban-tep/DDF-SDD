@@ -168,7 +168,7 @@ def process_req_nodes(app, doctree, fromdocname):
 
             # Create a reference
             newnode = nodes.reference('', '')
-            pprint(req_info['section_name'])
+            pprint(req_info['reqid'])
             innernode = nodes.emphasis(req_info['section_name'],req_info['section_name'])
             newnode['refdocname'] = req_info['docname']
             newnode['refuri'] = app.builder.get_relative_uri(

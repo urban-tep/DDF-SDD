@@ -89,22 +89,28 @@ Requirements
 
 
 .. req:: TS-ICD-240 Email Interface
+  :show:
 
   The Urban TEP Processing Centre Operating shall expose an email interface to:
 
 .. req:: TS-ICD-250 Processor and Data Exchange Interface
+  :show:
 
   The Online data access/FTP shall expose an (S)FTP interface to exchange data and processors between processing centres.
 
 .. req:: TS-ICD-350 Resource utilization reporting interface
+  :show:
 
   The processing centre shall send resource utilization reports to the Urban TEP Portal centralized APEL accounting interface.
 
 .. req:: TS-ICD-080 Accounting collection API	
+  :show:
 
   Urban TEP portal shall expose an accounting interface based on APEL technology to record usage of the internal or third party resource provid-ers.
 
 .. req:: TS-ICD-090 OGC Web Services Context Document (OWS Context)
+  :show:
+
   TEP Urban system shall exchange metadata internally and with remote third party systems using the OWS Context conceptual model in its extent.
   This specification shall be applicable to:
   - Dataset / Product / Series / Collection / Data Packages
@@ -118,5 +124,8 @@ Requirements
   In annex A, there is a catalogue entry example that is OWS context compliant document describing 1 entry with many options.
  	 	 
 .. req:: TS-ICD-140 Issue Tracking web widget	
+  :show:
 
-  rban TEP platform geobrowser shall integrate quick helper to submit issues or requests to the operation team. This shall create a new ticket in the support system hosted by Terradue. The follow up of the issue shall be done on this latter third party system.	 
+  Urban TEP platform geobrowser shall integrate quick helper to submit issues or requests to the operation team. This shall create a new ticket in the support system hosted by Terradue. The follow up of the issue shall be done on this latter third party system.	 
+
+  

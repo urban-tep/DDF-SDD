@@ -51,14 +51,18 @@ Requirements
   The Urban TEP Config and Processor Repo shall store all processors and processor versions used for Urban TEP in this Processing Centre as well as all system configurations, like user, queue resources, online data access quotas, and systematic workflows.
 
 .. req:: TS-ICD-350 Resource utilization reporting interface
+  :show:
 
   The processing centre shall send resource utilization reports to the Urban TEP Portal centralized APEL accounting interface.
 
 .. req:: TS-ICD-080 Accounting collection API	
+  :show:
 
   Urban TEP portal shall expose an accounting interface based on APEL technology to record usage of the internal or third party resource provid-ers.
 
 .. req:: TS-ICD-090 OGC Web Services Context Document (OWS Context)
+  :show:
+
   TEP Urban system shall exchange metadata internally and with remote third party systems using the OWS Context conceptual model in its extent.
   This specification shall be applicable to:
   - Dataset / Product / Series / Collection / Data Packages

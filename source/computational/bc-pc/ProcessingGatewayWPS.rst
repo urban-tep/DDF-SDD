@@ -144,18 +144,22 @@ Requirements
   A portal user belonging to the group *urbantep* is registered in the BC LDAP and authorized to use the WPS.
 
 .. req:: TS-ICD-210 OGC Web Processing Service Interface
+  :show:
 
   The BC implementation of the WPS supports OGC WPS version 1.0 with functions GetCapabilities, DescribeProcess, Execute, and in addition GetStatus.
 
 .. req:: TS-ICD-220 Result Access Interface
+  :show:
 
   The Processing Request Gateway/WPS provides the result datasets stored in the staging area of Online Data Access via its HTTP(S) interface.
 
 .. req:: TS-ICD-230 Processor and Reference Data Upload Interface
+  :show:
 
   The Processing Request Gateway/WPS provides a HTTP interface for the upload of processor bundles by well-known users.
 
 .. req:: TS-ICD-310 OGC Web Processing Service	
+  :show:
 
   The BC implementation of the WPS supports OGC WPS version 1.0 with functions GetCapabilities, DescribeProcess, Execute, and in addition GetStatus.
 

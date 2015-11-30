@@ -69,10 +69,10 @@ Requirements
   :show:
 
   The EO Data and Processing Storage shall store non-EO data like:
-•	Temporal statistics data
-•	Global Human Settlements Data
-•	Urban extents
-•	Imperviousness/urban greenness layer
-•	Settlements properties and pattern
-•	Urban areas definition in multiple options
+  •	Temporal statistics data
+  •	Global Human Settlements Data
+  •	Urban extents
+  •	Imperviousness/urban greenness layer
+  •	Settlements properties and pattern
+  •	Urban areas definition in multiple options
 
