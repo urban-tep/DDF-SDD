@@ -161,7 +161,9 @@ def process_req_nodes(app, doctree, fromdocname):
         tbody = nodes.tbody()
         tgroup += tbody
 
-        for req_info in env.req_all_reqs:
+        sorted_req = sorted(env.req_all_reqs, key=lambda req: req['reqid'])
+
+        for req_info in sorted_req:
 
             refpara = nodes.paragraph()
             refpara += nodes.Text("","")
