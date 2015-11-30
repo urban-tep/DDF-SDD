@@ -6,74 +6,75 @@ BC online data access component
 Implementation software and configuration
 -----------------------------------------
 
+The Online Data Access component is a shared BC component hosted on two machines, a disk array for the storage and an FTP front end in the external network running vsfptd and openssh. ZFS is used as file system of the disk array. 
+
+The configuration specific for Urban TEP comprises:
+
+ * a volume on the file system as staging area
+ * a configuration of certain users to allow (S)FTP, in particular for exchange between processing centres
+
 State representation and persistent data
 ----------------------------------------
+
+The persistent data of this component is the file system content:
+
+ * a directory ``/data/urbantep/staging/<user>/`` per user
+
+The staging area is also mounted into the Apache Tomcat server for serving processing results via HTTP(S).
 
 Computational service and functions
 -----------------------------------
 
+The computational service of this component is that of a file system, i.e. the data storage in files, organisation in directories, the provision of access control rules, and the functions of reading files and writing files. The access is provided by the ZFS processes and an NFS server internally, and vsftpd and sshd externally.
+
 Interfaces and interface items
 ------------------------------
 
-...
+The interfaces are:
 
-Requirements
-------------
+ * NFS for internal access by Processing Gateway/WPS
+ * SCP/SFTP for internal access by Ingestion and Proessing Control
+ * FTP/SFTP by other processing centres and by dedicated users
 
-.. req:: TS-FUN-630 
+Requirements for the design of BC online data access component
+--------------------------------------------------------------
+
+.. req:: TS-FUN-630
   :show:
 
-  Dataset exchange
+  (Dataset exchange) The Online Data Access/FTP provides an (S)FTP access for other Processing Centres (DLR, IT4I) for dataset exchange.
 
-  The Online Data Access/FTP from one Processing Centre shall exchange datasets from the other Processing Centres. 
-
-.. req:: TS-FUN-690 
+.. req:: TS-FUN-690
   :show:
 
-  Processing result provision
+  (Processing result provision) The Online Data Access hosts the staging area where the Processing Request Gateway/WPS places results for access by users via the gateway (HPPT(S)) or Online Data Access/FTP itself ((S)FTP).
 
-  The Processing Request Gateway/WPS or the Online Data Access/FTP shall provide the processing result to the users and the portal for online access. 
-
-.. req:: TS-FUN-720 
+.. req:: TS-FUN-720
   :show:
 
-  Reference data upload
+  (Reference data upload) The FTP access also allows upload of reference data by users. The Operator ingests this data into HDFS after verification.
 
-  The Processing Request Gateway/WPS may allow users to upload reference data for validation purpose.
-
-.. req:: TS-FUN-740 
+.. req:: TS-FUN-740
   :show:
 
-  Software upload
+  (Software upload) The FTP access also allows upload of processor implementations by well-known users. The Operator deploys processors after verification.
 
-  The processing centres shall support the upload of custom processors by well-known users. As baseline the external user sends the agreed algorithm code to the Urban TEP Processing Centre Operating and they validate and make it available for processing in Urban TEP Config and Processor Repo.
-
-.. req:: TS-SEC-610 
+.. req:: TS-SEC-610
   :show:
 
-  Authentication
-  Processing Centre User Management shall accept a dedicated portal user for authentication.
+  (Authentication) The Online Data Access/FTP uses the BC User Management to authenticate users. Among them is the Urban TEP Portal user.
 
 .. req:: TS-ICD-220
   :show:
 
-  Result Access Interface
+  (Result Access Interface) Processing results provided to users via HTTP(S) by the Processing Request Gateway/WPS are hosted in the staging area of the Online Data Access component.
 
-  The Processing Request Gateway/WPS shall expose an HTTP(S) interface to access the processing results, as shown in Figure 4 1. The Online data access/FTP shall expose an (S)FTP interface to the same data. 
-
-.. req:: TS-ICD-230 
+.. req:: TS-ICD-230
   :show:
 
-  Processor and Reference Data Upload Interface
+  (Processor and Reference Data Upload Interface) The FTP access also allows upload of reference data and/or processor implementations by well-known users. The Operator deploys processors and ingests reference data after verification.
 
-  The Processing Request Gateway/WPS or the Online data access/FTP shall expose an HTTP(S) or (S)FTP interface to upload custom processors or reference data.
-
-.. req:: TS-ICD-250 
+.. req:: TS-ICD-250
   :show:
 
-  Processor and Data Exchange Interface
-
-  The Online data access/FTP shall expose an (S)FTP interface to exchange data and processors between processing centres.
-
-
-
+  (Processor and Data Exchange Interface) The Online Data Access/FTP provides an (S)FTP access for other Processing Centres (DLR, IT4I) for dataset exchange and processor software exchange.

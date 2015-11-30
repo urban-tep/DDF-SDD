@@ -10,6 +10,7 @@
   !include source/groups/group___r_w_p_s.iuml
   !include source/groups/group___open_search.iuml
   !include source/groups/group___s_q_l_connector.iuml
+  !include source/groups/group___apel_accounting.iuml
 
   folder "Portal" [[../computational/portal/index.html]] {
     !include source/groups/group___t2_a_p_i.iuml
@@ -37,4 +38,13 @@
   !include source/groups/group___core.iuml
   !include source/groups/group___apel.iuml
   !include source/groups/group_relations.iuml
+
+  folder "Apel" {
+      database "Accounting Storage" as AAS [[accounting/storage.html]]
+      group___apel_server -down- AAS
+  }
+
+  hide group___elastic_cas
+  hide group___geosquare_a_p_i
+
 

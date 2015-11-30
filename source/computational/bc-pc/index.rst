@@ -6,7 +6,7 @@ BC processing centre components
 The Urban TEP subsystem of the BC processing centre consists of several functional components and interfaces. They are designed in this section of the design document. The following figure shows the decomposition into components and the subsystem-external interfaces. Each component will be described by its implementation software, its configuration, its persistent data, its functions, and the interface items it exchanges with other components of the processing centre, other subsystems of the Urban TEP, or external elements.
 
 .. figure:: bc-processing-centre-with-external-interfaces.png
-   :scale: 50
+   :scale: 65
    :align: center
 
    *BC processing centre decomposition with Calvalus cluster, other shared components, and Urban TEP-specific components*

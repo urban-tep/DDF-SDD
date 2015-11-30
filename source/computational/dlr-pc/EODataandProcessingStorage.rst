@@ -6,7 +6,11 @@ BC HDFS EO data and processing storage
 Implementation software and configuration
 -----------------------------------------
 
-The HDFS EO Data and Processing Storage component is based on Apache Hadoop 2.7.1 and Calvalus 2.7. It is deployed on the BC Calvalus infrastructure with 90 nodes, two redundant master nodes, and to I/O nodes in an internal protected network. It is accessible from the Processing Gateway/WPS virtual machine and the Ingestion and Processing Control virtual machine. HDFS is a file system. Calvalus defines certain structures within this file system.
+The EO Data and Processing Storage component is based on Apache Hadoop (Calvalus Cluster) and centralized NFS datashare (Geofarm Cluster).
+It is deployed on the DLR Calvalus infrastructure with 28 nodes, master node, and I/O node as a distributed hdfs Filesystem and to the 
+It can push data to the Processing Gateway/WPS on request (pull request via XMPP and data transfer via http push or ftp push) 
+
+For the TEP Urban 
 
 The configuration specific for Urban TEP comprises:
 
