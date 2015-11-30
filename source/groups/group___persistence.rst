@@ -20,7 +20,7 @@ Interfaces
 
 
 
-Classes
+Objects
 ^^^^^^^
 - :ref:`class_terradue_1_1_portal_1_1_entity_table_attribute`
 - :ref:`class_terradue_1_1_portal_1_1_entity_relationship_table_attribute`

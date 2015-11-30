@@ -1,0 +1,3 @@
+@startuml
+	[ElasticCas] as group___elastic_cas [[../groups/group___elastic_cas.html]]
+@enduml

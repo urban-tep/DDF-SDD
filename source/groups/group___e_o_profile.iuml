@@ -1,0 +1,3 @@
+@startuml
+	[Earth Observation Metadata profile] as group___e_o_profile [[../groups/group___e_o_profile.html]]
+@enduml

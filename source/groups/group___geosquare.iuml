@@ -1,0 +1,6 @@
+@startuml
+folder "Geosquare" [[../groups/group___geosquare.html]] {
+	!include group___geosquare_a_p_i.iuml
+	!include group___elastic_cas.iuml
+}
+@enduml

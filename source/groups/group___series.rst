@@ -27,7 +27,7 @@ Interfaces
 
 
 
-Classes
+Objects
 ^^^^^^^
 - :ref:`class_terradue_1_1_portal_1_1_series`
 

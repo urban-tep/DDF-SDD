@@ -100,7 +100,7 @@ Dependencies
 
 
 
-Classes
+Objects
 ^^^^^^^
 - :ref:`class_terradue_1_1_tep_1_1_controller_1_1_collection`
 - :ref:`class_terradue_1_1_tep_1_1_controller_1_1_data_package`
