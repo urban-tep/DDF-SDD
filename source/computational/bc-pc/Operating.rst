@@ -3,19 +3,54 @@
 BC Urban TEP Operating
 ======================
 
-Implementation software and configuration
------------------------------------------
+Personnell
+----------
 
-State representation and persistent data
-----------------------------------------
+The Urban TEP BC processing centre will be managed by the Calvalus operator with some Urban TEP-specific activities. 
 
-Computational service and functions
------------------------------------
+ * An email account urbantep@brockmann-consult.de serves as communication endpoint.
+ * The BC processing centre has an account in the Urban TEP portal issue tracking system.
+
+Information persistence
+-----------------------
+
+Operators exchange information that is kept persistent:
+
+ * The issue tracking keeps track of all communication activities regarding the BC processing centre. 
+ * The record of emails keeps track of bilateral communication.
+ * For private infomation a wiki document within the BC wiki (Confluence) is maintained. If necessary specific operational procedures inside the BC processing centre are documented here.
+
+Service and functions
+---------------------
+
+Activities of the Operator comprise:
+
+ * monitoring of ingestion
+ * communication with data providers, configuration for new ingestion sources (new datasets, different extent, different time interval)
+ * monitoring of processing, analysis of failures
+ * support of users in case of issues assigned to the BC processing centre
+ * support of well-known users for the integration and upload of processors (and reference datasets if necessary)
+ * communication with the Portal Operating and with Operating of the other processing centres, exchange of datasets and processors
+ * initiation and configuration for bulk processing in case of the systematic generation of a new product in the Urban TEP
+ * initiation of reporting, verification of reports
+ * data management, initiation of cleanup of old results
 
 Interfaces and interface items
 ------------------------------
 
-...
+The external interfaces provided or used by Operating are:
+
+ * The Operating provides an email interface
+ * The Operating uses the issue tracking interface of the Portal
+ * The Operating uses the online data access interfaces of other proessing centres (to exchange datasets or processors)
+
+The internal interfaces within the BC processing centre used by Operating are:
+
+ * The scripting and configuration interfaces of the Ingestion and Processing Control
+ * HDFS and NFS interfaces of the HDFS EO Data and Processing Storage for data management, installation of processors, change of access rights
+ * Versioning interface of Configuration and Processor Repository
+ * NFS interface of Online Data Access for user support, exchange with other processing centres, and data management of the staging area
+ * Monitoring and control interfaces, log files etc. of all components
 
 Requirements for the design of BC Urban TEP Operating
 -----------------------------------------------------
@@ -23,75 +58,63 @@ Requirements for the design of BC Urban TEP Operating
 .. req:: TS-FUN-750
   :show:
 
-  (Custom algorithm upload support) Urban TEP Processing Centre Operating shall support the implementation of custom algorithms. 
+  (Custom algorithm upload support) Urban TEP Processing Centre Operating provides support for the integration of user-provided processors on request via the Portal Issue Tracking system.
 
 .. req:: TS-FUN-760
   :show:
 
-  (Issue tracking) Urban TEP Processing Centre Operating shall make use of the portal Issue Tracker Interface and handle issues addressed to the Processing Centre.
+  (Issue tracking) Urban TEP Processing Centre Operating regularily handles issues assigned to the BC processing centre in the Portal Issue Tracking system.
 
 .. req:: TS-FUN-620
   :show:
 
-  (Data ingestion monitoring) The Urban TEP Processing and Ingestion Control shall provide the status of data ingestion to the Catalogue Entry Interface.
+  (Data ingestion monitoring) Operating initiates and monitors ingestion of datasets from data providers performed by the Urban TEP Processing and Ingestion Control.
 
 .. req:: TS-FUN-630
   :show:
 
-  (Dataset exchange) The Online Data Access/FTP from one Processing Centre shall exchange datasets from the other Processing Centres. 
+  (Dataset exchange) Operating performs the exchange of datasets and processors with the other Processing Centres. 
 
 
 .. req:: TS-FUN-670
   :show:
 
-  (Processing) The Scheduling and Processing shall perform the requested operation based on the specified configurations.
+  (Processing) Operating monitors processing.
 
 .. req:: TS-FUN-680
   :show:
 
-  (Deployment) Scheduling and Processing shall run Urban TEP processors provided in the Urban TEP Config & Processor Repo triggered by a request from the Processing Request Gateway/WPS. 
+  (Deployment) Operating maintains the versions of Urban TEP processors in the Urban TEP Config & Processor Repo and installs them on the Calvalus cluster. 
 
 .. req:: TS-FUN-690
   :show:
 
-  (Processing result provision) The Processing Request Gateway/WPS or the Online Data Access/FTP shall provide the processing result to the users and the portal for online access. 
+  (Processing result provision) Operating performs cleanup of results stored at Online Data Access/FTP for a certain time. Operating is also involved in the process of releasing a dataset as permanent (like an input or a reference dataset).
 
 .. req:: TS-FUN-710
   :show:
 
-  (Processing statistics) The Urban TEP Processing and Ingestion Control shall maintain a list of processing jobs performed with information on users and used resources, such as CPU hours, input data size, and storage capacity. This component shall report this information to the Reporting Interface of the portal.
+  (Processing statistics) Operating initiates and verifies the report generated with the Urban TEP Processing and Ingestion Control.
 
 .. req:: TS-FUN-720
   :show:
 
-  (Reference data upload) The Processing Request Gateway/WPS may allow users to upload reference data for validation purpose.
+  (Reference data upload) Operating supports reference data upload if the data is provided by FTP.
 
 .. req:: TS-FUN-740
   :show:
 
-  (Software upload) The processing centres shall support the upload of custom processors by well-known users. As baseline the external user sends the agreed algorithm code to the Urban TEP Processing Centre Operating and they validate and make it available for processing in Urban TEP Config and Processor Repo.
-
-.. req:: TS-FUN-770
-  :show:
-
-  (Processing in external cloud) Urban TEP project shall demonstrate the capability to migrate one of its processing workflows into an external cloud. The result dataset shall be made available in the portal.
+  (Software upload) Operating verifies user-provided processor bundles and installs them either in the user-specific area or for public use.
 
 .. req:: TS-RES-630
   :show:
 
-  (Subsystem configuration) The Urban TEP Config and Processor Repo shall store all processors and processor versions used for Urban TEP in this Processing Centre as well as all system configurations, like user, queue resources, online data access quotas, and systematic workflows.
-
-.. req:: TS-SEC-610
-  :show:
-
-  (Authentication) Processing Centre User Management shall accept a dedicated portal user for authentication.
-
-
+  (Subsystem configuration) Operating maintains the Urban TEP processors and processor versions, system configurations for queue resources, online data access space, and systematic workflows in the Configuration and Processor Repository.
 
 .. req:: TS-ICD-240
   :show:
 
-  (Email Interface) The Urban TEP Processing Centre Operating shall expose an email interface
+  (Email Interface) Operating has a dedicated email account urbantep@brockmann-consult.de .
 
 .. req:: TS-ICD-250
   :show:
@@ -101,29 +124,14 @@ Requirements for the design of BC Urban TEP Operating
 .. req:: TS-ICD-350
   :show:
 
-  (Resource utilization reporting interface) The processing centre shall send resource utilization reports to the Urban TEP Portal centralized APEL accounting interface.
-
-.. req:: TS-ICD-080
-  :show:
-
-  (Accounting collection API	) Urban TEP portal shall expose an accounting interface based on APEL technology to record usage of the internal or third party resource provid-ers.
+  (Resource utilization reporting interface) Operating initiates and verifies report generated by Ingestion and Processing Control.
 
 .. req:: TS-ICD-090
   :show:
 
-  (OGC Web Services Context Document (OWS Context)) TEP Urban system shall exchange metadata internally and with remote third party systems using the OWS Context conceptual model in its extent.
-  This specification shall be applicable to:
-  - Dataset / Product / Series / Collection / Data Packages
-  - Services (WPS)
-  - Job 
-  The system shall support the following mime-type for the representation at interface level:
-  - ATOM (RFC4287)
-  - GeoJson
-  - KML	 
-  The OGC OWS Context conceptual model is described in [OGC-12-80r2] and is fully specified for ATOM encoding in [OGC-12-84r2]. 
-  In annex A, there is a catalogue entry example that is OWS context compliant document describing 1 entry with many options.
+  The operator monitors - and initiates for bulk processing - the generation of catalogue entries by Ingestion and Processing Control.
  	 	 
 .. req:: TS-ICD-140
   :show:	
 
-  (Issue Tracking web widget) Urban TEP platform geobrowser shall integrate quick helper to submit issues or requests to the operation team. This shall create a new ticket in the support system hosted by Terradue. The follow up of the issue shall be done on this latter third party system.	 
+  (Issue Tracking web widget) Urban TEP Processing Centre Operating regularily handles issues assigned to the BC processing centre in the Portal Issue Tracking system. 

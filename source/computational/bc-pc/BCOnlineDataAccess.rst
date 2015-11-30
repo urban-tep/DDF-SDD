@@ -78,6 +78,3 @@ Requirements for the design of BC online data access component
   :show:
 
   (Processor and Data Exchange Interface) The Online Data Access/FTP provides an (S)FTP access for other Processing Centres (DLR, IT4I) for dataset exchange and processor software exchange.
-
-
-
