@@ -6,73 +6,105 @@ BC HDFS EO data and processing storage
 Implementation software and configuration
 -----------------------------------------
 
+The HDFS EO Data and Processing Storage component is based on Apache Hadoop 2.7.1 and Calvalus 2.7. It is deployed on the BC Calvalus infrastructure with 90 nodes, two redundant master nodes, and to I/O nodes in an internal protected network. It is accessible from the Processing Gateway/WPS virtual machine and the Ingestion and Processing Control virtual machine. HDFS is a file system. Calvalus defines certain structures within this file system.
+
+The configuration specific for Urban TEP comprises:
+
+ * access to certain EO datasets and to certain processor bundles for the group *urbantep*
+ * storage area for result sets, reference data, and uploaded processor bundles
+
 State representation and persistent data
 ----------------------------------------
+
+The persistent data of this component is the Hadoop configuration and the file system content. The configuration of Hadoop is not Urban TEP-specific. The file system structures relevant for Urban TEP are:
+
+ * directory ``/calvalus/eodata/MER_FSG_1P/v2013/`` of the MERIS full resolution geo-corrected input data
+ * directory ``/calvalus/eodata/Landsat8/v1/`` of Landsat8 L1 input data
+ * directory ``/calvalus/eodata/Sentinel2/v1/`` of Sentinel 2 input data
+ * file ``/calvalus/eodata/product-sets.csv`` with the master table of datasets
+ * directory ``/calvalus/software/1.0/urban-tep-1.0/`` an Urban TEP-specific processor bundle with index generation processors
+ * file ``/calvalus/software/1.0/urban-tep-1.0/bundle-descriptor.xml`` with the description of all processors made available by this bundle and their parameters
+ * directory ``/calvalus/software/1.0/...`` with other processor bundles for use in Urban TEP
+ * directory ``/calvalus/projects/urban-tep/`` as space for bulk production with the Ingestion and Processing Control component
+ * directory ``/calvalus/home/<user>/`` as space for results of on-demand processing
+ * directory ``/calvalus/home/<user>/point-data/`` as space for reference data
+ * directory ``/calvalus/home/<user>/software/`` as space for user-provided processor bundles
+
+Access to the shared EO data and the processor bundles is granted by corresponding ACLs for the directories. Access to the project and the user directories is granted by group and user ownerships.
+
+The directory structure information is in fact stored in a Hadoop database in the file system of the master. The file contents of the files is in fact organised in blocks stored in Unix file systems on volumes of the nodes.
 
 Computational service and functions
 -----------------------------------
 
+The computational service of this component is that of a file system, i.e. the data storage in files, organisation in directories, the provision of access control rules, and the functions of reading files and writing files. The service is provided by two types of processes:
+
+ * a namenode Unix process on the master serving the file system structure and data organisation
+ * the datanode Unix processes on all nodes concurrently serving the file contents
+
 Interfaces and interface items
 ------------------------------
 
-...
+There are two interfaces of the file system:
 
-Requirements
-------------
+ * the HDFS protocol providing direct concurrent access to namenode and datanodes via a set of functions and data streams. There is a Java API to this interface.
+ * an NFS protocol provided by a gateway service running on the I/O nodes of the cluster, providing a Posix-compliant interface
 
-.. req:: TS-FUN-610 Data ingestion
+In addition there is an operator interface:
+
+ * Web GUI of Hadoop for monitoring
+ * command line interface of Hadoop for monitoring and control
+
+Requirements for the design of BC HDFS EO data and processing storage
+---------------------------------------------------------------------
+
+.. req:: TS-FUN-610
   :show:
 
-  The Urban TEP Processing and Ingestion Control shall systematically harvest data from ESA Sentinel data hub, Landsat archives (ESA, Google, USGS) and MERIS archive (BC).
+  (Data ingestion) The Urban TEP Processing and Ingestion Control inserts newly retrieved Landsat and Sentinel 2 data into the file system using NFS (systematic ingestion) or HDFS (bulk ingestion). The MERIS dataset has also been ingested this way.
 
-.. req:: TS-FUN-611 Settlement mask processing input
+.. req:: TS-FUN-611
   :show:
 
-  The EO Data and Processing Storage shall make settlement mask data (GUF) available for processing.
+  (Settlement mask processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
 
-.. req:: TS-FUN-612 GSI input processing input
+.. req:: TS-FUN-612
   :show:
 
-  The EO Data and Processing Storage shall make GSI data available for processing.
+  (GSI input processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
 
-.. req:: TS-FUN-613 Population distribution processing input
+.. req:: TS-FUN-613
   :show:
 
-  The EO Data and Processing Storage shall make population distribution data (WorldPop) available for processing.
+  (Population distribution processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
 
-.. req:: TS-FUN-614 Administrative units processing input
+.. req:: TS-FUN-614
   :show:
 
-  The EO Data and Processing Storage shall make administrative units data (GADM) available for processing.
+  (Administrative units processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
 
-.. req:: TS-FUN-615 Socio-economic statistics processing input
+.. req:: TS-FUN-615
   :show:
 
-  The EO Data and Processing Storage shall make socio-economic statistics data (WBG) available for processing.
+  (Socio-economic statistics processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
 
-.. req:: TS-FUN-660 Subsetting processor
+.. req:: TS-FUN-660
   :show:
 
-  The Urban TEP Config and Processor Repo shall provide a processor for subsetting the GUF and GSI input dataset.
+  (Subsetting processor) Subsetting is provided as processor for the Urban TEP input datasets in the urban-tep-1.0 bundle. A function of the Sentinel Toolbox or BEAM is used for it.
 
-.. req:: TS-FUN-710 Processing statistics
+.. req:: TS-FUN-710
   :show:
 
-  The Urban TEP Processing and Ingestion Control shall maintain a list of processing jobs performed with information on users and used resources, such as CPU hours, input data size, and storage capacity. This component shall report this information to the Reporting Interface of the portal.
+  (Processing statistics) The used storage on HDFS is monitored regularily by Ingestion and Processing Control for the purpose of reporting.
 
-.. req:: TS-RES-610 Data storage for EO data
+.. req:: TS-RES-610
   :show:
 
-  The EO Data and Processing Storage shall store EO data.
+  (Data storage for EO data) EO data is stored on HDFS below directory /calvalus/eodata.
 
-.. req:: TS-RES-620 Data storage for non-EO data
+.. req:: TS-RES-620
   :show:
 
-  The EO Data and Processing Storage shall store non-EO data like:
-•	Temporal statistics data
-•	Global Human Settlements Data
-•	Urban extents
-•	Imperviousness/urban greenness layer
-•	Settlements properties and pattern
-•	Urban areas definition in multiple options
+  (Data storage for non-EO data) Urban TEP-specific non-EO data is stored on HDFS below directory /calvalus/projects/urbantep/ .
 

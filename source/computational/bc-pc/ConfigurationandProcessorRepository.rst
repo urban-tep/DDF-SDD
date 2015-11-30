@@ -17,36 +17,36 @@ Interfaces and interface items
 
 ...
 
-Requirements
-------------
+Requirements for the design of BC Urban TEP configuration and processor repository
+----------------------------------------------------------------------------------
 
-.. req:: TS-FUN-650 Process offerings
+.. req:: TS-FUN-650
   :show:
 
-  The Processing Request Gateway/WPS shall provide a set of processor offerings with parameters and input datasets of the Processing Centre. It shall accept requests with spatial and temporal selection. 
+  (Process offerings) The Processing Request Gateway/WPS shall provide a set of processor offerings with parameters and input datasets of the Processing Centre. It shall accept requests with spatial and temporal selection. 
 
-.. req:: TS-FUN-660 Subsetting processor
+.. req:: TS-FUN-660
   :show:
 
-  The Urban TEP Config and Processor Repo shall provide a processor for subsetting the GUF and GSI input dataset.
+  (Subsetting processor) The Urban TEP Config and Processor Repo shall provide a processor for subsetting the GUF and GSI input dataset.
 
-.. req:: TS-FUN-670 Processing
+.. req:: TS-FUN-670
   :show:
 
-  The Scheduling and Processing shall perform the requested operation based on the specified configurations.
+  (Processing) The Scheduling and Processing shall perform the requested operation based on the specified configurations.
 
-.. req:: TS-FUN-671 Temporal statistics/indices generator
+.. req:: TS-FUN-671
   :show:
 
-  The Urban TEP Config and Processor Repo shall provide a processor for generating the statistics (MIN, MAX, MEAN, etc.) and indices (NDBI, NDVI, ARVI, etc.).
+  (Temporal statistics/indices generator) The Urban TEP Config and Processor Repo shall provide a processor for generating the statistics (MIN, MAX, MEAN, etc.) and indices (NDBI, NDVI, ARVI, etc.).
 
-.. req:: TS-FUN-680 Deployment
+.. req:: TS-FUN-680
   :show:
 
-  Scheduling and Processing shall run Urban TEP processors provided in the Urban TEP Config & Processor Repo triggered by a request from the Processing Request Gateway/WPS. 
+  (Deployment) Scheduling and Processing shall run Urban TEP processors provided in the Urban TEP Config & Processor Repo triggered by a request from the Processing Request Gateway/WPS. 
 
-.. req:: TS-RES-630 Subsystem configuration
+.. req:: TS-RES-630
   :show:
 
-  The Urban TEP Config and Processor Repo shall store all processors and processor versions used for Urban TEP in this Processing Centre as well as all system configurations, like user, queue resources, online data access quotas, and systematic workflows.
+  (Subsystem configuration) The Urban TEP Config and Processor Repo shall store all processors and processor versions used for Urban TEP in this Processing Centre as well as all system configurations, like user, queue resources, online data access quotas, and systematic workflows.
 

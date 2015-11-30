@@ -17,49 +17,53 @@ Interfaces and interface items
 
 ...
 
-Requirements
-------------
+Requirements for the design of BC Processing and ingestion control
+------------------------------------------------------------------
 
-.. req:: TS-FUN-610 Data ingestion
+.. req:: TS-FUN-610
   :show:
 
-  The Urban TEP Processing and Ingestion Control shall systematically harvest data from ESA Sentinel data hub, Landsat archives (ESA, Google, USGS) and MERIS archive (BC).
+  (Data ingestion) The Urban TEP Processing and Ingestion Control shall systematically harvest data from ESA Sentinel data hub, Landsat archives (ESA, Google, USGS) and MERIS archive (BC).
 
-.. req:: TS-FUN-620 Data ingestion monitoring
+.. req:: TS-FUN-620
   :show:
 
-  The Urban TEP Processing and Ingestion Control shall provide the status of data ingestion to the Catalogue Entry Interface.
+  (Data ingestion monitoring) The Urban TEP Processing and Ingestion Control shall provide the status of data ingestion to the Catalogue Entry Interface.
 
-.. req:: TS-FUN-690 Processing result provision
+.. req:: TS-FUN-690
   :show:
 
-  The Processing Request Gateway/WPS or the Online Data Access/FTP shall provide the processing result to the users and the portal for online access. 
+  (Processing result provision) The Processing Request Gateway/WPS or the Online Data Access/FTP shall provide the processing result to the users and the portal for online access. 
 
-.. req:: TS-FUN-700 Catalogue entry
+.. req:: TS-FUN-700
   :show:
 
-  The Processing Request Gateway/WPS shall send the metadata of the resulting product(s) to the catalogue entry interface.
+  (Catalogue entry) The Processing Request Gateway/WPS shall send the metadata of the resulting product(s) to the catalogue entry interface.
 
-.. req:: TS-FUN-710 Processing statistics
+.. req:: TS-FUN-710
   :show:
 
-  The Urban TEP Processing and Ingestion Control shall maintain a list of processing jobs performed with information on users and used resources, such as CPU hours, input data size, and storage capacity. This component shall report this information to the Reporting Interface of the portal.
+  (Processing statistics) The Urban TEP Processing and Ingestion Control shall maintain a list of processing jobs performed with information on users and used resources, such as CPU hours, input data size, and storage capacity. This component shall report this information to the Reporting Interface of the portal.
 
-.. req:: TS-RES-630 Subsystem configuration
+.. req:: TS-RES-630
   :show:
 
-  The Urban TEP Config and Processor Repo shall store all processors and processor versions used for Urban TEP in this Processing Centre as well as all system configurations, like user, queue resources, online data access quotas, and systematic workflows.
+  (Subsystem configuration) The Urban TEP Config and Processor Repo shall store all processors and processor versions used for Urban TEP in this Processing Centre as well as all system configurations, like user, queue resources, online data access quotas, and systematic workflows.
 
-.. req:: TS-ICD-350 Resource utilization reporting interface
+.. req:: TS-ICD-350
+  :show:
 
-  The processing centre shall send resource utilization reports to the Urban TEP Portal centralized APEL accounting interface.
+  (Resource utilization reporting interface) The processing centre shall send resource utilization reports to the Urban TEP Portal centralized APEL accounting interface.
 
-.. req:: TS-ICD-080 Accounting collection API	
+.. req:: TS-ICD-080
+  :show:
 
-  Urban TEP portal shall expose an accounting interface based on APEL technology to record usage of the internal or third party resource provid-ers.
+  (Accounting collection API	) Urban TEP portal shall expose an accounting interface based on APEL technology to record usage of the internal or third party resource provid-ers.
 
-.. req:: TS-ICD-090 OGC Web Services Context Document (OWS Context)
-  TEP Urban system shall exchange metadata internally and with remote third party systems using the OWS Context conceptual model in its extent.
+.. req:: TS-ICD-090
+  :show:
+
+  (OGC Web Services Context Document (OWS Context)) TEP Urban system shall exchange metadata internally and with remote third party systems using the OWS Context conceptual model in its extent.
   This specification shall be applicable to:
   - Dataset / Product / Series / Collection / Data Packages
   - Services (WPS)
