@@ -1,15 +1,23 @@
-\usepackage{fancyhdr}
 \usepackage{graphicx}
-\usepackage[includeheadfoot,left=2cm,right=2cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[includeheadfoot,left=2cm,right=2cm,top=1cm,bottom=5cm]{geometry}
 \usepackage[ddmmyyyy]{datetime}
+\usepackage{tabularx}
+\usepackage{lastpage}
+
+\renewcommand{\familydefault}{\sfdefault}
 
 \renewcommand{\dateseparator}{--}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
 
 % Change the title page to look a bit better, and fit in with the fncychap
 % ``Bjarne'' style a bit better.
 %
 \renewcommand{\maketitle}{%
+
   \begin{titlepage}%
+    \pagestyle{title} 
     \let\footnotesize\small
     \let\footnoterule\relax
     \rule{\textwidth}{1pt}%
@@ -41,22 +49,28 @@
           & \begin{tabular}{l}\@author\end{tabular}  & \today \\
            & & \\
           Reviewed by & \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ & \\
-          & \begin{tabular}{l}\@reviewer\end{tabular}  & \today \\
+          & \begin{tabular}{l}Thomas Esch (DLR)\end{tabular}  & \today \\
            & & \\
           Approved by & \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ & \\
           & \begin{tabular}{l}\@approver\end{tabular}  & \_\_\_\_\_\_ \\
         \end{tabular}
         \par
       }%
-    \end{flushright}%\par
+      \vfill
     \vfill
-    \small ©  Restriction of Disclosure: All rights reserved. No part of this document may be reproduced, in any form or by any means, without permission in written form by TEP Urban Project Manager of the German Aerospace Center (DLR).
+    \end{flushright}%\par
+    
+    \small © Restriction of Disclosure: All rights reserved. No part of this document may be reproduced, in any form or by any means, without permission in written form by TEP Urban Project Manager of the German Aerospace Center (DLR).
+    \includegraphics{dlrcomplete.png} \hspace{6cm} \includegraphics{esa.png} 
   \end{titlepage}%
   \cleardoublepage%
   \setcounter{footnote}{0}%
   \let\thanks\relax\let\maketitle\relax
   %\gdef\@thanks{}\gdef\@author{}\gdef\@title{}
 }
+
+\setlength{\headheight}{0pt} 
+\setlength{\footskip}{60pt} 
 
 % Redefine the 'normal' header/footer style when using "fancyhdr" package:
 \@ifundefined{fancyhf}{}{
@@ -65,14 +79,17 @@
     \fancyhf{}
     \fancyfoot[L]{{\includegraphics{dlrcomplete.png}}}
     \fancyfoot[R]{{\includegraphics{esa.png}}}
-    \fancyhead[L]{{\py@HeaderFamily \includegraphics{logo-urban.png} }}
-    \fancyhead[R]{{\@title\\*\py@release}}
+    \fancyhead[L]{{\includegraphics{logo-urban.png} }}
+    \fancyhead[R]{{\rule[-2ex]{0pt}{2ex}\py@HeaderFamily
+    \begin{tabular}[b]{p{2cm}r}
+          ID & TEPUrban\_T2\_SDD-WP3\_1.0 \\
+          Issue & \py@release \\
+          Date & \today \\
+          Page & \thepage\ of \pageref{LastPage} 
+        \end{tabular}
+    }}
     \renewcommand{\headrulewidth}{0.4pt}
     \renewcommand{\footrulewidth}{0.4pt}
-    % define chaptermark with \@chappos when \@chappos is available for Japanese
-    \ifx\@chappos\undefined\else
-      \def\chaptermark##1{\markboth{\@chapapp\space\thechapter\space\@chappos\space ##1}{}}
-    \fi
   }
   % Update the plain style so we get the page number & footer line,
   % but not a chapter or section title.  This is to keep the first
@@ -81,15 +98,16 @@
     \fancyhf{}
     \fancyfoot[L]{{\includegraphics{dlrcomplete.png}}}
     \fancyfoot[R]{{\includegraphics{esa.png}}}
-    \renewcommand{\headrulewidth}{0pt}
-    \renewcommand{\footrulewidth}{0.4pt}
-  }
-
-  \fancypagestyle{title}{
-    \fancyhf{}
-    \fancyfoot[L]{{\includegraphics{dlrcomplete.png}}}
-    \fancyfoot[R]{{\includegraphics{esa.png}}}
-    \renewcommand{\headrulewidth}{0pt}
+    \fancyhead[L]{{\includegraphics{logo-urban.png} }}
+    \fancyhead[R]{{\rule[-2ex]{0pt}{2ex}\py@HeaderFamily
+    \begin{tabular}[b]{p{2cm}r}
+          ID & TEPUrban\_T2\_SDD-WP3\_1.0 \\
+          Issue & \py@release \\
+          Date & \today \\
+          Page & \thepage\ of \pageref{LastPage} 
+        \end{tabular}
+    }}
+    \renewcommand{\headrulewidth}{0.4pt}
     \renewcommand{\footrulewidth}{0.4pt}
   }
 }

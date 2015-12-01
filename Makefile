@@ -67,6 +67,8 @@ qthelp:
 
 latex:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
+	cp source/_templates/*.sty $(BUILDDIR)/latex
+	cp source/_static/* $(BUILDDIR)/latex
 	@echo
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
 	@echo "Run \`make all-pdf' or \`make all-ps' in that directory to" \
@@ -96,8 +98,3 @@ man:
 test:
 	mkdir $(REPORTDIR)
 	`which py.test` --tb=line -v --junitxml=$(REPORTDIR)/junit.xml check_sphinx.py
-
-pdf:
-	$(SPHINXBUILD) -b pdf $(ALLSPHINXOPTS) $(BUILDDIR)/pdf
-	@echo
-	@echo "Build finished. The PDF files are in $(BUILDDIR)/pdf."
