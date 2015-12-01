@@ -17,7 +17,7 @@ The Process sheduling, monitoring and implementation are run in their own secure
 State representation and persistent data
 ----------------------------------------
 
-The Processing Gateway and WPS forwards all requests to the Apache Mesos sheduler
+The Processing Gateway and WPS forwards all requests to the Apache Mesos sheduler. 
 
 
 Computational service and functions

@@ -3,6 +3,12 @@
 BC YARN scheduling and processing component
 ===========================================
 
+.. figure:: SchedulingModel.png
+   :scale: 120
+   :align: center
+
+   *YARN Scheduling and Processing component*
+
 Implementation software and configuration
 -----------------------------------------
 

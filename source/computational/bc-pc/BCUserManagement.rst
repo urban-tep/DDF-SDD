@@ -3,6 +3,12 @@
 BC user management
 ==================
 
+.. figure:: UserManagementModel.png
+   :scale: 100
+   :align: center
+
+   *User Management component*
+
 Implementation software and configuration
 -----------------------------------------
 
