@@ -1,4 +1,4 @@
-.. _bcpc_part1 :
+.. _dlrpc_part1 :
 
 DLR TEP Urban Operating
 =======================
@@ -6,34 +6,32 @@ DLR TEP Urban Operating
 Personnell
 ----------
 
-The Urban TEP BC processing centre will be managed by the Calvalus operator with some Urban TEP-specific activities. 
+The DLR TEP Urban processing centre will be managed by an operator with some Urban TEP-specific activities. 
 
- * An email account urbantep@brockmann-consult.de serves as communication endpoint.
- * The BC processing centre has an account in the Urban TEP portal issue tracking system.
+ * An email account serves as communication endpoint.
+ * The DlR processing centre monitors an account in the TEP Urban portal issue tracking system.
 
 Information persistence
 -----------------------
 
 Operators exchange information that is kept persistent:
 
- * The issue tracking keeps track of all communication activities regarding the BC processing centre. 
+ * The issue tracking keeps track of all communication activities regarding the DLR processing centre. 
  * The record of emails keeps track of bilateral communication.
- * For private infomation a wiki document within the BC wiki (Confluence) is maintained. If necessary specific operational procedures inside the BC processing centre are documented here.
 
 Service and functions
 ---------------------
 
 Activities of the Operator comprise:
 
- * monitoring of ingestion
+ * monitoring and configuration of systematic or one-time ingestion of data from external data providers using their interfaces
  * communication with data providers, configuration for new ingestion sources (new datasets, different extent, different time interval)
- * monitoring of processing, analysis of failures
- * support of users in case of issues assigned to the BC processing centre
- * support of well-known users for the integration and upload of processors (and reference datasets if necessary)
+ * monitoring of processing and delivery
+ * analysis of failures in production flow 
+ * support of users in questions partaining to the DLR Processing center 
+ * support vetted users in adapting their processors to DLR Processing center standards 
  * communication with the Portal Operating and with Operating of the other processing centres, exchange of datasets and processors
- * initiation and configuration for bulk processing in case of the systematic generation of a new product in the Urban TEP
- * initiation of reporting, verification of reports
- * data management, initiation of cleanup of old results
+ * generating and verification of usage reports
 
 Interfaces and interface items
 ------------------------------
@@ -42,15 +40,16 @@ The external interfaces provided or used by Operating are:
 
  * The Operating provides an email interface
  * The Operating uses the issue tracking interface of the Portal
- * The Operating uses the online data access interfaces of other proessing centres (to exchange datasets or processors)
+ * The Operating uses the online data access interfaces of the BC Processing center to exchange processors and/or replicate EO Data
 
-The internal interfaces within the BC processing centre used by Operating are:
+The internal interfaces within the DLR processing centre used by Operating are:
 
- * The scripting and configuration interfaces of the Ingestion and Processing Control
- * HDFS and NFS interfaces of the HDFS EO Data and Processing Storage for data management, installation of processors, change of access rights
- * Versioning interface of Configuration and Processor Repository
- * NFS interface of Online Data Access for user support, exchange with other processing centres, and data management of the staging area
- * Monitoring and control interfaces, log files etc. of all components
+ * Registering and maintaing necessary production users in DLR Infrastructure
+ * Control and Monitor production systems and all components
+ * Shell access to all relevant machines in the DLR Geofarm and DLR Calvalus
+ * Access to internal Dockerhub to version and deploy thematic processors
+ * Rights management on all TEP Urban relevant storage
+
 
 Requirements for the design of BC Urban TEP Operating
 -----------------------------------------------------
@@ -63,7 +62,7 @@ Requirements for the design of BC Urban TEP Operating
 .. req:: TS-FUN-760
   :show:
 
-  (Issue tracking) Urban TEP Processing Centre Operating regularily handles issues assigned to the BC processing centre in the Portal Issue Tracking system.
+  (Issue tracking) Urban TEP Processing Centre Operating regularily handles issues assigned to the DLR processing centre in the Portal Issue Tracking system.
 
 .. req:: TS-FUN-620
   :show:
@@ -104,7 +103,7 @@ Requirements for the design of BC Urban TEP Operating
 .. req:: TS-FUN-740
   :show:
 
-  (Software upload) Operating verifies user-provided processor bundles and installs them either in the user-specific area or for public use.
+  (Software upload) Operating verifies user-provided thematic processors and deploys them for public or private use.
 
 .. req:: TS-RES-630
   :show:
@@ -114,12 +113,7 @@ Requirements for the design of BC Urban TEP Operating
 .. req:: TS-ICD-240
   :show:
 
-  (Email Interface) Operating has a dedicated email account urbantep@brockmann-consult.de .
-
-.. req:: TS-ICD-250
-  :show:
-
-  (Processor and Data Exchange Interface) The Online data access/FTP shall expose an (S)FTP interface to exchange data and processors between processing centres.
+  (Email Interface) Operating has a dedicated email account TBD .
 
 .. req:: TS-ICD-350
   :show:
@@ -134,4 +128,11 @@ Requirements for the design of BC Urban TEP Operating
 .. req:: TS-ICD-140
   :show:	
 
-  (Issue Tracking web widget) Urban TEP Processing Centre Operating regularily handles issues assigned to the BC processing centre in the Portal Issue Tracking system. 
+  (Issue Tracking)  TEP Urban Processing Centre Operating regularily handles issues assigned to the DLR processing centre in the Portal Issue Tracking system. 
+  
+  .. req:: TS-FUN-610
+  :show:
+
+  (Data ingestion) Monitor and develop systematic and ondemand ingestion system from the ESA Sentinel data hub and ESA, Google and USGS for Landsat. 
+
+.. r

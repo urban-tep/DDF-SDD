@@ -3,6 +3,35 @@
 DLR Processing Center Computational Components
 ==============================================
 The TEP Urban subsystem of the DLR processing centre consists of several functional components and interfaces.
+This gives a quick overview while the they are explained in more detail in their sections
+
+ * to provide processing offerings, which involves
+     - the *Processing Gateway* with its WPS functions GetCapabilities and DescribeProcess
+     - the configured datasets and processors in *EO Data Storage* 
+ * to receive and handle processing requests from the portal , which involves
+     - the *Processing Gateway/WPS* with its functions Execute and GetStatus
+     - the * Apache Mesos Sheduling and Processing System* to run one or several jobs
+     - the supported thematic processors autodeployed to the Cores
+     - the input EO data available in *EO Data Storage*
+     - the storage of intermediates and outputs in *EO Data Storage*
+     - the pushing of results to the *Processing Gateway/WPS* for delivery via HTTPS or WMS
+     - the *Processing Gateway/WPS* to update the catalogue 
+  * to ingest input data
+     - the *Operator* to monitor on demand and mirroring ingestion
+     - the *Operator* for configuration and monitoring of systematic or one-time ingestion of data from external data providers using their interfaces
+ * to upload reference data
+     - the *Processing Gateway/WPS* with a REST-ful interface for reference data upload
+     - the *EO Data Storage* for storage of the reference data in TEEP Urban storage space
+ * to deploy thematic processors
+     - the *Apache Mesos Sheduling and Processing System* to deploy thematic processors to the Clusters
+      - optionally the *Operator* to verify and deploy trusted user processors
+ * to report on resource usage
+     - the *Apache Mesos Sheduling and Processing System* to generate the report for Urban TEP
+     - The *Operator* to verify and release the report
+
+
+
+
 The following figure shows the decomposition into its components and the subsystem-external interfaces. 
 
 
@@ -14,4 +43,5 @@ The following figure shows the decomposition into its components and the subsyst
    Processing Gateway/WPS <ProcessingGatewayWPS>
    Apache Mesos Sheduling and Processing System <MesosSchedulingandProcessing>
    EO Data Storage <EODataandProcessingStorage>
+   Operating <Operating>
 

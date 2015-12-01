@@ -16,7 +16,7 @@ This system ensures flexible and transparent management of a heterogeneous proce
 State representation and persistent data
 ----------------------------------------
 
-The persistent data of this component is a list of current and processed jobs.  
+The persistent data of this component is a list of current and processed jobs. It also accounts for the ressources spent on each job. 
 
 Computational service and functions
 -----------------------------------
@@ -70,3 +70,6 @@ Requirements for the design of DLR Mesos scheduling and processing component
   :show:
 
   (Processing statistics) The Scheduling and Processing maintains a history of jobs accessible for Urban TEP Processing and Ingestion Control for the purpose of reporting and accounting. 
+
+  
+  
