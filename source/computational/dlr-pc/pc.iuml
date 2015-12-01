@@ -1,14 +1,39 @@
 @startuml
 
-folder "DLR Processing Center" [[../computational/dlr-pc/index.html]] {
+ package "DLR Processing Center" [[../computational/dlr-pc/index.html]] {
   
-  [component #1]
-  [component #2]
-  [component #3]
+  [Processing Gateway/WPS]
+  
+  folder "DLR Internal Network"  {
+  
+  
+  [Mesos Scheduling and Processing System]
+  [EO Data Storage]
+  [Operating]
 
-  [component #1] -- [component #2]
+
+  
+  folder "DLR Processing Infrastructure"{
+	  [DLR Calvalus]
+	  [DLR Geofarm]
+  }
+   [Mesos Scheduling and Processing System] ->  [Processing Gateway/WPS] 
+   [Mesos Scheduling and Processing System] -> [DLR Calvalus]
+   [Mesos Scheduling and Processing System] -> [DLR Geofarm]
+   
+   [EO Data Storage] -->  [Processing Gateway/WPS] :HTTPS
+   [EO Data Storage] -->  [DLR Calvalus]
+   [EO Data Storage] -->  [DLR Geofarm]
+   
+   [Operating] - [Mesos Scheduling and Processing System] 
+   [Operating] - [EO Data Storage]
+   [Operating] - [Processing Gateway/WPS]
+   [Operating] -> "TEP Urban Portal and Information System"
+   
+  }
 }
 
+"TEP Urban Portal and Information System" -> "DLR Processing Center" : WPS
  
    
 @enduml

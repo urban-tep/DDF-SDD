@@ -36,7 +36,7 @@ The computational service of this component is that of a file system, i.e. the d
 
  * a namenode Unix process on the master node serving the file system structure and data organisation for the Calvalus system
  * the datanode Unix processes on all cluster nodes concurrently serving the file contents on Calvalus
- * on the geofarm dedicated IO-Machines shares the data via NFS with the Processing Nodes for input data and results. Intermediate data is stored localy.
+ * on the geofarm dedicated IO-Machines shares the data via NFS with the Processing Nodes for input data and results. Intermediate data is stored localy on nodes.
 
 Interfaces and interface items
 ------------------------------
