@@ -10,8 +10,8 @@ An environment contract between a component and its environment can cover Qualit
 
 This section describes the design choices to cope with the usage constraints. It describes the computational model that manly consists of :
  
-- the components (modules) participating to the real‐time behaviour, from which the system is constructed;
-- the service model on which the system is executed and its associated mechanisms;
+- the components (modules) participating to the real‐time behaviour, from which the system is constructed divided by main subsystems;
 - the means of communication between components/objects (e.g. interfaces, format, parameters)
+- the service model that the system uses to exchange data flow;
 
-The set of computational components were carried from those defined in the architecture. When applicable the reference to the business object (class) is mentionned
+The set of computational components were carried from those defined in the architecture. When applicable the reference to the business object is mentionned

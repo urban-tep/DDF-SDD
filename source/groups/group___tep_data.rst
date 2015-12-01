@@ -83,7 +83,11 @@ When a dataset is processed with a remote processing (e.g. WPS), the results of 
 
 
 - <<unknown>> raster and vector import. If the results include standard vector files (e.g. shapefile, geojson, csv with WKT, ...) or raster files such as geolocated images (geotiff, png with world files...), the  components shall propose to the user to export them to geoserver that will resturn a new WS layer that the web visualization widget shall display
-- <<unknown>> ???
+
+GeoNode export 
+^^^^^^^^^^^^^^^
+
+[GISAT INPUT]
 
 .. req:: TS-FUN-010
 	:show:

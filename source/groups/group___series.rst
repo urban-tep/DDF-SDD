@@ -14,6 +14,20 @@ Series
 
 This component manages all types of dataset series. It implements the machnaism to search for the dataset defined in the series via an OpenSearchable interface.
 
+.. req:: TS-ICD-080
+	:show:
+
+	:ref:`Apel <namespace_apel>` accounting interface details are described in this section
+
+
+
+.. req:: TS-ICD-100
+	:show:
+
+	:ref:`OpenSearch <group___open_search>` interface for dataset are supported by the component
+
+
+
 Dependencies
 ^^^^^^^^^^^^
 - :ref:`Persistence of Data <group___persistence>` stores persistently the series information in the database

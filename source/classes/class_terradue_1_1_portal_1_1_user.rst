@@ -3,7 +3,7 @@
 User
 ----
 
-:ref:`User <class_terradue_1_1_portal_1_1_user>`. 
+Basic object representing a user in the system. 
 
 
 .. uml::
@@ -20,9 +20,9 @@ Properties
 
 .. cssclass:: propertiestable
 
-+------+---------------+----------------------------------------------------------+
-| Type | Name          | Summary                                                  |
-+======+===============+==========================================================+
-| int  | AccountStatus | Gets or sets the activation status of the user account.  |
-+------+---------------+----------------------------------------------------------+
++------+---------------+-----------------------------------------+
+| Type | Name          | Summary                                 |
++======+===============+=========================================+
+| int  | AccountStatus | Activation status of the user account.  |
++------+---------------+-----------------------------------------+
 

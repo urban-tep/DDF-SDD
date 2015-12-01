@@ -13,7 +13,7 @@ Data package.
   skinparam componentStyle uml2
   !include source/classes/class_terradue_1_1_tep_1_1_controller_1_1_data_package.iuml
 
-It represents a container for datasets, owned by a user. This container manages remote resources by reference. Therefore, it can represent static datasets list or a dynamic set via search query. A Data Package is OpenSearchable and thus can be queried via an opensearch interface. 
+It represents a container for datasets, owned by a user. This container manages remote datasets by reference. It acts as a view over the Collection. Therefore, it can represent static datasets list or a dynamic set via search query. A Data Package is OpenSearchable and thus can be queried via an opensearch interface. 
 
 Properties
 ^^^^^^^^^^

@@ -1,14 +1,15 @@
 .. include:: _templates/header.rst
+.. include:: _templates/footer.rst
 .. include:: _templates/properties.rst
-
 
 .. raw:: pdf
 
 	PageBreak oneColumn
 
+
+
 .. toctree::
    :caption: Table of Contents
-   :numbered:
    :maxdepth: 2
    
    Introduction <introduction/index>

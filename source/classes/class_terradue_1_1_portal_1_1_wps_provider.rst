@@ -44,7 +44,7 @@ ProcessDescriptionType GetWPSDescribeProcessFromUrl() Gets the WPS describe proc
 
 bool                   GetTaskResult()                Gets the task result. 
 
-WpsProcessOffering     GetProcessOffering()           Gets the process offering. 
+WpsProcessOffering     GetProcessOffering()           Get all the process offering of the WPS provider 
 
 ====================== ============================== ===============================================================
 

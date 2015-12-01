@@ -18,10 +18,12 @@
    !include source/classes/class_terradue_1_1_portal_1_1_wps_process_offering.iuml
    !include source/classes/class_terradue_1_1_portal_1_1_wps_provider.iuml
 
+   !include source/classes/class_terradue_1_1_tep_1_1_controller_1_1_account.iuml
    !include source/classes/class_terradue_1_1_tep_1_1_controller_1_1_collection.iuml
    !include source/classes/class_terradue_1_1_tep_1_1_controller_1_1_data_package.iuml
    !include source/classes/class_terradue_1_1_tep_1_1_controller_1_1_group_tep.iuml
    !include source/classes/class_terradue_1_1_tep_1_1_controller_1_1_user_tep.iuml
+   !include source/classes/class_terradue_1_1_tep_1_1_controller_1_1_rates.iuml
    !include source/classes/class_terradue_1_1_tep_1_1_controller_1_1_role_tep.iuml
    !include source/classes/class_terradue_1_1_tep_1_1_controller_1_1_thematic_application.iuml
 

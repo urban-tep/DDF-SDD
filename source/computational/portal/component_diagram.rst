@@ -44,7 +44,4 @@
       group___apel_server -down- AAS
   }
 
-  hide group___elastic_cas
-  hide group___geosquare_a_p_i
-
 

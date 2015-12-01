@@ -5,7 +5,7 @@ Class Relationships
 
 
 
-- :ref:`class_terradue_1_1_portal_1_1_wps_process_offering` 
+- :ref:`class_terradue_1_1_portal_1_1_wps_process_offering` is offered by :ref:`WpsProvider <class_terradue_1_1_portal_1_1_wps_provider>` thats host the service of the offering
 
 
 
@@ -25,26 +25,39 @@ Class Relationships
 
 - :ref:`class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_ows_context` contains :ref:`OwcResource <class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_owc_resource>` that describe resources and their access parameters and configuration
 
-- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_data_package` The owner.
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_account` can be owned by a User
 
 
 
-- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_data_package` The colelctions.
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_account` can be owned by a Group
 
 
 
-- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_group_tep` The members.
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_data_package` is owned by a User
 
 
 
-- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_thematic_application` The collections.
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_data_package` is a view over one or more collections
 
 
 
-- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_thematic_application` The WPS services.
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_group_tep` contains members
 
 
 
-- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_user_tep` 
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_rates` gives a price to the Service
+
+
+
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_thematic_application` contians Collection
+
+
+
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_thematic_application` contains WpsProcessOffering
+
+
+
+- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_user_tep` belongs to a Group
+
 
 

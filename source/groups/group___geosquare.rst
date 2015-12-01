@@ -14,7 +14,14 @@ Geosquare
 
 This component manages the TEP users and thematic groups along with the user roles.
 
-Geosquare is an tool for indexing model-aware dataset in elasticsearch and then search them in a catalogue via an OpenSearch interface. 
+Geosquare is an tool for indexing model-aware dataset in elasticsearch and then search them in a catalogue via an OpenSearch interface.
+
+.. req:: TS-FUN-120
+	:show:
+
+	Geosquare provides with the Catalogue as a service function
+
+
 
 
 Sub-Modules

@@ -615,6 +615,38 @@
       parent: center
       fontSize: 8
 
+    footertable:
+      parent: bodytext
+      spaceBefore: 0
+      spaceAfter: 0
+      fontSize: 6
+      commands: []
+             [VALIGN, [ 0, 0 ], [ -1, -1 ], TOP ]
+
+    footertable1
+      parent: headertable
+      colWidths: [25%, 55%, 35%]
+      commands : []
+             [LINEBELOW, [0, 0], [-1, -1], 0.25, black]
+             [VALIGN, [ 0, 0 ], [ -1, -1 ], CENTER ]
+             [BOTTOMPADDING, [ 0, 0 ], [ -1, -1 ], 5 ]
+
+    footertable2
+      parent: footertable
+      colWidths: [25%, 75%]
+
+    fright:
+      parent: right
+      fontSize: 8
+
+    fleft:
+      parent: bodytext
+      fontSize: 8
+
+    fcenter:
+      parent: center
+      fontSize: 8
+
     xref: {fontName: stdMonoBold}
 
     std: {textColor: navy}

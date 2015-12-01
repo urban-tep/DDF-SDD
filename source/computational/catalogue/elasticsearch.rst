@@ -8,7 +8,7 @@ Elasticsearch
   !include includes/skins.iuml
   skinparam backgroundColor #FFFFFF
   skinparam componentStyle uml2
-  !include source/groups/elasticsearch.iuml
+  !include source/computational/catalogue/elasticsearch.iuml
 
 Elasticsearch is a third party tool for querying written words. It can perform some other nifty tasks, but at its core it’s made for wading through text, returning text similar to a given query and/or statistical analyses of a corpus of text.
 

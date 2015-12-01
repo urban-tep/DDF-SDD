@@ -14,6 +14,13 @@ Apel Accounting
 
 This is the internal interface for the subsystems to send the usage records to.
 
+.. req:: TS-ICD-080
+	:show:
+
+	:ref:`Apel <namespace_apel>` accounting interface details are described in this section
+
+
+
 Normative References
 ^^^^^^^^^^^^^^^^^^^^
 - `OGC Web Processing Service 1.0 <http://portal.opengeospatial.org/files/?artifact_id=24151>`_

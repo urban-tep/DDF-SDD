@@ -3,7 +3,7 @@
 Group
 -----
 
-Represents a user group
+Represents a basic user group
 
 
 .. uml::
@@ -20,13 +20,13 @@ Properties
 
 .. cssclass:: propertiestable
 
-+-----------------+-------------+---------------------------------------------------------------+
-| Type            | Name        | Summary                                                       |
-+=================+=============+===============================================================+
-| override string | Name        | Gets or sets the name, the unique identifier, of this group.  |
-+-----------------+-------------+---------------------------------------------------------------+
-| string          | Description | Gets or sets the long description of this group.              |
-+-----------------+-------------+---------------------------------------------------------------+
-| int             | Priority    | Gets or sets the optional privilege level of this group.      |
-+-----------------+-------------+---------------------------------------------------------------+
++-----------------+-------------+----------------------------------------------+
+| Type            | Name        | Summary                                      |
++=================+=============+==============================================+
+| override string | Name        | Name, the unique identifier, of this group.  |
++-----------------+-------------+----------------------------------------------+
+| string          | Description | Description of this group.                   |
++-----------------+-------------+----------------------------------------------+
+| int             | Priority    | Optional privilege level of this group.      |
++-----------------+-------------+----------------------------------------------+
 
