@@ -3,6 +3,12 @@
 BC processing gateway/WPS
 =========================
 
+.. figure:: GatewayModel.png
+   :scale: 120
+   :align: center
+
+   *Processing Gateway/WPS component*
+
 Implementation software and configuration
 -----------------------------------------
 

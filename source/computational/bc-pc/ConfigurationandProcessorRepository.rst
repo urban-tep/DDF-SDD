@@ -3,6 +3,12 @@
 BC Urban TEP configuration and processor repository
 ===================================================
 
+.. figure:: RepoModel.png
+   :scale: 100
+   :align: center
+
+   *Configuration and Processor Repository component*
+
 Implementation software and configuration
 -----------------------------------------
 

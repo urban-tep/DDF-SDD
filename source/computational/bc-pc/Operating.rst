@@ -3,6 +3,12 @@
 BC Urban TEP Operating
 ======================
 
+.. figure:: OperatingModel.png
+   :scale: 80
+   :align: center
+
+   *Operating use cases*
+
 Personnell
 ----------
 

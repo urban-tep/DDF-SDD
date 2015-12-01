@@ -3,6 +3,12 @@
 BC online data access component
 ===============================
 
+.. figure:: OnlineDataAccessModel.png
+   :scale: 120
+   :align: center
+
+   *Online Data Access component*
+
 Implementation software and configuration
 -----------------------------------------
 

@@ -3,6 +3,12 @@
 BC Processing and ingestion control
 ===================================
 
+.. figure:: IngestionAndProcessingControlModel.png
+   :scale: 100
+   :align: center
+
+   *Processing and Ingestion Control component*
+
 Implementation software and configuration
 -----------------------------------------
 
