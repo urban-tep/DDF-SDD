@@ -53,7 +53,10 @@ def find_parent_section_name(node):
     if isinstance(node, section):
         #pprint(node[node.first_child_matching_class(title)][0].astext())
         return node
-    return find_parent_section_name(node.parent)
+    if node.parent:
+        return find_parent_section_name(node.parent)
+    else:
+        return
 
   
 

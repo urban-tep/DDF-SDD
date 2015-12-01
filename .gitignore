@@ -5,3 +5,4 @@
 /__pycache__/
 build
 source/ext/req.pyc
+source/ext/githubpath.pyc
