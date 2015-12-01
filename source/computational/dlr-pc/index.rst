@@ -10,7 +10,7 @@ This gives a quick overview while the they are explained in more detail in their
      - the configured datasets and processors in *EO Data Storage* 
  * to receive and handle processing requests from the portal , which involves
      - the *Processing Gateway/WPS* with its functions Execute and GetStatus
-     - the * Apache Mesos Sheduling and Processing System* to run one or several jobs
+     - the *Mesos Scheduling and Processing System* to run one or several jobs
      - the supported thematic processors autodeployed to the Cores
      - the input EO data available in *EO Data Storage*
      - the storage of intermediates and outputs in *EO Data Storage*
@@ -23,25 +23,29 @@ This gives a quick overview while the they are explained in more detail in their
      - the *Processing Gateway/WPS* with a REST-ful interface for reference data upload
      - the *EO Data Storage* for storage of the reference data in TEEP Urban storage space
  * to deploy thematic processors
-     - the *Apache Mesos Sheduling and Processing System* to deploy thematic processors to the Clusters
+     - the *Mesos Scheduling and Processing System* to deploy thematic processors to the Clusters
       - optionally the *Operator* to verify and deploy trusted user processors
  * to report on resource usage
-     - the *Apache Mesos Sheduling and Processing System* to generate the report for Urban TEP
-     - The *Operator* to verify and release the report
+     - the *Mesos Scheduling and Processing System* to generate the APEL report for TEP Urban portal 
+     - The *Operator* to verify and release the reports
 
 
 
 
 The following figure shows the decomposition into its components and the subsystem-external interfaces. 
 
+. figure:: dlr_pc.png
+   :scale: 100
+   :align: center
 
-.. include:: component_diagram.rst
+   *DLR processing centre decomposition with Calvalus cluster, Geofarm cluster, other shared components*
+
 
 .. toctree::
    :maxdepth: 1
    
    Processing Gateway/WPS <ProcessingGatewayWPS>
-   Apache Mesos Sheduling and Processing System <MesosSchedulingandProcessing>
+   Mesos Scheduling and Processing System <MesosSchedulingandProcessing>
    EO Data Storage <EODataandProcessingStorage>
    Operating <Operating>
 
