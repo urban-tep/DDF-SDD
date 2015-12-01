@@ -39,7 +39,7 @@ Before describing the components the main functions with their initiation and wo
      - optionally the *IT4I Service Support Operator* to release the use of the uploaded processor, or the publication of the processor to be used by other users via the *HPCaaS Service Management Module* using the HPCaaS Administration interface.
  * To report on resource usage
      - the *HPCaaS Resource Allocation Reporting Module* to generate the report for Urban TEP,
-     - The *IT4I Service Support Operator* to verify and release the report.
+     - the *IT4I Service Support Operator* to verify and release the report.
 
 Individual packages and their components are described in more detail in the following subsections.
 
