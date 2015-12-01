@@ -28,5 +28,26 @@ It is a REST web service with usual CRUD (create, read, update, delete) function
 - User
 - Wps Provider
 
-It also offers for most of the items an OpenSearch interface to discover or search them efficiently.
+It also offers for most of the items an :ref:`OpenSearch <group___open_search>` interface to discover or search them efficiently. The results are provided in the :ref:`OWS Context <group___o_w_s_context>` model and in the feed format requested.
+
+.. req:: TS-ICD-020
+	:show:
+
+	OGC :ref:`OWS Context <group___o_w_s_context>` is used as the most as possible for representing objects in the portal
+
+
+
+.. req:: TS-ICD-100
+	:show:
+
+	T2 API provides with an :ref:`OpenSearch <group___open_search>` interface
+
+
+
+Normative References
+^^^^^^^^^^^^^^^^^^^^
+- `OpenSearch 1.1 <http://www.opensearch.org/Specifications/OpenSearch/1.1>`_
+
+- `OGC OWS Context Conceptual Model <https://portal.opengeospatial.org/files/?artifact_id=55182>`_
+
 

@@ -1,7 +1,7 @@
-.. _it4ipc_part1 :
+.. _it4ipc_wps_provider :
 
-IT4I Part #1
-============
+IT4I WPS Provider
+=================
 
 WPS Design
 ----------

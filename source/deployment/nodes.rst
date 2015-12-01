@@ -53,4 +53,16 @@ Deployment nodes
 .. req:: TS-FUN-120
 	:show:
 
-	The diagram of this section shows how the Catalogue service is deployed on the Terradue Cloud platform
+	The deployment diagram of this section shows how the Catalogue service is deployed on the Terradue Cloud platform
+
+
+.. req:: TS-SEC-050
+	:show:
+
+	The deployment diagram of this section shows that all access to web interfaces are through HTTPS with a certificate
+
+
+.. req:: TS-REU-010 
+	:show:
+
+	The deployment diagram shows that we reuse the Terradue Cloud Platform catalogue as a service already deployed

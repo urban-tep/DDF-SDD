@@ -17,9 +17,7 @@ It provides with the functions to define privileges for users or groups on entit
 The authorisation consists of two phases:
 
 - a generic phase where the current user's access privileges are compared to the necessary privileges for the accessed resource
-- an optional specific phase where the same check is performed for the requested operation. This phase is specific to the entity subclass in question as the possible operations are entity-specific.
-
-If IfyContext.RestrictedMode is <<unknown>> (the default value) and the user has insufficient privileges to access an item, the item is not loaded and an exception is thrown immediately. Otherwise, if IfyContext.RestrictedMode is <<unknown>>, the authorisation check needs to be done by the code that loaded the entity item. This code should check the CanView property of the loaded item and if its value is <<unknown>>, it may either continue or throw another, more appropriate, exception. The latter procedure is also followed for the second phase that checks operation authorisations. The authorisation for a specific operation must be ensured by the code of the entity subclass. The central authorisation model supports this task by initialising the properties corresponding to the operation privilege that are applicable to the entity subclass.
+- an optional specific phase where the same check is performed for the requested operation. This phase is specific to the entity subclass in question as the possible operations are entity-specific.*true*
 
 
 
@@ -59,6 +57,27 @@ If IfyContext.RestrictedMode is <<unknown>> (the default value) and the user has
 	(c) Terradue Srl
 	endfooter
 	
+
+.. req:: TS-FUN-380
+	:show:
+
+	Authorisation scheme paradigm is described in this section.
+
+
+
+.. req:: TS-SEC-010
+	:show:
+
+	Collection / Series / Data Package Authorisation scheme paradigm is described in this section.
+
+
+
+.. req:: TS-SEC-020
+	:show:
+
+	Service Authorisation scheme paradigm is described in this section.
+
+
 
 Dependencies
 ^^^^^^^^^^^^

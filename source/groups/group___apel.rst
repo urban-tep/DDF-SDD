@@ -21,6 +21,5 @@ Sub-Modules
   :maxdepth: 0
 
   group___apel_server
-  group___apel_accounting
   group___apel_reporting
 

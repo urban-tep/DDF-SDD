@@ -159,7 +159,14 @@ Model and Representation
 
 This components has also a function to represent a WpsProcessOffering object as a OwcOffering in the :ref:`OWS Context <group___o_w_s_context>` model. It implements the mechanism to search for  and the WpsProcessOffering via an OpenSearchable interface.
 
-"" 
+""
+
+.. req:: TS-FUN-250
+	:show:
+
+	This section describes with sequence diagrams the internal WPS service discovery
+
+
 
 Dependencies
 ^^^^^^^^^^^^

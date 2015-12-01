@@ -55,6 +55,13 @@ Next subsections describe each of the main components individually
    
    Portal <portal/index>
    Catalogue <catalogue/index>
+<<<<<<< HEAD
    Brockmann Consult Processing Centre Components <bc-pc/index>
    IT4Innovations Processing Centre Components <it4i-pc/index>
    DLR Processing Centre Components <dlr-pc/index>
+=======
+   Brockmann Consult Processing Centre Requirements <bc-pc/index>
+   IT4Innovations Processing Centre Requirements <it4i-pc/index>
+   DLR Processing Centre Requirements <dlr-pc/index>
+   PUMA <PUMA/index>
+>>>>>>> 1bcd69ceb2d57d4f9289e45df6fe670463456b85

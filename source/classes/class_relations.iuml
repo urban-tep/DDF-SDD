@@ -14,11 +14,14 @@ OwcOperation  *-- "1" OwcContent : is invoked with
 OwcResource  *-- "*" OwcOffering : exposes 
 OwsContext  *-- "1" OwcCreator : references 
 OwsContext  *-- "*" OwcResource : contains 
+Account  *-- "1" UserTep : has
+Account  *-- "1" GroupTep : has
 Collection  --|>  Series : implements
 DataPackage  *-- "1" UserTep : has
 DataPackage  *-- "*" Collection : has
 GroupTep  *-- "*" UserTep : has
 GroupTep  --|>  Group : implements
+Rates  *-- "1" Entity : has
 RoleTep  --|>  Entity : implements
 ThematicApplication  *-- "*" Collection : has
 ThematicApplication  *-- "*" WpsProcessOffering : has

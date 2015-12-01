@@ -23,3 +23,8 @@ Here is all the software packages developed and maintainded by Terradue
    Terradue::WebService::Model <../namespaces//namespace_terradue_1_1_web_service_1_1_model>
    Terradue::Tep <../namespaces//namespace_terradue_1_1_tep>
 
+
+.. req:: TS-VAL-010
+  :show:
+
+  This section lists all Terradue software packages used and their repositoy location.

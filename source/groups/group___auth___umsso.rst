@@ -157,6 +157,13 @@ Next diagram depicts the scenarios that applies when a user perform an HTTP requ
 	
 	
 
+.. req:: TS-SEC-040
+	:show:
+
+	UM-SSO plugin described 
+
+
+
 Interfaces
 ^^^^^^^^^^
 - implements :ref:`Authentication <group___authentication>` to enable UM-SSO Authentication.

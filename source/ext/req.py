@@ -169,16 +169,19 @@ def process_req_nodes(app, doctree, fromdocname):
             refpara += nodes.Text("","")
 
             # Create a reference
-            newnode = nodes.reference('', '')
-            pprint(req_info['reqid'])
-            innernode = nodes.emphasis(req_info['section_name'],req_info['section_name'])
-            newnode['refdocname'] = req_info['docname']
-            newnode['refuri'] = app.builder.get_relative_uri(
-                fromdocname, req_info['docname'])
-            newnode['refuri'] += '#' + req_info['target']['refid']
-            newnode.append(innernode)
-            refpara += newnode
-            refpara += nodes.Text('', '')
+            try:
+                newnode = nodes.reference('', '')
+                pprint(req_info['reqid'])
+                innernode = nodes.emphasis(req_info['section_name'],req_info['section_name'])
+                newnode['refdocname'] = req_info['docname']
+                newnode['refuri'] = app.builder.get_relative_uri(
+                    fromdocname, req_info['docname'])
+                newnode['refuri'] += '#' + req_info['target']['refid']
+                newnode.append(innernode)
+                refpara += newnode
+                refpara += nodes.Text('', '')
+            except:
+                continue
 
             append_row(tbody,
                [req_info['reqid'],

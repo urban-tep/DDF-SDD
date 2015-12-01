@@ -1,16 +1,17 @@
 .. _dlrpc_components_list :
 
 DLR Processing Center Computational Components
-===============================================
+==============================================
+The TEP Urban subsystem of the DLR processing centre consists of several functional components and interfaces.
+The following figure shows the decomposition into its components and the subsystem-external interfaces. 
 
-The DLR Processing Center components list are described herafter individually grouped by their main purpose.
 
 .. include:: component_diagram.rst
 
 .. toctree::
    :maxdepth: 1
    
-   part1 <part1>
-   part2 <part2>
-   part3 <part3>
+   Processing Gateway/WPS <ProcessingGatewayWPS>
+   Apache Mesos Sheduling and Processing System <MesosSchedulingandProcessing>
+   EO Data Storage <EODataandProcessingStorage>
 

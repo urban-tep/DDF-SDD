@@ -1,5 +1,16 @@
 .. role:: normal
 
+.. raw:: pdf
+
+   Spacer 0 3cm
+
+.. image:: _static/logo-urban-big.png
+  :align: center
+
+.. raw:: pdf
+
+  Spacer 0 1cm
+
 <?py if title: ?>
 
 .. cssclass:: title
@@ -8,24 +19,40 @@
 
 <?py #end ?>
 
-<?py if subtitle: ?>
+.. raw:: pdf
 
-.. cssclass:: subtitle
+  Spacer 0 1cm
 
-#{subtitle}
-
-<?py #end ?>
+.. image:: _static/logoconsortium.png
+  :align: center
 
 .. raw:: pdf
 
    Spacer 0 3cm
 
+Prepared by 
 <?py for author in authors: ?>
 .. cssclass:: author
 
-#{author}
+  #{author}
 
 <?py #end ?>
+
+.. raw:: pdf
+
+   Spacer 0 1cm
+
+Reviewed by
+  Martin Boettcher (BC)
+
+  Thomas Esch (DLR)
+
+.. raw:: pdf
+
+   Spacer 0 1cm
+
+Approved by
+  Thomas Esch (DLR)
 
 .. raw:: pdf
 

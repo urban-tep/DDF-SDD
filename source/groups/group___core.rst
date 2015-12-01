@@ -19,6 +19,7 @@ Objects
 ^^^^^^^
 - :ref:`class_terradue_1_1_portal_1_1_user`
 - :ref:`class_terradue_1_1_portal_1_1_wps_process_offering`
+- :ref:`class_terradue_1_1_portal_1_1_wps_provider`
 
 
 Sub-Modules

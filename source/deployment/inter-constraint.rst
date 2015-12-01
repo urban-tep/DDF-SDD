@@ -26,11 +26,6 @@ Database Constraints
 - MySql for Web Portal
 - ElasticSearch for Catalogue
 
-Middleware Contraints
-^^^^^^^^^^^^^^^^^^^^^
-
-- Cloud Controller powered by OpenNebula
-
 .. _cots:
 
 COTS Package Constraints

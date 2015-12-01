@@ -8,11 +8,13 @@ Herafter, all business objects are described individually
 .. toctree::
   :maxdepth: 0
    
+  Account <../classes/class_terradue_1_1_tep_1_1_controller_1_1_account>
   Collection <../classes/class_terradue_1_1_tep_1_1_controller_1_1_collection>
   Data Package <../classes/class_terradue_1_1_tep_1_1_controller_1_1_data_package>
   Entity <../classes/class_terradue_1_1_portal_1_1_entity>
   Feature <../classes/class_terradue_1_1_portal_1_1_feature>
   Group <../classes/class_terradue_1_1_portal_1_1_group>
+  Rates <../classes/class_terradue_1_1_tep_1_1_controller_1_1_rates>
   Series <../classes/class_terradue_1_1_portal_1_1_series>
   Service <../classes/class_terradue_1_1_portal_1_1_service>
   User <../classes/class_terradue_1_1_portal_1_1_user>

@@ -237,7 +237,7 @@ plantuml_output_format = 'svg'
 # would mean that specific document would be compressed
 # regardless of the global pdf_compressed setting.
 pdf_documents = [
- ('index', u'UrbanTEP-SDD', u'Urban Thematic Exploitation Platform Software Design Document', u'Terradue'),
+ ('index', u'UrbanTEP-SDD', u'Urban Thematic Exploitation Platform Software Design Document', r'Emmanuel Mathot (T2)\\Martin Boettcher (BC)\\Thomas Esch (DLR)\\Stepan Kuchar (IT4I)\\Julian Zeidler (DLR)'),
 ]
 # A comma-separated list of custom stylesheets. Example:
 pdf_stylesheets = ['a4', 'kerning', 'sdd']
@@ -289,7 +289,7 @@ pdf_page_template = 'oneColumn'
 # Show Table Of Contents at the beginning?
 pdf_use_toc = True
 # How many levels deep should the table of contents be?
-pdf_toc_depth = 4
+pdf_toc_depth = 3
 # Add section number to section references
 pdf_use_numbered_links = True
 # Background images fitting mode

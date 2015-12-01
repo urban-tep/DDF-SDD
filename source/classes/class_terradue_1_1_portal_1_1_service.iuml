@@ -7,8 +7,6 @@ class Service {
  +IconUrl:string
  +Rating:int
  +ClassId:int
- +OnBuildTask:BuildTaskCallbackType
- +GetParameters()
  +CheckParameters()
  +BuildTask()
 }
