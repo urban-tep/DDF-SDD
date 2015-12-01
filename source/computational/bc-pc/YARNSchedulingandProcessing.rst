@@ -3,6 +3,21 @@
 BC YARN scheduling and processing component
 ===========================================
 
+.. req:: TS-FUN-670
+  :show:
+
+  (Processing) The Scheduling and Processing processes submitted jobs by applying the requested workflow (e.g. Level 2 processing, aggregation) and processing with the requested EO data processors.
+
+.. req:: TS-FUN-680
+  :show:
+
+  (Deployment) Scheduling and Processing automatically deploys Urban TEP processors provided in HDFS on the Calvalus-specific locations on processing job submission that require these processors.
+
+.. req:: TS-FUN-710
+  :show:
+
+  (Processing statistics) The Scheduling and Processing maintains a history of jobs accessible for Urban TEP Processing and Ingestion Control for the purpose of reporting.
+
 .. figure:: SchedulingModel.png
    :scale: 120
    :align: center
@@ -62,20 +77,3 @@ Example Calvalus Request
 .. literalinclude:: seasonality-test.xml
    :language: xml
    
-Requirements for the design of BC YARN scheduling and processing component
---------------------------------------------------------------------------
-
-.. req:: TS-FUN-670
-  :show:
-
-  (Processing) The Scheduling and Processing processes submitted jobs by applying the requested workflow (e.g. Level 2 processing, aggregation) and processing with the requested EO data processors.
-
-.. req:: TS-FUN-680
-  :show:
-
-  (Deployment) Scheduling and Processing automatically deploys Urban TEP processors provided in HDFS on the Calvalus-specific locations on processing job submission that require these processors.
-
-.. req:: TS-FUN-710
-  :show:
-
-  (Processing statistics) The Scheduling and Processing maintains a history of jobs accessible for Urban TEP Processing and Ingestion Control for the purpose of reporting.

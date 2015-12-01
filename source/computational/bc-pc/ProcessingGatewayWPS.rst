@@ -3,6 +3,81 @@
 BC processing gateway/WPS
 =========================
 
+.. req:: TS-FUN-640
+  :show:
+
+  (WPS interface) The Processing Request Gateway/WPS provides an OGC WPS 1.0 interface with functions GetCapabilities, DescribeProcess, Execute, and GetStatus.
+
+.. req:: TS-FUN-645
+  :show:
+
+  (Processing mode) The Processing Request Gateway/WPS supports asynchronous requests and the retrieval of intermediate and final status with GetStatus.
+
+.. req:: TS-FUN-650
+  :show:
+
+  (Process offerings) The Processing Request Gateway/WPS provides the set of processor offerings with parameters and input datasets with the functions GetCapabilities and DescribeProcess. Spatial and temporal selection is among the parameters of the Execute request.
+
+.. req:: TS-FUN-680
+  :show:
+
+  (Deployment) Execute requests received are translated to YARN requests forwarded to Scheduling and Processing. This results into processing with the selected processor.
+
+.. req:: TS-FUN-690
+  :show:
+
+  (Processing result provision) The Processing Request Gateway/WPS stages the results to the Online Data Access storage and provides them via HTTP(S).
+
+.. req:: TS-FUN-700
+  :show:
+
+  (Catalogue entry) Either the Processing Request Gateway/WPS or the Ingestion and Processing Control component (detailed design decision) generates a metadata record and submits it to the catalogue.
+
+.. req:: TS-FUN-720
+  :show:
+
+  (Reference data upload) The Processing Request Gateway/WPS provides a HTTP interface for the upload of reference data and stores it in the user area of the HDFS EO Data and Processing Storage.
+
+.. req:: TS-FUN-740
+  :show:
+
+  (Software upload) The Processing Request Gateway/WPS provides a HTTP interface for the upload of (well-known) user-provided processor bundles and stores them in the user area of the HDFS EO Data and Processing Storage.
+
+.. req:: TS-PER-610
+  :show:
+
+  (Response time) The Processing Request Gateway/WPS returns an Execute response with the identifier and an intermediate status upon submission of the Execute request.
+
+.. req:: TS-SEC-610
+  :show:
+
+  (Authentication) A portal user belonging to the group *urbantep* is registered in the BC LDAP and authorized to use the WPS.
+
+.. req:: TS-ICD-210
+  :show:
+
+  (GC Web Processing Service Interface) The BC implementation of the WPS supports OGC WPS version 1.0 with functions GetCapabilities, DescribeProcess, Execute, and in addition GetStatus.
+
+.. req:: TS-ICD-220 Result Access Interface
+  :show:
+
+  The Processing Request Gateway/WPS provides the result datasets stored in the staging area of Online Data Access via its HTTP(S) interface.
+
+.. req:: TS-ICD-230
+  :show:
+
+  (Processor and Reference Data Upload Interface) The Processing Request Gateway/WPS provides a HTTP interface for the upload of processor bundles by well-known users.
+
+.. req:: TS-ICD-310 	
+  :show:
+
+  (OGC Web Processing Service) The BC implementation of the WPS supports OGC WPS version 1.0 with functions GetCapabilities, DescribeProcess, Execute, and in addition GetStatus.
+
+.. req:: TS-FUN-671
+  :show:
+
+  (Temporal statistics/indices generator) The Urban TEP Config and Processor Repo contains an indexes generation processor (see beam-buildin~1.0~urban-tep-indices-meris-l1b in GetCapabilities example above) and several aggregators to build statistics with its generic L3 workflow.
+
 .. figure:: GatewayModel.png
    :scale: 120
    :align: center
@@ -95,82 +170,4 @@ Example GetStatus response
 
 .. literalinclude:: urban-tep-wps-GetStatus-sample-response.xml
    :language: xml
-
-Requirements for the design of BC processing gateway/WPS
---------------------------------------------------------
-
-.. req:: TS-FUN-640
-  :show:
-
-  (WPS interface) The Processing Request Gateway/WPS provides an OGC WPS 1.0 interface with functions GetCapabilities, DescribeProcess, Execute, and GetStatus.
-
-.. req:: TS-FUN-645
-  :show:
-
-  (Processing mode) The Processing Request Gateway/WPS supports asynchronous requests and the retrieval of intermediate and final status with GetStatus.
-
-.. req:: TS-FUN-650
-  :show:
-
-  (Process offerings) The Processing Request Gateway/WPS provides the set of processor offerings with parameters and input datasets with the functions GetCapabilities and DescribeProcess. Spatial and temporal selection is among the parameters of the Execute request.
-
-.. req:: TS-FUN-680
-  :show:
-
-  (Deployment) Execute requests received are translated to YARN requests forwarded to Scheduling and Processing. This results into processing with the selected processor.
-
-.. req:: TS-FUN-690
-  :show:
-
-  (Processing result provision) The Processing Request Gateway/WPS stages the results to the Online Data Access storage and provides them via HTTP(S).
-
-.. req:: TS-FUN-700
-  :show:
-
-  (Catalogue entry) Either the Processing Request Gateway/WPS or the Ingestion and Processing Control component (detailed design decision) generates a metadata record and submits it to the catalogue.
-
-.. req:: TS-FUN-720
-  :show:
-
-  (Reference data upload) The Processing Request Gateway/WPS provides a HTTP interface for the upload of reference data and stores it in the user area of the HDFS EO Data and Processing Storage.
-
-.. req:: TS-FUN-740
-  :show:
-
-  (Software upload) The Processing Request Gateway/WPS provides a HTTP interface for the upload of (well-known) user-provided processor bundles and stores them in the user area of the HDFS EO Data and Processing Storage.
-
-.. req:: TS-PER-610
-  :show:
-
-  (Response time) The Processing Request Gateway/WPS returns an Execute response with the identifier and an intermediate status upon submission of the Execute request.
-
-.. req:: TS-SEC-610
-  :show:
-
-  (Authentication) A portal user belonging to the group *urbantep* is registered in the BC LDAP and authorized to use the WPS.
-
-.. req:: TS-ICD-210
-  :show:
-
-  (GC Web Processing Service Interface) The BC implementation of the WPS supports OGC WPS version 1.0 with functions GetCapabilities, DescribeProcess, Execute, and in addition GetStatus.
-
-.. req:: TS-ICD-220 Result Access Interface
-  :show:
-
-  The Processing Request Gateway/WPS provides the result datasets stored in the staging area of Online Data Access via its HTTP(S) interface.
-
-.. req:: TS-ICD-230
-  :show:
-
-  (Processor and Reference Data Upload Interface) The Processing Request Gateway/WPS provides a HTTP interface for the upload of processor bundles by well-known users.
-
-.. req:: TS-ICD-310 	
-  :show:
-
-  (OGC Web Processing Service) The BC implementation of the WPS supports OGC WPS version 1.0 with functions GetCapabilities, DescribeProcess, Execute, and in addition GetStatus.
-
-.. req:: TS-FUN-671
-  :show:
-
-  (Temporal statistics/indices generator) The Urban TEP Config and Processor Repo contains an indexes generation processor (see beam-buildin~1.0~urban-tep-indices-meris-l1b in GetCapabilities example above) and several aggregators to build statistics with its generic L3 workflow.
 

@@ -3,6 +3,51 @@
 BC Processing and ingestion control
 ===================================
 
+.. req:: TS-FUN-610
+  :show:
+
+  (Data ingestion) The Urban TEP Processing and Ingestion Control provides an ingestion script for the ESA Sentinel data hub and for USGS for Landsat. There is a bulk ingestion script that has been used for MERIS ingestion from media.
+
+.. req:: TS-FUN-620
+  :show:
+
+  (Data ingestion monitoring) The Urban TEP Processing and Ingestion Control maintains the state of ingestion. Catalogue entry generation for datasets are done operator-controlled.
+
+.. req:: TS-FUN-690
+  :show:
+
+  (Processing result provision) Processing results can be staged to the Online Data Access staging area as a step in processing control.
+
+.. req:: TS-FUN-700
+  :show:
+
+  (Catalogue entry) Processing and Ingestion Control provides scripts for catalogue entry generation of new datasets. Catalogue entry generation for datasets are done operator-controlled.
+
+.. req:: TS-FUN-710
+  :show:
+
+  (Processing statistics) Processing and Ingestion Control provides scripts for processing report generation and to transfer them to teh Reporting component of the Portal. Report generation is done operator-controlled.
+
+.. req:: TS-RES-630
+  :show:
+
+  (Subsystem configuration) The configuration of ingestion and processing workflows is maintained in the Config and Processor Repository.
+
+.. req:: TS-ICD-350
+  :show:
+
+  (Resource utilization reporting interface) Processing and Ingestion Control provides scripts for processing report generation and to transfer them to teh Reporting component of the Portal. Report generation is done operator-controlled.
+
+.. req:: TS-ICD-080
+  :show:
+
+  (Accounting collection API) Processing and Ingestion Control provides scripts for processing report generation and to transfer them to teh Reporting component of the Portal. Report generation is done operator-controlled.
+
+.. req:: TS-ICD-090
+  :show:
+
+  (OGC Web Services Context Document (OWS Context)) Processing and Ingestion Control provides scripts for catalogue entry generation of new datasets. Catalogue entry generation for datasets are done operator-controlled.
+ 	 	 
 .. figure:: IngestionAndProcessingControlModel.png
    :scale: 100
    :align: center
@@ -60,52 +105,3 @@ The interfaces used by the component are:
  * the job history interface to collect statistics for finished jobs.
  * the Catalogue entry interface of the Portal based on OWS structures
  * The reporting interface of the Portal based on APEL
-
-Requirements for the design of BC Processing and ingestion control
-------------------------------------------------------------------
-
-.. req:: TS-FUN-610
-  :show:
-
-  (Data ingestion) The Urban TEP Processing and Ingestion Control provides an ingestion script for the ESA Sentinel data hub and for USGS for Landsat. There is a bulk ingestion script that has been used for MERIS ingestion from media.
-
-.. req:: TS-FUN-620
-  :show:
-
-  (Data ingestion monitoring) The Urban TEP Processing and Ingestion Control maintains the state of ingestion. Catalogue entry generation for datasets are done operator-controlled.
-
-.. req:: TS-FUN-690
-  :show:
-
-  (Processing result provision) Processing results can be staged to the Online Data Access staging area as a step in processing control.
-
-.. req:: TS-FUN-700
-  :show:
-
-  (Catalogue entry) Processing and Ingestion Control provides scripts for catalogue entry generation of new datasets. Catalogue entry generation for datasets are done operator-controlled.
-
-.. req:: TS-FUN-710
-  :show:
-
-  (Processing statistics) Processing and Ingestion Control provides scripts for processing report generation and to transfer them to teh Reporting component of the Portal. Report generation is done operator-controlled.
-
-.. req:: TS-RES-630
-  :show:
-
-  (Subsystem configuration) The configuration of ingestion and processing workflows is maintained in the Config and Processor Repository.
-
-.. req:: TS-ICD-350
-  :show:
-
-  (Resource utilization reporting interface) Processing and Ingestion Control provides scripts for processing report generation and to transfer them to teh Reporting component of the Portal. Report generation is done operator-controlled.
-
-.. req:: TS-ICD-080
-  :show:
-
-  (Accounting collection API) Processing and Ingestion Control provides scripts for processing report generation and to transfer them to teh Reporting component of the Portal. Report generation is done operator-controlled.
-
-.. req:: TS-ICD-090
-  :show:
-
-  (OGC Web Services Context Document (OWS Context)) Processing and Ingestion Control provides scripts for catalogue entry generation of new datasets. Catalogue entry generation for datasets are done operator-controlled.
- 	 	 

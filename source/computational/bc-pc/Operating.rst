@@ -3,64 +3,6 @@
 BC Urban TEP Operating
 ======================
 
-.. figure:: OperatingModel.png
-   :scale: 80
-   :align: center
-
-   *Operating use cases*
-
-Personnell
-----------
-
-The Urban TEP BC processing centre will be managed by the Calvalus operator with some Urban TEP-specific activities. 
-
- * An email account urbantep@brockmann-consult.de serves as communication endpoint.
- * The BC processing centre has an account in the Urban TEP portal issue tracking system.
-
-Information persistence
------------------------
-
-Operators exchange information that is kept persistent:
-
- * The issue tracking keeps track of all communication activities regarding the BC processing centre. 
- * The record of emails keeps track of bilateral communication.
- * For private infomation a wiki document within the BC wiki (Confluence) is maintained. If necessary specific operational procedures inside the BC processing centre are documented here.
-
-Service and functions
----------------------
-
-Activities of the Operator comprise:
-
- * monitoring of ingestion
- * communication with data providers, configuration for new ingestion sources (new datasets, different extent, different time interval)
- * monitoring of processing, analysis of failures
- * support of users in case of issues assigned to the BC processing centre
- * support of well-known users for the integration and upload of processors (and reference datasets if necessary)
- * communication with the Portal Operating and with Operating of the other processing centres, exchange of datasets and processors
- * initiation and configuration for bulk processing in case of the systematic generation of a new product in the Urban TEP
- * initiation of reporting, verification of reports
- * data management, initiation of cleanup of old results
-
-Interfaces and interface items
-------------------------------
-
-The external interfaces provided or used by Operating are:
-
- * The Operating provides an email interface
- * The Operating uses the issue tracking interface of the Portal
- * The Operating uses the online data access interfaces of other proessing centres (to exchange datasets or processors)
-
-The internal interfaces within the BC processing centre used by Operating are:
-
- * The scripting and configuration interfaces of the Ingestion and Processing Control
- * HDFS and NFS interfaces of the HDFS EO Data and Processing Storage for data management, installation of processors, change of access rights
- * Versioning interface of Configuration and Processor Repository
- * NFS interface of Online Data Access for user support, exchange with other processing centres, and data management of the staging area
- * Monitoring and control interfaces, log files etc. of all components
-
-Requirements for the design of BC Urban TEP Operating
------------------------------------------------------
-
 .. req:: TS-FUN-750
   :show:
 
@@ -141,3 +83,59 @@ Requirements for the design of BC Urban TEP Operating
   :show:	
 
   (Issue Tracking web widget) Urban TEP Processing Centre Operating regularily handles issues assigned to the BC processing centre in the Portal Issue Tracking system. 
+
+.. figure:: OperatingModel.png
+   :scale: 80
+   :align: center
+
+   *Operating use cases*
+
+Personnell
+----------
+
+The Urban TEP BC processing centre will be managed by the Calvalus operator with some Urban TEP-specific activities. 
+
+ * An email account urbantep@brockmann-consult.de serves as communication endpoint.
+ * The BC processing centre has an account in the Urban TEP portal issue tracking system.
+
+Information persistence
+-----------------------
+
+Operators exchange information that is kept persistent:
+
+ * The issue tracking keeps track of all communication activities regarding the BC processing centre. 
+ * The record of emails keeps track of bilateral communication.
+ * For private infomation a wiki document within the BC wiki (Confluence) is maintained. If necessary specific operational procedures inside the BC processing centre are documented here.
+
+Service and functions
+---------------------
+
+Activities of the Operator comprise:
+
+ * monitoring of ingestion
+ * communication with data providers, configuration for new ingestion sources (new datasets, different extent, different time interval)
+ * monitoring of processing, analysis of failures
+ * support of users in case of issues assigned to the BC processing centre
+ * support of well-known users for the integration and upload of processors (and reference datasets if necessary)
+ * communication with the Portal Operating and with Operating of the other processing centres, exchange of datasets and processors
+ * initiation and configuration for bulk processing in case of the systematic generation of a new product in the Urban TEP
+ * initiation of reporting, verification of reports
+ * data management, initiation of cleanup of old results
+
+Interfaces and interface items
+------------------------------
+
+The external interfaces provided or used by Operating are:
+
+ * The Operating provides an email interface
+ * The Operating uses the issue tracking interface of the Portal
+ * The Operating uses the online data access interfaces of other proessing centres (to exchange datasets or processors)
+
+The internal interfaces within the BC processing centre used by Operating are:
+
+ * The scripting and configuration interfaces of the Ingestion and Processing Control
+ * HDFS and NFS interfaces of the HDFS EO Data and Processing Storage for data management, installation of processors, change of access rights
+ * Versioning interface of Configuration and Processor Repository
+ * NFS interface of Online Data Access for user support, exchange with other processing centres, and data management of the staging area
+ * Monitoring and control interfaces, log files etc. of all components
+

@@ -3,6 +3,56 @@
 BC HDFS EO data and processing storage
 ======================================
 
+.. req:: TS-FUN-610
+  :show:
+
+  (Data ingestion) The Urban TEP Processing and Ingestion Control inserts newly retrieved Landsat and Sentinel 2 data into the file system using NFS (systematic ingestion) or HDFS (bulk ingestion). The MERIS dataset has also been ingested this way.
+
+.. req:: TS-FUN-611
+  :show:
+
+  (Settlement mask processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
+
+.. req:: TS-FUN-612
+  :show:
+
+  (GSI input processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
+
+.. req:: TS-FUN-613
+  :show:
+
+  (Population distribution processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
+
+.. req:: TS-FUN-614
+  :show:
+
+  (Administrative units processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
+
+.. req:: TS-FUN-615
+  :show:
+
+  (Socio-economic statistics processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
+
+.. req:: TS-FUN-660
+  :show:
+
+  (Subsetting processor) Subsetting is provided as processor for the Urban TEP input datasets in the urban-tep-1.0 bundle. A function of the Sentinel Toolbox or BEAM is used for it.
+
+.. req:: TS-FUN-710
+  :show:
+
+  (Processing statistics) The used storage on HDFS is monitored regularily by Ingestion and Processing Control for the purpose of reporting.
+
+.. req:: TS-RES-610
+  :show:
+
+  (Data storage for EO data) EO data is stored on HDFS below directory /calvalus/eodata.
+
+.. req:: TS-RES-620
+  :show:
+
+  (Data storage for non-EO data) Urban TEP-specific non-EO data is stored on HDFS below directory /calvalus/projects/urbantep/ .
+
 .. figure:: HDFSModel.png
    :scale: 150
    :align: center
@@ -60,57 +110,4 @@ In addition there is an operator interface:
 
  * Web GUI of Hadoop for monitoring
  * command line interface of Hadoop for monitoring and control
-
-Requirements for the design of BC HDFS EO data and processing storage
----------------------------------------------------------------------
-
-.. req:: TS-FUN-610
-  :show:
-
-  (Data ingestion) The Urban TEP Processing and Ingestion Control inserts newly retrieved Landsat and Sentinel 2 data into the file system using NFS (systematic ingestion) or HDFS (bulk ingestion). The MERIS dataset has also been ingested this way.
-
-.. req:: TS-FUN-611
-  :show:
-
-  (Settlement mask processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
-
-.. req:: TS-FUN-612
-  :show:
-
-  (GSI input processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
-
-.. req:: TS-FUN-613
-  :show:
-
-  (Population distribution processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
-
-.. req:: TS-FUN-614
-  :show:
-
-  (Administrative units processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
-
-.. req:: TS-FUN-615
-  :show:
-
-  (Socio-economic statistics processing input) Urban TEP-specific datasets are stored in the project space /calvalus/projects/urbantep/ of HDFS if needed on Calvalus.
-
-.. req:: TS-FUN-660
-  :show:
-
-  (Subsetting processor) Subsetting is provided as processor for the Urban TEP input datasets in the urban-tep-1.0 bundle. A function of the Sentinel Toolbox or BEAM is used for it.
-
-.. req:: TS-FUN-710
-  :show:
-
-  (Processing statistics) The used storage on HDFS is monitored regularily by Ingestion and Processing Control for the purpose of reporting.
-
-.. req:: TS-RES-610
-  :show:
-
-  (Data storage for EO data) EO data is stored on HDFS below directory /calvalus/eodata.
-
-.. req:: TS-RES-620
-  :show:
-
-  (Data storage for non-EO data) Urban TEP-specific non-EO data is stored on HDFS below directory /calvalus/projects/urbantep/ .
 

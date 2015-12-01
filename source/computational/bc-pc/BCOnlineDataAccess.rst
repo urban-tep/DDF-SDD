@@ -3,48 +3,6 @@
 BC online data access component
 ===============================
 
-.. figure:: OnlineDataAccessModel.png
-   :scale: 120
-   :align: center
-
-   *Online Data Access component*
-
-Implementation software and configuration
------------------------------------------
-
-The Online Data Access component is a shared BC component hosted on two machines, a disk array for the storage and an FTP front end in the external network running vsfptd and openssh. ZFS is used as file system of the disk array. 
-
-The configuration specific for Urban TEP comprises:
-
- * a volume on the file system as staging area
- * a configuration of certain users to allow (S)FTP, in particular for exchange between processing centres
-
-State representation and persistent data
-----------------------------------------
-
-The persistent data of this component is the file system content:
-
- * a directory ``/data/urbantep/staging/<user>/`` per user
-
-The staging area is also mounted into the Apache Tomcat server for serving processing results via HTTP(S).
-
-Computational service and functions
------------------------------------
-
-The computational service of this component is that of a file system, i.e. the data storage in files, organisation in directories, the provision of access control rules, and the functions of reading files and writing files. The access is provided by the ZFS processes and an NFS server internally, and vsftpd and sshd externally.
-
-Interfaces and interface items
-------------------------------
-
-The interfaces are:
-
- * NFS for internal access by Processing Gateway/WPS
- * SCP/SFTP for internal access by Ingestion and Proessing Control
- * FTP/SFTP by other processing centres and by dedicated users
-
-Requirements for the design of BC online data access component
---------------------------------------------------------------
-
 .. req:: TS-FUN-630
   :show:
 
@@ -84,3 +42,43 @@ Requirements for the design of BC online data access component
   :show:
 
   (Processor and Data Exchange Interface) The Online Data Access/FTP provides an (S)FTP access for other Processing Centres (DLR, IT4I) for dataset exchange and processor software exchange.
+
+.. figure:: OnlineDataAccessModel.png
+   :scale: 120
+   :align: center
+
+   *Online Data Access component*
+
+Implementation software and configuration
+-----------------------------------------
+
+The Online Data Access component is a shared BC component hosted on two machines, a disk array for the storage and an FTP front end in the external network running vsfptd and openssh. ZFS is used as file system of the disk array. 
+
+The configuration specific for Urban TEP comprises:
+
+ * a volume on the file system as staging area
+ * a configuration of certain users to allow (S)FTP, in particular for exchange between processing centres
+
+State representation and persistent data
+----------------------------------------
+
+The persistent data of this component is the file system content:
+
+ * a directory ``/data/urbantep/staging/<user>/`` per user
+
+The staging area is also mounted into the Apache Tomcat server for serving processing results via HTTP(S).
+
+Computational service and functions
+-----------------------------------
+
+The computational service of this component is that of a file system, i.e. the data storage in files, organisation in directories, the provision of access control rules, and the functions of reading files and writing files. The access is provided by the ZFS processes and an NFS server internally, and vsftpd and sshd externally.
+
+Interfaces and interface items
+------------------------------
+
+The interfaces are:
+
+ * NFS for internal access by Processing Gateway/WPS
+ * SCP/SFTP for internal access by Ingestion and Proessing Control
+ * FTP/SFTP by other processing centres and by dedicated users
+

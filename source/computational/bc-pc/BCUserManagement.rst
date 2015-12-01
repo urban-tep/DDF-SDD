@@ -3,6 +3,51 @@
 BC user management
 ==================
 
+.. req:: TS-FUN-640
+  :show:
+
+  (WPS interface) The BC WPS is secured by simple authentication and a verification of the group membership.
+
+.. req:: TS-FUN-720
+  :show:
+
+  (Reference data upload) The Processing Request Gateway/WPS checks by authentication and group membership whether a user is entitled to upload reference data.
+
+.. req:: TS-FUN-740
+  :show:
+
+  (Software upload)  The Processing Request Gateway/WPS checks by authentication and group membership whether a user is entitled to upload custom processors by well-known users.
+
+.. req:: TS-SEC-610
+  :show:
+
+  (Authentication) The User Management provides a user account for the Portal.
+
+.. req:: TS-ICD-210
+  :show:
+
+  (OGC Web Processing Service Interface) The BC WPS is secured by simple authentication and a verification of the group membership.
+
+.. req:: TS-ICD-220
+  :show:
+
+  (Result Access Interface) The result access is secured by simple authentication. For well-known users result access is also possible by (S)FTP using the same credentials.
+
+.. req:: TS-ICD-230
+  :show:
+
+  (Processor and Reference Data Upload Interface) The Processing Request Gateway/WPS checks by authentication and group membership whether a user is entitled to upload reference data or custom processors by well-known users.
+
+.. req:: TS-ICD-250
+  :show:
+
+  (Processor and Data Exchange Interface) User Management provides a dedicated user for exchange of data and processor software with the other processing centres.
+
+.. req:: TS-ICD-310
+  :show:
+
+  (OGC Web Processing Service) The BC WPS is secured by simple authentication and a verification of the group membership.
+
 .. figure:: UserManagementModel.png
    :scale: 100
    :align: center
@@ -40,51 +85,3 @@ Interfaces and interface items
 
 The slapd exposes an LDAP interface. Updates can be performed by scripts (or by LDIF files).
 
-Requirements for the design of BC user management
--------------------------------------------------
-
-.. req:: TS-FUN-640 WPS interface
-  :show:
-
-  The BC WPS is secured by simple authentication and a verification of the group membership.
-
-.. req:: TS-FUN-720 Reference data upload
-  :show:
-
-  The Processing Request Gateway/WPS checks by authentication and group membership whether a user is entitled to upload reference data.
-
-.. req:: TS-FUN-740 Software upload
-  :show:
-
-   The Processing Request Gateway/WPS checks by authentication and group membership whether a user is entitled to upload custom processors by well-known users.
-
-.. req:: TS-SEC-610 Authentication
-  :show:
-
-  The User Management provides a user account for the Portal.
-
-
-.. req:: TS-ICD-210 OGC Web Processing Service Interface
-  :show:
-
-  The BC WPS is secured by simple authentication and a verification of the group membership.
-
-.. req:: TS-ICD-220 Result Access Interface
-  :show:
-
-  The result access is secured by simple authentication. For well-known users result access is also possible by (S)FTP using the same credentials.
-
-.. req:: TS-ICD-230 Processor and Reference Data Upload Interface
-  :show:
-
-  The Processing Request Gateway/WPS checks by authentication and group membership whether a user is entitled to upload reference data or custom processors by well-known users.
-
-.. req:: TS-ICD-250 Processor and Data Exchange Interface
-  :show:
-
-  User Management provides a dedicated user for exchange of data and processor software with the other processing centres.
-
-.. req:: TS-ICD-310 OGC Web Processing Service	
-  :show:
-
-  The BC WPS is secured by simple authentication and a verification of the group membership.

@@ -3,6 +3,36 @@
 BC Urban TEP configuration and processor repository
 ===================================================
 
+.. req:: TS-FUN-650
+  :show:
+
+  (Process offerings) The processors of the Urban TEP are versioned externally to Urban TEP.
+
+.. req:: TS-FUN-660
+  :show:
+
+  (Subsetting processor) The Urban TEP Config and Processor Repo contains a subsetting processor. 
+
+.. req:: TS-FUN-670
+  :show:
+
+  (Processing) The Urban TEP Config and Processor Repo contains a subsetting processor and the indexes generation processor in the urbantep-1.0 processor bundle for use by requests from the portal.
+
+.. req:: TS-FUN-671
+  :show:
+
+  (Temporal statistics/indices generator) The Urban TEP Config and Processor Repo contains an indexes generation processor.
+
+.. req:: TS-FUN-680
+  :show:
+
+  (Deployment) The Urban TEP Config and Processor Repo contains a subsetting processor and the indexes generation processor in the urbantep-1.0 processor bundle for use by requests from the portal. 
+
+.. req:: TS-RES-630
+  :show:
+
+  (Subsystem configuration) The Urban TEP Config and Processor Repo versions processors. Several versions of a processor can be available and in use at the same time (by different requests).
+
 .. figure:: RepoModel.png
    :scale: 100
    :align: center
@@ -81,38 +111,4 @@ This bundle uses the conventions of a processor developer framework (BEAM, SNAP)
   bundle-descriptor.xml
 
 Details of the SNAP and BEAM conventions for operator implementation can be found in the respective documentation. Further information on the bundle descriptor schema and recommendations for embedding processor packages into Urban TEP will be provided in the implementation phase.
-
-
-Requirements for the design of BC Urban TEP configuration and processor repository
-----------------------------------------------------------------------------------
-
-.. req:: TS-FUN-650
-  :show:
-
-  (Process offerings) The processors of the Urban TEP are versioned externally to Urban TEP.
-
-.. req:: TS-FUN-660
-  :show:
-
-  (Subsetting processor) The Urban TEP Config and Processor Repo contains a subsetting processor. 
-
-.. req:: TS-FUN-670
-  :show:
-
-  (Processing) The Urban TEP Config and Processor Repo contains a subsetting processor and the indexes generation processor in the urbantep-1.0 processor bundle for use by requests from the portal.
-
-.. req:: TS-FUN-671
-  :show:
-
-  (Temporal statistics/indices generator) The Urban TEP Config and Processor Repo contains an indexes generation processor.
-
-.. req:: TS-FUN-680
-  :show:
-
-  (Deployment) The Urban TEP Config and Processor Repo contains a subsetting processor and the indexes generation processor in the urbantep-1.0 processor bundle for use by requests from the portal. 
-
-.. req:: TS-RES-630
-  :show:
-
-  (Subsystem configuration) The Urban TEP Config and Processor Repo versions processors. Several versions of a processor can be available and in use at the same time (by different requests).
 
