@@ -9,6 +9,7 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    
    General Schema <schema>
    Business Objects <objects>

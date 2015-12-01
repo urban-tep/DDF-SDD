@@ -1,7 +1,7 @@
-.. _design_subsystems_components_list :
+.. _design_overview :
 
-Subsystems components
-=====================
+Overview
+========
 
 The following schema provide a general overview of the main componenents that comes into play in Urban TEP.
 
@@ -48,14 +48,7 @@ This section describes them by subsystem:
    13. Dataset Download is the download endpoint for the data on the data provider.
 
 
-Next subsections describe each of the main components individually
+Next sections describe each of the main components individually
 
-.. toctree::
-   :maxdepth: 1
    
-   Portal <portal/index>
-   Catalogue <catalogue/index>
-   Brockmann Consult Processing Centre Components <bc-pc/index>
-   IT4Innovations Processing Centre Components <it4i-pc/index>
-   DLR Processing Centre Components <dlr-pc/index>
-   PUMA <PUMA/index>
+   

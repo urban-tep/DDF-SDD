@@ -33,7 +33,7 @@ This gives a quick overview while the they are explained in more detail in their
 
 The following figure shows the decomposition into its components and the subsystem-external interfaces. 
 
-. figure:: dlr_pc.png
+.. figure:: dlr_pc.png
    :scale: 100
    :align: center
 

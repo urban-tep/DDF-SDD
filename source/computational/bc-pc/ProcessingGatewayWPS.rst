@@ -58,7 +58,7 @@ BC processing gateway/WPS
 
   (GC Web Processing Service Interface) The BC implementation of the WPS supports OGC WPS version 1.0 with functions GetCapabilities, DescribeProcess, Execute, and in addition GetStatus.
 
-.. req:: TS-ICD-220 Result Access Interface
+.. req:: TS-ICD-220
   :show:
 
   The Processing Request Gateway/WPS provides the result datasets stored in the staging area of Online Data Access via its HTTP(S) interface.
