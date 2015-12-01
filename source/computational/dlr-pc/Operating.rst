@@ -3,57 +3,6 @@
 DLR TEP Urban Operating
 =======================
 
-Personnell
-----------
-
-The DLR TEP Urban processing centre will be managed by an operator with some Urban TEP-specific activities. 
-
- * An email account serves as communication endpoint.
- * The DlR processing centre monitors an account in the TEP Urban portal issue tracking system.
-
-Information persistence
------------------------
-
-Operators exchange information that is kept persistent:
-
- * The issue tracking keeps track of all communication activities regarding the DLR processing centre. 
- * The record of emails keeps track of bilateral communication.
-
-Service and functions
----------------------
-
-Activities of the Operator comprise:
-
- * monitoring and configuration of systematic or one-time ingestion of data from external data providers using their interfaces
- * communication with data providers, configuration for new ingestion sources (new datasets, different extent, different time interval)
- * monitoring of processing and delivery
- * analysis of failures in production flow 
- * support of users in questions partaining to the DLR Processing center 
- * support vetted users in adapting their processors to DLR Processing center standards 
- * communication with the Portal Operating and with Operating of the other processing centres, exchange of datasets and processors
- * generating and verification of usage reports
-
-Interfaces and interface items
-------------------------------
-
-The external interfaces provided or used by Operating are:
-
- * The Operating provides an email interface
- * The Operating uses the issue tracking interface of the Portal
- * The Operating uses the online data access interfaces of the BC Processing center to exchange processors and/or replicate EO Data
-
-The internal interfaces within the DLR processing centre used by Operating are:
-
- * Registering and maintaing necessary production users in DLR Infrastructure
- * Control and Monitor production systems and all components
- * Shell access to all relevant machines in the DLR Geofarm and DLR Calvalus
- * Access to internal Dockerhub to version and deploy thematic processors
- * Rights management on all TEP Urban relevant storage
-
-
-Requirements for the design of BC Urban TEP Operating
------------------------------------------------------
-
 .. req:: TS-FUN-750
   :show:
 
@@ -78,7 +27,7 @@ Requirements for the design of BC Urban TEP Operating
 .. req:: TS-FUN-670
   :show:
 
-  (Processing) Operating monitors processing.
+  (Processing) Operating monitors processing jobs.
 
 .. req:: TS-FUN-680
   :show:
@@ -123,9 +72,9 @@ Requirements for the design of BC Urban TEP Operating
   :show:
 
   The operator monitors - and initiates for bulk processing - the generation of catalogue entries for new EO Datasets.
- 	 	 
+       
 .. req:: TS-ICD-140
-  :show:	
+  :show: 
 
   (Issue Tracking)  TEP Urban Processing Centre Operating regularily handles issues assigned to the DLR processing centre in the Portal Issue Tracking system. 
   
@@ -139,4 +88,55 @@ Requirements for the design of BC Urban TEP Operating
 
   Operation maintains scripts to generate accounting reports, verify them and transder reports to the Reporting component of the Portal. 
 
+
+
+
+
+
+Personnell
+----------
+
+The DLR TEP Urban processing centre will be managed by an operator with some Urban TEP-specific activities. 
+
+ * An email account serves as communication endpoint.
+ * The DlR processing centre monitors an account in the TEP Urban portal issue tracking system.
+
+Information persistence
+-----------------------
+
+Operators exchange information that is kept persistent:
+
+ * The issue tracking keeps track of all communication activities regarding the DLR processing centre. 
+ * The record of emails keeps track of bilateral communication.
+
+Service and functions
+---------------------
+
+Activities of the Operator comprise:
+
+ * monitoring and configuration of systematic or one-time ingestion of data from external data providers using their interfaces
+ * communication with data providers, configuration for new ingestion sources (new datasets, different extent, different time interval)
+ * monitoring of processing and delivery
+ * analysis of failures in production flow 
+ * support of users in questions partaining to the DLR Processing center 
+ * support vetted users in adapting their processors to DLR Processing center standards 
+ * communication with the Portal Operating and with Operating of the other processing centres, exchange of datasets and processors
+ * generating and verification of usage reports
+
+Interfaces and interface items
+------------------------------
+
+The external interfaces provided or used by Operating are:
+
+ * The Operating provides an email interface
+ * The Operating uses the issue tracking interface of the Portal
+ * The Operating uses the online data access interfaces of the BC Processing center to exchange processors and/or replicate EO Data
+
+The internal interfaces within the DLR processing centre used by Operating are:
+
+ * Registering and maintaing necessary production users in DLR Infrastructure 
+ * Control and Monitor production systems and all components
+ * Shell access to all relevant machines in the DLR Geofarm and DLR Calvalus
+ * Access to internal Dockerhub to version and deploy thematic processors
+ * Rights management on all TEP Urban relevant storage
 

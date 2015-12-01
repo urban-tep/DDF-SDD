@@ -3,6 +3,25 @@
 DLR  Mesos scheduling and processing component
 ==============================================
 
+
+.. req:: TS-FUN-670
+  :show:
+
+  (Processing) The Scheduling and Processing processes submitted jobs by applying the requested workflow with the requested thematic processors.
+
+.. req:: TS-FUN-680
+  :show:
+
+  (Deployment) Scheduling and Processing automatically deploys Urban TEP processors when requested by the Portal via the Processing Gateway
+
+.. req:: TS-FUN-710
+  :show:
+
+  (Processing statistics) The Scheduling and Processing maintains a history of jobs accessible for Urban TEP Processing and Ingestion Control for the purpose of reporting and accounting. 
+
+  
+
+
 Implementation software and configuration
 -----------------------------------------
 
@@ -52,24 +71,4 @@ In addition there is an operator interface:
  * Web GUI of Mesos for monitoring (accessible only on internal secure network)
  * REST interface of mesos for monitoring and control
 
-   
-Requirements for the design of DLR Mesos scheduling and processing component
-----------------------------------------------------------------------------
-
-.. req:: TS-FUN-670
-  :show:
-
-  (Processing) The Scheduling and Processing processes submitted jobs by applying the requested workflow with the requested thematic processors.
-
-.. req:: TS-FUN-680
-  :show:
-
-  (Deployment) Scheduling and Processing automatically deploys Urban TEP processors when requested by the Portal via the Processing Gateway
-
-.. req:: TS-FUN-710
-  :show:
-
-  (Processing statistics) The Scheduling and Processing maintains a history of jobs accessible for Urban TEP Processing and Ingestion Control for the purpose of reporting and accounting. 
-
-  
   
