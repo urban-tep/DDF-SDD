@@ -4,3 +4,4 @@
 /_reports/
 /__pycache__/
 build
+source/ext/req.pyc

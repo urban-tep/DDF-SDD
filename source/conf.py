@@ -96,6 +96,8 @@ github_branch = "master"
 # requirements trace
 req_include_reqs = True
 
+number_section = True
+
 # -- Options for HTML output ---------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  Major themes that come with
@@ -183,8 +185,8 @@ latex_paper_size = 'a4'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'UrbanTEP-SDD.tex', u'Urban Thematic Exploitation Platform Software Design Document',
-   u'Terradue', 'manual'),
+  ('index', 'UrbanTEP-SDD.tex', u'Urban Thematic Exploitation Platform Design Defintion File',
+   u'Terradue', 'manual', True),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -193,10 +195,10 @@ latex_documents = [
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
-#latex_use_parts = False
+latex_use_parts = False
 
 # Additional stuff for the LaTeX preamble.
-#latex_preamble = ''
+#latex_preamble = '\\usepackage{typo3}'
 
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []

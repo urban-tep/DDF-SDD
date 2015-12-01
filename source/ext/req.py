@@ -51,8 +51,8 @@ from pprint import pprint
 
 def find_parent_section_name(node):
     if isinstance(node, section):
-        pprint(node[node.first_child_matching_class(title)][0].astext())
-        return node[node.first_child_matching_class(title)][0].astext()
+        #pprint(node[node.first_child_matching_class(title)][0].astext())
+        return node
     return find_parent_section_name(node.parent)
 
   
@@ -93,7 +93,7 @@ class ReqDirective(Directive):
         env.req_all_reqs.append({
             'docname': env.docname,
             'evidence': '\n'.join(self.content[-1:]),
-            'section_name' : find_parent_section_name(self.state),
+            'section' : find_parent_section_name(self.state),
             'reqid' : self.content[0],
             'req': ad[0].deepcopy(),
             'target': targetnode,
@@ -171,8 +171,15 @@ def process_req_nodes(app, doctree, fromdocname):
             # Create a reference
             try:
                 newnode = nodes.reference('', '')
-                pprint(req_info['reqid'])
-                innernode = nodes.emphasis(req_info['section_name'],req_info['section_name'])
+                #pprint(req_info['reqid'])
+                section = req_info['section']
+                section_name = ''
+                if section.get('secnumber'):
+                    section_name += (('%s' + self.secnumber_suffix) %
+                             '.'.join(map(str, node['secnumber'])))
+                section_name += section[section.first_child_matching_class(title)][0].astext()
+                pprint(section_name)
+                innernode = nodes.emphasis(section_name,section_name)
                 newnode['refdocname'] = req_info['docname']
                 newnode['refuri'] = app.builder.get_relative_uri(
                     fromdocname, req_info['docname'])

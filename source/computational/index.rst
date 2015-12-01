@@ -4,7 +4,8 @@ Software Design
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :numbered:
    
    Level of abstraction <abstraction>
    Subsystems Components <subsystems>
