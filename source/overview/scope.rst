@@ -30,7 +30,7 @@ Roles on the Platform are complying to a community policy (e.g. the data access 
 Data access
 ^^^^^^^^^^^
 
-Users dicovers the available dataset collection and ...
+Users dicovers the available dataset collection and their related
 
 * Policy: applicable EO data access and sharing policies
 * Process: collection discovery, catalogue query, data package creation, EO product download
@@ -41,7 +41,7 @@ Processor integration and Service offering
 
 * Policy: Processor terms of use, ICT Provider terms of use
 * Process: processor code wrapping, processor integration testing and validation, processor deployment as a service to user Portal
-* Resource: Developer Cloud Sandbox, Portal
+* Resource: Processing center, Portal
 
 Data processing over managed ICT
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -64,13 +64,14 @@ Data visualization and analysis
 
 * Policy: applicable EO data access and sharing policies, applicable Processor terms of use
 * Process: data catalogue query, query results retrieval, results upload to shared storage
-* Resource: vmCloudToolbox
+* Resource: PUMA
 
 The platform is meant to allow users to perform data visualisation tasks:
 
 * from processing software toolboxes hosted on their dedicated virtual machine: visualize and analyse EO-based products, e.g. to further apply data manipulation tools to them.
 * from Web Portal Geobrowser: overlay EO data collections density maps, geohazards events layers (e.g. Disasters Charter activations)
 * still from the Web Portal Geobrowser: combine EO data footprints and EO-based products to support data processing decision making (selection of processing input data, discovery and analysis of data processing results)
+* from PUMA, apply advance WebGIS analysis
 
 Reproducible Science collaboration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

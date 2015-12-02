@@ -18,12 +18,15 @@ Accounting to user/group accounts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Periodically, it collects the usage records from the :ref:`Apel Server <group___apel_server>` and use them to balance the user accounts with credits.
+
 *Here shall be a sequence diagram to describe the periodical user account balance*
 
 Credit Authorization and Quota restrictions 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The quota restriction is implemented using the balance of the user or group account used to query the resource.*Here shall be a sequence diagram to describe the credit authorization mechanism and the quota restriction*
+The quota restriction is implemented using the balance of the user or group account used to query the resource.
+
+*Here shall be a sequence diagram to describe the credit authorization mechanism and the quota restriction*
 
 .. req:: TS-FUN-400
 	:show:

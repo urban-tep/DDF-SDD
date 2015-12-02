@@ -1,0 +1,3 @@
+@startuml
+interface "GeoNode API" as group___geo_node_a_p_i [[../groups/group___geo_node_a_p_i.html]]
+@enduml

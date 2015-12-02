@@ -17,7 +17,9 @@ It provides with the functions to define privileges for users or groups on entit
 The authorisation consists of two phases:
 
 - a generic phase where the current user's access privileges are compared to the necessary privileges for the accessed resource
-- an optional specific phase where the same check is performed for the requested operation. This phase is specific to the entity subclass in question as the possible operations are entity-specific.*true*
+- an optional specific phase where the same check is performed for the requested operation. This phase is specific to the entity subclass in question as the possible operations are entity-specific.
+
+*true*
 
 
 

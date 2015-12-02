@@ -21,14 +21,3 @@ Dependencies
 - :ref:`Authentication <group___authentication>` authenticates a user
 
 
-
-Objects
-^^^^^^^
-- :ref:`class_terradue_1_1_portal_1_1_configuration`
-- :ref:`class_terradue_1_1_portal_1_1_user_level`
-- :ref:`class_terradue_1_1_portal_1_1_account_activation_rule_type`
-- :ref:`class_terradue_1_1_portal_1_1_ify_context_1_1_db_conn_data`
-- :ref:`class_terradue_1_1_portal_1_1_ify_context`
-- :ref:`class_terradue_1_1_portal_1_1_ify_local_context`
-- :ref:`class_terradue_1_1_portal_1_1_ify_web_context`
-

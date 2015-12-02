@@ -34,6 +34,8 @@
 [group___tep_contents]  ..>  [group___persistence] : []
 [group___tep_data]  ..>  [group___authorisation] : uses
 [group___tep_data]  ..>  [group___series] : uses
+[group___tep_data]  --(  [group___geo_server_a_p_i] : connects
+[group___tep_data]  --(  [group___geo_node_a_p_i] : connects
 [group___tep_service]  ..>  [group___core_w_p_s] : uses
 [group___web_pages]  --(  [group___t2_a_p_i] : connects
 @enduml

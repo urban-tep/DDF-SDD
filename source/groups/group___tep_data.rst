@@ -82,17 +82,13 @@ When a dataset is processed with a remote processing (e.g. WPS), the results of 
 
 
 
-- <<unknown>> raster and vector import. If the results include standard vector files (e.g. shapefile, geojson, csv with WKT, ...) or raster files such as geolocated images (geotiff, png with world files...), the  components shall propose to the user to export them to geoserver that will resturn a new WS layer that the web visualization widget shall display
-
-GeoNode export 
-^^^^^^^^^^^^^^^
-
-[GISAT INPUT]
+- <<unknown>> raster and vector export. If the results include standard vector files (e.g. shapefile, geojson, csv with WKT, ...) or raster files such as geolocated images (geotiff, png with world files...), the  components shall propose to the user to export them to geoserver that will resturn a new WMS layer that the web visualization widget shall display
+- <<unknown>> from an existing WMS layer, the  components shall propose to the user to export them to geonode that will return a link to the geonode map for the visualisation.
 
 .. req:: TS-FUN-010
 	:show:
 
-	The GeoNode export function allows user to upload their data to PUMA.
+	The GeoNode and :ref:`GeoServer <namespace_geo_server>` export function allows user to upload their data to PUMA.
 
 
 
@@ -103,10 +99,16 @@ Dependencies
 - uses :ref:`Series <group___series>` to delegates the dataset series persistence and search mechanism.
 
 
+Interfaces
+^^^^^^^^^^
+- connects :ref:`GeoServer API <group___geo_server_a_p_i>` to export vector or raster data.
+
+- connects :ref:`GeoNode API <group___geo_node_a_p_i>` to export WMS.
+
+
 
 Objects
 ^^^^^^^
 - :ref:`class_terradue_1_1_tep_1_1_controller_1_1_collection`
 - :ref:`class_terradue_1_1_tep_1_1_controller_1_1_data_package`
-- :ref:`class_terradue_1_1_tep_1_1_filters`
 

@@ -11,6 +11,9 @@
   !include source/groups/group___open_search.iuml
   !include source/groups/group___s_q_l_connector.iuml
   !include source/groups/group___apel_accounting.iuml
+  !include source/groups/group___geo_server_a_p_i.iuml
+  !include source/groups/group___geo_node_a_p_i.iuml
+  
 
   folder "Portal" [[../computational/portal/index.html]] {
     !include source/groups/group___t2_a_p_i.iuml
