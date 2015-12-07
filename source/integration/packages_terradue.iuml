@@ -15,10 +15,12 @@ package "Terradue" <<Frame>> {
   class "Terradue::ServiceModel::Syndication" as namespace_terradue_1_1_service_model_1_1_syndication
   class "Terradue::Tep" as namespace_terradue_1_1_tep
   class "Terradue::WebService::Model" as namespace_terradue_1_1_web_service_1_1_model
+  
 }
 
    !include ../../source/namespaces/namespace_terradue_1_1_authentication_1_1_umsso.iuml
    !include ../../source/namespaces/namespace_terradue_1_1_geo_json.iuml
+   
    !include ../../source/namespaces/namespace_terradue_1_1_github.iuml
    !include ../../source/namespaces/namespace_terradue_1_1_metadata_1_1_earth_observation.iuml
    !include ../../source/namespaces/namespace_terradue_1_1_service_model_1_1_ogc_1_1_ows_context.iuml
