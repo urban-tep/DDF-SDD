@@ -3,15 +3,10 @@
 WpsProvider
 -----------
 
+
 Represents a remote provider of a Web Processing :ref:`Service <class_terradue_1_1_portal_1_1_service>`.
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/classes/class_terradue_1_1_portal_1_1_wps_provider.iuml
 
 This class is used as the computing resource on which WPS processes, which are equivalent to tasks, run.
 

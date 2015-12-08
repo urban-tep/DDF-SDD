@@ -5,13 +5,6 @@ NetTopologySuite
 
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/namespaces/namespace_net_topology_suite.iuml
-
 :ref:`NetTopologySuite <namespace_net_topology_suite>` Software Package
 
 The NTS Topology Suite is an API for modelling and manipulating 2-dimensional linear geometry. It provides numerous geometric predicates and functions. NTS conforms to the Simple Features Specification.

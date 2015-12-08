@@ -5,13 +5,6 @@ Terradue::OpenSearch::SciHub
 
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/namespaces/namespace_terradue_1_1_open_search_1_1_sci_hub.iuml
-
 :ref:`Terradue <namespace_terradue>` .Net C# library implementing an :ref:`OpenSearch <namespace_terradue_1_1_open_search>` gateway towards Sentinel Scientific Hub API
 
 Software Page : `DotNetOgcOwsContext <https://github.com/Terradue/DotNetOgcOwsContext>`_
@@ -25,6 +18,7 @@ Nature : OSS
 
 
 
-Requires :
-- :ref:`namespace_terradue_1_1_service_model_1_1_syndication`
+This software package implements the following business objects: :ref:`namespace_terradue_1_1_service_model_1_1_syndication`
+
+
 

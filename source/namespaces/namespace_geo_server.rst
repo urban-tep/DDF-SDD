@@ -5,13 +5,6 @@ GeoServer
 
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/namespaces/namespace_geo_server.iuml
-
 :ref:`GeoServer <namespace_geo_server>` is an open source server for sharing geospatial data. Designed for interoperability, it publishes data from any major spatial data source using open standards.
 
 Software Page : `GeoServer <http://geoserver.org/>`_

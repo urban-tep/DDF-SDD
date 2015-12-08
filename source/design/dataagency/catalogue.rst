@@ -1,0 +1,22 @@
+.. _catalogue :
+
+Catalogue
+=========
+
+The Catalogue is provided as a service for storing and querying dataset in indexes. The dataset can be classified to series to provide directly with dataset collection.
+
+.. req:: HEP-TS-DES-004
+  :show:
+
+  This component describes the Catalogue as a Service
+
+
+Geosquare is the software component developed over elasticsearch that enables the service.
+
+.. include:: ../../groups/group___geosquare.rst
+.. include:: group___geosquare_a_p_i
+
+.. include:: elasticsearch.rst
+
+
+

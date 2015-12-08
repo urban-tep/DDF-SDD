@@ -5,13 +5,6 @@ Terradue::OpenSearch::GeoJson
 
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/namespaces/namespace_terradue_1_1_open_search_1_1_geo_json.iuml
-
 DotNetOpenSearchGeoJson Software Package
 
 Software Page : `DotNetOpenSearchGeoJson <https://github.com/Terradue/DotNetOpenSearchGeoJson>`_
@@ -25,7 +18,7 @@ Nature : OSS
 
 
 
-Requires :
-- :ref:`namespace_terradue_1_1_open_search`
-- :ref:`namespace_terradue_1_1_geo_json`
+This software package implements the following business objects: :ref:`namespace_terradue_1_1_open_search`, :ref:`namespace_terradue_1_1_geo_json`
+
+
 

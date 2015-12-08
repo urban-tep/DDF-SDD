@@ -3,15 +3,10 @@
 Service
 -------
 
+
 Abstract base object for processing services.
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/classes/class_terradue_1_1_portal_1_1_service.iuml
 
 
 

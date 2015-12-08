@@ -5,7 +5,10 @@ Tep Modules
 
 
 
+
 .. uml::
+  :align: center
+  :caption: Tep Modules component diagram
 
   !include includes/skins.iuml
   skinparam backgroundColor #FFFFFF
@@ -15,8 +18,14 @@ Tep Modules
 This is a super component that encloses all Thematic Exploitation Platform related functional compoenents. Their main functionnalities are targeted to ebhance the basic :ref:`Core <group___core>` functionalities for the thematic usage of the plaform. 
 
 
-Sub-Modules
-^^^^^^^^^^^
+This component is implemented in the following software packages: :ref:`namespace_terradue_1_1_tep`
+
+
+
+
+This component contains the sub-compoenents described in the following sections.
+
+
 .. toctree::
   :maxdepth: 0
 
@@ -26,9 +35,4 @@ Sub-Modules
   group___tep_contents
   group___tep_data
   group___tep_service
-
-
-Software Packages
-^^^^^^^^^^^^^^^^^
-- :ref:`namespace_terradue_1_1_tep`
 

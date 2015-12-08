@@ -5,12 +5,7 @@ Accounting
 
 
 
-.. uml::
 
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/groups/group___tep_accounting.iuml
 
 This component makes the integrated accounting of the TEP.
 
@@ -49,19 +44,18 @@ The quota restriction is implemented using the balance of the user or group acco
 
 
 
-Dependencies
-^^^^^^^^^^^^
+It depends on other components as
+
 - :ref:`Persistence of Data <group___persistence>` stores the user accounts in the database
 
 
-Interfaces
-^^^^^^^^^^
+It interacts with interfaces as it
+
 - connects :ref:`Apel Reporting <group___apel_reporting>` to retrieve the aggregated usage records.
 
 
 
-Objects
-^^^^^^^
-- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_account`
-- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_rates`
+This component manages the following business objects: :ref:`class_terradue_1_1_tep_1_1_account`, :ref:`class_terradue_1_1_tep_1_1_rates`
+
+
 

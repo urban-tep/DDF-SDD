@@ -5,13 +5,6 @@ Shibboleth::ServiceProvider
 
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/namespaces/namespace_shibboleth_1_1_service_provider.iuml
-
 Open source system for attribute-based Web SSO
 
 :ref:`Shibboleth <namespace_shibboleth>` is a Web Single Sign-On implementations based on OpenSAML that supports multiple protocols, federated identity, and the extensible exchange of rich attributes subject to privacy controls.

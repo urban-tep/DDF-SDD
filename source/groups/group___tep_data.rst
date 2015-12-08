@@ -5,12 +5,7 @@ Data
 
 
 
-.. uml::
 
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/groups/group___tep_data.iuml
 
 This component is in charge of all the data management in the platform.
 
@@ -24,9 +19,9 @@ Each user of the platform may define a DataPackage to save a set of dataset that
 
 
 .. uml::
+	:caption: Data package lifecycle #1 state diagram
 
 
-	
 	User -> WebPortal: Select data
 	WebPortal -> WebServer: Stores in a temporary data package
 	WebServer -> Database: Save a temporary data package
@@ -36,19 +31,14 @@ Each user of the platform may define a DataPackage to save a set of dataset that
 	WebServer -> WebPortal: Return new data package
 	WebPortal -> User: Data package successfully created
 	
-	footer
-	TEP Data Package creation state diagram
-	(c) Terradue Srl
-	endfooter
-	
 	
 
 
 
 .. uml::
+	:caption: Data package lifecycle #2 state diagram
 
 
-	
 	User -> WebPortal: Load existing data package
 	WebPortal -> WebServer: Stores the data package in the temporary data package
 	WebPortal -> User: Displays the items from the data package
@@ -63,10 +53,6 @@ Each user of the platform may define a DataPackage to save a set of dataset that
 	WebPortal -> User: Displays an error message to the user
 	end
 	
-	footer
-	TEP Data Package update state diagram
-	(c) Terradue Srl
-	endfooter
 	
 	
 
@@ -82,8 +68,8 @@ When a dataset is processed with a remote processing (e.g. WPS), the results of 
 
 
 
-- <<unknown>> raster and vector export. If the results include standard vector files (e.g. shapefile, geojson, csv with WKT, ...) or raster files such as geolocated images (geotiff, png with world files...), the  components shall propose to the user to export them to geoserver that will resturn a new WMS layer that the web visualization widget shall display
-- <<unknown>> from an existing WMS layer, the  components shall propose to the user to export them to geonode that will return a link to the geonode map for the visualisation.
+- :emphasis:`:ref:`GeoServer <namespace_geo_server>`` raster and vector export. If the results include standard vector files (e.g. shapefile, geojson, csv with WKT, ...) or raster files such as geolocated images (geotiff, png with world files...), the  components shall propose to the user to export them to geoserver that will resturn a new WMS layer that the web visualization widget shall display
+- :emphasis:`GeoNode` from an existing WMS layer, the  components shall propose to the user to export them to geonode that will return a link to the geonode map for the visualisation.
 
 .. req:: TS-FUN-010
 	:show:
@@ -92,23 +78,22 @@ When a dataset is processed with a remote processing (e.g. WPS), the results of 
 
 
 
-Dependencies
-^^^^^^^^^^^^
+It depends on other components as
+
 - uses :ref:`Authorisation <group___authorisation>` to manage the users in the groups with their roles and their access accordingly.
 
 - uses :ref:`Series <group___series>` to delegates the dataset series persistence and search mechanism.
 
 
-Interfaces
-^^^^^^^^^^
+It interacts with interfaces as it
+
 - connects :ref:`GeoServer API <group___geo_server_a_p_i>` to export vector or raster data.
 
 - connects :ref:`GeoNode API <group___geo_node_a_p_i>` to export WMS.
 
 
 
-Objects
-^^^^^^^
-- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_collection`
-- :ref:`class_terradue_1_1_tep_1_1_controller_1_1_data_package`
+This component manages the following business objects: :ref:`class_terradue_1_1_tep_1_1_collection`, :ref:`class_terradue_1_1_tep_1_1_data_package`
+
+
 

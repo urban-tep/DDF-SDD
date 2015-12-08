@@ -1,6 +1,0 @@
-@startuml
-class UserTep {
-[[../classes/class_terradue_1_1_tep_1_1_controller_1_1_user_tep.html]]
- +TerradueCloudPlatformId:string
-}
-@enduml

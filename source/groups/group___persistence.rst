@@ -5,17 +5,12 @@ Persistence of Data
 
 
 
-.. uml::
 
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/groups/group___persistence.iuml
 
 The component provides generic interaction with data that is persistently stored in a relational database. The data location and structure are defined in the classes that implement an object and which represent real-world entities.
 
-Interfaces
-^^^^^^^^^^
+It interacts with interfaces as it
+
 - connects to :ref:`SQL interface to RDBMS <group___s_q_l_connector>`
 
 

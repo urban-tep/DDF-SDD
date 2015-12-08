@@ -1,4 +1,4 @@
-.. include:: ../../classes/class_terradue_1_1_tep_1_1_controller_1_1_role_tep.rst
+.. include:: ../../classes/class_terradue_1_1_tep_1_1_role_tep.rst
 
 .. req:: TS-DES-020
   :show:

@@ -5,13 +5,6 @@ Newtonsoft::Json
 
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/namespaces/namespace_newtonsoft_1_1_json.iuml
-
 Json.NET Software Package
 
 Json.NET is a popular high-performance JSON framework for .NET

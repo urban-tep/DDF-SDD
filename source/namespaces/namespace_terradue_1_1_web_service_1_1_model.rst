@@ -5,13 +5,6 @@ Terradue::WebService::Model
 
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/namespaces/namespace_terradue_1_1_web_service_1_1_model.iuml
-
 :ref:`Terradue.WebService.Model <namespace_terradue_1_1_web_service_1_1_model>` Software Package
 
 Software Page : `Terradue.WebService.Model <https://git.terradue.com/sugar/terradue-webservice-model>`_
@@ -25,6 +18,7 @@ Nature : OSS
 
 
 
-Requires :
-- :ref:`namespace_terradue_1_1_portal`
+This software package implements the following business objects: :ref:`namespace_terradue_1_1_portal`
+
+
 

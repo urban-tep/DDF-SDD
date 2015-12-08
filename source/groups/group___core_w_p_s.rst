@@ -5,37 +5,34 @@ WPS
 
 
 
-.. uml::
 
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/groups/group___core_w_p_s.iuml
 
 This component is an helper for
 
 - providing with WPS Server as a processing resource;
 - providing with WPS process as processing offerings.
 
-It has two main functions:
+Main Functions 
+^^^^^^^^^^^^^^^
+
+
 
 - analyses the GetCapabilities() of the WPS server of a WpsProvider to retrieve all the process offered;
 - retrieves the DescribeProcess() of the previously discovered process to describe the process with input and ouput parameters and create a WpsProcessOffering;
 - submits, controls and monitors processing via the Execute() of the WPS server of a WpsProvider
 
-Below, the sequence diagram describes the the previously listed functions.
+Below, the sequence diagrams describe the the previously listed functions.
 
 
 
 .. uml::
+	:caption: WPS Service Analysis Sequence Diagram - Get Capabilities
 
 
-	!define DIAG_NAME WPS Service Analysis Sequence Diagram
-	
 	participant "WebClient" as WC
 	participant "WebServer" as WS
-	participant "Provider" as P
-	participant "Cloud Provider" as C
+	participant "WPS Provider" as P
+	participant "Infrastructure" as C
 	participant "DataBase" as DB
 	
 	autonumber
@@ -51,7 +48,7 @@ Below, the sequence diagram describes the the previously listed functions.
 	        WS -> WS: get service info (identifier, title, abstract)
 	    end
 	end
-	WS -> C: Load all Providers
+	WS -> C: discover Providers
 	loop on each provider
 	    WS -> P: GetCapabilities
 	    WS -> WS: extract services from GetCapabilities using request identifier
@@ -63,6 +60,21 @@ Below, the sequence diagram describes the the previously listed functions.
 	WS -> WC: return aggregated GetCapabilities
 	deactivate WS
 	
+	
+
+
+
+.. uml::
+	:caption: WPS Service Analysis Sequence Diagram - Describe Process
+
+
+	participant "WebClient" as WC
+	participant "WebServer" as WS
+	participant "WPS Provider" as P
+	participant "DataBase" as DB
+	
+	autonumber
+	
 	== Describe Process ==
 	
 	WC -> WS: DescribeProcess request
@@ -71,7 +83,6 @@ Below, the sequence diagram describes the the previously listed functions.
 	    WS -> DB: load service from request identifier
 	    WS -> DB: get provider url + service identifier on the provider
 	else case process from cloud provider
-	    WS -> C: get service provider
 	    WS -> P: GetCapabilities
 	    WS -> WS: extract describeProcess url from GetCapabilities using request identifier
 	end
@@ -79,6 +90,21 @@ Below, the sequence diagram describes the the previously listed functions.
 	WS -> P: DescribeProcess
 	WS -> WC: return result from describeProcess
 	deactivate WS
+	
+	
+
+
+
+.. uml::
+	:caption: WPS Service Analysis Sequence Diagram - Execute
+
+
+	participant "WebClient" as WC
+	participant "WebServer" as WS
+	participant "WPS Provider" as P
+	participant "DataBase" as DB
+	
+	autonumber
 	
 	== Execute ==
 	
@@ -88,7 +114,6 @@ Below, the sequence diagram describes the the previously listed functions.
 	    WS -> DB: load service from request identifier
 	    WS -> DB: get provider url + service identifier on the provider
 	else case process 'from cloud provider'
-	    WS -> C: get service provider
 	    WS -> P: GetCapabilities
 	    WS -> WS: extract execute url from GetCapabilities using request identifier
 	end
@@ -103,6 +128,21 @@ Below, the sequence diagram describes the the previously listed functions.
 	end
 	deactivate WS
 	
+	
+
+
+
+.. uml::
+	:caption: WPS Service Analysis Sequence Diagram - Retrieve Result
+
+
+	participant "WebClient" as WC
+	participant "WebServer" as WS
+	participant "WPS Provider" as P
+	participant "DataBase" as DB
+	
+	autonumber
+	
 	== Retrieve Result Servlet ==
 	
 	WC -> WS: RetrieveResultServlet request
@@ -113,12 +153,28 @@ Below, the sequence diagram describes the the previously listed functions.
 	WS -> WC: return updated statusLocation response
 	deactivate WS
 	
+	
+
+
+
+.. uml::
+	:caption: WPS Service Analysis Sequence Diagram - Search WPS process
+
+
+	participant "WebClient" as WC
+	participant "WebServer" as WS
+	participant "Provider" as P
+	participant "Infrastructure" as C
+	participant "DataBase" as DB
+	
+	autonumber
+	
 	== Search WPS process ==
 	
 	WC -> WS: WPS search request
 	activate WS
 	WS -> DB: Load all Providers
-	WS -> C: Load all Providers
+	WS -> C: discover Providers
 	loop on each provider
 	    WS -> P: GetCapabilities
 	    WS -> WS: get services info
@@ -131,6 +187,21 @@ Below, the sequence diagram describes the the previously listed functions.
 	    end
 	end
 	deactivate WS
+	
+	
+
+
+
+.. uml::
+	:caption: WPS Service Analysis Sequence Diagram - Integrate WPS provider
+
+
+	participant "WebClient" as WC
+	participant "WebServer" as WS
+	participant "Provider" as P
+	participant "DataBase" as DB
+	
+	autonumber
 	
 	== Integrate WPS provider ==
 	
@@ -148,18 +219,11 @@ Below, the sequence diagram describes the the previously listed functions.
 	end
 	
 	
-	footer
-	DIAG_NAME
-	(c) Terradue Srl
-	endfooter
-	
 
 Model and Representation 
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This components has also a function to represent a WpsProcessOffering object as a OwcOffering in the :ref:`OWS Context <group___o_w_s_context>` model. It implements the mechanism to search for  and the WpsProcessOffering via an OpenSearchable interface.
-
-""
+This components has also a function to represent a :ref:`Terradue.Portal.WpsProcessOffering <class_terradue_1_1_portal_1_1_wps_process_offering>` object as a :ref:`Terradue.ServiceModel.Ogc.OwsModel.OwcOffering <class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_owc_offering>` in the :ref:`OWS Context <group___o_w_s_context>` model. It implements the mechanism to search for :ref:`Terradue.Portal.WpsProvider <class_terradue_1_1_portal_1_1_wps_provider>` and the :ref:`Terradue.Portal.WpsProcessOffering <class_terradue_1_1_portal_1_1_wps_process_offering>` via an OpenSearchable interface.
 
 .. req:: TS-FUN-250
 	:show:
@@ -168,15 +232,15 @@ This components has also a function to represent a WpsProcessOffering object as 
 
 
 
-Dependencies
-^^^^^^^^^^^^
-- :ref:`Persistence of Data <group___persistence>` stores the  and WpsProcessOffering references in the database
+It depends on other components as
+
+- :ref:`Persistence of Data <group___persistence>` stores the :ref:`Terradue.Portal.WpsProvider <class_terradue_1_1_portal_1_1_wps_provider>` and :ref:`Terradue.Portal.WpsProcessOffering <class_terradue_1_1_portal_1_1_wps_process_offering>` references in the database
 
 - :ref:`Authorisation <group___authorisation>` controls the access on the WPS services
 
 
-Interfaces
-^^^^^^^^^^
+It interacts with interfaces as it
+
 - connects :ref:`Remote Web Processing Services Interface <group___r_w_p_s>` interface to retrieve process offerings from WPS Server and to submit, control and monitor prcoessing.
 
 

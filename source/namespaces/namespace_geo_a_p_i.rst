@@ -5,13 +5,6 @@ GeoAPI
 
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/namespaces/namespace_geo_a_p_i.iuml
-
 :ref:`GeoAPI <namespace_geo_a_p_i>` Software Package
 
 GeoAPI.NET project provides a common framework based on OGC/ISO standards to improve interoperability among .NET GIS projects.

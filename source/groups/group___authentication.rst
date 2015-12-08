@@ -5,22 +5,16 @@ Authentication
 
 
 
-.. uml::
 
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/groups/group___authentication.iuml
 
 It provides with the functions to identify a user through a generic interface for implementing multiple authentication mechanism.
 
 
 
 .. uml::
+	:caption: Authentication mechanism Activity Diagram
 
 
-	!define DIAG_NAME Authentication mechanism Activity Diagram
-	
 	start
 	:read session information;
 	if (valid session) then (yes)
@@ -47,14 +41,11 @@ It provides with the functions to identify a user through a generic interface fo
 	endif
 	stop
 	
-	footer
-	DIAG_NAME
-	(c) Terradue Srl
-	endfooter
+	
 	
 
-Dependencies
-^^^^^^^^^^^^
+It depends on other components as
+
 - :ref:`Persistence of Data <group___persistence>` reads/writes the user information
 
 

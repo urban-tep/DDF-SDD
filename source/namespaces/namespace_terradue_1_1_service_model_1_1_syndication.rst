@@ -5,13 +5,6 @@ Terradue::ServiceModel::Syndication
 
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/namespaces/namespace_terradue_1_1_service_model_1_1_syndication.iuml
-
 DotNetSyndication Software Package
 
 Software Page : `DotNetSyndication <https://github.com/Terradue/DotNetSyndication>`_

@@ -1,0 +1,7 @@
+@startuml
+class Rates {
+[[../classes/class_terradue_1_1_tep_1_1_rates.html]]
+ +Unit:string
+ +Cost:double
+}
+@enduml

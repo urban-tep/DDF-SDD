@@ -5,7 +5,10 @@ Web Services
 
 
 
+
 .. uml::
+  :align: center
+  :caption: Web Services component diagram
 
   !include includes/skins.iuml
   skinparam backgroundColor #FFFFFF
@@ -15,8 +18,9 @@ Web Services
 
 
 
-Sub-Modules
-^^^^^^^^^^^
+This component contains the sub-compoenents described in the following sections.
+
+
 .. toctree::
   :maxdepth: 0
 

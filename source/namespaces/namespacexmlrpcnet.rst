@@ -5,13 +5,6 @@ xmlrpcnet
 
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/namespaces/namespacexmlrpcnet.iuml
-
 XML-RPC.NET Software Package
 
 XML-RPC.NET - an XML-RPC client library for .Net

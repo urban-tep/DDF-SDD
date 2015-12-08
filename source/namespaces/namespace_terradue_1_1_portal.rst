@@ -5,13 +5,6 @@ Terradue::Portal
 
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/namespaces/namespace_terradue_1_1_portal.iuml
-
 :ref:`Terradue.Portal <namespace_terradue_1_1_portal>` Software Package
 
 Software Page : `Terradue.Portal <https://git.terradue.com/sugar/terradue-portal>`_
@@ -25,20 +18,15 @@ Nature : OSS
 
 
 
-Requires :
-- :ref:`namespace_terradue_1_1_open_search`
-- :ref:`namespace_my_sql_1_1_data`
+This software package implements the following business objects: :ref:`namespace_terradue_1_1_open_search`, :ref:`namespace_my_sql_1_1_data`
 
 
 
-Classes
-^^^^^^^
-- :ref:`class_terradue_1_1_portal_1_1_entity`
-- :ref:`class_terradue_1_1_portal_1_1_feature`
-- :ref:`class_terradue_1_1_portal_1_1_group`
-- :ref:`class_terradue_1_1_portal_1_1_series`
-- :ref:`class_terradue_1_1_portal_1_1_service`
-- :ref:`class_terradue_1_1_portal_1_1_user`
-- :ref:`class_terradue_1_1_portal_1_1_wps_process_offering`
-- :ref:`class_terradue_1_1_portal_1_1_wps_provider`
+
+
+
+
+This software package implements the following business objects: :ref:`class_terradue_1_1_portal_1_1_entity`, :ref:`class_terradue_1_1_portal_1_1_feature`, :ref:`class_terradue_1_1_portal_1_1_group`, :ref:`class_terradue_1_1_portal_1_1_series`, :ref:`class_terradue_1_1_portal_1_1_service`, :ref:`class_terradue_1_1_portal_1_1_user`, :ref:`class_terradue_1_1_portal_1_1_wps_process_offering`, :ref:`class_terradue_1_1_portal_1_1_wps_provider`
+
+
 

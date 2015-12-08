@@ -200,6 +200,21 @@ latex_use_parts = False
 # Additional stuff for the LaTeX preamble.
 latex_preamble = '\\usepackage{sdd}'
 
+latex_elements = {
+# The paper size ('letterpaper' or 'a4paper').
+#'papersize': 'letterpaper',
+
+# The font size ('10pt', '11pt' or '12pt').
+#'pointsize': '10pt',
+
+# Additional stuff for the LaTeX preamble.
+#'preamble':'',
+
+#Figure placement within LaTeX paper NOT WORKING
+'figure_align': 'H'
+
+}
+
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []
 

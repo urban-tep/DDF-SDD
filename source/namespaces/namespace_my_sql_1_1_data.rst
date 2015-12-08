@@ -5,13 +5,6 @@ MySql::Data
 
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/namespaces/namespace_my_sql_1_1_data.iuml
-
 :ref:`MySql.Data <namespace_my_sql_1_1_data>` Software Package
 
 Connector/Net is a fully-managed ADO.NET driver for MySQL.

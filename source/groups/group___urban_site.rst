@@ -5,7 +5,10 @@ Urban Site
 
 
 
+
 .. uml::
+  :align: center
+  :caption: Urban Site component diagram
 
   !include includes/skins.iuml
   skinparam backgroundColor #FFFFFF
@@ -22,8 +25,9 @@ This is the container for all the web pages and widgets component.
 
 
 
-Sub-Modules
-^^^^^^^^^^^
+This component contains the sub-compoenents described in the following sections.
+
+
 .. toctree::
   :maxdepth: 0
 

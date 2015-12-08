@@ -3,15 +3,10 @@
 WpsProcessOffering
 ------------------
 
+
 Represents a WPS process offering on a remote WPS server.
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/classes/class_terradue_1_1_portal_1_1_wps_process_offering.iuml
 
 
 

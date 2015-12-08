@@ -5,12 +5,7 @@ Earth Observation Metadata profile
 
 
 
-.. uml::
 
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/groups/group___e_o_profile.iuml
 
 The Earth Observation (EO) Metadata profile of Observations and Measurements is intended to provide a standard schema for encoding Earth Observation product metadata to support the description and cataloguing of products acquired by sensors aboard EO satellites.
 
@@ -23,8 +18,8 @@ EO products are differentiated by parameters such as the date of acquisition and
 
 
 
-Normative References
-^^^^^^^^^^^^^^^^^^^^
+The following normative references are applied to this component:
+
 - `OGC Earth Observation Metadata profile of Observations & Measurements (10-157r4) <https://portal.opengeospatial.org/files/61098>`_
 
 

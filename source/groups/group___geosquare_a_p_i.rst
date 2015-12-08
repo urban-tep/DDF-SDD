@@ -5,18 +5,9 @@ Geosquare API
 
 
 
-.. uml::
 
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/groups/group___geosquare_a_p_i.iuml
 
-ElasticCas is the component enabling the gateway with :ref:`Elasticsearch <namespace_elasticsearch>` in both directions.
-
-For dataset ingestion, it transform the metadata feed in JSON documents to index in elasticsearch. For dataset query, it exploit :ref:`Elasticsearch <namespace_elasticsearch>` search engine to retrieve the documents in JSON and transform them in metadata feed.
-
-The transformation and query semantics are defined trough plugins to enables several metadata models and feed formats.
+This is the interface of Geosquare for data ingestion and query. It implements :ref:`OpenSearch <group___open_search>` standards.
 
 .. req:: TS-ICD-090
 	:show:
@@ -30,5 +21,17 @@ The transformation and query semantics are defined trough plugins to enables sev
 
 	Geosquare API provides with an :ref:`OpenSearch <group___open_search>` interface
 
+
+
+It depends on other components as
+
+- manages EO dataset metadata based on :ref:`Earth Observation Metadata profile <group___e_o_profile>`
+
+
+The following normative references are applied to this component:
+
+- `OpenSearch 1.1 <http://www.opensearch.org/Specifications/OpenSearch/1.1>`_
+
+- `OGC OWS Context Conceptual Model <https://portal.opengeospatial.org/files/?artifact_id=55182>`_
 
 

@@ -5,12 +5,7 @@ Authorisation
 
 
 
-.. uml::
 
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/groups/group___authorisation.iuml
 
 It provides with the functions to define privileges for users or groups on entities for which restrictions are useful, such as entities that represent resources (computing resources or processing services etc.).
 
@@ -24,9 +19,9 @@ The authorisation consists of two phases:
 
 
 .. uml::
+	:caption: Authorisation mechanism Activity Diagram
 
 
-	!define DIAG_NAME Authorisation mechanism Activity Diagram
 	
 	start
 	:Load entity item considering access policies and user/group privileges;
@@ -54,10 +49,6 @@ The authorisation consists of two phases:
 	:Operation allowed;
 	stop
 	
-	footer
-	DIAG_NAME
-	(c) Terradue Srl
-	endfooter
 	
 
 .. req:: TS-FUN-380
@@ -81,15 +72,15 @@ The authorisation consists of two phases:
 
 
 
-Dependencies
-^^^^^^^^^^^^
+It depends on other components as
+
 - :ref:`Persistence of Data <group___persistence>` reads/writes the privileges persistently
 
 - uses :ref:`Context <group___context>` to identify the user and the session
 
 
 
-Objects
-^^^^^^^
-- :ref:`class_terradue_1_1_portal_1_1_group`
+This component manages the following business objects: :ref:`class_terradue_1_1_portal_1_1_group`
+
+
 

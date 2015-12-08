@@ -3,15 +3,10 @@
 Series
 ------
 
+
 Represents a series of data sets that are available from a catalogue.
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/classes/class_terradue_1_1_portal_1_1_series.iuml
 
 
 

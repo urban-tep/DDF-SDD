@@ -5,12 +5,7 @@ SQL interface to RDBMS
 
 
 
-.. uml::
 
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/groups/group___s_q_l_connector.iuml
 
 This is the interface to the relational Database in SQL
 

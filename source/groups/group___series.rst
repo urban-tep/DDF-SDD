@@ -5,14 +5,9 @@ Series
 
 
 
-.. uml::
 
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/groups/group___series.iuml
 
-This component manages all types of dataset series. It implements the machnaism to search for the dataset defined in the series via an OpenSearchable interface.
+This component manages all types of dataset series. It implements the mechanism to search for the dataset defined in the series via an :ref:`OpenSearch <group___open_search>` interface.
 
 .. req:: TS-ICD-080
 	:show:
@@ -28,20 +23,20 @@ This component manages all types of dataset series. It implements the machnaism 
 
 
 
-Dependencies
-^^^^^^^^^^^^
+It depends on other components as
+
 - :ref:`Persistence of Data <group___persistence>` stores persistently the series information in the database
 
 - :ref:`Authorisation <group___authorisation>` controls the access on the series
 
 
-Interfaces
-^^^^^^^^^^
+It interacts with interfaces as it
+
 - connects to :ref:`OpenSearch <group___open_search>` interfaces defined in the series to proxy the queries
 
 
 
-Objects
-^^^^^^^
-- :ref:`class_terradue_1_1_portal_1_1_series`
+This component manages the following business objects: :ref:`class_terradue_1_1_portal_1_1_series`
+
+
 

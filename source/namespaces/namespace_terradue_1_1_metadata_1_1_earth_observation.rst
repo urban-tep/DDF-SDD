@@ -5,13 +5,6 @@ Terradue::Metadata::EarthObservation
 
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/namespaces/namespace_terradue_1_1_metadata_1_1_earth_observation.iuml
-
 :ref:`Terradue <namespace_terradue>` .Net C# library implementing the Earth Observation :ref:`Metadata <namespace_terradue_1_1_metadata>` profile of Observations & Measurements
 
 Software Page : `DotNetEarthObservation <https://github.com/Terradue/DotNetEarthObservation>`_
@@ -25,8 +18,7 @@ Nature : OSS
 
 
 
-Requires :
-- :ref:`namespace_terradue_1_1_open_search`
-- :ref:`namespace_terradue_1_1_geo_json`
-- :ref:`namespace_net_topology_suite`
+This software package implements the following business objects: :ref:`namespace_terradue_1_1_open_search`, :ref:`namespace_terradue_1_1_geo_json`, :ref:`namespace_net_topology_suite`
+
+
 

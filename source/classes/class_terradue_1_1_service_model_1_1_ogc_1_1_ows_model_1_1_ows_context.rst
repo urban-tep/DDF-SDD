@@ -3,15 +3,10 @@
 OwsContext
 ----------
 
+
 This class is the overall container class for the OWS context document. 
 
 
-.. uml::
-
-  !include includes/skins.iuml
-  skinparam backgroundColor #FFFFFF
-  skinparam componentStyle uml2
-  !include source/classes/class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_ows_context.iuml
 
 
 

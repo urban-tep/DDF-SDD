@@ -1,6 +1,0 @@
-@startuml
-class RoleTep {
-[[../classes/class_terradue_1_1_tep_1_1_controller_1_1_role_tep.html]]
- +Name:string
-}
-@enduml
