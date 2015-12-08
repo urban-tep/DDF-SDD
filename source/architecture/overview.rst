@@ -3,7 +3,7 @@
 Overview
 ========
 
-The following schema provide a static overview of the main componenents that comes into play in Urban TEP.
+The following schema provide a static overview of the main components that comes into play in Urban TEP.
 
 
 .. include:: component_diagram.rst
