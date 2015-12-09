@@ -26,7 +26,7 @@ The *Service Management Module* manages information and configuration of all pro
 .. req:: TS-FUN-700
   :show:
 
-  The *Service Management Module* will generate a metadata record and submit it to the *Service Configuration Tool* that will submit it to the catalogue at the IT4I processing centre.
+  The *Service Management Module* will generate a metadata record and submit it to the *Service Configuration Tool* that will submit it to the catalogue at the IT4I processing centre and subsequently generates a metadata record and submits it to the Urban TEP catalogue.
 
 
 Processing Job Management Module
@@ -84,6 +84,8 @@ The *HPC Data Storage Access Framework* currently supports SCP transfer to *Anse
 User and Quota Management Module
 --------------------------------
 The *User and Quota Management Module* is used for managing users that will be submitting jobs to supported clusters. The first part of this module is the administration part that manages the user database and their quotas for cluster usage. The second part is the authentication and authorisation part that checks access of all requests to the *HPC as a Service Middleware*, provides actual usage and quota information and provides the number of available resources that the user can use for processing.
+
+This module allows flexible approach to user management between the Urban TEP Portal and the IT4I processing centre. It fully supports the currently planned approach of authentication and authorisation by the portal, but it can also support basic synchronisation of user databases between the portal and the HPC as a Service to further enhance the security, access control and quota management with finer granularity at the IT4I processing centre.
 
 .. req:: TS-RES-630
   :show:

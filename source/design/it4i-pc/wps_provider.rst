@@ -48,7 +48,9 @@ Service Configuration Tool
 --------------------------
 The *Service Configuration Tool* is an IT4I in-house J2EE solution that serves as an auxiliary tool for managing and updating configuration of supported services in the *GeoServer*. It is actually a web service-based adapter that synchronises the *HPC as a Service Middleware* and *GeoServer* service configurations to simplify the administration of both solutions. Whenever any change in the service configuration appears in *HPC as a Service* (either by a processing workflow or by administration intervention), the *Service Management Module* of the *HPC as a Service Middleware* synchronises the configuration changes with the *GeoServer* using the *Service Configuration Tool*.
 
+This solution will also generate a metadata record and submit it to the Urban TEP catalogue for any changes in service definition at the IT4I processing centre.
+
 .. req:: TS-FUN-700
   :show:
 
-  The *Service Configuration Tool* will receive the metadata record from the *HPCaaS Service Management Module* and will submit it to the catalogue at the IT4I processing centre.
+  The *Service Configuration Tool* will receive the metadata record from the *HPCaaS Service Management Module* and will submit it to the catalogue at the IT4I processing centre and subsequently generates a metadata record and submits it to the Urban TEP catalogue.
