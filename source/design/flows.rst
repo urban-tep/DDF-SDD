@@ -35,24 +35,21 @@ In the :ref:`portal`, any users may register a new :ref:`WPS server <class_terra
 Processing centers and Catalogue metadata exchange
 --------------------------------------------------
 
-.. warning:: to be described
-
+Processing centers will offer an `OGC Catalogue Service <http://www.opengeospatial.org/standards/cat>`_ of all metadata available, which is continually updated. The processing center catologue service can be harvested by the :ref:`portal` and if necessary by other processing centers. This mechanism will allow the portal and porcessing centers to refer to and use valid data resources
 
 
 
 Processor deployment
 --------------------
 
-.. warning:: to be described
-
-
+Any registered user may use the help desk of the :ref:`portal` to get the technical specifications of the processing centers. He will have to build his software according to the specifications and submit the software package via the help desk. An oparator will manage deployment and `OGC Web Processing Service <http://www.opengeospatial.org/standards/wps>`_ integration. 
 
 
 
 Processing results data flow
 ----------------------------
 
-.. warning:: to be described
+After an OGC WPS processing request is sent from the :ref:`portal` to the procesing center in question, the WPS response will contain an URL resource of the location of the results. The results will be accesssible at an SFTP server in the processing center. Once the portal is aware that processing is complete, it is able to retrieve the results for display or use the URL to notify the user where the results are obtainable.
 
 
 
