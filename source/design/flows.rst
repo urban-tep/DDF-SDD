@@ -25,17 +25,19 @@ Accounting data flow
 
 
 
-Portal and Processing centers job submission
+Portal and Processing centres job submission
 --------------------------------------------
 
 In the :ref:`portal`, any users may register a new :ref:`WPS server <class_terradue_1_1_portal_1_1_wps_provider>`. The component :ref:`core WPS <group___core_w_p_s>` discovers the processing :ref:`WPS processing services <class_terradue_1_1_portal_1_1_wps_process_offering>` available by the :ref:`class_terradue_1_1_portal_1_1_wps_provider` and the user selects the services he wants to integrate in its :ref:`Thematic Application <class_terradue_1_1_tep_1_1_thematic_application>`. The users accessing the :ref:`Thematic Application <class_terradue_1_1_tep_1_1_thematic_application>` have access to the selected :ref:`processing service <class_terradue_1_1_portal_1_1_wps_process_offering>` and the :ref:`portal` will proxy the job request to the :ref:`WPS server <class_terradue_1_1_portal_1_1_wps_provider>` and grant the access or not according to the user or group :ref:`class_terradue_1_1_tep_1_1_account` credit balance. 
 
+The on-demand job submission and execution workflow is also described in section 4.1.6 of the Sustainable Operations Concept Technical Note.
 
 
-Processing centers and Catalogue metadata exchange
+
+Processing centres and Catalogue metadata exchange
 --------------------------------------------------
 
-Processing centers will offer an `OGC Catalogue Service <http://www.opengeospatial.org/standards/cat>`_ of all metadata available, which is continually updated. The processing center catologue service can be harvested by the :ref:`portal` and if necessary by other processing centers. This mechanism will allow the portal and porcessing centers to refer to and use valid data resources
+Processing centres will offer an `OGC Catalogue Service <http://www.opengeospatial.org/standards/cat>`_ of all metadata available, which is continually updated. The processing centre catologue service can be harvested by the :ref:`portal` and if necessary by other processing centres. This mechanism will allow the portal and processing centres to refer to and use valid data resources
 
 
 
@@ -44,7 +46,7 @@ Processor deployment
 
 Any registered user may use the help desk of the :ref:`portal` to get the technical specifications of the processing centres that are suitable for his envisioned processor along with the development kit for creating new processors. The selected processing centre will also provide specific experimental environment (e.g. a virtual machine image or connection information to the experimental infrastructure directly at the processing centre) with sample data for the user to test the processor during the development. The user will then have to build his software according to the specifications, validate it in the experimental environment and submit the software package via the help desk. Urban TEP help desk operator will manage deployment of the processor with the selected processing centre help desk and its integration to the `OGC Web Processing Service <http://www.opengeospatial.org/standards/wps>`_ on the processing centre and the portal.
 
-The concepts of processor integration with frameworks and languages supported, packaging examples, and runtime environment are described for each respective processing centre, in section 4.5.7.4 and 4.6.3.3. Supported processor integration tools and languages are described in section 5.5 of the System and Service Technical Note. More detailed operational process for the processor deployment is described in section 4.1.4 of the Sustainable Operations Concept TN.
+The concepts of processor integration with frameworks and languages supported, packaging examples, and runtime environment are described for each respective processing centre, in section 4.5.7.4 and 4.6.3.3. Supported processor integration tools and languages are described in section 5.5 of the System and Service Technical Note. More detailed operational process for the processor deployment is described in section 4.1.4 of the Sustainable Operations Concept Technical Note.
 
 
 
