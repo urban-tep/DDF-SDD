@@ -49,7 +49,7 @@ Any registered user may use the help desk of the :ref:`portal` to get the techni
 Processing results data flow
 ----------------------------
 
-After an OGC WPS processing request is sent from the :ref:`portal` to the procesing center in question, the WPS response will contain an URL resource of the location of the results. The results will be accesssible at an SFTP server in the processing center. Once the portal is aware that processing is complete, it is able to retrieve the results for display or use the URL to notify the user where the results are obtainable.
+After an `OGC Web Processing Service <http://www.opengeospatial.org/standards/wps>`_ request is sent from the :ref:`portal` to the procesing center in question, the WPS response will contain an URL resource of the location of the results. The results will be accesssible at an SFTP server in the processing center. Once the portal is aware that processing is complete, it is able to retrieve the results for display or use the URL to notify the user where the results are obtainable.
 
 
 
