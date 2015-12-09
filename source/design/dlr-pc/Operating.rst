@@ -90,16 +90,13 @@ DLR TEP Urban Operating
 
 
 
-
-
-
-Personnell
+Personnel
 ----------
 
 The DLR TEP Urban processing centre will be managed by an operator with some Urban TEP-specific activities. 
 
  * An email account serves as communication endpoint.
- * The DlR processing centre monitors an account in the TEP Urban portal issue tracking system.
+ * The DLR processing centre monitors an account in the TEP Urban portal issue tracking system.
 
 Information persistence
 -----------------------
@@ -128,9 +125,9 @@ Interfaces and interface items
 
 The external interfaces provided or used by Operating are:
 
- * The Operating provides an email interface
- * The Operating uses the issue tracking interface of the Portal
- * The Operating uses the online data access interfaces of the BC Processing center to exchange processors and/or replicate EO Data
+ * Operating provides an email interface
+ * Operating uses the issue tracking interface of the Portal
+ * Operating uses the online data access interfaces of the BC Processing center to exchange processors and/or replicate EO Data
 
 The internal interfaces within the DLR processing centre used by Operating are:
 
