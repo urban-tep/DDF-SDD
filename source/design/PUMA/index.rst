@@ -98,6 +98,21 @@ The server side of application utilizes mainly NodeJS framework. NodeJS applicat
 
 PostGIS database contains geographical data itself and is bound to Geonode system. MongoDB contains various configurations and abstractions of the real data.
 
+External API
+^^^^^^^^^^^^
+
+At the current moment PUMA doesn’t offer capabilities for integration with other services. It is tool which was mainly meant to be used by the end user. The only supported integration is import of the data into the tool using GeoServer REST API. 
+
+In order to support integration with other services, we will provide API for configuring the state of the User Interface and choosing the relevant data sets. This API will be modelled according to the guidelines in the OGC OWS Context Conceptual Model. This API will be implemented in the PUMA in the implementation phase. 
+
+The API will offer to store some queried state in which case the request will return an id of current state. It will also allow user to display the PUMA in the requested state. It doesn’t matter whether the PUMA will be opened using link in separate tab or injected into the iframe in any page.  
+
+To enable TEP data visulization in PUMA, following steps are assumed:
+
+- PORTAL component / DATA PROVIDERs shall push the data (process results) using PUMA exposed GeoServer REST API into PUMA local storage (PostgreSQL, filesystem) - vector datasets shall be stored in the PostgreSQL (with PostGIS extension), raster datasets shall be stored in the file system
+- PUMA application provides API to define which data to be visualised and the type of visualisation (choropleth, disperse diagram, column chart, pie chart, …)
+- This API shall be called from PORTAL environment in a form of URI
+
 Common request workflow
 ^^^^^^^^^^^^^^^^^^^^^^^
 
