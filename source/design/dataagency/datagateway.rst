@@ -10,26 +10,10 @@ The Data Gateway is Data as a Service platform of Terradue to resolve the best l
 It resolves the best location from the catalogue but also based on rules.
 
 
-.. req:: HEP-TS-FUN-040
+.. req:: TS-FUN-100
   :show:
 
   The data gateway mechanism is fully described in this section
-
-
-Partnership Policies
-""""""""""""""""""""
-
-The Data Gateway implements 3 methods to access data from data providers:
-
-- remote access either by user redirection or by piping the data request download
-- caching the data resource on a custom data storage for a defined retention time
-- mirroring the data resource on a custom data storage for an undefined time limit
-
-
-.. req:: HEP-TS-FUN-041
-  :show:
-
-  The data gateway's partnership policies implementation is fully described in this section
 
 
 Rule Based design
@@ -45,16 +29,10 @@ The rules conditions are applicable to:
 The rules are combinable.
 
 
-.. req:: HEP-TS-FUN-042
-  :show:
-
-  The data gateway's rule based mechanism is fully described in this section
-
-
 Data Access Policies enforcement
 """"""""""""""""""""""""""""""""
 
-.. req:: HEP-TS-SEC-051
+.. req:: TS-FUN-480
   :show:
 
   Data Access policies enforcement is described in this section
@@ -71,10 +49,6 @@ SciHub
 Data Gateway service implements a channel for harvesting and retrieving data from Copernicus Sentinels Scientific Hub (https://scihub.esa.int/).
 
 
-.. req:: HEP-TS-ICD-034
-  :show:
-
-  Data Access policies enforcement is described in this section
 
 
 

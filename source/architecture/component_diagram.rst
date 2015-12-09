@@ -46,6 +46,8 @@
 
     node PUMA {
       interface "Web UI" as PUMAWEBUI <<UI>>
+      interface "GeoServer API" as PUMAGeoServerAPI <<http>>
+      interface "WMS" as PUMAWMS <<http>>
     }
 
     node "Portal" {
@@ -81,6 +83,15 @@
 
     node PUMA {
       [GeoNode] as PUMAGeoNode
+      [GeoServer] as PUMAGeoServer
+      database "PUMA" as PUMADB
+      PUMAGeoServer -- PUMAWMS
+      PUMAGeoServer -- PUMAGeoServerAPI
+      PUMAGeoNode -- PUMAWMS
+      PUMAWEBUI --( PUMAWMS
+      PUMAWEBUI -- PUMADB
+      PUMAGeoServer -- PUMADB
+      PUMAGeoNode -- PUMADB
     }
 
     node "Portal" {
@@ -88,7 +99,8 @@
       WEBUI -down-( OS2
       WEBUI -down-( WPS2
       WEBUI -down-( T2API
-      WEBUI -down-( redmine
+      WEBUI --( redmine
+      WEBUI --( PUMAWMS
       [Web Server] -down-( OS1 : find series
       [Web Server] -up- OS2 : expose series
       [Web Server] -up- WPS2 : handle request
@@ -97,9 +109,10 @@
       [Web Server] --( WPS1 : find service
       [Web Server] --( WPS1 : submit request
       [Web Server] -right- TEPDB
-      [Web Server] -left- PUMAGeoNode : publishes results
+      [Web Server] --( PUMAGeoServerAPI : publishes results
+      [Web Server] --( PUMAWEBUI : redirects
       [Web Server] -right- ACR
-      [Web Server] -down-() gsapi : register dataset
+      [Web Server] -down-( gsapi : register dataset
     }
 
     node "APEL" {
