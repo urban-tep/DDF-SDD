@@ -42,14 +42,16 @@ Processing centers will offer an `OGC Catalogue Service <http://www.opengeospati
 Processor deployment
 --------------------
 
-Any registered user may use the help desk of the :ref:`portal` to get the technical specifications of the processing centers. He will have to build his software according to the specifications and submit the software package via the help desk. An oparator will manage deployment and `OGC Web Processing Service <http://www.opengeospatial.org/standards/wps>`_ integration. 
+Any registered user may use the help desk of the :ref:`portal` to get the technical specifications of the processing centres that are suitable for his envisioned processor along with the development kit for creating new processors. The selected processing centre will also provide specific experimental environment (e.g. a virtual machine image or connection information to the experimental infrastructure directly at the processing centre) with sample data for the user to test the processor during the development. The user will then have to build his software according to the specifications, validate it in the experimental environment and submit the software package via the help desk. Urban TEP help desk operator will manage deployment of the processor with the selected processing centre help desk and its integration to the `OGC Web Processing Service <http://www.opengeospatial.org/standards/wps>`_ on the processing centre and the portal.
+
+The concepts of processor integration with frameworks and languages supported, packaging examples, and runtime environment are described for each respective processing centre, in section 4.5.7.4 and 4.6.3.3. Supported processor integration tools and languages are described in section 5.5 of the System and Service Technical Note. More detailed operational process for the processor deployment is described in section 4.1.4 of the Sustainable Operations Concept TN.
 
 
 
 Processing results data flow
 ----------------------------
 
-After an `OGC Web Processing Service <http://www.opengeospatial.org/standards/wps>`_ request is sent from the :ref:`portal` to the procesing center in question, the WPS response will contain an URL resource of the location of the results. The results will be accesssible at an SFTP server in the processing center. Once the portal is aware that processing is complete, it is able to retrieve the results for display or use the URL to notify the user where the results are obtainable.
+After an `OGC Web Processing Service <http://www.opengeospatial.org/standards/wps>`_ request is sent from the :ref:`portal` to the procesing centre in question, the WPS response will contain URL and authentication credentials to the SFTP/SCP interface at the processing centre containing the results. Once the portal is aware that processing is complete, it is able to retrieve the results for visualisation and/or provide them to the user for download.
 
 
 
