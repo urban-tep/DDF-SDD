@@ -107,7 +107,7 @@ Interfaces and interface items
 The external interfaces provided by the Processing Gateway/WPS are 
 
  * the WPS interface
- * the result access interface (HTTPS/FTP
+ * the result access interface (HTTPS/FTP)
  * the interface for upload of reference data and of processor bundles via HTTP
 
 The subsystem-external interface used by the Processing Gateway/WPS is 
