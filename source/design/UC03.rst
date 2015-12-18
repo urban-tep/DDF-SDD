@@ -1,0 +1,15 @@
+.. _design_uc03 :
+
+Develop and deploy a new service and/or new product
+===================================================
+
+  
+1)  User registers via portal.
+2)  User provides new software and new data to TEP Urban platform team. 
+3)  TEP Urban platform team checks, ingests and deploys new software and new data.
+4)  User and TEP Urban platform team test the functionality of the application.
+5)  As soon as operational functionality of the application is verified, the new service and new data sets are registered in the catalogue/store.
+6)  The user selects the required data and the new service and schedules the processing of a new product.
+7)  The generated new product is registered in the catalogue/store and delivered for download to the user via the platform.
+8)  The user visualises the new product and combines it with other data (UC-04) 
+

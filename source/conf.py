@@ -25,7 +25,7 @@ sys.path.append(os.path.abspath('ext'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['githubpath', 'sphinxcontrib.plantuml', 'sphinx.ext.autodoc', 'rst2pdf.pdfbuilder', 'req']
+extensions = ['githubpath', 'sphinxcontrib.plantuml', 'sphinx.ext.autodoc', 'rst2pdf.pdfbuilder', 'req', 'sphinx.ext.todo']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -97,6 +97,8 @@ github_branch = "master"
 req_include_reqs = True
 
 number_section = True
+
+todo_include_todos = True
 
 # -- Options for HTML output ---------------------------------------------------
 

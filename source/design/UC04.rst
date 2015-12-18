@@ -1,0 +1,15 @@
+.. _design_uc04 :
+
+Combine, analyse and visualise data, products and results
+=========================================================
+
+1)  User registers via portal.
+2)  User selects thematic content existing in catalogue/store along with area and/or time.
+3)  User selects GIS tools and functionalities to explore, visualise, combine and/or analyse selected thematic contents.
+4)  Portal/platform sends corresponding request to information system at platform or outside the platform (PUMA), where the user can visualise the result and explore the results in pre-prepared views.
+5)  If provided views are not sufficient, user can modify settings and or define new view.
+6)  If computing-intensive processing required, the requested product is processed at a processing center where the requested service and data access functionality are hosted.
+7)  If a new product is generated it can be registered in the catalogue/store.
+8)  Generated output (data, statistics, graphs, report) is provided to the user via the portal. 
+
+

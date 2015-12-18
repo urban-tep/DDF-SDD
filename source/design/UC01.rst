@@ -1,0 +1,112 @@
+.. _design_uc01 :
+
+Query and access existing thematic content
+==========================================
+
+
+This use case aims at using TEP Urban for user exploration of the registered thematic data collection, visualize, share and download them.
+
+The first step for the user is to discover and search dataset in collections within thematic applications.
+
+The following first figure depicts this step using the integrated geobrowser of the portal and the basic visualization functions.
+
+.. uml::
+  :caption: Data discovery, query, visualization and selection on portal geobrowser
+
+
+  actor "User" as U
+  participant "Portal" as P
+  database "Portal database" as PDB
+  database "Catalogue" as C
+  participant "Feature Server" as FS
+  
+  autonumber
+  
+  U -> P : Query Thematic Application
+  activate P
+  P <-> PDB : Load Thematic Applications items
+  PDB -> P : Data Collections, Services, Maps, Features...
+  P -> U : Thematic Application
+  deactivate P
+
+  U -> P : Query Collection with params (AOI, timespan, filters...)
+  activate P
+  P -> C : Query catalogue index of the collection
+  C -> P : Datasets metadata (atom, geojson...)
+  P -> FS : Get visualization features (WMS, WFS, TMS...)
+  FS -> P : return features
+  P -> U : Datasets information and visualization features
+  deactivate P
+
+
+Next figure depicts the next step that consists of selecting and saving a dataset selection. Then download or share the full selection.
+
+
+.. uml::
+  :caption: Data selection, download and share on portal geobrowser
+
+  actor "User" as U
+  participant "Portal" as P
+  database "Portal database" as PDB
+  database "Catalogue" as C
+  participant "Feature Server" as FS
+  participant "Data Gateway" as DG
+  database "Data Provider" as DP
+
+  U -> P : Select datasets in the basket
+  U -> P : Save basket as a data package
+  activate P
+  P <-> PDB : Save user data package
+  P -> U : Data package
+  deactivate P
+
+  U -> P : Download data package
+  P -> U : redirect to DG
+  U -> DG : download data package
+  activate DG
+  DG <-> P : query data package
+  DG <-> C : query the possible locations
+  DG -> DG : resolve the best locations
+  DG -> U : download links (direct, metalink)
+  deactivate DG
+
+
+
+Next figure depicts the same use case but using PUMA for the data vizualisation and manipulation.
+
+.. todo:: *GISAT* sequence diagram of the user interaction with PUMA
+
+
+.. uml::
+  :caption: Data discovery, query, visualization and combination on PUMA
+
+
+  actor "User" as U
+  participant "Portal" as P
+  database "Portal database" as PDB
+  database "PUMA" as PUMA
+  participant "Feature Server" as FS
+  participant "Data Gateway" as DG
+  database "Data Provider" as DP
+  
+  
+
+Next figure depicts the next step that consists of subsetting and downloading only the AOI of the dataset selection.
+
+.. todo:: *T2* sequence diagram with service selection and subset job submission
+
+
+.. uml::
+  :caption: Data subsetting on geobrowser
+
+
+  actor "User" as U
+  participant "Portal" as P
+  database "Portal database" as PDB
+  database "Catalogue" as C
+  participant "Feature Server" as FS
+  participant "Data Gateway" as DG
+  database "Data Provider" as DP
+
+
+

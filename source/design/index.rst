@@ -7,16 +7,11 @@ Dynamic Architecture
    :maxdepth: 3
    :numbered:
    
-   Level of abstraction <abstraction>
-   Overview <overview>
-   Portal <portal/index>
-   APEL <APEL/index>
-   Data Agency <dataagency/index>
-   Brockmann Consult Processing Centre Components <bc-pc/index>
-   IT4Innovations Processing Centre Components <it4i-pc/index>
-   DLR Processing Centre Components <dlr-pc/index>
-   PUMA <PUMA/index>
-   Interfaces <interfaces>
-   Information Flow <flows>
+   Query and access existing thematic content <UC01>
+   Conduct on-demand processing <UC02>
+   Develop and deploy a new service and/or new product <UC03>
+   Combine, analyse and visualise data, products and results <UC04>
+   Integrated accounting, credit and quota  <accounting>
+   Authentication and Autorization Scheme <auth>
    
    

@@ -1,0 +1,15 @@
+.. _design_uc02 :
+
+Conduct on-demand processing
+============================
+
+1)  User registers via portal.
+2)  User selects existing service in catalogue or store and defines for which area and/or time the service should be applied in order to generate a new product.
+3)  User defines appropriate parameter setting (e.g., thresholds) functions of service.
+4)  Portal/platform sends corresponding request to the processing center where the requested service and data access functionality are hosted.
+5)  Processing center generates the new product.
+6)  New product is submitted to information system at platform, where the user can visualise the result and decide if chosen parameter setting was sufficient.
+7)  If selected parameter setting was not sufficient, user can modify settings and start new processing.
+8)  If selected parameter setting was sufficient, the new product is delivered to the user via the portal/platform and the new product is registered in the catalogue/store.
+
+

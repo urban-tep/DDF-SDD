@@ -3,15 +3,21 @@
 Static Architecture
 ###################
 
-The static architecture gives a static description of the whole system through the general partitioning of the sub-systems and the informational schema defined with the business objects.
+The static architecture gives a static description of the whole system through the general partitioning of the sub-systems and the informational schema defined with the configuratio data.
 
 .. toctree::
    :maxdepth: 2
    :numbered:
    
    System overview <overview>
-   Business Objects Definition <objects/index>
-   Data Model <datamodel>
-   Processing Services Development <procser>
-
+   Level of abstraction <abstraction>
+   Portal <portal/index>
+   APEL <APEL/index>
+   Data Agency <dataagency/index>
+   Brockmann Consult Processing Centre Components <bc-pc/index>
+   IT4Innovations Processing Centre Components <it4i-pc/index>
+   DLR Processing Centre Components <dlr-pc/index>
+   PUMA <PUMA/index>
+   Interfaces <interfaces>
+   Configuration Data <data>
 
