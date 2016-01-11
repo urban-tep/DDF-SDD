@@ -5,11 +5,37 @@ Develop and deploy a new service and/or new product
 
   
 1)  User registers via portal.
-2)  User provides new software and new data to TEP Urban platform team. 
-3)  TEP Urban platform team checks, ingests and deploys new software and new data.
-4)  User and TEP Urban platform team test the functionality of the application.
-5)  As soon as operational functionality of the application is verified, the new service and new data sets are registered in the catalogue/store.
-6)  The user selects the required data and the new service and schedules the processing of a new product.
-7)  The generated new product is registered in the catalogue/store and delivered for download to the user via the platform.
-8)  The user visualises the new product and combines it with other data (UC-04) 
+    
+.. todo:: *T2* sequence diagram and description of the user interaction with Portal
+
+3)  User provides new software and new data to TEP Urban platform team. 
+    
+.. todo:: *IT4I* sequence diagram and description of the user interaction with the development environment
+
+
+4)  TEP Urban platform team checks, ingests and deploys new software and new data.
+    
+.. todo:: *BC* sequence diagram and description of the deployment of the new software and data
+
+
+5)  User and TEP Urban platform team test the functionality of the application.
+    
+.. todo:: *BC* sequence diagram and description of the user interaction for testing the new software
+
+
+6)  As soon as operational functionality of the application is verified, the new service and new data sets are registered in the catalogue/store.
+     
+.. todo:: *BC* sequence diagram and description of the application registration with ne software and data
+
+
+7)  The user selects the required data and the new service and schedules the processing of a new product.
+     
+.. todo:: *T2* sequence diagram and description of the user interaction with Portal
+
+
+8)  The generated new product is registered in the catalogue/store and delivered for download to the user via the platform.
+    
+.. todo:: *T2* sequence diagram and description of the user interaction with Portal
+
+10)  The user visualises the new product and combines it with other data (UC-04) 
 
