@@ -5,10 +5,11 @@ Static Architecture
 
 The static architecture gives a static description of the whole system through the general partitioning of the sub-systems and the informational schema defined with the configuratio data.
 
+Contents:
+
 .. toctree::
    :maxdepth: 2
-   :numbered:
-   
+
    System overview <overview>
    Level of abstraction <abstraction>
    Portal <portal/index>

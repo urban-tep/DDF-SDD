@@ -1,4 +1,4 @@
-.. _design_dataagency_components_list :
+.. _design_dataagency :
 
 Data Agency
 ===========
