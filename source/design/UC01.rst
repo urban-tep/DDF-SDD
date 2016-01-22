@@ -74,9 +74,6 @@ Next figure depicts the next step that consists of selecting and saving a datase
 
 Next figure depicts the same use case but using PUMA for the data vizualisation and manipulation.
 
-.. todo:: *GISAT* sequence diagram of the user interaction with PUMA
-
-
 .. uml::
   :caption: Data discovery, query, visualization and combination on PUMA
 
@@ -89,7 +86,25 @@ Next figure depicts the same use case but using PUMA for the data vizualisation 
   participant "Data Gateway" as DG
   database "Data Provider" as DP
   
-  
+  autonumber
+
+  U->P Select Data Set for the exploration in PUMA
+  U->P Visualize chosen data set in PUMA
+  activate P
+  P->PUMA Choose data set
+  P->PUMA Prepare the default visualization for user
+  P->U Redirect to PUMA
+  deactivate P
+
+  activate PUMA
+  PUMA->U Interface with chosen data set and default visualizations
+  U->PUMA Show Additional Charts about the data
+  PUMA->U Showing the additional charts
+  U->PUMA Filter the data set by year
+  PUMA->U Showing filtered data set.
+  U->PUMA Show another layer on top of current as overlay
+  PUMA->U Showing layer on top of current
+  deactivate PUMA
 
 Next figure depicts the next step that consists of subsetting and downloading only the AOI of the dataset selection.
 
