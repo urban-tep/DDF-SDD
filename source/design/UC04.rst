@@ -3,15 +3,10 @@
 Combine, analyse and visualise data, products and results
 =========================================================
 
-1)  User registers via portal.
-    
-.. todo:: *T2* sequence diagram and description of the user interaction with Portal
+In this user scenario, a previous user data selection may be enhanced using GIS tools.
 
-2)  User selects thematic content existing in catalogue/store along with area and/or time.
-    
-.. todo:: *T2* sequence diagram and description of the user interaction with Portal
+It is then assumed the user has made a data selection within a data package as described in :ref:`design_uc01`.
 
-3)  User selects GIS tools and functionalities to explore, visualise, combine and/or analyse selected thematic contents.
 
 The Portal will contain option to explore and visualize the currently chosen thematic content. The page with the GIS
 functionality will be opened inside of the portal. It will allow the user to see the data over the map. If the
@@ -28,24 +23,25 @@ times, it will be possible to use the play functionality through the years.
 
   autonumber
 
-  U->P Explore chosen thematic contents
+  U -> P : Explore chosen thematic contents
   activate P
-  P->GIS Visualize selected Thematic Content
+  P -> GIS : Visualize selected Thematic Content
   deactivate P
 
   activate GIS
-  GIS->U Visualized thematic content over the map
-  U->GIS Filter the data based on the year
-  GIS->U Filtered data
-  U->GIS Show me Italy
-  GIS->U Focus is moved to the Italy
-  U->GIS Display another layer on top of current
-  GIS->U Another layer displayed
-  U->GIS Play the timeline on these layers
-  GIS->U Playing the changes in the layers
-  U->GIS Zooming in and on the map
-  U->GIS Moving over the map
+  GIS -> U : Visualized thematic content over the map
+  U -> GIS : Filter the data based on the year
+  GIS -> U : Filtered data
+  U -> GIS : Show me Italy
+  GIS -> U : Focus is moved to the Italy
+  U -> GIS : Display another layer on top of current
+  GIS -> U : Another layer displayed
+  U -> GIS : Play the timeline on these layers
+  GIS -> U : Playing the changes in the layers
+  U -> GIS : Zooming in and on the map
+  U -> GIS : Moving over the map
   deactivate GIS
+
 
 4)  Portal/platform sends corresponding request to information system at platform or outside the platform (PUMA), where the user can visualise the result and explore the results in pre-prepared views.
     
