@@ -102,7 +102,7 @@ class ReqDirective(Directive):
             'target': targetnode,
         })
 
-        if not self.options.has_key('show'):
+        if not 'show' in self.options:
             return [targetnode]
 
         return [targetnode] + ad
