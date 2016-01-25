@@ -38,6 +38,8 @@ The rules conditions are applicable to:
 The rules are combinable.
 
 
+.. _design_data_gateway_access:
+
 Data Access Policies enforcement
 """"""""""""""""""""""""""""""""
 

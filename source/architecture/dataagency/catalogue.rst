@@ -20,7 +20,6 @@ The Catalogue is provided as a service for storing and querying dataset in index
 Geosquare is the software component developed over elasticsearch that enables the service.
 
 .. include:: ../../groups/group___geosquare.rst
-.. include:: group___geosquare_a_p_i
 
 .. include:: elasticsearch.rst
 

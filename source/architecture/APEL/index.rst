@@ -1,4 +1,4 @@
-.. _apel:
+.. _design_apel :
 
 APEL
 ====
