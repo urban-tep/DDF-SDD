@@ -91,7 +91,7 @@ pygments_style = 'sphinx'
 
 # Github path
 github_repo = "https://github.com/urban-tep/DDF-SDD"
-github_branch = "master"
+github_branch = "develop"
 
 # requirements trace
 req_include_reqs = True

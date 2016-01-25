@@ -14,6 +14,7 @@ The first step for the user is to discover and search dataset in :ref:`class_ter
 
 The following first figure depicts this step using the integrated geobrowser of the portal and the basic visualization functions.
 
+
 .. uml::
   :caption: Data discovery, query, visualization and selection on portal geobrowser
 
@@ -136,7 +137,7 @@ Next figure depicts the sequence that consists of requesting a processing on dem
   deactivate P
 
   end
-  
+
 
 .. warning:: 
   
@@ -157,28 +158,25 @@ Next figure depicts the same use case but using PUMA for the data vizualisation 
   participant "Portal" as P
   database "Portal database" as PDB
   database "PUMA" as PUMA
-  participant "Feature Server" as FS
-  participant "Data Gateway" as DG
-  database "Data Provider" as DP
   
   autonumber
 
-  U->P Select Data Set for the exploration in PUMA
-  U->P Visualize chosen data set in PUMA
+  U -> P : Select Data Set for the exploration in PUMA
+  U -> P : Visualize chosen data set in PUMA
   activate P
-  P->PUMA Choose data set
-  P->PUMA Prepare the default visualization for user
-  P->U Redirect to PUMA
+  P -> PUMA : Choose data set
+  P -> PUMA : Prepare the default visualization for user
+  P -> U : Redirect to PUMA
   deactivate P
 
   activate PUMA
-  PUMA->U Interface with chosen data set and default visualizations
-  U->PUMA Show Additional Charts about the data
-  PUMA->U Showing the additional charts
-  U->PUMA Filter the data set by year
-  PUMA->U Showing filtered data set.
-  U->PUMA Show another layer on top of current as overlay
-  PUMA->U Showing layer on top of current
+  PUMA -> U : Interface with chosen data set and default visualizations
+  U -> PUMA : Show Additional Charts about the data
+  PUMA -> U : Showing the additional charts
+  U -> PUMA : Filter the data set by year
+  PUMA -> U : Showing filtered data set.
+  U -> PUMA : Show another layer on top of current as overlay
+  PUMA -> U : Showing layer on top of current
   deactivate PUMA
 
 
