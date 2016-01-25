@@ -1,11 +1,37 @@
-.. _design_uc01 :
+.. _dynamic_accounting :
 
-Query and access existing thematic content
-==========================================
+Integrated Accounting: Credit and Quota flows
+=============================================
 
-1)  User registers via portal
-2)  User selects existing thematic product of interest in catalogue or store and defines for which area and/or time the product should be provided
-3)  P the requested data is hosted (mirrored)
-4)  Processing center creates a subset (spatial and/or temporal) according to the user request
-5)  Request data set is provided to the portal/platform for download by the user
 
+:ref:`design_apel` component collects the usage records for all the resources providers of the platform via the :ref:`group___apel_accounting`. They are then reported via the :ref:`group___apel_reporting` interface from which the portal gets the aggregated usage records. Those usage records contains unit of cost and the amount of the resource consumed for a certain :ref:`class_terradue_1_1_tep_1_1_user_tep` or :ref:`class_terradue_1_1_tep_1_1_group_tep`. Then this amount is debited from the credit :ref:`class_terradue_1_1_tep_1_1_account` of this user or group.
+
+Section :ref:`group___tep_accounting` decribes in details how the portal carries forward the accounting on the user and groups account and how quota can be applied from this user and groups accounts.
+
+On the other hand, the providers must account for the usage of their resources. This task is independant from the portal and up to every provider (ICT, data, etc) using the :ref:`group___apel_accounting` as illustrated in the following figure for an ICT provider. In the TEP Hydrology initial scenario, every ICT resources reports the usage based on WPS requests completed.
+
+
+.. uml::
+  :caption: ICT resource provider accounting usage sequence diagram
+
+  box "Cluster" #LightBlue
+    participant "WPS Server" as WPS
+    participant "APEL Client" as AL
+  end box
+  participant "APEL Server" as AS
+  
+  autonumber
+
+  WPS -> WPS : job completed
+  activate WPS
+  WPS -> WPS : build usage record
+  WPS -> AL : usage record
+  activate AL 
+  AL -> AS : send usage record
+  activate AS 
+  AS -> AS : save usage record in DB
+  AS -> AL : usage record confirmation
+  deactivate AS
+  AL -> WPS : usage record ok
+  deactivate AL
+  deactivate WPS
