@@ -9,7 +9,7 @@ main purposes, the role of the community and the target deliveries of the system
 Section :ref:`static_architecture` describes the first level decomposition that leads to a separation into
 subsystems in a product-driven way.
 
-Section :ref:`design` covers the design of each subsystem, providing subsystems
+Section :ref:`dynamic_architecture` covers the design of each subsystem, providing subsystems
 computational model, components identification and description together with main data flow.
 
 Section :ref:`integration_scheme` summarizes the integration scheme of the system as a whole.
