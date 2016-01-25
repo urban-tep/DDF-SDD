@@ -7,6 +7,13 @@ Application
 
 
 
+
+
+.. req:: TS-DES-110
+	:show:
+
+	Data flow along with services are built into the Thematic Application inside this component. 
+
 This component manages the TEP applications
 
 Thematic Application brings a simple way to define an application of a specific aspect of the thematic. It specifies togheter the form of the application, its features such as the map and the layers, its data and services.
@@ -15,13 +22,6 @@ Thematic Application over OWS data model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *This section shall further describe how the component uses the OWS Context model to represent the dataset collections, the services, maps, features layers...*
-
-.. req:: TS-DES-110
-	:show:
-
-	Data flow along with services are built into the Thematic Application inside this component. 
-
-
 
 It depends on other components as
 

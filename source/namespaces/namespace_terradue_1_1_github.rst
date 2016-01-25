@@ -5,6 +5,7 @@ Terradue::Github
 
 
 
+
 :ref:`Terradue.Github <namespace_terradue_1_1_github>` is a .Net library that provide an extension to :ref:`Terradue.Portal <namespace_terradue_1_1_portal>` to enable a :ref:`Github <namespace_terradue_1_1_github>` account into a user profile with several associated functions.
 
 Software Page : `Terradue.Github <https://git.terradue.com/sugar/terradue-github>`_

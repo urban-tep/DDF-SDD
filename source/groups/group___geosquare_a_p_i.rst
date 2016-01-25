@@ -7,13 +7,6 @@ Geosquare API
 
 
 
-This is the interface of Geosquare for data ingestion and query. It implements :ref:`OpenSearch <group___open_search>` standards.
-
-.. req:: TS-ICD-090
-	:show:
-
-	Geosquare API provides with feed format supporting :ref:`OWS Context <group___o_w_s_context>`
-
 
 
 .. req:: TS-ICD-100
@@ -22,6 +15,13 @@ This is the interface of Geosquare for data ingestion and query. It implements :
 	Geosquare API provides with an :ref:`OpenSearch <group___open_search>` interface
 
 
+
+.. req:: TS-ICD-090
+	:show:
+
+	Geosquare API provides with feed format supporting :ref:`OWS Context <group___o_w_s_context>`
+
+This is the interface of Geosquare for data ingestion and query. It implements :ref:`OpenSearch <group___open_search>` standards.
 
 It depends on other components as
 

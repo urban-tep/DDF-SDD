@@ -5,6 +5,7 @@ Shibboleth::ServiceProvider
 
 
 
+
 Open source system for attribute-based Web SSO
 
 :ref:`Shibboleth <namespace_shibboleth>` is a Web Single Sign-On implementations based on OpenSAML that supports multiple protocols, federated identity, and the extensible exchange of rich attributes subject to privacy controls.

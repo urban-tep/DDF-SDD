@@ -7,6 +7,13 @@ WPS
 
 
 
+
+
+.. req:: TS-FUN-250
+	:show:
+
+	This section describes with sequence diagrams the internal WPS service discovery
+
 This component is an helper for
 
 - providing with WPS Server as a processing resource;
@@ -224,13 +231,6 @@ Model and Representation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This components has also a function to represent a :ref:`Terradue.Portal.WpsProcessOffering <class_terradue_1_1_portal_1_1_wps_process_offering>` object as a :ref:`Terradue.ServiceModel.Ogc.OwsModel.OwcOffering <class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_owc_offering>` in the :ref:`OWS Context <group___o_w_s_context>` model. It implements the mechanism to search for :ref:`Terradue.Portal.WpsProvider <class_terradue_1_1_portal_1_1_wps_provider>` and the :ref:`Terradue.Portal.WpsProcessOffering <class_terradue_1_1_portal_1_1_wps_process_offering>` via an OpenSearchable interface.
-
-.. req:: TS-FUN-250
-	:show:
-
-	This section describes with sequence diagrams the internal WPS service discovery
-
-
 
 It depends on other components as
 

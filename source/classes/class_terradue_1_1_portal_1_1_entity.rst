@@ -1,17 +1,17 @@
 .. _class_terradue_1_1_portal_1_1_entity:
 
-Entity
-------
-
-
 Abstract base class of all entity types that usually correspond to real-world entities.
+---------------------------------------------------------------------------------------
+
+
+The class provides generic interaction with data that is persistently stored in a relational database. The data location and structure are defined in the subclasses which represent real-world entities.<rived class stores privileges persistently in a database table if the entity subclass has the :ref:`class_terradue_1_1_portal_1_1_entity_table_attribute_1a03b5b0c3487be219010725d523c1da79` flag set. 
 
 
 
 
 
-Properties
-^^^^^^^^^^
+
+The following properties define the object
 
 .. cssclass:: propertiestable
 
@@ -25,29 +25,28 @@ Properties
 | string | Name       | Human-readable name of an entity item item.                     |
 +--------+------------+-----------------------------------------------------------------+
 
-Methods
-^^^^^^^
+The following functions are applicable to the object
 
 .. cssclass:: propertiestable
 
-==== =================================== =======================================================================================================================================
-Type Name                                Summary
-==== =================================== =======================================================================================================================================
-void Load()                              Reads the information of an item from the database.</sum 
+=================================== =======================================================================================================================================
+Name                                Summary
+=================================== =======================================================================================================================================
+Load                                Reads the information of an item from the database.</sum 
 
-void Load()                              Reads the information of an item using the specified IDataReader.
+Load                                Reads the information of an item using the specified IDataReader.
 
-void Store()                             Writes the item to the database.
+Store                               Writes the item to the database.
 
-void StorePrivilegesForUsers()           Sets the privileges on the resource represented by the instance for the specified users according to the privilege properties.
+StorePrivilegesForUsers             Sets the privileges on the resource represented by the instance for the specified users according to the privilege properties.
 
-void StorePrivilegesForGroups()          Sets the privileges on the resource represented by the instance for the specified user groups according to the privilege properties.
+StorePrivilegesForGroups            Sets the privileges on the resource represented by the instance for the specified user groups according to the privilege properties.
 
-void StoreGlobalPrivileges()             Sets global privileges on the resource represented by the instance that will apply to all users according to the privilege properties.
+StoreGlobalPrivileges               Sets global privileges on the resource represented by the instance that will apply to all users according to the privilege properties.
 
-void RemoveGlobalPrivileges()            Sets global privileges on the resource represented by the instance that will apply to all users according to the privilege properties.
+RemoveGlobalPrivileges              Sets global privileges on the resource represented by the instance that will apply to all users according to the privilege properties.
 
-void Delete()                            
-void GetAllowedAdministratorOperations() 
-==== =================================== =======================================================================================================================================
+Delete                              
+GetAllowedAdministratorOperations   
+=================================== =======================================================================================================================================
 

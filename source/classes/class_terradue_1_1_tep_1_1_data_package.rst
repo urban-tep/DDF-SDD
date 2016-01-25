@@ -1,17 +1,17 @@
 .. _class_terradue_1_1_tep_1_1_data_package:
 
-DataPackage
------------
-
-
 Data package. 
-
+--------------
 
 
 It represents a container for datasets, owned by a user. This container manages remote datasets by reference. It acts as a view over the Collection. Therefore, it can represent static datasets list or a dynamic set via search query. A Data Package is OpenSearchable and thus can be queried via an opensearch interface. 
 
-Properties
-^^^^^^^^^^
+
+
+
+
+
+The following properties define the object
 
 .. cssclass:: propertiestable
 

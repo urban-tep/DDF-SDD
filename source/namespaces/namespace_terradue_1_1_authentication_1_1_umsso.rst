@@ -5,6 +5,7 @@ Terradue::Authentication::Umsso
 
 
 
+
 :ref:`Terradue <namespace_terradue>` .Net UM-SSO Library provides with an autentication mechanism via Web Single Sign-On implementations based on OpenSAML.
 
 Software Page : `Terradue.Authentication.Umsso <https://git.terradue.com/sugar/terradue-authentication-umsso>`_

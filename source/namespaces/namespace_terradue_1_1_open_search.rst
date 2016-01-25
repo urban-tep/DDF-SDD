@@ -5,6 +5,7 @@ Terradue::OpenSearch
 
 
 
+
 :ref:`Terradue.OpenSearch <namespace_terradue_1_1_open_search>` is a .Net library that provides an engine perform :ref:`OpenSearch <namespace_terradue_1_1_open_search>` query from a class or an URL to multiple and custom types of results
 
 Software Page : `DotNetOpenSearch <https://github.com/Terradue/DotNetOpenSearch>`_

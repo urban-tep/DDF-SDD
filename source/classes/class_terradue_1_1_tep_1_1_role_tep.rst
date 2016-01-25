@@ -1,11 +1,7 @@
 .. _class_terradue_1_1_tep_1_1_role_tep:
 
-RoleTep
--------
-
-
 TEP Role 
-
+---------
 
 
 This class represents the role of a TEP user in a thematic group. This role may be be:
@@ -17,8 +13,12 @@ This class represents the role of a TEP user in a thematic group. This role may 
 - Software Vendor. As an software vendore, the user can propose commercial software to the group
 - Manager. As the manager of the group, the user grants or revokes roles to user within the group 
 
-Properties
-^^^^^^^^^^
+
+
+
+
+
+The following properties define the object
 
 .. cssclass:: propertiestable
 

@@ -7,6 +7,27 @@ Accounting
 
 
 
+
+
+.. req:: TS-FUN-420
+	:show:
+
+	Quota mechanism based on the account balance of the user or groups is described in this section.
+
+
+
+.. req:: TS-FUN-410
+	:show:
+
+	Business objects used to represent user or group account are referenced in this section.
+
+
+
+.. req:: TS-FUN-400
+	:show:
+
+	The mechanism of debit and credit of user or group accounts is described in this section.
+
 This component makes the integrated accounting of the TEP.
 
 Accounting to user/group accounts 
@@ -22,27 +43,6 @@ Credit Authorization and Quota restrictions
 The quota restriction is implemented using the balance of the user or group account used to query the resource.
 
 *Here shall be a sequence diagram to describe the credit authorization mechanism and the quota restriction*
-
-.. req:: TS-FUN-400
-	:show:
-
-	The mechanism of debit and credit of user or group accounts is described in this section.
-
-
-
-.. req:: TS-FUN-410
-	:show:
-
-	Business objects used to represent user or group account are referenced in this section.
-
-
-
-.. req:: TS-FUN-420
-	:show:
-
-	Quota mechanism based on the account balance of the user or groups is described in this section.
-
-
 
 It depends on other components as
 

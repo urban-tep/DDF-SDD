@@ -7,6 +7,13 @@ Data
 
 
 
+
+
+.. req:: TS-FUN-010
+	:show:
+
+	The GeoNode and :ref:`GeoServer <namespace_geo_server>` export function allows user to upload their data to PUMA.
+
 This component is in charge of all the data management in the platform.
 
 It implements the mechanism to search for Collection and Data Packages via an OpenSearchable interface.
@@ -70,13 +77,6 @@ When a dataset is processed with a remote processing (e.g. WPS), the results of 
 
 - :emphasis:`:ref:`GeoServer <namespace_geo_server>`` raster and vector export. If the results include standard vector files (e.g. shapefile, geojson, csv with WKT, ...) or raster files such as geolocated images (geotiff, png with world files...), the  components shall propose to the user to export them to geoserver that will resturn a new WMS layer that the web visualization widget shall display
 - :emphasis:`GeoNode` from an existing WMS layer, the  components shall propose to the user to export them to geonode that will return a link to the geonode map for the visualisation.
-
-.. req:: TS-FUN-010
-	:show:
-
-	The GeoNode and :ref:`GeoServer <namespace_geo_server>` export function allows user to upload their data to PUMA.
-
-
 
 It depends on other components as
 

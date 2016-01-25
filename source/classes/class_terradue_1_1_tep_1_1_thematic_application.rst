@@ -1,17 +1,16 @@
 .. _class_terradue_1_1_tep_1_1_thematic_application:
 
-ThematicApplication
--------------------
-
-
 Thematic application. 
+----------------------
 
 
 
 
 
-Properties
-^^^^^^^^^^
+
+
+
+The following properties define the object
 
 .. cssclass:: propertiestable
 

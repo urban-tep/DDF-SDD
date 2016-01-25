@@ -34,14 +34,14 @@ Users dicovers the available dataset collection and their related
 
 * Policy: applicable EO data access and sharing policies
 * Process: collection discovery, catalogue query, data package creation, EO product download
-* Resource: Dataset Catalogue, Portal
+* Resource: :ref:`design_dataagency`, :ref:`design_portal`
 
 Processor integration and Service offering
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Policy: Processor terms of use, ICT Provider terms of use
 * Process: processor code wrapping, processor integration testing and validation, processor deployment as a service to user Portal
-* Resource: Processing center, Portal
+* Resource: Processing centers, :ref:`design_portal`
 
 Data processing over managed ICT
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -58,13 +58,14 @@ Users define input data and select a results location (e.g. portal, cloud block 
 
 * Policy: applicable Public Cloud Provider terms of use
 * Process: runJob - On-demand computing element
+* Resource: Processing centers, :ref:`design_portal`
 
 Data visualization and analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Policy: applicable EO data access and sharing policies, applicable Processor terms of use
 * Process: data catalogue query, query results retrieval, results upload to shared storage
-* Resource: PUMA
+* Resource: , :ref:`design_puma`, :ref:`design_portal`
 
 The platform is meant to allow users to perform data visualisation tasks:
 
@@ -78,6 +79,7 @@ Reproducible Science collaboration
 
 * Policy: applicable EO data access and sharing policies
 * Process: Job run sharing, code sharing via social coding platforms, Cloud bursting
+* Resource: :ref:`design_dataagency`, :ref:`design_portal`, Processing centers
 
 The Urban TEP Platform is investigating on different collaborative eScience scenarios made available to users:
 
@@ -94,7 +96,8 @@ EO Data exploitation
 """"""""""""""""""""
 
 * Policy: applicable EO data access and sharing policies
-* Process: EO data catalogue access, Job run sharing, shared Search result referencing, Geobrowser interactions
+* Process: EO data catalogue access, Job run sharing, shared Search result referencing, :ref:`class_terradue_1_1_tep_1_1_thematic_application` interactions
+* Resource: :ref:`design_dataagency`, :ref:`design_portal`, Processing centers
 
 * dedicated to EO data collections available as input data for processing tasks
 * provides Portal links to automate the discovery allowing users to easily feed processing tasks
@@ -103,16 +106,18 @@ EO-based products exploitation
 """"""""""""""""""""""""""""""
 
 * Policy: applicable EO data access and sharing policies
-* Process: EO data catalogue access, Job run sharing, Job intermediate results detailed analysis, Geobrowser interactions
+* Process: EO data catalogue access, Job run sharing, Job intermediate results detailed analysis, :ref:`class_terradue_1_1_tep_1_1_thematic_application` interactions
+* Resource: :ref:`design_dataagency`, :ref:`design_portal`, Processing centers
 
-* dedicated to GEP processors results (final and intermediate processing outputs) 
+* dedicated to U-TEP processors results (final and intermediate processing outputs) 
 * provides Portal links to processing jobs runs, to allow users understand a processor, and its possible improvements 
 
 Publication referencing
 """""""""""""""""""""""
 
 * Policy: applicable EO data access and sharing policies
-* Process: Web link referencing, shared Search result referencing, Geobrowser interactions
+* Process: Web link referencing, shared Search result referencing, :ref:`class_terradue_1_1_tep_1_1_thematic_application` interactions
+* Resource: :ref:`design_dataagency`, :ref:`design_portal`
 
 * related to the scientific community curated results (scientific papers)
 * provides Portal links to collateral resources (like in GEP, data and processors) that allow researchers to understand and reproduce an experiment or a production
@@ -122,6 +127,7 @@ Community sharing
 
 * Policy: applicable EO data access and sharing policies, 
 * Process: Offering description, Offering cataloguing, shared Search result referencing, Geobrowser interactions
+* Resource: :ref:`design_dataagency`, :ref:`design_portal`
 
 * dedicated to geotag and reference web accessible content that labs, institutes, agencies, ... are openly sharing on the web (articles and blog posts, products images delivered in web-browser compatible formats, ...)
 * provides a Portal integration mechanism based on the OGC standard "OWS Context" (http://www.opengeospatial.org/standards/owc)

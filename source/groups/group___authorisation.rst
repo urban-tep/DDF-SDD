@@ -7,6 +7,27 @@ Authorisation
 
 
 
+
+
+.. req:: TS-SEC-020
+	:show:
+
+	Service Authorisation scheme paradigm is described in this section.
+
+
+
+.. req:: TS-SEC-010
+	:show:
+
+	Collection / Series / Data Package Authorisation scheme paradigm is described in this section.
+
+
+
+.. req:: TS-FUN-380
+	:show:
+
+	Authorisation scheme paradigm is described in this section.
+
 It provides with the functions to define privileges for users or groups on entities for which restrictions are useful, such as entities that represent resources (computing resources or processing services etc.).
 
 The authorisation consists of two phases:
@@ -50,27 +71,6 @@ The authorisation consists of two phases:
 	stop
 	
 	
-
-.. req:: TS-FUN-380
-	:show:
-
-	Authorisation scheme paradigm is described in this section.
-
-
-
-.. req:: TS-SEC-010
-	:show:
-
-	Collection / Series / Data Package Authorisation scheme paradigm is described in this section.
-
-
-
-.. req:: TS-SEC-020
-	:show:
-
-	Service Authorisation scheme paradigm is described in this section.
-
-
 
 It depends on other components as
 

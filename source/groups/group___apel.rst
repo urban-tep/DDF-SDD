@@ -22,7 +22,7 @@ The accounting information is gathered from different resource providers into a 
 We use this system in TEP to record the usage on the different resources provider of the platform in order to provide a central accounting mechanism for the platform. 
 
 
-This component contains the sub-compoenents described in the following sections.
+This component contains the sub-components described in the following sections.
 
 
 .. toctree::

@@ -1,17 +1,16 @@
 .. _class_terradue_1_1_portal_1_1_user:
 
-User
-----
-
-
 Basic object representing a user in the system. 
+------------------------------------------------
 
 
 
 
 
-Properties
-^^^^^^^^^^
+
+
+
+The following properties define the object
 
 .. cssclass:: propertiestable
 

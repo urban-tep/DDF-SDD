@@ -1,4 +1,4 @@
-.. _puma :
+.. _design_puma :
 
 PUMA
 ====

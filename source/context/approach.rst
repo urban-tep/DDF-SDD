@@ -30,9 +30,9 @@ and the integration of scientific applications and services for the EC projects 
 Data driven plarform
 --------------------
 
-Data is the fuel of the Urban TEP platform and thus needs to be managed with systems
+Data is the fuel of the Hydrology TEP platform and thus needs to be managed with systems
 in order to harvest, discover and query many collections of datsets from various Earth Observation missions.
-The catalogue components are an evolution of the experiences and operational deployments
+The :ref:`design_dataagency` components are an evolution of the experiences and operational deployments
 made in the context of the European Commission FP7 GENESI-DEC project and then applied on
 the G-POD catalogues. Terradue developed a full system for the data management with state-of-the-art
 technology for super fast indexing of dataset metadata document and implementing the community

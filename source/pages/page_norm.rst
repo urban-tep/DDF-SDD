@@ -5,15 +5,16 @@ Normative References
 
 
 
-`OGC Web Processing Service 1.0 <http://portal.opengeospatial.org/files/?artifact_id=24151>`_
+
+`APEL <https://wiki.egi.eu/wiki/APEL/MessageFormat>`_
 
 - :ref:`ApelAccounting <group___apel_accounting>`
 - :ref:`ApelReporting <group___apel_reporting>`
-- :ref:`RWPS <group___r_w_p_s>`
 
 `OpenSearch 1.1 <http://www.opensearch.org/Specifications/OpenSearch/1.1>`_
 
 - :ref:`Atom <group___atom>`
+- :ref:`GeosquareAPI <group___geosquare_a_p_i>`
 - :ref:`OpenSearch <group___open_search>`
 - :ref:`T2API <group___t2_a_p_i>`
 
@@ -32,11 +33,16 @@ EO op UM-SSO Interface Control Document [SIE-EO-OP-UM-SSO-ICD-002]
 
 `OGC OWS Context Conceptual Model <https://portal.opengeospatial.org/files/?artifact_id=55182>`_
 
+- :ref:`GeosquareAPI <group___geosquare_a_p_i>`
 - :ref:`OWSContext <group___o_w_s_context>`
 - :ref:`T2API <group___t2_a_p_i>`
 
 `OGC OWS Context Atom Encoding Standard <https://portal.opengeospatial.org/files/?artifact_id=55183>`_
 
 - :ref:`OWSContext <group___o_w_s_context>`
+
+`OGC Web Processing Service 1.0 <http://portal.opengeospatial.org/files/?artifact_id=24151>`_
+
+- :ref:`RWPS <group___r_w_p_s>`
 
 

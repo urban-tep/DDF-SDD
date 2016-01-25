@@ -1,17 +1,16 @@
 .. _class_terradue_1_1_tep_1_1_user_tep:
 
-UserTep
--------
-
-
 TEP User 
-
+---------
 
 
 A user in the TEP platform has a basic profile (defined in the platform) It can also be integrated with third party profiles (:ref:`Github <namespace_terradue_1_1_github>`, :ref:`Terradue <namespace_terradue>` Cloud Platform).  
 
-Properties
-^^^^^^^^^^
+
+
+
+
+The following properties define the object
 
 .. cssclass:: propertiestable
 

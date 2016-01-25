@@ -7,6 +7,13 @@ UM-SSO plugin
 
 
 
+
+
+.. req:: TS-SEC-040
+	:show:
+
+	UM-SSO plugin described 
+
 This module enables external authentication using UM-SSO mechanism. In the core, the :ref:`Context <group___context>` component provides with an interface that allows using HTTP headers present in the HHTP context to authenticate the user. Associated with a set of rules, the :ref:`Authentication <group___authentication>` is able to establish a protocol to authenticate user.
 
 Typical code ruleset is declared with the method UM-SSO. accountType maps the rule to an account. The rule is applied only if the condition that specified that the header  is present and not empty. Then the value present in  is used as login username and user is registered automatically if not yet present in the database with register="true" and the user receives a account creation mail with the mail information found in header Umsso-Person-Email.
@@ -125,13 +132,6 @@ Next diagram depicts the scenarios that applies when a user perform an HTTP requ
 	W -->> U: HTTP response
 	
 	
-
-.. req:: TS-SEC-040
-	:show:
-
-	UM-SSO plugin described 
-
-
 
 It interacts with interfaces as it
 

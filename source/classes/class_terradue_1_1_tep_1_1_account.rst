@@ -1,17 +1,17 @@
 .. _class_terradue_1_1_tep_1_1_account:
 
-Account
--------
-
-
 :ref:`Account <class_terradue_1_1_tep_1_1_account>`. 
-
+-----------------------------------------------------
 
 
 This object represents an account owned by a user or a group. Each account has a balance value to represent the credit avaialable for the owner. 
 
-Properties
-^^^^^^^^^^
+
+
+
+
+
+The following properties define the object
 
 .. cssclass:: propertiestable
 

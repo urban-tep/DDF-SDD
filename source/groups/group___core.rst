@@ -28,7 +28,7 @@ This component is implemented in the following software packages: :ref:`namespac
 
 
 
-This component contains the sub-compoenents described in the following sections.
+This component contains the sub-components described in the following sections.
 
 
 .. toctree::

@@ -7,13 +7,6 @@ Series
 
 
 
-This component manages all types of dataset series. It implements the mechanism to search for the dataset defined in the series via an :ref:`OpenSearch <group___open_search>` interface.
-
-.. req:: TS-ICD-080
-	:show:
-
-	:ref:`Apel <namespace_apel>` accounting interface details are described in this section
-
 
 
 .. req:: TS-ICD-100
@@ -22,6 +15,13 @@ This component manages all types of dataset series. It implements the mechanism 
 	:ref:`OpenSearch <group___open_search>` interface for dataset are supported by the component
 
 
+
+.. req:: TS-ICD-080
+	:show:
+
+	:ref:`Apel <namespace_apel>` accounting interface details are described in this section
+
+This component manages all types of dataset series. It implements the mechanism to search for the dataset defined in the series via an :ref:`OpenSearch <group___open_search>` interface.
 
 It depends on other components as
 

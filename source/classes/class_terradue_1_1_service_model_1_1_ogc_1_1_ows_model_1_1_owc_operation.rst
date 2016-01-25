@@ -1,17 +1,16 @@
 .. _class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_owc_operation:
 
-OwcOperation
-------------
+OWS Operation
+-------------
 
 
-Definition of the operation either to get the information or to get the capabilities. Note that service specific extension requirements may mandate more than one owc:operation. 
+Definition of the operation either to get the information or to get the capabilities. Note that service specific extension requirements may mandate more than one owc:operation.  
 
 
 
 
 
-Properties
-^^^^^^^^^^
+The following properties define the object
 
 .. cssclass:: propertiestable
 

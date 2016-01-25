@@ -1,19 +1,18 @@
 .. _class_terradue_1_1_tep_1_1_group_tep:
 
-GroupTep
---------
-
-
 TEP Group 
-
+----------
 
 
 A Thematic exploitation Platform group is an entity comprising multiple people with a specific role, that has a collective goal and is linked to a thematic.
-
 Typically, An organizatio may form a group.
 
-Properties
-^^^^^^^^^^
+
+
+
+
+
+The following properties define the object
 
 .. cssclass:: propertiestable
 

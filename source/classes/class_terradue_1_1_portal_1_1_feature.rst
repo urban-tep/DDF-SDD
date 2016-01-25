@@ -1,17 +1,16 @@
 .. _class_terradue_1_1_portal_1_1_feature:
 
-Feature
--------
-
-
 A :ref:`Feature <class_terradue_1_1_portal_1_1_feature>` is a container for an item on the portal or on the web that the portal features in a way or another depending on the user interface (e.g. front page carousel). It has all the properties for storing the cnecessary contents (title, url, image, description). 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
 
 
-Properties
-^^^^^^^^^^
+
+
+
+The following properties define the object
 
 .. cssclass:: propertiestable
 

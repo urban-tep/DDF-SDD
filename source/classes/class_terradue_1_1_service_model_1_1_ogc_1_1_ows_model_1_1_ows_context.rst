@@ -1,7 +1,7 @@
 .. _class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_ows_context:
 
-OwsContext
-----------
+OWS Context
+-----------
 
 
 This class is the overall container class for the OWS context document. 
@@ -10,8 +10,8 @@ This class is the overall container class for the OWS context document.
 
 
 
-Properties
-^^^^^^^^^^
+
+The following properties define the object
 
 .. cssclass:: propertiestable
 

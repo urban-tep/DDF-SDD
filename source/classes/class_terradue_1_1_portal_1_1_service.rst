@@ -1,17 +1,16 @@
 .. _class_terradue_1_1_portal_1_1_service:
 
-Service
--------
-
-
 Abstract base object for processing services.
+---------------------------------------------
 
 
 
 
 
-Properties
-^^^^^^^^^^
+
+
+
+The following properties define the object
 
 .. cssclass:: propertiestable
 
@@ -31,17 +30,16 @@ Properties
 | int    | ClassId     | Class identifier. Can be used to classify the maturity level.  |
 +--------+-------------+----------------------------------------------------------------+
 
-Methods
-^^^^^^^
+The following functions are applicable to the object
 
 .. cssclass:: propertiestable
 
-============= ================= ========================
-Type          Name              Summary
-============= ================= ========================
-void          CheckParameters() Checks the parameters. 
+================= ========================
+Name              Summary
+================= ========================
+CheckParameters   Checks the parameters. 
 
-abstract void BuildTask()       Builds the task. 
+BuildTask         Builds the task. 
 
-============= ================= ========================
+================= ========================
 

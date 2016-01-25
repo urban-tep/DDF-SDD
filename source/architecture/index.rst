@@ -10,8 +10,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   System overview <overview>
    Level of abstraction <abstraction>
+   System overview <overview>
    Portal <portal/index>
    APEL <APEL/index>
    Data Agency <dataagency/index>

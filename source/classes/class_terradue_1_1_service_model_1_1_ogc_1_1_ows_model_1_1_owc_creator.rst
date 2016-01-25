@@ -1,17 +1,16 @@
 .. _class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_owc_creator:
 
-OwcCreator
-----------
+OWC Creator 
+------------
 
 
-This datatype class provides place to encode information related to the creator of the context document. It includes the creator application and any relevant properties or settings for the application. 
+This object provides place to encode information related to the creator of the context document. It includes the creator application and any relevant properties or settings for the application.  
 
 
 
 
 
-Properties
-^^^^^^^^^^
+The following properties define the object
 
 .. cssclass:: propertiestable
 
