@@ -1,11 +1,11 @@
-.. _portal :
+.. _design_portal :
 
 Portal
 ======
 
 The portal is mainly composed of 
 
-- a Web Server running a .NET application including the components :ref:`group___core`, :ref:`group___security`, :ref:`group___tep`, :ref:`group___web_services`, 
+- a Web Server running a web application including the components :ref:`group___core`, :ref:`group___security`, :ref:`group___tep`, :ref:`group___web_services`, 
 - a web site of html and javascript in the component :ref:`group___urban_site`
 
 The backend relies on a relational databse to store persistently the portal and user data.

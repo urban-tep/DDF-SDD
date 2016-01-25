@@ -20,5 +20,5 @@ Contents:
    DLR Processing Centre Components <dlr-pc/index>
    PUMA <PUMA/index>
    Interfaces <interfaces>
-'   Configuration Data <data>
+   Configuration Data <data>
 

@@ -19,11 +19,11 @@ This section describes all business objects individually
   Service <../../classes/class_terradue_1_1_portal_1_1_service>
   User <../../classes/class_terradue_1_1_portal_1_1_user>
   TEP Group <../../classes/class_terradue_1_1_tep_1_1_group_tep>
-  TEP Role <teprole>
+  TEP Role <../../classes/class_terradue_1_1_tep_1_1_role_tep>
   TEP User <../../classes/class_terradue_1_1_tep_1_1_user_tep>
-  Thematic Application <thematicapplication>
-  WpsProcessOffering <../../classes/class_terradue_1_1_portal_1_1_wps_process_offering>
-  WpsProvider <../../classes/class_terradue_1_1_portal_1_1_wps_provider>
+  Thematic Application <../../classes/class_terradue_1_1_tep_1_1_thematic_application>
+  WPS Service  <../../classes/class_terradue_1_1_portal_1_1_wps_process_offering>
+  WPS Provider <../../classes/class_terradue_1_1_portal_1_1_wps_provider>
 
   OwcApplication <../../classes/class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_owc_application>
   OwcContent <../../classes/class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_owc_content>

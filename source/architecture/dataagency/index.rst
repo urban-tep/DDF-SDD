@@ -3,7 +3,7 @@
 Data Agency
 ===========
 
-The Data Agency is a set of compoenent providing with services for faciliting the data flow.
+The Data Agency is a set of components providing with services for faciliting the data flow.
 For that purpose it first includes a catalogue to store dataset metadata and perform complex queries.
 It also expose a data pipe service with the data gateway that helps finding the best location for the
 data according to paramaters such as the processing service or location.

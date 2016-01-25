@@ -1,0 +1,204 @@
+@startuml
+   skinparam backgroundColor #FFFFFF
+   skinparam componentStyle uml2
+
+   skinparam component {
+   
+    backgroundColor<<UI>> Green
+    borderColor<<UI>> DarkGreen
+
+    backgroundColor<<AI>> #99CC99
+    borderColor<<AI>> #669966
+
+    backgroundColor<<SMHI>> #99CC99
+    borderColor<<SMHI>> #669966
+
+    backgroundColor<<IsardSAT>> #99CC99
+    borderColor<<IsardSAT>> #669966
+
+  }
+
+   
+   skinparam folder {
+    backgroundColor<<T2>> #EEEBDC
+    borderColor<<T2>> #919871
+
+    backgroundColor<<ESA>> #336699
+    borderColor<<ESA>> #003366
+
+    backgroundColor<<ICT>> #FFCC00
+    borderColor<<ICT>> #FF9900
+
+   }
+
+   skinparam interface {
+   
+    backgroundColor<<API>> Blue
+    borderColor<<API>> DarkBlue
+    backgroundColor<<API int>> Red
+    borderColor<<API int>> DarkRed
+
+   }
+
+   interface "GeoServer API" as group___geo_server_a_p_i <<API>>
+
+   folder "ECEO" <<T2>> {
+     interface "T2 API" as eceot2api <<API>>
+   }
+
+   folder "EO-SSO" <<ESA>> {
+     [Identity Provider]
+  }
+
+  folder "ESA Data Provider" <<ESA>> {
+     interface "Data Access" as esada
+     [VA4] -- esada
+     [SciHub] -- esada
+     
+  }
+
+   folder "Hydrology TEP" {
+   
+     interface "OpenNebula XML-RPC" as group___open_nebula_x_m_l_r_p_c <<API>>
+     interface "Apel Accounting" as group___apel_accounting <<API>>
+     interface "Web Processing Service" as group___r_w_p_s <<API>>
+     interface "OpenSearch" as group___open_search <<API>>
+   
+     folder "Portal" <<T2>> {
+
+      interface "T2 API" as group___t2_a_p_i <<API>>
+      [Hydrology Site] as group___hydro_site <<UI>>
+      
+      [Web Services] as group___web_services
+
+      [Core] as group___core
+
+      [Security] as group___security
+
+      [Tep Modules] as group___tep
+
+      [Cloud] as group___cloud
+
+     }
+
+     group___hydro_site --( eceot2api : ajax
+     group___hydro_site -down-( group___t2_a_p_i : ajax
+     group___web_services -up- group___t2_a_p_i : REST
+     group___core -up-( group___open_search : query
+     group___core --( group___r_w_p_s : submit
+     group___core -- group___security : auth/n - auth/z
+     group___tep -down- group___core : use
+     group___tep -right- group___cloud : search
+     group___tep -down- group___security : auth/n - auth/z
+     group___tep --( group___geo_server_a_p_i : export
+     group___web_services -down- group___tep : CRUD
+     group___cloud --( group___open_nebula_x_m_l_r_p_c : control
+
+     interface "Data Gateway API" as datagatewayAPI
+
+     folder "Data Agency" <<T2>> {
+ 
+      interface "Geosquare API" as group___geosquare_a_p_i
+
+      [Catalogue] as catalogue
+      
+      [Data Gateway] as datagateway
+
+      [Data Agent] as dataagent
+
+     }
+
+     catalogue -up- group___open_search : expose
+     catalogue -- group___geosquare_a_p_i : expose
+
+     datagateway -up-( group___open_search : query
+     datagateway -down-( datagatewayAPI : cache/stream/redirect
+     datagateway --( group___geosquare_a_p_i : locate
+
+     dataagent -up-( group___open_search : query/harvest
+     dataagent -up-( esada : query/harvest
+     dataagent --( group___geosquare_a_p_i : ingest 
+
+     folder "Apel" <<T2>> {
+      database "Accounting Storage" as AAS 
+      [APEL Server] as group___apel_server
+      group___apel_server -down- AAS
+     }
+
+     group___tep -left-( group___apel_accounting : account
+     group___apel_server -- group___apel_accounting : store
+
+     folder "Development Environment" <<T2>> {
+
+      [Sandbox] as sandbox
+
+     }
+
+     folder "Production center" <<T2>> {
+
+      [Cluster] as cluster
+
+      [Coordinator] as coordinator
+
+      [Cloud Controller] as cc
+
+     }
+
+     folder "Services" as services <<T2>> {
+
+        [Data Analysis] <<DEIMOS>> as dataanalysis
+
+        [Small Water Bodies Mapping] <<AI>> as swbm
+
+        [Water Quality and Level Monitoring] <<IsardSAT>> as wqlm
+
+        [Hydrological Models] <<SMHI>> as hm
+
+        [Flood monitoring] <<AI>> as fm
+
+        [WOIS CloudToolbox] <<DEIMOS>> as wois
+
+     }
+
+     sandbox -up- group___r_w_p_s : execute
+     cluster -up- group___r_w_p_s : execute
+     coordinator -up- group___r_w_p_s : execute
+     coordinator -up-( group___r_w_p_s : submit
+     cc -up- group___open_nebula_x_m_l_r_p_c : manage
+     cc -- sandbox : provision
+     cc -- cluster : provision
+     coordinator -- sandbox : submit
+     coordinator -- cluster : submit
+     cc -up- group___apel_accounting : report
+
+     sandbox -- dataanalysis : develop
+     sandbox -- swbm : develop
+     sandbox -- wqlm : develop
+     sandbox -- hm : develop
+     sandbox -- fm : develop
+
+     cluster -- dataanalysis : produce
+     cluster -- swbm : produce
+     cluster -- wqlm : produce
+     cluster -- hm : produce
+     cluster -- fm : produce
+
+     cluster -up- datagatewayAPI : download
+     sandbox -up- datagatewayAPI : download
+
+     interface "VNC" as vnc
+
+     wois -up- vnc : desktop
+
+  }
+
+  folder "ICT Provider" <<ICT>> {
+     interface "API" as ictapi
+     [Server] -- ictapi
+     
+  }
+
+  cc -down- ictapi : provision
+
+  
+@enduml
