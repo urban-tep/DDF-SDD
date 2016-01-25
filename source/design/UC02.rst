@@ -5,19 +5,68 @@ Conduct on-demand processing
 
 This use case aims at using TEP Urban for submitting processing on demand driven by the Area of interest search or the data selection
 
-1)  User registers via portal.
 
-.. todo:: *T2* sequence diagram and description of the user interaction with Portal
+On demand data processing from portal
+-------------------------------------
 
-2)  User selects existing service in catalogue or store and defines for which area and/or time the service should be applied in order to generate a new product.
-    
-.. todo:: *T2* sequence diagram and description of the user interaction with Portal
+Some dataset can be asked on demand by the user to the production center.
 
-3)  User defines appropriate parameter setting (e.g., thresholds) functions of service.
-    
-.. todo:: *T2* sequence diagram and description of the user interaction with Portal
+Next figure depicts the sequence that consists of requesting a processing on demand based on a previous dataset selection as described in :ref:`design_uc01_dds`.
 
-4)  Portal/platform sends corresponding request to the processing center where the requested service and data access functionality are hosted.
+
+.. uml::
+  :caption: On demand data processing submission
+
+
+  actor "User" as U
+  participant "Portal" as P
+  database "Portal database" as PDB
+  participant "Web Processing Service" as WPS
+
+  U -> P : Select processing service
+  P -> U : Processing service description (input, output...)
+
+  alt direct remote WPS
+
+  U -> WPS : submit WPS execute request
+  activate WPS
+  WPS -> U : WPS process id
+  deactivate WPS
+  U -> P : save processing job information
+  activate P
+  P -> PDB : save job
+  P -> U : return job id
+  deactivate P
+
+  else proxied remote WPS
+
+  U -> P : submit WPS execute request
+  activate P
+  P -> P : proxy WPS request
+  activate P #DarkSalmon
+  P -> WPS : submit WPS execute request
+  activate WPS
+  WPS -> P : WPS process id
+  deactivate WPS
+  deactivate P
+  P -> U : WPS process id
+  U -> P : save processing job information
+  P -> PDB : save job
+  P -> U : return job id
+  deactivate P
+
+  end
+
+
+.. warning:: 
+  
+  This scenario illustration does not take into account the quota and credit management on purpose for readibility reason. All details about accounting operations that may apply to this scenario are described in the :ref:`dynamic_accounting` section.
+
+
+
+Precessing execution in the processing centers
+----------------------------------------------
+
     
 .. todo:: *BC* sequence diagram and description of the interaction of the Portal to the processing center via WPS
 
@@ -30,14 +79,12 @@ This use case aims at using TEP Urban for submitting processing on demand driven
 .. todo:: *BC* sequence diagram and description of the product registration at the catalogue
 
 
-.. todo:: *T2* sequence diagram and description of the user interaction with Portal
 
-10)  If selected parameter setting was not sufficient, user can modify settings and start new processing.
-     
-.. todo:: *T2* sequence diagram and description of the user interaction with Portal
+Further visualization and data analysis options on the produced data are detailed in the :ref:`_design_uc01` section.
 
-11)  If selected parameter setting was sufficient, the new product is available for further manipulation and sharing.
-     
-.. todo:: *T2* sequence diagram and description of the user interaction with Portal
+.. _design_uc01_dds :
+
+
+
 
 

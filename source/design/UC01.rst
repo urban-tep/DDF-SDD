@@ -6,6 +6,7 @@ Query and access existing thematic content
 
 This use case aims at using TEP Urban for user exploration of the registered thematic data collection, visualize, share and download them.
 
+.. _design_uc01_dds :
 
 Data Discovery and selection
 ----------------------------
@@ -86,62 +87,7 @@ Next figure depicts the next step that consists of selecting and saving a datase
   end
 
 
-On demand data processing
--------------------------
-
-
-Some dataset can be asked on demand by the user to the production center or within its own sandbox.
-
-Next figure depicts the sequence that consists of requesting a processing on demand based on the previous dataset selection.
-
-
-.. uml::
-  :caption: On demand data processing submission
-
-
-  actor "User" as U
-  participant "Portal" as P
-  database "Portal database" as PDB
-  participant "Web Processing Service" as WPS
-
-  U -> P : Select processing service
-  P -> U : Processing service description (input, output...)
-
-  alt direct remote WPS
-
-  U -> WPS : submit WPS execute request
-  activate WPS
-  WPS -> U : WPS process id
-  deactivate WPS
-  U -> P : save processing job information
-  activate P
-  P -> PDB : save job
-  P -> U : return job id
-  deactivate P
-
-  else proxied remote WPS
-
-  U -> P : submit WPS execute request
-  activate P
-  P -> P : proxy WPS request
-  activate P #DarkSalmon
-  P -> WPS : submit WPS execute request
-  activate WPS
-  WPS -> P : WPS process id
-  deactivate WPS
-  deactivate P
-  P -> U : WPS process id
-  U -> P : save processing job information
-  P -> PDB : save job
-  P -> U : return job id
-  deactivate P
-
-  end
-
-
-.. warning:: 
-  
-  This scenario illustration does not take into account the quota and credit management on purpose for readibility reason. All details about accounting operations that may apply to this scenario are described in the :ref:`dynamic_accounting` section.
+.. _design_uc01_puma :
 
 
 Data Visualization using PUMA
