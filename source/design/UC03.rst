@@ -3,15 +3,58 @@
 Develop and deploy a new service and/or new product
 ===================================================
 
+This scenario aims at using TEP Urban for user development and integration of a new service within the platform to expose it as a processing service available in the thematic applications for its community or other users of the platform.
+
+Data discorvery and selection have already described in the previous section :ref:`design_uc01`.
+
+
+Development environment instantation
+------------------------------------
+
+When a user wants to develop and integrate a new service, the development environment proposed in Urban TEP is the Sandbox.
+
+The next figure describes the sequence of operations for an expert user to provision the Sandbox.
+
+
+.. todo:: 
+
+  **BC** and **IT4I** please review the text with the name and the ref of the devel env. I called it Sandbox for the moment
+
+
+.. uml::
+  :caption: ?? instantation sequence diagram
+
+
+  actor "User" as U
+  participant "Portal" as P
+  database "Portal Database" as PDB
+  participant "IT4I" as CC
+  entity "IaaS" as I
+  participant "Sandbox" as SB
   
-1)  User registers via portal.
+  autonumber
+  
+  U -> P : Request Developer Cloud Sandbox
+  activate P
+  P -> U : redirect user to developer info page
+  U -> CC : instantiate Sandbox
+  activate CC
+  CC -> I : provision VM
+  activate I
+  I -> SB : start SB
+  activate SB #DarkSalmon
+  SB -> SB : contextualize VM to Sandbox
+  SB -> I : SB ready
+  I -> CC : SB ready
+  deactivate I
+  CC --> U : SB access information
+  
     
-.. todo:: *T2* sequence diagram and description of the user interaction with Portal
+.. todo:: *IT4I* complete sequence diagram and description of the sandbox provisioning
 
-3)  User provides new software and new data to TEP Urban platform team. 
-    
-.. todo:: *IT4I* sequence diagram and description of the user interaction with the development environment
 
+Developing and integrating a new processing service
+---------------------------------------------------
 
 4)  TEP Urban platform team checks, ingests and deploys new software and new data.
     
@@ -23,19 +66,17 @@ Develop and deploy a new service and/or new product
 .. todo:: *BC* sequence diagram and description of the user interaction for testing the new software
 
 
+Deploying a new service
+-----------------------
+
+
 6)  As soon as operational functionality of the application is verified, the new service and new data sets are registered in the catalogue/store.
      
 .. todo:: *BC* sequence diagram and description of the application registration with ne software and data
 
 
-7)  The user selects the required data and the new service and schedules the processing of a new product.
-     
-.. todo:: *T2* sequence diagram and description of the user interaction with Portal
+Using the new service in the portal
+-----------------------------------
 
-
-8)  The generated new product is registered in the catalogue/store and delivered for download to the user via the platform.
-    
-.. todo:: *T2* sequence diagram and description of the user interaction with Portal
-
-10)  The user visualises the new product and combines it with other data (UC-04) 
+After those operations, a :ref:`class_terradue_1_1_tep_1_1_thematic_application` with the new service is available to the expert user. Then according to the authorization option applied, the user may share this application with selected users or its community (user group). The Content authority manager may also validate this thematic application with the new service and decide to make it available publicly on the portal.
 
