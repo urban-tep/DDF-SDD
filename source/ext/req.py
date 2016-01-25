@@ -123,10 +123,18 @@ def append_row(tbody, cells):
         entry = nodes.entry()
         row += entry
   
-        if isinstance(cell, str):
-            node = nodes.paragraph(text=cell)
-        else:
-            node = cell
+        try:
+            if isinstance(cell, basestring):
+                node = nodes.paragraph(text=cell)
+            else:
+                node = cell
+
+        except NameError:
+            if isinstance(cell, str):
+                node = nodes.paragraph(text=cell)
+            else:
+                node = cell
+
   
         entry += node
 
@@ -169,19 +177,17 @@ def process_req_nodes(app, doctree, fromdocname):
         for req_info in sorted_req:
 
             refpara = nodes.paragraph()
-            refpara += nodes.Text("","")
+            refpara += nodes.Text('','')
 
             # Create a reference
             try:
                 newnode = nodes.reference('', '')
-                #pprint(req_info['reqid'])
                 section = req_info['section']
                 section_name = ''
                 if section.get('secnumber'):
                     section_name += (('%s' + self.secnumber_suffix) %
                              '.'.join(map(str, node['secnumber'])))
                 section_name += section[section.first_child_matching_class(title)][0].astext()
-                pprint(section_name)
                 innernode = nodes.emphasis(section_name,section_name)
                 newnode['refdocname'] = req_info['docname']
                 newnode['refuri'] = app.builder.get_relative_uri(
