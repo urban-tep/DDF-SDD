@@ -3,7 +3,7 @@
 Static Architecture
 ###################
 
-The static architecture gives a static description of the whole system through the general partitioning of the sub-systems and the informational schema defined with the configuratio data.
+The static architecture gives a static description of the whole system through the general partitioning of the sub-systems and the informational schema defined with the configuration data.
 
 Contents:
 

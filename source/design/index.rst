@@ -1,11 +1,10 @@
-.. _design:
+.. _dynamic_architecture:
 
 Dynamic Architecture
 ####################
 
 .. toctree::
    :maxdepth: 3
-   :numbered:
    
    Query and access existing thematic content <UC01>
    Conduct on-demand processing <UC02>
