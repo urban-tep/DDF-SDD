@@ -1,4 +1,4 @@
-.. _catalogue :
+.. _design_catalogue :
 
 Catalogue
 =========
