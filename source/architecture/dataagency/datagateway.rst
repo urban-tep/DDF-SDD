@@ -55,6 +55,7 @@ To illustrate this mechanism, the 2 following figures describes 2 typical cases 
 
 .. uml::
   :caption: Data Gateway - trusted originator access (IP based) sequence diagram
+  :align: center
 
   actor "User" as U
   participant "Portal" as P
@@ -85,6 +86,7 @@ To illustrate this mechanism, the 2 following figures describes 2 typical cases 
 
 .. uml::
   :caption: Data Gateway - temporary access (token based) sequence diagram
+  :align: center
 
   actor "User" as U
   participant "Portal" as P

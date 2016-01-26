@@ -1,6 +1,6 @@
 .. uml::
-
-   !define DIAG_NAME Software Packages Diagram1
+   :align: center
+   :caption: Software Packages Diagram1
 
    !include includes/skins.iuml
 
@@ -10,10 +10,5 @@
    !include source/integration/packages_terradue.iuml
    !include source/integration/packages_external.iuml  
    !include source/namespaces/namespace_relations.iuml
-
-  footer
-  
-    DIAG_NAME
-    endfooter
 
     

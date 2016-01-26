@@ -41,6 +41,7 @@ The authorisation consists of two phases:
 
 .. uml::
 	:caption: Authorisation mechanism Activity Diagram
+	:align: center
 
 
 	

@@ -22,7 +22,8 @@ The next figure describes the sequence of operations for an expert user to provi
 
 
 .. uml::
-  :caption: ?? instantation sequence diagram
+  :caption: Sandbox instantation sequence diagram
+  :align: center
 
 
   actor "User" as U

@@ -16,6 +16,7 @@ Next figure depicts the sequence that consists of requesting a processing on dem
 
 .. uml::
   :caption: On demand data processing submission
+  :align: center
 
 
   actor "User" as U

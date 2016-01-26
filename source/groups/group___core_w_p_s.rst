@@ -34,6 +34,7 @@ Below, the sequence diagrams describe the the previously listed functions.
 
 .. uml::
 	:caption: WPS Service Analysis Sequence Diagram - Get Capabilities
+	:align: center
 
 
 	participant "WebClient" as WC
@@ -73,6 +74,7 @@ Below, the sequence diagrams describe the the previously listed functions.
 
 .. uml::
 	:caption: WPS Service Analysis Sequence Diagram - Describe Process
+	:align: center
 
 
 	participant "WebClient" as WC
@@ -104,6 +106,7 @@ Below, the sequence diagrams describe the the previously listed functions.
 
 .. uml::
 	:caption: WPS Service Analysis Sequence Diagram - Execute
+	:align: center
 
 
 	participant "WebClient" as WC
@@ -141,6 +144,7 @@ Below, the sequence diagrams describe the the previously listed functions.
 
 .. uml::
 	:caption: WPS Service Analysis Sequence Diagram - Retrieve Result
+	:align: center
 
 
 	participant "WebClient" as WC
@@ -166,6 +170,7 @@ Below, the sequence diagrams describe the the previously listed functions.
 
 .. uml::
 	:caption: WPS Service Analysis Sequence Diagram - Search WPS process
+	:align: center
 
 
 	participant "WebClient" as WC
@@ -201,6 +206,7 @@ Below, the sequence diagrams describe the the previously listed functions.
 
 .. uml::
 	:caption: WPS Service Analysis Sequence Diagram - Integrate WPS provider
+	:align: center
 
 
 	participant "WebClient" as WC

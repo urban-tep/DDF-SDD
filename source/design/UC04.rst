@@ -16,6 +16,7 @@ times, it will be possible to use the play functionality through the years.
 
 .. uml::
   :caption: Data discovery, query, visualization and combination on PUMA
+  :align: center
 
   actor "User" as U
   participant "Portal" as P

@@ -13,6 +13,7 @@ It provides with the functions to identify a user through a generic interface fo
 
 .. uml::
 	:caption: Authentication mechanism Activity Diagram
+	:align: center
 
 
 	start

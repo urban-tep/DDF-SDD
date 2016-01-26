@@ -1,6 +1,6 @@
 .. uml::
-
-  !define DIAG_NAME Component Diagram
+  :align: center
+  :caption: Portal component diagram
 
   !include includes/skins.iuml
 

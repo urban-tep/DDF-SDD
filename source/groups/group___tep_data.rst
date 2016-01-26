@@ -27,6 +27,7 @@ Each user of the platform may define a DataPackage to save a set of dataset that
 
 .. uml::
 	:caption: Data package lifecycle #1 state diagram
+	:align: center
 
 
 	User -> WebPortal: Select data
@@ -44,6 +45,7 @@ Each user of the platform may define a DataPackage to save a set of dataset that
 
 .. uml::
 	:caption: Data package lifecycle #2 state diagram
+	:align: center
 
 
 	User -> WebPortal: Load existing data package

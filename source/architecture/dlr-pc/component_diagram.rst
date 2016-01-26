@@ -1,4 +1,5 @@
 .. uml::
+   :align: center
 
    !define DIAG_NAME Component Diagram
 

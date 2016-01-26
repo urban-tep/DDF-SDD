@@ -28,6 +28,7 @@ Change Log
 |         |            | Document restructuration : section :ref:`system_context` [RID AM-30]                        |
 +---------+------------+---------------------------------------------------------------------------------------------+
 |         |            | Document restructuration : section :ref:`static_architecture` [RID AM-31]                   |
+|         |            | [RID SP-62] [RID AM-41]                                                                                |
 +---------+------------+---------------------------------------------------------------------------------------------+
-|         |            | Document restructuration : section :ref:`dynamic_architecture` [RID SP-62]                  |
+|         |            | Document restructuration : section :ref:`dynamic_architecture` [RID ]                  |
 +---------+------------+---------------------------------------------------------------------------------------------+

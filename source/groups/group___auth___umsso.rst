@@ -24,6 +24,7 @@ Following diagram depicts the User status when logging with UM-SSO.
 
 .. uml::
 	:caption: User login with UM-SSO activity diagram
+	:align: center
 
 
 	start
@@ -57,6 +58,7 @@ Next diagram depicts the scenarios that applies when a user perform an HTTP requ
 
 .. uml::
 	:caption: UM-SSO protected HTTP request sequence diagram
+	:align: center
 
 
 	actor "User\n(Web Browser)" as U
