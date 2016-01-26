@@ -8,11 +8,12 @@ Integrated Accounting: Credit and Quota flows
 
 Section :ref:`group___tep_accounting` decribes in details how the portal carries forward the accounting on the user and groups account and how quota can be applied from this user and groups accounts.
 
-On the other hand, the providers must account for the usage of their resources. This task is independant from the portal and up to every provider (ICT, data, etc) using the :ref:`group___apel_accounting` as illustrated in the following figure for an ICT provider. In the TEP Hydrology initial scenario, every ICT resources reports the usage based on WPS requests completed.
+On the other hand, the providers must account for the usage of their resources. This task is independant from the portal and up to every provider (ICT, data, etc) using the :ref:`group___apel_accounting` as illustrated in the following figure for an ICT provider. In the TEP Urban initial scenario, every ICT resources reports the usage based on WPS requests completed.
 
 
 .. uml::
   :caption: ICT resource provider accounting usage sequence diagram
+  :align: center
 
   box "Cluster" #LightBlue
     participant "WPS Server" as WPS
