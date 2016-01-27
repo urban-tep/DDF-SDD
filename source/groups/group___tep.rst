@@ -15,7 +15,7 @@ Tep Modules
   skinparam componentStyle uml2
   !include source/groups/group___tep.iuml
 
-This is a super component that encloses all Thematic Exploitation Platform related functional compoenents. Their main functionnalities are targeted to ebhance the basic :ref:`Core <group___core>` functionalities for the thematic usage of the plaform. 
+This is a super component that encloses all Thematic Exploitation Platform related functional components. Their main functionnalities are targeted to enhance the basic :ref:`Core <group___core>` functionalities for the thematic usage of the plaform. 
 
 
 This component is implemented in the following software packages: :ref:`namespace_terradue_1_1_tep`

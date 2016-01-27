@@ -1,7 +1,6 @@
 .. uml::
    :align: center
-
-   !define DIAG_NAME Business Objects
+   :caption: Business Objects
 
    !include includes/skins.iuml
 
@@ -41,7 +40,3 @@
 
    (GroupTep, UserTep) .. RoleTep
    (DataPackage, Collection) .. Filters
-
-  footer
-    DIAG_NAME
-    endfooter

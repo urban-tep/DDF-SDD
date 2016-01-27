@@ -37,11 +37,11 @@ Below, the sequence diagrams describe the the previously listed functions.
 	:align: center
 
 
-	participant "WebClient" as WC
-	participant "WebServer" as WS
+	actor "User or System" as WC
+	participant "Portal" as WS
 	participant "WPS Provider" as P
-	participant "Infrastructure" as C
-	participant "DataBase" as DB
+	participant "Cloud Controller" as C
+	participant "Portal DataBase" as DB
 	
 	autonumber
 	
@@ -51,17 +51,17 @@ Below, the sequence diagrams describe the the previously listed functions.
 	activate WS
 	WS -> DB: Load all Providers (Proxy=true)
 	loop on each provider
-	    WS -> DB: load services
+	    WS <-> DB: load services
 	    loop on each service
-	        WS -> WS: get service info (identifier, title, abstract)
+	        WS <-> WS: get service info (identifier, title, abstract)
 	    end
 	end
 	WS -> C: discover Providers
 	loop on each provider
-	    WS -> P: GetCapabilities
-	    WS -> WS: extract services from GetCapabilities using request identifier
+	    WS <-> P: GetCapabilities
+	    WS <-> WS: extract services from GetCapabilities using request identifier
 	    loop on each service
-	        WS -> WS: get service info (identifier, title, abstract)
+	        WS <-> WS: get service info (identifier, title, abstract)
 	    end
 	end
 	WS -> WS: aggregate all services info into response offering
@@ -77,10 +77,10 @@ Below, the sequence diagrams describe the the previously listed functions.
 	:align: center
 
 
-	participant "WebClient" as WC
-	participant "WebServer" as WS
+	participant "User or System" as WC
+	participant "Portal" as WS
 	participant "WPS Provider" as P
-	participant "DataBase" as DB
+	participant "Portal DataBase" as DB
 	
 	autonumber
 	
@@ -89,14 +89,14 @@ Below, the sequence diagrams describe the the previously listed functions.
 	WC -> WS: DescribeProcess request
 	activate WS
 	alt case process from db
-	    WS -> DB: load service from request identifier
-	    WS -> DB: get provider url + service identifier on the provider
+	    WS <-> DB: load service from request identifier
+	    WS <-> DB: get provider url + service identifier on the provider
 	else case process from cloud provider
-	    WS -> P: GetCapabilities
-	    WS -> WS: extract describeProcess url from GetCapabilities using request identifier
+	    WS <-> P: GetCapabilities
+	    WS <-> WS: extract describeProcess url from GetCapabilities using request identifier
 	end
 	WS -> WS: build "real" describeProcess request
-	WS -> P: DescribeProcess
+	WS <-> P: DescribeProcess
 	WS -> WC: return result from describeProcess
 	deactivate WS
 	
@@ -109,10 +109,10 @@ Below, the sequence diagrams describe the the previously listed functions.
 	:align: center
 
 
-	participant "WebClient" as WC
-	participant "WebServer" as WS
+	participant "User or System" as WC
+	participant "Portal" as WS
 	participant "WPS Provider" as P
-	participant "DataBase" as DB
+	participant "Portal DataBase" as DB
 	
 	autonumber
 	
@@ -147,10 +147,10 @@ Below, the sequence diagrams describe the the previously listed functions.
 	:align: center
 
 
-	participant "WebClient" as WC
-	participant "WebServer" as WS
+	participant "User or System" as WC
+	participant "Portal" as WS
 	participant "WPS Provider" as P
-	participant "DataBase" as DB
+	participant "Portal DataBase" as DB
 	
 	autonumber
 	
@@ -173,11 +173,11 @@ Below, the sequence diagrams describe the the previously listed functions.
 	:align: center
 
 
-	participant "WebClient" as WC
-	participant "WebServer" as WS
-	participant "Provider" as P
-	participant "Infrastructure" as C
-	participant "DataBase" as DB
+	participant "User or System" as WC
+	participant "Portal" as WS
+	participant "WPS Provider" as P
+	participant "Cloud Controller" as C
+	participant "Portal DataBase" as DB
 	
 	autonumber
 	
@@ -209,10 +209,10 @@ Below, the sequence diagrams describe the the previously listed functions.
 	:align: center
 
 
-	participant "WebClient" as WC
-	participant "WebServer" as WS
-	participant "Provider" as P
-	participant "DataBase" as DB
+	participant "User or System" as WC
+	participant "Portal" as WS
+	participant "WPS Provider" as P
+	participant "Portal DataBase" as DB
 	
 	autonumber
 	

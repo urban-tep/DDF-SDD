@@ -1,9 +1,10 @@
 .. _class_terradue_1_1_portal_1_1_group:
 
-Represents a basic user group
------------------------------
+:ref:`User <class_terradue_1_1_portal_1_1_user>` :ref:`Group <class_terradue_1_1_portal_1_1_group>`
+---------------------------------------------------------------------------------------------------
 
 
+>Represents a basic user group
 
 
 

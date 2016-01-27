@@ -1,9 +1,10 @@
 .. _class_terradue_1_1_portal_1_1_user:
 
-Basic object representing a user in the system. 
+:ref:`User <class_terradue_1_1_portal_1_1_user>`
 ------------------------------------------------
 
 
+Basic object representing a user in the system. 
 
 
 

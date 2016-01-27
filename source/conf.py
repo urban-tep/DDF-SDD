@@ -200,7 +200,7 @@ latex_logo = '_static/logo-urban-big.png'
 latex_use_parts = False
 
 # Additional stuff for the LaTeX preamble.
-latex_preamble = '\\usepackage{sdd}'
+latex_preamble = '\\usepackage{sdd}\n\\usepackage{float}'
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').

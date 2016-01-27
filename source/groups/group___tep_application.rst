@@ -21,7 +21,15 @@ Thematic Application brings a simple way to define an application of a specific 
 Thematic Application over OWS data model 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*This section shall further describe how the component uses the OWS Context model to represent the dataset collections, the services, maps, features layers...*
+This component uses extensively :ref:`OWS Context <group___o_w_s_context>` model to represent the dataset collections, the services, maps, features layers and combine them together fefining therefore:
+
+
+
+- data AOI and limits
+- data constraints with the processing services
+- processing services predefintion (default values, massive processing extent...)
+- map backgroungs, feature layers and other functions
+- special functions such as benchmarking or special widgets
 
 It depends on other components as
 

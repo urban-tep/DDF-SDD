@@ -12,6 +12,5 @@ class Entity {
  +StoreGlobalPrivileges()
  +RemoveGlobalPrivileges()
  +Delete()
- +GetAllowedAdministratorOperations()
 }
 @enduml

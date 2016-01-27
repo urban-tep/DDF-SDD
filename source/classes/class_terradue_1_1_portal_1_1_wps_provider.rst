@@ -1,9 +1,10 @@
 .. _class_terradue_1_1_portal_1_1_wps_provider:
 
-Represents a remote provider of a Web Processing :ref:`Service <class_terradue_1_1_portal_1_1_service>`.
---------------------------------------------------------------------------------------------------------
+WPS Provider
+------------
 
 
+Represents a remote provider of a Web Processing :ref:`Service <class_terradue_1_1_portal_1_1_service>`. 
 This class is used as the computing resource on which WPS processes, which are equivalent to tasks, run.
 "" 
 

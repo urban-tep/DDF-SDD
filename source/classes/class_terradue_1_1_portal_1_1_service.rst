@@ -1,9 +1,10 @@
 .. _class_terradue_1_1_portal_1_1_service:
 
+Processing :ref:`Service <class_terradue_1_1_portal_1_1_service>`
+-----------------------------------------------------------------
+
+
 Abstract base object for processing services.
----------------------------------------------
-
-
 
 
 

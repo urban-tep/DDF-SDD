@@ -22,11 +22,11 @@ Geosquare
 
 	Geosquare provides with the Catalogue as a service function
 
-Geosquare is a .NET web application for indexing model-aware dataset in elasticsearch. It provides with an interface for searching the dataset in a catalogue via an OpenSearch interface according to a data model.
+Geosquare is a web application for indexing model-aware dataset in elasticsearch. It provides with an interface for searching the dataset in a catalogue via an OpenSearch interface according to a data model.
 
 ElasticCas is the component enabling the gateway with :ref:`Elasticsearch <namespace_elasticsearch>` in both directions.
 
-For dataset ingestion, it transform the metadata feed in JSON documents to index in elasticsearch. For dataset query, it exploit :ref:`Elasticsearch <namespace_elasticsearch>` search engine to retrieve the documents in JSON and transform them in metadata feed.
+For dataset ingestion, it transforms the metadata feed in JSON documents to index in elasticsearch. For dataset query, it exploits :ref:`Elasticsearch <namespace_elasticsearch>` search engine to retrieve the documents in JSON and transform them in metadata feed.
 
 The transformation and query semantics are defined trough plugins to enables several metadata models and feed formats.
 

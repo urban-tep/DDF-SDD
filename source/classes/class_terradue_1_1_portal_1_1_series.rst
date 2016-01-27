@@ -1,9 +1,10 @@
 .. _class_terradue_1_1_portal_1_1_series:
 
+Data :ref:`Series <class_terradue_1_1_portal_1_1_series>`
+---------------------------------------------------------
+
+
 Represents a series of data sets that are available from a catalogue.
----------------------------------------------------------------------
-
-
 
 
 

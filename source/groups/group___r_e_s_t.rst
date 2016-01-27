@@ -7,7 +7,7 @@ REST handler
 
 
 
-This component enables the full web service stack to intercat with the back-end. It allows to control many of the business objects in the system with REST CRUD (Create, Read, Update, Delete) operations
+This component enables the full web service stack to interact with the back-end. It allows to control many of the business objects in the system with REST CRUD (Create, Read, Update, Delete) operations
 
 It depends on other components as
 
