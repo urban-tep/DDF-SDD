@@ -159,6 +159,9 @@ Example Execute request
 .. literalinclude:: urban-tep-wps-sample-request.xml
    :language: xml
 
+.. warning::
+	The XML above does not represent a complete and valid Execute request to BC WPS. Some parts have been ommitted for a better readibility.
+
 Example Execute response
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
