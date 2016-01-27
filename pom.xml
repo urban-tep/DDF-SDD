@@ -67,25 +67,6 @@
 							</arguments>
 						</configuration>
 					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.4</version>
-				<executions>
-					<execution>
-						<id>rpm</id> <!-- this is used for inheritance merges -->
-						<phase>prepare-package</phase> <!-- bind to the packaging phase -->
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<descriptors>
-								<descriptor>${basedir}/src/assembly/package-html.xml</descriptor>
-							</descriptors>
-							<appendAssemblyId>true</appendAssemblyId>
-						</configuration>
-					</execution>
 					<execution>
 						<id>generate-pdf</id>
 						<phase>compile</phase>
@@ -143,6 +124,26 @@
                 </successCodes>
 						</configuration>
 					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>rpm</id> <!-- this is used for inheritance merges -->
+						<phase>prepare-package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptors>
+								<descriptor>${basedir}/src/assembly/package-html.xml</descriptor>
+							</descriptors>
+							<appendAssemblyId>true</appendAssemblyId>
+						</configuration>
+					</execution>
+					
 				</executions>
 			</plugin>
 			<plugin>
