@@ -12,7 +12,7 @@
 	<artifactId>esa-tep-urban-sdd</artifactId>
 	<packaging>rpm</packaging>
 	<description>Urban Thematic Exploitation Platform Software Design Document</description>
-	<version>0.1-SNAPSHOT</version>
+	<version>1.2-SNAPSHOT</version>
 
 
 	<dependencies>
@@ -63,34 +63,11 @@
 							<arguments>
 								<argument>clean</argument>
 								<argument>html</argument>
+								<argument>latex</argument>
 							</arguments>
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>com.google.code.maven-replacer-plugin</groupId>
-				<artifactId>replacer</artifactId>
-				<version>1.5.3</version>
-				<executions>
-					<!-- <execution>
-						<id>target-top</id>
-						<phase>process-classes</phase>
-						<goals>
-							<goal>replace</goal>
-						</goals>    
-						<configuration>
-							<filesToInclude>${basedir}/_build/html/**/*.svg</filesToInclude>
-							<replacements>
-								<replacement>
-									<token><![CDATA[<a]]></token>
-									<value><![CDATA[<a target="_top"]]></value>
-								</replacement>         
-							</replacements>
-						</configuration>               
-					</execution> -->
-				</executions>
-
 			</plugin>
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
@@ -107,6 +84,63 @@
 								<descriptor>${basedir}/src/assembly/package-html.xml</descriptor>
 							</descriptors>
 							<appendAssemblyId>true</appendAssemblyId>
+						</configuration>
+					</execution>
+					<execution>
+						<id>generate-pdf</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<workingDirectory>_build/latex</workingDirectory>
+							<executable>pdflatex</executable>
+							<arguments>
+								<argument>-interaction=nonstopmode</argument>
+								<argument>UrbanTEP-SDD.tex</argument>
+							</arguments>
+							<successCodes>
+                    <successCode>0</successCode>
+                    <successCode>1</successCode>
+                </successCodes>
+						</configuration>
+					</execution>
+					<execution>
+						<id>generate-pdf2</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<workingDirectory>_build/latex</workingDirectory>
+							<executable>pdflatex</executable>
+							<arguments>
+								<argument>-interaction=nonstopmode</argument>
+								<argument>UrbanTEP-SDD.tex</argument>
+							</arguments>
+							<successCodes>
+                    <successCode>0</successCode>
+                    <successCode>1</successCode>
+                </successCodes>
+						</configuration>
+					</execution>
+					<execution>
+						<id>generate-pdf3</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<workingDirectory>_build/latex</workingDirectory>
+							<executable>pdflatex</executable>
+							<arguments>
+								<argument>-interaction=nonstopmode</argument>
+								<argument>UrbanTEP-SDD.tex</argument>
+							</arguments>
+							<successCodes>
+                    <successCode>0</successCode>
+                    <successCode>1</successCode>
+                </successCodes>
 						</configuration>
 					</execution>
 				</executions>
