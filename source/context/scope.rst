@@ -46,11 +46,12 @@ Processor integration and Service offering
 Data processing over managed ICT
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Users can instantiate (on-demand) a processing service appliance, provision the appliance on a pre-configured ICT Provider and invoke the processing via the OGC Web Processing Service interface.
-Users define input data and select a results location (e.g. portal, cloud block storage, dropbox, google drive, ...)
+Platform can instantiate processing resource, provision the infrastructure on a pre-configured ICT Provider and invoke the processing via the OGC Web Processing Service interface.
+Users define input data and select a results location 
 
 * Policy: applicable Public Cloud Provider terms of use
 * Process: runJob - On-demand cloud appliance
+* Resource: :ref:`design_dataagency`, :ref:`design_portal`, Processing centers
 
       
 Users can run existing processing services (e.g. G-POD services) and and invoke the processing via the OGC Web Processing Service interface.
@@ -85,7 +86,7 @@ The Urban TEP Platform is investigating on different collaborative eScience scen
 
 * Job run sharing, allowing users to see a job processing parameters and results, and reuse a job definition as a baseline for further runs. 
 * Collaborative work on algorithm integration, Virtual Machines accessing Git repositories, like offered by social coding platforms such as GitHub).
-* Cloud bursting of Processing services to Commercial Clouds, in order to enable low-cost, massive data processing campaigns.
+* Cloud bursting of Processing services to Commercial Clouds, in order to absorbe peaks in the processing and increase scalability for massive data processing campaigns.
 
 Capacity Building through Data Sharing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -120,7 +121,7 @@ Publication referencing
 * Resource: :ref:`design_dataagency`, :ref:`design_portal`
 
 * related to the scientific community curated results (scientific papers)
-* provides Portal links to collateral resources (like in GEP, data and processors) that allow researchers to understand and reproduce an experiment or a production
+* provides Portal links to collateral resources that allow researchers to understand and reproduce an experiment or a production
 
 Community sharing
 """""""""""""""""

@@ -38,7 +38,7 @@ When a dataset is processed with a remote processing (e.g. WPS), the results of 
 Analysis and Visualization 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*[]*
+When a dataset is processed with a remote processing (e.g. WPS), the results of this data may be located in a place where there is no other function than downloading the data directly on its local machine to visualize or analyze it. This component enables export capability to :ref:`GeoServer <namespace_geo_server>` with support to raster and vector files. If the results include standard vector files (e.g. shapefile, geojson, csv with WKT, ...) or raster files such as geolocated images (geotiff, png with world files...), the  components shall propose to the user to export them to geoserver that will resturn a new WMS layer that the web visualization widget shall display. It also integrates functions to "manipulate" the results and its metadata with an external tools such as GIS functions.
 
 It depends on other components as
 

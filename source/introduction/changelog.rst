@@ -25,10 +25,22 @@ Change Log
 +---------+------------+---------------------------------------------------------------------------------------------+
 | 1.2     | 04/02/2016 | PDR dispositions                                                                            |
 +---------+------------+---------------------------------------------------------------------------------------------+
-|         |            | Document restructuration : section :ref:`system_context` [RID AM-30]                        |
+|         |            | Document restructuration : section :ref:`system_context` [RID AM-30] [RID SP-53]            |
+|         |            | [RID SP-54] [RID SP-56] [RID SP-57] [RID SP-58] [RID SP-59] [RID SP-61]                     |
 +---------+------------+---------------------------------------------------------------------------------------------+
 |         |            | Document restructuration : section :ref:`static_architecture` [RID AM-31]                   |
-|         |            | [RID SP-62] [RID AM-41]                                                                     |
+|         |            | [RID SP-62] [RID AM-41] [RID AM-43] [RID AM-44] [RID AM-52] [RID SP-52]                     |
 +---------+------------+---------------------------------------------------------------------------------------------+
-|         |            | Document restructuration : section :ref:`dynamic_architecture` [RID ]                       |
+|         |            | Document restructuration : section :ref:`dynamic_architecture` [RID AM-53]                  |
++---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | :ref:`business_objects` section reduced and refocused on its purpose [RID AM-45]            |
++---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | sequence diagram in :ref:`group___core_w_p_s` reviewed with components name [RID AM-48]     |
++---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | ngeo reference in :ref:`group___auth___umsso` removed [RID AM-50]                           |
++---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | in :ref:`group___auth___umsso`, UM-SSO replaced by EO-SSO [RID SP-70]                       |
++---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | in :ref:`group___tep_accounting` and :ref:`dynamic_accounting`, new sections describing the |
+|         |            | quota mechnism are added [RID SP-71].                                                       |
 +---------+------------+---------------------------------------------------------------------------------------------+

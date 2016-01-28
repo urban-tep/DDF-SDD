@@ -1,10 +1,10 @@
 .. _class_terradue_1_1_portal_1_1_feature:
 
-:ref:`Feature <class_terradue_1_1_portal_1_1_feature>`
-------------------------------------------------------
+:ref:`Portal <namespace_terradue_1_1_portal>` :ref:`Feature <class_terradue_1_1_portal_1_1_feature>`
+----------------------------------------------------------------------------------------------------
 
 
-A :ref:`Feature <class_terradue_1_1_portal_1_1_feature>` is a container for an item on the portal or on the web that the portal features in a way or another depending on the user interface (e.g. front page carousel). It has all the properties for storing the necessary contents (title, url, image, description).  
+A portal feature is a container for an item on the portal or on the web that the portal features in a way or another depending on the user interface (e.g. front page carousel). It has all the properties for storing the necessary contents (title, url, image, description).  
 
 
 

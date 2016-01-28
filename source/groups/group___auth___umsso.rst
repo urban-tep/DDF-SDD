@@ -1,6 +1,6 @@
 .. _group___auth___umsso:
 
-UM-SSO plugin
+EM-SSO plugin
 -------------
 
 
@@ -14,22 +14,22 @@ UM-SSO plugin
 
 	UM-SSO plugin described 
 
-This module enables external authentication using UM-SSO mechanism. In the core, the :ref:`Context <group___context>` component provides with an interface that allows using HTTP headers present in the HHTP context to authenticate the user. Associated with a set of rules, the :ref:`Authentication <group___authentication>` is able to establish a protocol to authenticate user.
+This module enables external authentication using EO-SSO mechanism. In the core, the :ref:`Context <group___context>` component provides with an interface that allows using HTTP headers present in the HHTP context to authenticate the user. Associated with a set of rules, the :ref:`Authentication <group___authentication>` is able to establish a protocol to authenticate user.
 
-Typical code ruleset is declared with the method UM-SSO. accountType maps the rule to an account. The rule is applied only if the condition that specified that the header  is present and not empty. Then the value present in  is used as login username and user is registered automatically if not yet present in the database with register="true" and the user receives a account creation mail with the mail information found in header Umsso-Person-Email.
+Typical code ruleset is declared with the method EO-SSO. accountType maps the rule to an account. The rule is applied only if the condition that specified that the header  is present and not empty. Then the value present in  is used as login username and user is registered automatically if not yet present in the database with register="true" and the user receives a account creation mail with the mail information found in header Umsso-Person-Email.
 
-Following diagram depicts the User status when logging with UM-SSO.
+Following diagram depicts the User status when logging with EO-SSO.
 
 
 
 .. uml::
-	:caption: User login with UM-SSO activity diagram
+	:caption: User login with EO-SSO activity diagram
 	:align: center
 
 
 	start
 	    if (secured service?) then (yes)
-	      if (UM-SSO logged?) then (yes)
+	      if (EO-SSO logged?) then (yes)
 	        if (user in DB?) then (yes)
 	          if (user pending activation?) then (yes)
 	            :reinvite user to confirm email;
@@ -43,7 +43,7 @@ Following diagram depicts the User status when logging with UM-SSO.
 	          stop
 	        endif
 	      else (no)
-	        :redirect user to UM-SSO IDP;
+	        :redirect user to EO-SSO IDP;
 	        stop
 	      endif
 	    endif
@@ -52,29 +52,28 @@ Following diagram depicts the User status when logging with UM-SSO.
 	
 	
 
-Next diagram depicts the scenarios that applies when a user perform an HTTP request to a web service protected by UM-SSO. This scenario is the “normal” case where user credentials are correct.
+Next diagram depicts the scenarios that applies when a user perform an HTTP request to a web service protected by EO-SSO. This scenario is the “normal” case where user credentials are correct.
 
 
 
 .. uml::
-	:caption: UM-SSO protected HTTP request sequence diagram
+	:caption: EO-SSO protected HTTP request sequence diagram
 	:align: center
 
 
-	actor "User\n(Web Browser)" as U
-	participant "Web Server\n(ngEO SP checkpoint)" as W
-	participant "Web Service\nusing :Context" as C
-	participant "Authentication\nConfiguration\nAuth.xml" as A
-	entity "UM-SSO Identity Provider" as I
+	actor "User" as U
+	participant "Service Provider\ncheckpoint" as W
+	participant "Portal" as C
+	entity "EO-SSO Identity Provider" as I
 	
 	autonumber
 	
-	== UM-SSO authentication ==
+	== EO-SSO authentication ==
 	
 	U ->> W: HTTP request
 	activate W
 	
-	alt "user not authenticated on UM-SSO"
+	alt "user not authenticated on EO-SSO"
 	
 	W -->> U: HTTP redirect\nto IdP
 	deactivate W
@@ -116,8 +115,7 @@ Next diagram depicts the scenarios that applies when a user perform an HTTP requ
 	
 	activate C
 	
-	C -> A: Read configuration
-	A --> C: Authentication RuleSet
+	C -> C: Read Authentication RuleSet
 	C -> C: Apply ruleset\nto HTTP Headers
 	
 	alt "User not present in DB"
@@ -137,11 +135,11 @@ Next diagram depicts the scenarios that applies when a user perform an HTTP requ
 
 It interacts with interfaces as it
 
-- implements :ref:`Authentication <group___authentication>` to enable UM-SSO Authentication.
+- implements :ref:`Authentication <group___authentication>` to enable EO-SSO Authentication.
 
 
 The following normative references are applied to this component:
 
-- EO op UM-SSO Interface Control Document [SIE-EO-OP-UM-SSO-ICD-002]
+- EO op EO-SSO Interface Control Document [SIE-EO-OP-UM-SSO-ICD-002]
 
 
