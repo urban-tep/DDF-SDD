@@ -1,5 +1,5 @@
-Software packages
-=================
+Appendix A : Software packages
+==============================
 
 The set of software packages gathers the components and classes into logical entities.
 

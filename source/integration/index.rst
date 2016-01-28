@@ -7,6 +7,3 @@ Integration Scheme
    :maxdepth: 2
    
    Implementation choices <impl>
-   Software packages <packages>
-   Normative References <references> 
-   API References <api>

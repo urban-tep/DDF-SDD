@@ -16,6 +16,8 @@
    Integration Scheme <integration/index>
    Deployment Plan <deployment/index>
    Requirements Traceability <requirement/index>
-
+   Appendix A : Software Packages List <integration/packages>
+   Appendix B : Normative references <integration/references>
+   Appendix C : API <integration/api>
 
 

@@ -44,3 +44,5 @@ Change Log
 |         |            | in :ref:`group___tep_accounting` and :ref:`dynamic_accounting`, new sections describing the |
 |         |            | quota mechnism are added [RID SP-71].                                                       |
 +---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | in :ref:`group___tep_service`, the reference to WPS Factory is removed [RID SP-71]          |
++---------+------------+---------------------------------------------------------------------------------------------+
