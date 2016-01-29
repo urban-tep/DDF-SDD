@@ -61,11 +61,65 @@ Developing and integrating a new processing service
     
 .. todo:: *BC* sequence diagram and description of the deployment of the new software and data
 
+.. uml::
+  :caption: Deployment of new software
+  :align: center
+  
+  actor "User"
+  participant "Sandbox"
+  participant "Validator"
+  participant "Procesing Center" as PC
+  
+  User -> Sandbox : send upload request
+  activate Sandbox
+  Sandbox -> Validator : optionally request feedback
+  activate Validator
+  Validator -> Sandbox : validation successful
+  deactivate Validator
+  Sandbox -> Sandbox : package the software
+  activate Sandbox #Green
+  deactivate Sandbox
+  Sandbox -> PC : upload the packaged software
+  activate PC
+  PC -> PC : deploy the software
+  PC -> Sandbox : deployment successful
+  deactivate PC
+  Sandbox -> User : deployment successful
+  deactivate Sandbox
+
 
 5)  User and TEP Urban platform team test the functionality of the application.
     
 .. todo:: *BC* sequence diagram and description of the user interaction for testing the new software
 
+.. uml::
+  :caption: Testing of new software
+  :align: center
+  
+  actor "User"
+  participant "Sandbox"
+  participant "Catalog"
+  participant "WPS"
+  participant "Procesing Center" as PC
+  
+  User -> Sandbox : test new software
+  activate Sandbox
+  Sandbox -> Catalog : search for a test dataset
+  activate Catalog
+  Catalog -> Sandbox : dataset information
+  deactivate Catalog
+  Sandbox -> WPS : test new software
+  activate Sandbox #Green
+  activate WPS
+  WPS -> PC : send Execute request
+  activate PC
+  PC -> WPS : process status
+  deactivate PC
+  WPS -> Sandbox : process status
+  deactivate WPS
+  deactivate Sandbox
+  deactivate Sandbox
+  
 
 Deploying a new service
 -----------------------
