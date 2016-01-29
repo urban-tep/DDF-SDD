@@ -95,8 +95,51 @@ Next figure depicts the next step that consists of selecting and saving a datase
 Data Visualization using PUMA
 -----------------------------
 
-
 Next figure depicts the same use case but using PUMA for the data vizualisation and manipulation.
+
+Preparation of Data for PUMA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The process of visualization of the data inside the PUMA consists of three parts. First part is uploading the data into
+the PUMA. Second is mapping uploaded data to visualization concepts available to the user in the PUMA visualization
+interface. Third is either redirecting user to the PUMA visualization interface or integrating it into current state for
+example via iframe. As a part of the third step it is necessary to allow specification of visible part of the interface
+in the PUMA.
+
+For the first part there is already available interface in the GeoServer component of the PUMA. This step consists of
+creating a data store using GeoServer REST API
+
+- http://docs.geoserver.org/stable/en/user/rest/api/datastores.html. This supports shp, properties, h2, spatialite and appschema.
+- http://docs.geoserver.org/stable/en/user/rest/api/coveragestores.html. This supports geotiff, worldimage and imagemosaic.
+
+If we need to support additional formats we will need to decide how to integrate them further down the line. It is
+possible to support postGIS database by allowing access to a database, which will be mapped in the GeoServer upfront
+manually. For other formats there will be some development effort needed.
+
+.. image:: puma/insertDataToPuma.png
+
+For the second step we will need to expose the API, which allows the Portal to map the data to the visualization
+concepts used inside of the PUMA. This is currently done manually in the GUI. To allow this we need to expose API for
+this mapping. This needs to be done as a part of the development phase.
+
+.. image:: puma/integratePuma.png
+
+For the third step we will need to prepare and document the URL structure, which will contain the information about the
+User Interface, its state and the visualizations which will be visible by default for the user.
+
+.. image:: puma/redirectToPuma.png
+
+Capabilities of PUMA with respect to visualization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PUMA focuses on showing the visualized data in right contexts. Second important part is to visualize them using tools
+which will be accessible to as many people as possible. This is achieved by the combination of layers with charts
+overlayed on top of the map.
+
+In PUMA it is possible to overlay multiple layers on top of each other to get more complex image of the whole situation.
+It is also possible to filter all the available information based on the Area of interest, Attributes, Scope and Layers.
+In order to deliver maximum possible value it also allows user to see charts depicting the changes of the values over the
+time.
 
 .. uml::
   :caption: Data discovery, query, visualization and combination on PUMA
