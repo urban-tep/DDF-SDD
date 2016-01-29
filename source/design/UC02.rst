@@ -65,11 +65,138 @@ Next figure depicts the sequence that consists of requesting a processing on dem
 
 
 
-Precessing execution in the processing centers
+Processing execution in the processing centers
 ----------------------------------------------
 
     
-.. todo:: *BC* sequence diagram and description of the interaction of the Portal to the processing center via WPS
+.. todo:: *BC* sequence diagram and description of the execution of the job inside the processing center
+
+.. uml::
+  :caption: Execute request
+  :align: center
+
+
+  participant "Portal"
+  participant "WPS"
+  participant "Production Control" as PC
+  participant "Scheduler"
+  participant "Processor"
+  participant "Staging"
+
+  alt synchronous
+
+	  activate Scheduler
+	  Portal -> WPS : Execute request
+	  
+	  activate WPS
+	  WPS -> PC : send request to the selected processor
+	  
+	  activate PC
+	  PC -> Scheduler : send processing request
+	  
+	  Scheduler -> Processor : perform job
+	  
+	  activate Processor
+	  PC -> PC : start monitoring thread
+	  activate PC #Green
+	  PC -> Processor : check if the job is finished
+	  Processor -> PC : job status
+	  note right : job in progress
+	  
+	  Processor -> Staging : send the products
+	  deactivate Processor
+	  activate Staging
+	  
+	  PC -> Processor : check if the job is finished
+	  Processor -> PC : job status
+	  note right #00B200 : <color:white>job finished</color>
+	  
+	  PC -> Staging : check if the staging is finished
+	  Staging -> PC : staging status
+	  note right : staging in progress
+	  deactivate Staging
+	  
+	  PC -> Staging : check if the staging is finished
+	  Staging -> PC : product URL(s)
+	  note right #00B200 : <color:white>staging finished</color>
+	  
+	  PC -> WPS : product URL(s)
+	  deactivate PC
+	  deactivate PC
+	  
+	  WPS -> Portal : product URL(s)
+	  deactivate WPS
+
+  else asynchronous
+
+	  Portal -> WPS : Execute request
+	  activate WPS
+	  WPS -> PC : send request to the selected processor
+	  
+	  activate PC
+	  PC -> Scheduler : send processing request
+	  Scheduler -> PC : job ID
+	  
+	  PC -> WPS : job ID
+	  WPS -> Portal : job ID
+	  deactivate WPS
+	  
+	  Scheduler -> Processor : perform job
+	  
+	  activate Processor
+	  PC -> PC : start monitoring thread
+	  activate PC #Green
+	  
+	  Portal -> WPS : GetStatus request
+	  activate WPS
+	  WPS -> PC : check if the job is finished
+	  
+	  PC -> Processor : check if the job is finished
+	  Processor -> PC : job progress
+	  note right : job in progress
+	  PC -> WPS : job progress
+	  WPS -> Portal : job progress
+	  deactivate WPS
+	  
+	  Processor -> Staging : send the products
+	  deactivate Processor
+	  activate Staging
+	  
+	  Portal -> WPS : GetStatus request
+	  activate WPS
+	  WPS -> PC : check if the job is finished
+	  
+	  PC -> Processor : check if the job is finished
+	  Processor -> PC : job progress
+	  note right #00B200 : <color:white>job finished</color>
+	  PC -> Staging : check if the staging is finished
+	  Staging -> PC : staging status
+	  note right : staging in progress
+	  PC -> WPS : job progress
+	  WPS -> Portal : job progress
+	  deactivate WPS
+	  
+	  
+	  deactivate Staging
+	  
+	  Portal -> WPS : GetStatus request
+	  activate WPS
+	  WPS -> PC : check if the job is finished
+	  
+	  PC -> Processor : check if the job is finished
+	  Processor -> PC : job progress
+	  note right #00B200 : <color:white>job finished</color>
+	  PC -> Staging : check if the staging is finished
+	  Staging -> PC : product URL(s)
+	  note right #00B200 : <color:white>staging finished</color>
+	  PC -> WPS : product URL(s)
+	  deactivate PC
+	  deactivate PC
+	  WPS -> Portal : product URL(s)
+	  deactivate WPS
+	  
+
+  end
 
 5)  Processing center generates the new product.
     
