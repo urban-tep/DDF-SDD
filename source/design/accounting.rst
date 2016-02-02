@@ -12,27 +12,26 @@ On the other hand, the providers must account for the usage of their resources. 
 
 
 .. uml::
-  :caption: ICT resource provider accounting usage sequence diagram
+  :caption: Reporting of completed jobs to APEL server
   :align: center
-
-  box "Cluster" #LightBlue
-    participant "WPS Server" as WPS
-    participant "APEL Client" as AL
+  
+  box "Processing Center" #LightBlue
+	  participant "Staging"
+	  participant "Production Control" as PC
+	  participant "Scheduler"
   end box
   participant "APEL Server" as AS
   
-  autonumber
-
-  WPS -> WPS : job completed
-  activate WPS
-  WPS -> WPS : build usage record
-  WPS -> AL : usage record
-  activate AL 
-  AL -> AS : send usage record
-  activate AS 
-  AS -> AS : save usage record in DB
-  AS -> AL : usage record confirmation
+  activate PC
+  activate Scheduler
+  Staging -> PC : product URL(s) and metadata
+  PC -> Scheduler : collect counters for the job
+  Scheduler -> PC : usage record
+  PC -> PC : format usage record
+  PC -> PC : instanciate APEL client
+  activate PC #Green
+  PC -> AS : send usage record
+  activate AS
+  AS -> PC : record accepted
   deactivate AS
-  AL -> WPS : usage record ok
-  deactivate AL
-  deactivate WPS
+  deactivate PC
