@@ -68,8 +68,6 @@ Next figure depicts the sequence that consists of requesting a processing on dem
 Processing execution in the processing centers
 ----------------------------------------------
 
-    
-.. todo:: *BC* sequence diagram and description of the execution of the job inside the processing center
 
 .. uml::
   :caption: Execute request
@@ -117,7 +115,7 @@ Processing execution in the processing centers
 	  deactivate Staging
 	  
 	  PC -> Staging : check if the staging is finished
-	  Staging -> PC : product URL(s)
+	  Staging -> PC : product URL(s) and metadata
 	  note right #00B200 : <color:white>staging finished</color>
 	  
 	  PC -> WPS : product URL(s)
@@ -187,7 +185,7 @@ Processing execution in the processing centers
 	  Processor -> PC : job progress
 	  note right #00B200 : <color:white>job finished</color>
 	  PC -> Staging : check if the staging is finished
-	  Staging -> PC : product URL(s)
+	  Staging -> PC : product URL(s) and metadata
 	  note right #00B200 : <color:white>staging finished</color>
 	  PC -> WPS : product URL(s)
 	  deactivate PC
@@ -198,14 +196,27 @@ Processing execution in the processing centers
 
   end
 
-5)  Processing center generates the new product.
-    
-.. todo:: *BC* sequence diagram and description of the gneneration of the products
-
-9)  New product is registered to the catalogue and result report to the portal, where the user can visualise the result and decide if chosen parameter setting was sufficient.
+Product registration to catalogue
+----------------------------------
    
-.. todo:: *BC* sequence diagram and description of the product registration at the catalogue
-
+.. uml::
+  :caption: Product registration to catalogue
+  :align: center
+  
+  participant "Staging"
+  participant "Production Control" as PC
+  participant "Catalogue"
+  
+  activate PC
+  Staging -> PC : product URL(s) and metadata
+  PC -> PC : collect and format metadata
+  PC -> PC : instanciate catalogue client
+  activate PC #Green
+  PC -> Catalogue : send product metadata
+  activate Catalogue
+  Catalogue -> PC : metadata accepted
+  deactivate Catalogue
+  deactivate PC
 
 
 Further visualization and data analysis options on the produced data are detailed in the :ref:`_design_uc01` section.
