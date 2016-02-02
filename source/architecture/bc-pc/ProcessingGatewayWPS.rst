@@ -139,38 +139,5 @@ The internal interface of the Processing Gateway/WPS provided is
 
  * the plain Tomcat interface (logging, monitoring and control) for Operating
 
-The OGC WPS interface items are defined in the OGC specification. Example interface items for Urban TEP are the following:
-
-Example GetCapabilities response
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. literalinclude:: urban-tep-wps-GetCapabilities-sample-response.xml
-   :language: xml
-   
-Example DescribeProcess response
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. literalinclude:: urban-tep-wps-DescribeProcess-sample-response.xml
-   :language: xml
-   
-Example Execute request
-~~~~~~~~~~~~~~~~~~~~~~~
-
-.. literalinclude:: urban-tep-wps-sample-request.xml
-   :language: xml
-
-.. warning::
-	The XML above does not represent a complete and valid Execute request to BC WPS. Some parts have been ommitted for a better readibility.
-
-Example Execute response
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. literalinclude:: urban-tep-wps-Execute-response.xml
-   :language: xml
-
-Example GetStatus response
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. literalinclude:: urban-tep-wps-GetStatus-sample-response.xml
-   :language: xml
+The OGC WPS interface items are defined in the OGC specification. Example interface items for Urban TEP can be found in :ref:`appendix-D`.
 

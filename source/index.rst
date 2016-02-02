@@ -19,5 +19,6 @@
    Appendix A : Software Packages List <integration/packages>
    Appendix B : Normative references <integration/references>
    Appendix C : API <integration/api>
+   Appendix D : WPS Sample Requests/Responses <integration/wps_xml>
 
 
