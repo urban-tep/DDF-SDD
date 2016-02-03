@@ -57,8 +57,6 @@ The next figure describes the sequence of operations for an expert user to provi
 Developing and integrating a new processing service
 ---------------------------------------------------
 
-4)  TEP Urban platform team checks, ingests and deploys new software and new data.
-    
 .. uml::
   :caption: Deployment of new software
   :align: center
@@ -84,6 +82,10 @@ Developing and integrating a new processing service
   deactivate PC
   Sandbox -> User : deployment successful
   deactivate Sandbox
+  
+This scenario is initiated by a user clicking an **upload** button on Sandbox. The Sandbox will then optionally request a feedback to Validator, to ensure the new Software complies to the required standard/specification.
+When the Validator returns "successful" code, the software is packaged by the Sandbox. The software will be packaged differently depending on where this software is going to be deployed (BC, DLR, or IT4I). 
+The packaged software is then sent to the selected Processing Center and is deployed there. A response is sent back  to indicate whether the software has been successfully deployed and is available for testing.
 
 
 5)  User and TEP Urban platform team test the functionality of the application.
