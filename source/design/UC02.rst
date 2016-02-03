@@ -234,9 +234,7 @@ Product registration to catalogue
   deactivate Catalogue
   deactivate PC
   
-
-
-Further visualization and data analysis options on the produced data are detailed in the :ref:`design_uc01_index` section.
-
-
+The registration of product(s) to Catalogue occurs after a process has been successfully performed and its product(s) has been successfully staged. 
+Production Control collects the metadata and formats it according to the Catalogue specification. A catalogue client is then instantiated to send the formatted metadata information to the Catalogue server. 
+A confirmation that metadata information has been successfully accepted is returned to the Production Control.
 
