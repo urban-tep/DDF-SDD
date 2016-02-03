@@ -70,7 +70,7 @@ Processing execution in the processing centers
 
 
 .. uml::
-  :caption: Execute request
+  :caption: Processing execution in the processing centers
   :align: center
 
 
@@ -87,7 +87,7 @@ Processing execution in the processing centers
 	  Portal -> WPS : Execute request
 	  
 	  activate WPS
-	  WPS -> PC : send request to the selected processor
+	  WPS -> PC : send job request
 	  
 	  activate PC
 	  PC -> Scheduler : send processing request
@@ -129,7 +129,7 @@ Processing execution in the processing centers
 
 	  Portal -> WPS : Execute request
 	  activate WPS
-	  WPS -> PC : send request to the selected processor
+	  WPS -> PC : send job request
 	  
 	  activate PC
 	  PC -> Scheduler : send processing request
@@ -196,6 +196,22 @@ Processing execution in the processing centers
 
   end
 
+There are two types of processing mode that are supported by the processing centers that are configurable by an attribute field ``status`` in WPS execute requests. 
+These two modes are **synchronous** and **asynchronous**, as displayed in the sequence diagram above. 
+
+In **synchronous** mode, when an execute request is received from the Portal, WPS creates a job request based on the information provided in the execute request. 
+The job request is then sent to Production Control. Subsequently, the job request is propagated to Scheduler while at the same time a monitoring thread is created at Production Control to monitor the job progress.
+The job request is now in the Scheduler queue. When a resource has become available, the request is then sent to the specific processor, as indicated in the execute request. 
+When the processing job is finished, the staging job is started. During the processing and staging, the monitoring thread of Production Control actively inquires the status of the job in a pre-configured time interval.
+When the staging job has been completed, product URL(s) and metadata information are returned to the Production Control. The product URL(s) is sent to WPS, and eventually to the Portal (wrapped in a WPS response XML). 
+The metadata is processed and sent to Catalogue. More details on the product registration to catalogue can be found here :ref:`product_to_catalogue`. It is worth mentioning that the WPS session is alive as long as the
+job is still ongoing. The session is killed after an indication from the Processor or Staging that the job has been completed (successfully or unsuccessfully) has been received.
+
+In **asynchronous** mode, the initial procedure is the same as the synchronous up to the job submission to the Scheduler. While nothing is returned back to the WPS in synchronous mode, a job ID is returned back to WPS and eventually to the Portal in asynchronous mode. The WPS session terminates right after this. What happens between Production Control, Scheduler, Processor, and Staging are identical to the one in synchronous mode, but the main difference is that Portal can now inquire the status of a job at anytime, given the job ID. Each call (GetStatus) is represented by a short session with an almost immediate response back to the Portal. As it is in the synchronous mode, product URL(s) is returned to the Portal once the job has been completed.
+
+
+.. _product_to_catalogue:
+
 Product registration to catalogue
 ----------------------------------
    
@@ -210,20 +226,17 @@ Product registration to catalogue
   activate PC
   Staging -> PC : product URL(s) and metadata
   PC -> PC : collect and format metadata
-  PC -> PC : instanciate catalogue client
+  PC -> PC : instantiate catalogue client
   activate PC #Green
   PC -> Catalogue : send product metadata
   activate Catalogue
   Catalogue -> PC : metadata accepted
   deactivate Catalogue
   deactivate PC
+  
 
 
-Further visualization and data analysis options on the produced data are detailed in the :ref:`_design_uc01` section.
-
-.. _design_uc01_dds :
-
-
+Further visualization and data analysis options on the produced data are detailed in the :ref:`design_uc01_index` section.
 
 
 

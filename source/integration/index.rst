@@ -2,7 +2,6 @@
 
 Integration Scheme
 ##################
-
 .. toctree::
    :maxdepth: 2
    

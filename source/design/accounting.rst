@@ -28,7 +28,7 @@ On the other hand, the providers must account for the usage of their resources. 
   PC -> Scheduler : collect counters for the job
   Scheduler -> PC : usage record
   PC -> PC : format usage record
-  PC -> PC : instanciate APEL client
+  PC -> PC : instantiate APEL client
   activate PC #Green
   PC -> AS : send usage record
   activate AS

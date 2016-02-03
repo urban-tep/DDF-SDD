@@ -1,4 +1,4 @@
-.. _design_uc01 :
+.. _design_uc01_index :
 
 Query and access existing thematic content
 ==========================================

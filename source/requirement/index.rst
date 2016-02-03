@@ -2,6 +2,4 @@
 
 Requirement Traceability
 ########################
-
-
 .. reqtrace::

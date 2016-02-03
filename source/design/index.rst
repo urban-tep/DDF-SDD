@@ -2,7 +2,6 @@
 
 Dynamic Architecture
 ####################
-
 .. toctree::
    :maxdepth: 3
    

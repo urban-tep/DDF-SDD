@@ -59,8 +59,6 @@ Developing and integrating a new processing service
 
 4)  TEP Urban platform team checks, ingests and deploys new software and new data.
     
-.. todo:: *BC* sequence diagram and description of the deployment of the new software and data
-
 .. uml::
   :caption: Deployment of new software
   :align: center
@@ -90,8 +88,6 @@ Developing and integrating a new processing service
 
 5)  User and TEP Urban platform team test the functionality of the application.
     
-.. todo:: *BC* sequence diagram and description of the user interaction for testing the new software
-
 .. uml::
   :caption: Testing of new software
   :align: center

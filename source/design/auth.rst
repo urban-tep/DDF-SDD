@@ -1,4 +1,4 @@
-.. _design_uc01 :
+.. _design_uc06 :
 
 Authentication and Autorization Scheme
 ======================================

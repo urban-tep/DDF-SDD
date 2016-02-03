@@ -1,9 +1,7 @@
 .. _system_context:
 
-
 System context
 ##############
-
 .. toctree::
    :maxdepth: 2
    

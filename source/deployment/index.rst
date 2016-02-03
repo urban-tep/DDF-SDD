@@ -2,9 +2,6 @@
 
 Deployment Plan
 ###############
-
-Contents:
-
 .. toctree::
    :maxdepth: 2
 
