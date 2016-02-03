@@ -18,6 +18,7 @@ Contents:
    Brockmann Consult Processing Centre Components <bc-pc/index>
    IT4Innovations Processing Centre Components <it4i-pc/index>
    DLR Processing Centre Components <dlr-pc/index>
+   Processor development environment <devel-env/index>
    PUMA <PUMA/index>
    Interfaces <interfaces>
    Configuration Data <data>
