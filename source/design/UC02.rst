@@ -201,7 +201,8 @@ These two modes are **synchronous** and **asynchronous**, as displayed in the se
 
 In **synchronous** mode, when an execute request is received from the Portal, WPS creates a job request based on the information provided in the execute request. 
 The job request is then sent to Production Control. Subsequently, the job request is propagated to Scheduler while at the same time a monitoring thread is created at Production Control to monitor the job progress.
-The job request is now in the Scheduler queue. When a resource has become available, the request is then sent to the specific processor, as indicated in the execute request. 
+The job request is now in the Scheduler queue. The scheduler handles all the incoming processing requests with different job complexity and required processors. Depending on the configuration of each processor, it is possible to perform multiple concurrrent processing in every processor. 
+When a resource has become available in the target processor, the request is then sent to the specific processor, as indicated in the execute request. 
 When the processing job is finished, the staging job is started. During the processing and staging, the monitoring thread of Production Control actively inquires the status of the job in a pre-configured time interval.
 When the staging job has been completed, product URL(s) and metadata information are returned to the Production Control. The product URL(s) is sent to WPS, and eventually to the Portal (wrapped in a WPS response XML). 
 The metadata is processed and sent to Catalogue. More details on the product registration to catalogue can be found here :ref:`product_to_catalogue`. It is worth mentioning that the WPS session is alive as long as the
