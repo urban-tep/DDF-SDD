@@ -87,45 +87,65 @@ This scenario is initiated by a user clicking an **upload** button on Sandbox. T
 When the Validator returns "successful" code, the software is packaged by the Sandbox. The software will be packaged differently depending on where this software is going to be deployed (BC, DLR, or IT4I). 
 The packaged software is then sent to the selected Processing Center and is deployed there. A response is sent back  to indicate whether the software has been successfully deployed and is available for testing.
 
+.. _test_new_software :
 
-5)  User and TEP Urban platform team test the functionality of the application.
-    
 .. uml::
   :caption: Testing of new software
   :align: center
   
   actor "User"
   participant "Sandbox"
-  participant "Catalog"
+  participant "Catalogue"
   participant "WPS"
   participant "Procesing Center" as PC
   
   User -> Sandbox : test new software
   activate Sandbox
-  Sandbox -> Catalog : search for a test dataset
-  activate Catalog
-  Catalog -> Sandbox : dataset information
-  deactivate Catalog
-  Sandbox -> WPS : test new software
+  Sandbox -> Catalogue : search for a test dataset
+  activate Catalogue
+  Catalogue -> Sandbox : dataset information
+  deactivate Catalogue
+  Sandbox -> WPS : send Execute request
   activate Sandbox #Green
   activate WPS
-  WPS -> PC : send Execute request
+  WPS -> PC : send job request
   activate PC
-  PC -> WPS : process status
+  PC -> WPS : process status and results
   deactivate PC
-  WPS -> Sandbox : process status
+  WPS -> Sandbox : process status and results
   deactivate WPS
   deactivate Sandbox
   deactivate Sandbox
+  
+This scenario is intended for testing a software that has just been uploaded and deployed in the processing center. 
+It is started by the user clicking **test new software** button on the Sandbox. The Sandbox then requests for available test datasets from the Catalogue.
+After the User selects the dataset, the testing is initiated by sending an execute request to WPS synchronously. The job request is then propagated to the Processing Centre, where the new software is located.
+The status and results are then returned to the Sandbox for the user to investigate whether the process is successful.
   
 
 Deploying a new service
 -----------------------
 
-
-6)  As soon as operational functionality of the application is verified, the new service and new data sets are registered in the catalogue/store.
-     
-.. todo:: *BC* sequence diagram and description of the application registration with ne software and data
+.. uml::
+  :caption: Publishing a new software
+  :align: center
+  
+  actor "User"
+  participant "Sandbox"
+  participant "Procesing Center" as PC
+  
+  User -> Sandbox : publish the new software
+  Sandbox -> PC : get all unpublished software for the given user
+  PC -> Sandbox : a list of unpublished software
+  Sandbox -> PC : publish the software (software id)
+  activate PC
+  PC -> Sandbox : publishing ok
+  deactivate PC
+  
+This scenario is possible only after the new software is tested against a certain test datasets. The test scenario can be found here :ref:`test_new_software`. 
+When a **publish** button is pressed in the Sandbox, a request is sent to Processing Centres to provide a list of all unpublished software for the given user. 
+From the returned list, the user can select the software to be published. When that happens, a request is sent to a Processing Centre where the selected software is located. 
+A response is returned to indicate whether the software is now available for all other users to use.
 
 
 Using the new service in the portal
