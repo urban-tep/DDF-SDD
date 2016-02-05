@@ -18,35 +18,7 @@ The issues tracked by the *IT4I Helpdesk* are solved by *IT4I Service Support Op
 
   The *IT4I Helpdesk* will handle issues addressed to the IT4I Processing Centre.
 
-
-
-Service Processor Repository
-----------------------------
-The *Service Processor Repository* will be based on software versioning tools and will provide a repository for different versions of supported service processors, both internal and user-developed. Source codes, configuration and make files, necessary auxiliary data and working example configurations will be stored in the repository to enable validation of source codes and their semi-automatic building, deployment and testing to the *IT4I Processing Infrastrucutre* based on the request of the *IT4I Service Support Operator*.
-
-The *Service Processor Repository* will be deployed as a Git repository on the same virtual server as *IT4I Helpdesk*.
-
-.. req:: TS-FUN-680
+.. req:: TS-ICD-240
   :show:
 
-  The *Service Processor Repository* will store all versions of the supported service processors that will be deployed to the *HPC clusters* for processing at the IT4I processing centre.
-
-.. req:: TS-FUN-740
-  :show:
-
-  The *Service Processor Repository* will enable to upload custom processors to the IT4I processing centre. These custom processors will have to be validated and deployed by the *IT4I Service Support Operator* before they can be used.
-
-.. req:: TS-FUN-750
-  :show:
-
-  The *Service Processor Repository* will enable to upload custom processors to the IT4I processing centre. These custom processors will have to be validated and deployed by the *IT4I Service Support Operator* before they can be used.
-
-.. req:: TS-RES-630
-  :show:
-
-  The *Service Processor Repository* will store all versions of the supported service processors that will be deployed to the *HPC clusters* for processing at the IT4I processing centre.
-
-.. req:: TS-ICD-340
-  :show:
-
-  The *Service Processor Repository* will enable to upload custom processors to the IT4I processing centre. These custom processors will have to be validated and deployed by the *IT4I Service Support Operator* before they can be used.
+  The *IT4I Helpdesk* will track issues and requests addressed to the IT4I Processing Centre.

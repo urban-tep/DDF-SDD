@@ -5,23 +5,23 @@ Develop and deploy a new service and/or new product
 
 This scenario aims at using TEP Urban for user development and integration of a new service within the platform to expose it as a processing service available in the thematic applications for its community or other users of the platform.
 
-Data discorvery and selection have already described in the previous section :ref:`design_uc01`.
+Data discorvery and selection have already described in the previous section :ref:`design_uc01_index`.
 
 
-Development environment instantation
-------------------------------------
+Development environment instantiation
+-------------------------------------
 
 When a user wants to develop and integrate a new service, the development environment proposed in Urban TEP is the Sandbox.
 
 The next figure describes the sequence of operations for an expert user to provision the Sandbox.
 
+.. figure:: sandbox_instantiation.png
+   :align: center
 
-.. todo:: 
+   *Sequence diagram for the development environment instantiation*
 
-  **BC** and **IT4I** please review the text with the name and the ref of the devel env. I called it Sandbox for the moment
-
-
-.. uml::
+..
+	.. uml::
   :caption: Sandbox instantation sequence diagram
   :align: center
 
@@ -51,7 +51,10 @@ The next figure describes the sequence of operations for an expert user to provi
   CC --> U : SB access information
   
     
-.. todo:: *IT4I* complete sequence diagram and description of the sandbox provisioning
+
+.. todo::
+
+  **IT4I** Complete the textual description
 
 
 Developing and integrating a new processing service

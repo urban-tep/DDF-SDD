@@ -36,7 +36,7 @@ Whenever the *Urban TEP Portal* wants to discover, which services are available 
 
   The *GeoServer* will produce regular close-to-instant responses for the processing at the IT4I processing centre.
 
-.. req:: TS-ICD-310
+.. req:: TS-ICD-210
   :show:
 
   The *GeoServer* will provide the WPS interface for the IT4I processing centre.

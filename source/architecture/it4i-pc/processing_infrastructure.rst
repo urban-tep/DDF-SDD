@@ -9,19 +9,14 @@ Login Nodes
 -----------
 Each cluster contains login nodes that are used for accessing the cluster environment and managing jobs. These login nodes serve as a single point for accessing the computational resources on the cluster and executing processing services. They are accessible through the SSH interface and the *HPCaaS HPC Connection Framework* uses this interface to submit processing jobs on the clusters. All processing requests in the Urban TEP platform has to go through the *HPC as a Service Middleware*, so the connections to *Login Nodes* are not provided to the *Urban TEP Portal* or any other part of the platform.
 
-.. req:: TS-ICD-330
-  :show:
-
-  The *Login Nodes* will provide the SSH interface for accessing experimental environment by the user at the IT4I processing centre. The connection to this interface will be provided by the *IT4I Service Support Operators* based on the approved request on the *Urban TEP Service Desk* escalated to the *IT4I Helpdesk*.
-
 All login nodes for both *Salomon* and *Anselm* clusters are running the *PBS Pro Scheduler* software, which efficiently distributes workloads across the computing resources on the related HPC cluster. These schedulers are independent, so jobs submitted on the *Salomon* cluster are only scheduled on *Salomon* and not on *Anselm* and vice versa. The *HPCaaS Middleware* therefore needs to know, which cluster is relevant for each processed service and submitted job. The *HPCaaS HPC Connection Framework* then uses the *PBS Pro Scheduler* to queue the processing jobs and monitor their status. By reconfiguring used queues in the *PBS Pro Scheduler* it is possible to dedicate a part of the cluster for executing Urban TEP services or let them compete over resources with other projects. It is also possible to change the configuration of the queues during runtime to react to the demand.
 
-The final Urban TEP related component on the *Login Nodes* is the *Data Mirroring / Caching Tool* that is currently present only on the *Salomon HPC*. This component connects to the external data providers and downloads service related data for long-term mirroring or short-term caching. It is deployed directly on the *Login Nodes* to have direct access to the *Shared Data Storage* on the *Salomon HPC* and store the data directly on the processing environment. This component is currently implemented to mirror LandSat data and will be extended with other data providers during Phase 2 of the Urban TEP project.
+The final Urban TEP related component on the *Login Nodes* is the *Data Mirroring / Caching Tool* that is currently present only on the *Salomon HPC*. This component connects to the external data providers and downloads service related data for long-term mirroring or short-term caching. It is deployed directly on the *Login Nodes* to have direct access to the *Shared Data Storage* on the *Salomon HPC* and store the data directly on the processing environment. This component is currently implemented to download LandSat data and will be extended with other data providers during Phase 2 of the Urban TEP project.
 
 .. req:: TS-FUN-610
   :show:
 
-  The *Data Mirroring / Caching Tool* will mirror the LandSat data and mirror or cache Sentinel data and data from other providers on the IT4I processing infrastructure as necessary.
+  The *Data Mirroring / Caching Tool* will download/cache/mirror the LandSat data, Sentinel data and data from other providers on the IT4I processing infrastructure as necessary.
 
 .. req:: TS-FUN-620
   :show:
@@ -50,15 +45,15 @@ The *Shared Data Storage* of each cluster is accessible by the SCP and GridFTP i
 
   The *Salomon Shared Data Storage* will store non-EO data at the IT4I processing centre to be available for processing on the *Salomon HPC Cluster*.
 
-.. req:: TS-ICD-320
+.. req:: TS-ICD-220
   :show:
 
   The *Shared Data Storage* will provide the SCP/GridFTP interface for accessing processing results to the portal at the IT4I processing centre. The connection to this interface will be provided by the *HPCaaS HPC Data Storage Access Module*.
 
-.. req:: TS-ICD-330
+.. req:: TS-ICD-250
   :show:
 
-  The *Shared Data Storage* will provide the SCP interface for uploading development versions of the user-developed processors to the experimental environment at the IT4I processing centre. The connection to this interface will be provided by the *IT4I Service Support Operators* based on the approved request on the *Urban TEP Service Desk* escalated to the *IT4I Helpdesk*.
+  The *Shared Data Storage* will provide SCP/GridFTP interface for exchange of processors and data with other processing centres.
 
 
 As the storages are not shared between clusters, when executing processing services on the *Anselm HPC cluster*, the necessary input data have to be transferred from the *Salomon HPC cluster* first.
@@ -93,6 +88,10 @@ The *Supported Service Processors* are applications that are responsible for the
 
   The *Supported Service Processors* will include a processor for generating the functional urban areas at the IT4I processing centre.
 
+.. req:: TS-RES-630
+  :show:
+
+  The *Supported Service Processors* contain all versions of the supported service processors that are deployed for processing at the IT4I processing centre.
 
 
 HPC Clusters

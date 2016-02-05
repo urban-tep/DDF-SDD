@@ -14,12 +14,12 @@ Before describing the components the main functions with their initiation and wo
 
  * To provide processing offerings, which involves
      - the *Geoserver* that publishes supported processing services via the GetCapabilities and DescribeProcess WPS functions,
-     - the configured datasets and processors in the *Service Processor Repository* deployed to the Processing Infrastructure as *Supported Service Processors* on the selected HPC cluster,
+     - the *Supported Service Processors* on the selected HPC cluster,
      - and their configuration managed by the *HPCaaS Service Management Module*.
  * To receive and handle processing requests, which involves
      - the *Geoserver* that provides the Execute and GetStatus WPS functions,
      - the modules of *HPCaaS Middleware* to manage the proper job deployment and execution on the processing infrastructure,
-     - the "Supported Service Processor" stored in the *Shared Data Storage* of the selected HPC cluster used for processing,
+     - the *Supported Service Processors* stored in the *Shared Data Storage* of the selected HPC cluster used for processing,
      - the input EO data available in the *Shared Data Storage* of the selected HPC cluster,
      - the storage of intermediates and outputs in the *Shared Data Storage* of the selected HPC cluster,
      - the staging of results through the *SCP/GridFTP* interface,
@@ -29,14 +29,17 @@ Before describing the components the main functions with their initiation and wo
      - the *IT4I Service Support Operator* to monitor ingestion,
      - the *Data Mirroring / Caching Tool* on the *Salomon Login Nodes* for configuration and systematic or one-time ingestion of data from external data providers using their interfaces.
  * To upload reference data
-     - the *HPCaaS Middleware* and its *HPC Data Storage Access Framework* with a WCF REST-ful interface for reference data upload,
+     - the *HPCaaS HPC Data Storage Access Framework* to provide authorized access for a direct SFTP/SCP connection used for reference data upload to the *Shared Data Storage* of the selected HPC cluster,
      - the *Shared Data Storage* of the selected HPC cluster for storage of the reference data in a user-specific space.
+ * To provide experimental development environment for user developed processors
+     - the *Sandbox Virtual Machines* to provide a unified environment for developing, testing and packaging new processors with supported tools and experimental data,
+     - the *HPCaaS Virtual Machine Management Framework* to manage and provide access and to the *Sandbox Virtual Machines*.
  * To upload processor bundles
-     - the *IT4I Helpdesk* with a HTTPS interface to receive a request to deploy a processor bundle,
-     - the *Service Processor Repository* with a SFTP/SCP interface for the processor bundle upload,
-     - the *IT4I Service Support Operator* to validate and deploy the uploaded processor bundle to the selected HPC cluster and to the *HPCaaS Service Management Module* using the HPCaaS Administration interface to be used by the specific user/group,
+		 - the *HPCaaS Package Deployment Manager* to manage the deployment of user developed processor packages/bundles,
+		 - the *HPCaaS HPC Data Storage Access Framework* to provide authorized access for a direct SFTP/SCP connection used for processor bundle upload to the *Shared Data Storage* of the selected HPC cluster,
+     - the *HPCaaS Service Management Module* and the *Service Configuration Tool* to register the uploaded processor bundle to the service catalogue to be used by the user that developed the new processor and optionally to his group,
      - the *Shared Data Storage* of the selected HPC cluster for storage of the processor bundle in a user-specific space,
-     - optionally the *IT4I Service Support Operator* to release the use of the uploaded processor, or the publication of the processor to be used by other users via the *HPCaaS Service Management Module* using the HPCaaS Administration interface.
+     - optionally the *IT4I Service Support Operator* to publish the processor as a new service for other users via the *HPCaaS Service Management Module* using the *HPCaaS Administration* interface.
  * To report on resource usage
      - the *HPCaaS Resource Allocation Reporting Module* to generate the report for Urban TEP,
      - the *IT4I Service Support Operator* to verify and release the report.
@@ -49,5 +52,6 @@ Individual packages and their components are described in more detail in the fol
    WPS Provider <wps_provider>
    HPC as a Service (HPCaaS) <hpc_as_a_service>
 	 Processing Infrastructure <processing_infrastructure>
+	 Sandbox Virtual Machines <sandbox_vm>
    Service Support <service_support>
 
