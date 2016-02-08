@@ -49,5 +49,7 @@ Change Log
 |         |            | sections moved to appendix [RID SP-83]                                                      |
 +---------+------------+---------------------------------------------------------------------------------------------+
 |         |            | Development environment added to the design, new processor deployment updated and           |
-|         |            | integrated into processing centre infrastructures [RID AM-15]                               |
+|         |            | integrated into processing centre infrastructures (sections :ref:`approach`,                |
+|         |            | :ref:`bcpc_components_list`, :ref:`it4ipc_components_list`, :ref:`dlrpc_components_list`,   |
+|         |            | :ref:`develenv_processor_development_environment`, :ref:`design_uc03`) [RID AM-15]          |
 +---------+------------+---------------------------------------------------------------------------------------------+
