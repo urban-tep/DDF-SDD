@@ -10,27 +10,27 @@ There are mainly 3 areas of policies identified and driving the system design.
 
 * **Data provider partnership policies**
 
-# Mirroring: Data is made available on TEP infrastructure and under TEP access control and
+  # Mirroring: Data is made available on TEP infrastructure and under TEP access control and
 authorization
-# Caching: Data is temporarily cached and made available on TEP infrastructure and under TEP
+  # Caching: Data is temporarily cached and made available on TEP infrastructure and under TEP
 access control and authorization
-# Remote access: Data is made available on data provider’s infrastructure; either under TEP or
+  # Remote access: Data is made available on data provider’s infrastructure; either under TEP or
 data provider’s access control and authorization
 
 * **Data access policies**
    
-# Open: Data is freely accessible to all registered and authenticated users
-# Restricted: Data is accessible to authorized subset of registered and authenticated users
-# Quota restricted: Data is accessible to authorized subset of registered and authenticated users according to assigned quota
+  # Open: Data is freely accessible to all registered and authenticated users
+  # Restricted: Data is accessible to authorized subset of registered and authenticated users
+  # Quota restricted: Data is accessible to authorized subset of registered and authenticated users according to assigned quota
 
 * **EO data processor terms of use**
 
-# Opensource
-# Commercial
+  # Opensource
+  # Commercial
 
-* ICT Provider policies
+* **ICT Provider policies**
 
-# ICT Provider terms of use
-# a given Public Cloud Provider API capabilities
+  # ICT Provider terms of use
+  # a given Public Cloud Provider API capabilities
 
 
