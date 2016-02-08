@@ -11,17 +11,17 @@
   !include source/groups/group___open_search.iuml
   interface "Data Gateway API" as datagatewayAPI
 
-  folder "Data Agency" [[../design/dataagency/index.html]] {
+  folder "Data Agency" [[../architecture/dataagency/index.html]] {
 
-      !include source/design/dataagency/datagateway.iuml
+      !include source/architecture/dataagency/datagateway.iuml
 
       
 
-    folder "Catalogue" [[../design/catalogue/index.html]] {
+    folder "Catalogue" [[../architecture/catalogue/index.html]] {
 
       !include source/groups/group___geosquare.iuml
 
-      !include source/design/dataagency/elasticsearch.iuml
+      !include source/architecture/dataagency/elasticsearch.iuml
     }
 
      group___elastic_cas -- group___geosquare_a_p_i : expose
