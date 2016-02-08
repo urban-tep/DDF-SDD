@@ -11,9 +11,12 @@ Data discorvery and selection have already described in the previous section :re
 Development environment instantiation
 -------------------------------------
 
-When a user wants to develop and integrate a new service, the development environment proposed in Urban TEP is the Sandbox.
+The platform provides a development environment (Sandbox) for users that wish to develop and integrate new services to the platform. IT4I Processing centre is responsible for Sandbox management and provisioning in the TEP Urban platform, but the user still requests the Sandbox instantiation through the Portal as a single user interface to the platform. The portal then sends a request to the IT4I Processing Services that create a new instance of the Sandbox virtual machine (VM) and synchronizes a user working directory from the IT4I infrastructure to the VM (more information about the content of the Sandbox virtual machine and working directory synchronization can be found in :ref:`develenv_processor_development_environment`).
 
-The next figure describes the sequence of operations for an expert user to provision the Sandbox.
+The user then decides if he wants to develop the new service locally on his workstation by downloading the Sandbox VM image from the provided URL or if he wants to develop it remotely in the IT4I Processing Infrastructure. In the case of the remote access request, IT4I Processing Services will ensure temporary hosting of the VM in the IT4I Processing Infrastructure and send access information to the user through the portal. When the user finishes his work in the hosted VM or the hosting time limit is reached, the user's working directory is synchronized to the IT4I Processing Infrastructure to ensure persistance of the user's development effort.
+
+The following sequence diagram describes the flow of the Sandbox instantiation and provisioning.
+
 
 .. figure:: sandbox_instantiation.png
    :align: center
