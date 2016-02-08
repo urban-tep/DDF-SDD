@@ -48,6 +48,7 @@ from docutils.parsers.rst import directives
 from sphinx.locale import _
 from sphinx.application import Sphinx
 from pprint import pprint
+from docutils.utils import escape2null, unescape
 
 def find_parent_section_name(node):
     if isinstance(node, section):
@@ -83,10 +84,32 @@ class ReqDirective(Directive):
 
         targetid = "req-%d" % env.new_serialno('req')
         targetnode = nodes.target('', '', ids=[targetid])
+        sectionnode = find_parent_section_name(self.state)
+        includead = True
 
-        ad = make_admonition(req, self.name, [_('Requirement coverage')], self.options,
-                             self.content, self.lineno, self.content_offset,
+        ads = []
+        ad = None
+
+        if sectionnode : 
+            ads = sectionnode.traverse(nodes.Admonition)
+        
+        if len(ads) > 0 :
+            ad = ads[0] 
+            pprint(ad)
+            para = ad.traverse(nodes.paragraph, descend=True)
+            para[0] += nodes.Text(', ' + self.content[0])   
+#            pprint(para[0])
+            includead = False
+        else :
+            pprint(self.content)
+            text = nodes.paragraph()
+            text += nodes.Text("This section covers ")
+            text += nodes.Text(self.content[0])
+            ad = make_admonition(req, self.name, [_('Requirement coverage')], self.options,
+                             text, self.lineno, self.content_offset,
                              self.block_text, self.state, self.state_machine)
+            pprint(ad)
+
 
         if not hasattr(env, 'req_all_reqs'):
             env.req_all_reqs = []
@@ -102,9 +125,13 @@ class ReqDirective(Directive):
             'target': targetnode,
         })
 
+        if not includead:
+            return [targetnode]
+
         if not 'show' in self.options:
             return [targetnode]
 
+        pprint("return all")
         return [targetnode] + ad
 
 

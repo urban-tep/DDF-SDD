@@ -19,7 +19,7 @@ This section describes them by subsystem:
 
 - The :ref:`design_apel` is a subsystem that collects accounting records via the accounting interface. It provides then with an reporting interface to provide with aggregated accounting.
    
-- **PUMA** supports the portal for specific data visualization and analysis functionnalities.
+- :ref:`design_puma` supports the portal for specific data visualization and analysis functionnalities.
 
 - All **Processing Center** subsystems are in charge of the processing services from integration to production. For integration and processor deployment, they all have a specific integration point for new services in the processing center. They also exposes all a WPS endpoint for processing tasks management at the processing center level. Finally, process results of the completed processing tasks are accessible in a data result pool.
 
