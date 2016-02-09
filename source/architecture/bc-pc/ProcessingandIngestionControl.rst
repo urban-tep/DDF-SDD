@@ -26,7 +26,7 @@ BC Processing and ingestion control
 .. req:: TS-FUN-710
   :show:
 
-  (Processing statistics) Processing and Ingestion Control provides scripts for processing report generation and to transfer them to teh Reporting component of the Portal. Report generation is done operator-controlled.
+  (Processing statistics) Processing and Ingestion Control generates processing reports and to transfer them to the Reporting component of the Portal.
 
 .. req:: TS-RES-630
   :show:
@@ -36,12 +36,12 @@ BC Processing and ingestion control
 .. req:: TS-ICD-350
   :show:
 
-  (Resource utilization reporting interface) Processing and Ingestion Control provides scripts for processing report generation and to transfer them to teh Reporting component of the Portal. Report generation is done operator-controlled.
+  (Resource utilization reporting interface) Processing and Ingestion Control provides scripts for processing report generation and to transfer them to the Reporting component of the Portal.
 
 .. req:: TS-ICD-080
   :show:
 
-  (Accounting collection API) Processing and Ingestion Control provides scripts for processing report generation and to transfer them to teh Reporting component of the Portal. Report generation is done operator-controlled.
+  (Accounting collection API) Processing and Ingestion Control provides scripts for processing report generation and to transfer them to the Reporting component of the Portal.
 
 .. req:: TS-ICD-090
   :show:
@@ -61,7 +61,7 @@ The implementation of the Processing and Ingestion Control component is based on
 
 The configuration specific to Urban TEP comprises:
 
- * an ingestion system instance ing-inst with one script for each data source (e.g. for systematic Sentinel 2 ingestion for the Urban TEP initial cities)
+ * an ingestion system instance ing-inst with one script for each data source (e.g. for systematic Sentinel 2 ingestion for the Urban TEP initial cities (mirroring), or for on-demand ingestion of a dataset (caching))
  * a processing system instance urban-inst with one script for each bulk production workflow (e.g. one for the statistics generation from MERIS data), and specific configurations for the spatio-temporal extent to be processed
  * scripts for catalogue entry generation and report generation and submission
 
@@ -70,7 +70,7 @@ State representation and persistent data
 
 The state of processing system instances is kept in report files automatically generated:
 
- * ingestion reports lists all files ingested so far to avoid duplicate transfers.
+ * ingestion reports lists all files systematically ingested so far to avoid duplicate transfers.
  * processing system instance reports lists all requests processed for systematic processing and for bulk production. This allows for recovery from failure and resume after interruption.
 
 In addition ingestion as well as processing change the state of HDFS EO Data and Processing Storage.
@@ -85,7 +85,7 @@ The computational service of this component is:
  * to control bulk production, i.e. to submit all requests required to fulfil a larger processing task, with configured concurrency
  * to recover from errors and resume production, retrying the failed step
  * to publish results by placing them in the staging area of Online Data Access and by providing a catalogue entry to the Portal Catalogue.
- * to generate processing reports with information on users and used resources, such as CPU hours, input data size, and storage capacity
+ * to generate and upload processing reports with information on users and used resources, such as CPU hours, input data size, and storage capacity
 
 The processing itself is performed by YARN Scheduling and Processing.
 
@@ -95,7 +95,6 @@ Interfaces and interface items
 The interfaces provided by this component are:
 
  * the scripting interface to control ingestion, systematic processing, and bulk production
- * the scripting interface for catalogue entry generation for new datasets and for reporting on processing activities
 
 The interfaces used by the component are:
 

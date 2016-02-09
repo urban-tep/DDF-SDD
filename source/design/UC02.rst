@@ -61,7 +61,7 @@ Next figure depicts the sequence that consists of requesting a processing on dem
 
 .. warning:: 
   
-  This scenario illustration does not take into account the quota and credit management on purpose for readibility reason. All details about accounting operations that may apply to this scenario are described in the :ref:`dynamic_accounting` section.
+  This scenario illustration does not take into account the quota and credit management on purpose for readability reason. All details about accounting operations that may apply to this scenario are described in the :ref:`dynamic_accounting` section.
 
 
 

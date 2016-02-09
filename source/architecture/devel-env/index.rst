@@ -22,6 +22,8 @@ The following figure depicts the approach.
 
    *Urban TEP development environment and processor deployment in a processing centre*
 
+As there are three processing centres with partially different input datasets and capacities the Urban TEP governance may decide for a user which processing centre to use for which type of application.
+
 Virtual machine image for instantiation or download
 ---------------------------------------------------
 The processor development enviromnent (Sandbox) will be provided by the IT4I processing centre as a virtual machine, either as an VM image to be downloaded by the user for local development, or hosted on the IT4I processing infrastructure for remote development. When the user requests a creation of the Sandbox through the Portal, new instance of the virtual machine is created from the baseline running on a CentOS Linux 6 operating system and containing additional tools and data sets described in section :ref:`develenv_tools_datasets`.

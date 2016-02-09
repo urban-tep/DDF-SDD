@@ -54,6 +54,8 @@ BC user management
 
    *User Management component*
 
+While Urban TEP users are authenticated by the portal via SSO, it has to be made sure that the requests submitted on behalf of them to a processing centre really stem from the portal. This is verified by the BC user management. Nevertheless, requests from the portal contain in their payload data the user information of the external user as well. This user information is required by reporting and other functions.
+
 Implementation software and configuration
 -----------------------------------------
 

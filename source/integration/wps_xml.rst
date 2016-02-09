@@ -22,7 +22,7 @@ Execute request
    :language: xml
 
 .. warning::
-	The XML above does not represent a complete and valid Execute request to BC WPS. Some parts have been omitted for a better readibility.
+	The XML above does not represent a complete and valid Execute request to BC WPS. Some parts have been omitted for a better readability.
 
 Execute response
 ~~~~~~~~~~~~~~~~

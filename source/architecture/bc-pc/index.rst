@@ -35,7 +35,7 @@ Before describing the components the main functions with their initiation and wo
      - the *Processing and Ingestion Control* for catalogue entry generation
  * to ingest input data
      - the *Operator* to monitor ingestion
-     - the *Processing and Ingestion Control* for configuration and systematic or one-time ingestion of data from external data providers using their interfaces
+     - the *Processing and Ingestion Control* for configuration and systematic (mirroring) or one-time ingestion (caching) of data from external data providers using their interfaces
  * to upload reference data
      - the *Processing Gateway/WPS* with a REST-ful interface for reference data upload
      - the *HDFS EO Data and Processing Storage* for storage of the reference data in a user-specific space

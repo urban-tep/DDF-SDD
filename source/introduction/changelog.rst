@@ -16,7 +16,7 @@ Change Log
 |         |            | Section :ref:`flows` added to for outlining Urban-TEP specific interaction                  |
 |         |            | between components [RID PRE_REVIEW-04]                                                      |
 +---------+------------+---------------------------------------------------------------------------------------------+
-|         |            | Individual class diagram removed for better readibility [RID PRE_REVIEW-05]                 |
+|         |            | Individual class diagram removed for better readability [RID PRE_REVIEW-05]                 |
 +---------+------------+---------------------------------------------------------------------------------------------+
 |         |            | More details on PUMA integration for data visualization is given in :ref:`static_overview`, |
 |         |            | :ref:`puma` and :ref:`flows`. [RID PRE_REVIEW-07 and 10]                                    |
@@ -29,9 +29,9 @@ Change Log
 |         |            | [RID SP-54] [RID SP-56] [RID SP-57] [RID SP-58] [RID SP-59] [RID SP-61]                     |
 +---------+------------+---------------------------------------------------------------------------------------------+
 |         |            | Document restructuration : section :ref:`static_architecture` [RID AM-31]                   |
-|         |            | [RID SP-62] [RID AM-41] [RID AM-43] [RID AM-44] [RID AM-52] [RID SP-52]                     |
+|         |            | [RID SP-62] [RID AM-57] [RID AM-41] [RID AM-43] [RID AM-44] [RID AM-52] [RID SP-52]         |
 +---------+------------+---------------------------------------------------------------------------------------------+
-|         |            | Document restructuration : section :ref:`dynamic_architecture` [RID AM-53]                  |
+|         |            | Document restructuration : section :ref:`dynamic_architecture` [RID AM-53] [RID SP-84]      |
 +---------+------------+---------------------------------------------------------------------------------------------+
 |         |            | :ref:`business_objects` section reduced and refocused on its purpose [RID AM-45]            |
 +---------+------------+---------------------------------------------------------------------------------------------+
@@ -51,5 +51,11 @@ Change Log
 |         |            | Development environment added to the design, new processor deployment updated and           |
 |         |            | integrated into processing centre infrastructures (sections :ref:`approach`,                |
 |         |            | :ref:`bcpc_components_list`, :ref:`it4ipc_components_list`, :ref:`dlrpc_components_list`,   |
-|         |            | :ref:`develenv_processor_development_environment`, :ref:`design_uc03`) [RID AM-15]          |
+|         |            | :ref:`develenv_processor_development_environment`, :ref:`design_uc03`) [RIDs AM-15]         |
+|         |            | [RID AM-33] [RID AM-46] [RID AM-47] [RID-SP-85]                                             |
++---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | Processing centre design updated: functions of operating [RID AM-60], data access via       |
+|         |            | portal [RID SP-73], on-demand ingestion (caching in addition to mirroring) [RID SP-74],     |
+|         |            | user management and authentication [RID SP-75], examples shortened and moved to annex       |
+|         |            | [RID AM-57] [RID SP-76], automated reporting [RID SP-78]                                    |
 +---------+------------+---------------------------------------------------------------------------------------------+
