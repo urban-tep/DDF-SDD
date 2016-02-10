@@ -5,4 +5,4 @@ Integration Scheme
 .. toctree::
    :maxdepth: 2
    
-   Implementation choices <impl>
+   Implementation Choices <impl>
