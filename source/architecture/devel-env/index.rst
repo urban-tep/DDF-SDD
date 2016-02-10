@@ -246,13 +246,37 @@ The following information is contained in such a request:
 
 Local test and verification
 ---------------------------
+A tool supports the local testing of the processor once it has been sucessfully built. This tools gives the developer shell access to his generated image. This allwos the developer to interactively run his processor in the deployable environment. 
+He can then interactivly test that this environment contains all the dependancies of his processsor and is set up correctly. If not he can iteratively go back and amend the Dockerfile with the necessary changes until his processor runs to his satisfaction
+The tool also makes the Urban TEP deployment scripts, the testdata (in urbantep/eodata/) as well as the users home directory accessible from inside the docker container.
+The interactive shell can be started via:
 
+::
+
+  urbantep-testrun <Identifier>
+  e.g.
+  urbantep-testrun myProcessorTest:0.1
+
+Once the processor has been tested to run sucessfully in the local image and the descriptor file and a test wps request file have been created the provided tool urbantep-verification can be used to check that
+
+- the descriptor file is a valid and well formed xml File
+- the tep urban sheduler can successfully call the processor inside the image
+- the processor correctly handles the input parameters as would be provided by a wps process
+- the processor delivers the expected output
+
+The local verification step might look like the following: 
+
+::
+
+  urbantep-verification <descriptor-file> <wps-file>
+  e.g.
+  urbantep-testrun myProcessorTest:01-descriptor.xml myProcessorTest:01-test-wps.xml
 
 
 Packaging and deployment
 ------------------------
 
-A tool supports the packaging and deployment of a processor that has been locally tested. This tool is a shell script that packages the user software and uploads it to the processing centre via the portal (for authentication). The call may look like the following and it will ask for the credentials:
+A tool supports the packaging and deployment of a processor once it has been tested locally . This tool is a shell script that packages the user software and uploads it to the processing centre via the portal (for authentication). The call may look like the following and it will ask for the credentials:
 
 ::
 
