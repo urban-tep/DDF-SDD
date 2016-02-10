@@ -1,13 +1,13 @@
 .. _design_uc04 :
 
-Combine, analyse and visualise data, products and results
+Combine, Analyse and Visualise Data, Products and Results
 =========================================================
 
 In this user scenario, a previous user data selection may be enhanced using GIS tools.
 
 It is then assumed the user has made a data selection within a data package as described in :ref:`design_uc01`.
 
-Preparation of Data for PUMA
+Preparation of data for PUMA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The process of visualization of the data inside the PUMA consists of three parts. First part is uploading the data into
