@@ -1,4 +1,4 @@
-Appendix C : API references
+Appendix C : API References
 ===========================
 
 .. include:: ../pages/page_api.rst
