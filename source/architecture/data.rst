@@ -7,7 +7,7 @@ Configuration Data
    :maxdepth: 2
    :numbered:
    
-   Business Objects Definition <objects/index>
-   Data Model <datamodel>
+   Business objects definition <objects/index>
+   Data model <datamodel>
 
 
