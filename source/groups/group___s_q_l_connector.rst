@@ -1,11 +1,11 @@
 .. _group___s_q_l_connector:
 
-SQL interface to RDBMS
+SQL connector
 ----------------------
 
 
 
 
 
-This is the interface to the relational Database in SQL
+This is the interface to the relational database (RDBMS) in SQL
 
