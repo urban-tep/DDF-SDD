@@ -1,20 +1,20 @@
-Sandbox Constraints
+Sandbox constraints
 -------------------
   
 .. todo :: please complete this section for the production centers constraints.
 
-General Operating System Constraints
+General operating system constraints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 TBC
 
-Sizing And Performance
+Sizing and performance
 ^^^^^^^^^^^^^^^^^^^^^^
 
 TBC
 
 
-Network Security Constraints
+Network security constraints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 TBC
