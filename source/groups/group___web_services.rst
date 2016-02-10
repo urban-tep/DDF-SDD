@@ -1,6 +1,6 @@
 .. _group___web_services:
 
-Web-services
+Web services
 ------------
 
 
