@@ -1,11 +1,11 @@
 .. _it4ipc_processing_infrastructure :
 
-IT4I Processing Infrastructure
+IT4I processing infrastructure
 ==============================
 The *IT4I Processing Infrastructure* contains two Linux-based HPC clusters - *Anselm* and *Salomon* - and a supporting infrastructure for accessing and managing these clusters. The *Salomon HPC cluster* is the more powerful one of the two and will be primarilly used in the platform, with *Anselm HPC cluster* serving as a possible reserve during high utilisation of the *Salomon HPC cluster* or for executing processors accelerated with GPGPUs (as *Salomon* does not contain any GPGPU accelerators). As both these clusters have similar structure, their main components will be described together in the following subsections.
 
 
-Login Nodes
+Login nodes
 -----------
 Each cluster contains login nodes that are used for accessing the cluster environment and managing jobs. These login nodes serve as a single point for accessing the computational resources on the cluster and executing processing services. They are accessible through the SSH interface and the *HPCaaS HPC Connection Framework* uses this interface to submit processing jobs on the clusters. All processing requests in the Urban TEP platform has to go through the *HPC as a Service Middleware*, so the connections to *Login Nodes* are not provided to the *Urban TEP Portal* or any other part of the platform.
 
@@ -24,7 +24,7 @@ The final Urban TEP related component on the *Login Nodes* is the *Data Mirrorin
   The *Data Mirroring / Caching Tool* will provide the status of data ingestion on the IT4I processing infrastructure to the *HPC as a Service Middleware* that will update the service description using the *Service Configuration Tool*.
 
 
-Shared Data Storages
+Shared data storages
 --------------------
 Both clusters contain a *Shared Data Storage* specific for each cluster that is shared between all computing nodes of the specific cluster. This storage is used for the long-term mirrored data, short-term cached data, configuration and processing data of currently submitted jobs and processing results of finished jobs that were not yet downloaded by the *Urban TEP Portal* and deleted from the processing infrastructure.
 
@@ -59,7 +59,7 @@ The *Shared Data Storage* of each cluster is accessible by the SCP and GridFTP i
 As the storages are not shared between clusters, when executing processing services on the *Anselm HPC cluster*, the necessary input data have to be transferred from the *Salomon HPC cluster* first.
 
 
-Supported Service Processors
+Supported service processors
 ----------------------------
 The *Supported Service Processors* are applications that are responsible for the computations performed in the platform. The processors that will be supported by the IT4I processing centre will be deployed on the *Salomon Shared Data Storage* and possibly *Anselm Shared Data Storage* and will be directly available on the computing resources on these clusters. They will be deployed as basic Linux-based applications and will be able to use all languages, runtime environments, libraries and tools installed on the processing infrastructure.
 
@@ -94,7 +94,7 @@ The *Supported Service Processors* are applications that are responsible for the
   The *Supported Service Processors* contain all versions of the supported service processors that are deployed for processing at the IT4I processing centre.
 
 
-HPC Clusters
+HPC clusters
 ------------
 The HPC clusters themselves are used for computing by executing processing service processors. The structure of both clusters is similar but with significant differences in the number and power of their computing nodes.
 
