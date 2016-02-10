@@ -1,6 +1,6 @@
 .. _design_data_gateway:
 
-Data Gateway
+Data gateway
 ^^^^^^^^^^^^
 
 General design
@@ -15,7 +15,7 @@ It resolves the best location from the catalogue but also based on rules.
 
   The data gateway mechanism is fully described in this section
 
-Partnership Policies
+Partnership policies
 """"""""""""""""""""
 
 The Data Gateway implements 3 methods to access data from data providers:
@@ -25,7 +25,7 @@ The Data Gateway implements 3 methods to access data from data providers:
 - mirroring the data resource on a custom data storage for an undefined time limit
 
 
-Rule Based design
+Rule-based design
 """""""""""""""""
 
 The Data Gateway implements a rule-based mechanism to control data partnership and access policies and scenario. 
@@ -40,7 +40,7 @@ The rules are combinable.
 
 .. _design_data_gateway_access:
 
-Data Access Policies enforcement
+Data access policies enforcement
 """"""""""""""""""""""""""""""""
 
 .. req:: TS-FUN-480
