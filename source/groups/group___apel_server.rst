@@ -1,6 +1,6 @@
 .. _group___apel_server:
 
-Apel Server
+Apel server
 -----------
 
 
