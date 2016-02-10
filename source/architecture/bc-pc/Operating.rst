@@ -1,6 +1,6 @@
 .. _bcpc_part1 :
 
-BC Urban TEP Operating
+BC Urban TEP operating
 ======================
 
 .. req:: TS-FUN-750
