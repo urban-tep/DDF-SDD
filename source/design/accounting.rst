@@ -1,6 +1,6 @@
 .. _dynamic_accounting :
 
-Integrated Accounting: Credit and Quota flows
+Integrated Accounting: Credit and Quota Flows
 =============================================
 
 
