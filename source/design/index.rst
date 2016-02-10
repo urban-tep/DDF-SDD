@@ -5,11 +5,11 @@ Dynamic Architecture
 .. toctree::
    :maxdepth: 3
    
-   Query and access existing thematic content <UC01>
-   Conduct on-demand processing <UC02>
-   Develop and deploy a new service and/or new product <UC03>
-   Combine, analyse and visualise data, products and results <UC04>
-   Integrated accounting, credit and quota  <accounting>
+   Query and Access Existing Thematic Content <UC01>
+   Conduct On-demand Processing <UC02>
+   Develop and Deploy a New Service and/or Product <UC03>
+   Combine, Analyse and Visualise Data, Products and Results <UC04>
+   Integrated Accounting, Credit and Quota  <accounting>
    Authentication and Autorization Scheme <auth>
    
    
