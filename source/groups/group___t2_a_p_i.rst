@@ -1,6 +1,6 @@
 .. _group___t2_a_p_i:
 
-T2 API
+Terradue API
 ------
 
 
