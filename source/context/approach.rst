@@ -27,7 +27,7 @@ Agency’s Grid Processing on Demand (G-POD) system, the development of the earl
 and the integration of scientific applications and services for the EC projects GEOWOW and SenSyF.
 
 
-Data driven platform
+Data-driven platform
 --------------------
 
 Data is the fuel of the Urban TEP platform and thus needs to be managed with systems
