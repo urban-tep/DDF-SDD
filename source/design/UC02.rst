@@ -1,6 +1,6 @@
 .. _design_uc02 :
 
-Conduct on-demand processing
+Conduct On-demand Processing
 ============================
 
 This use case aims at using TEP Urban for submitting processing on demand driven by the Area of interest search or the data selection
