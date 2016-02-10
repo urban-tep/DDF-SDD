@@ -94,11 +94,20 @@ Installation of a processor and its dependencies
 The user processors will be tested and deployed as leightweight Docker Containers. A docker container is a stripped-to-basics version of a Linux operating system which only contains the libraries and programms necessary to run the user processor.
 The Urban TEP will provide the thematic urban data processor developers with base images that allready have the relevant toolboxes installed. Furthermore most open source frameworks (like e.g GDAL) allready provide up to date docker images for their community to built on. 
 The developer controls the creation of the container by specifying the steps necessary to "install" his processor on a fresh installation in the Form of a Dockerfile, a text file that contains all the commands, in order, needed to build a given image. Dockerfiles adhere to a specific format and use a specific set of instructions
-An example of a simple Dockerfile for a processor based on gdal::
+An example of a simple Dockerfile for a Cloudmasking processor based on the Matlab Runtime::
 
-  FROM geodata/gdal
-  MAINTAINER Demo User<demo@example.com>
-  COPY myUserProcessor /usr/local/bin
+  FROM colin-rhodes/docker-matlab-mcr
+  MAINTAINER Martin Boettcher<Martin Boettcher <martin.boettcher@brockmann-consult.de>
+  COPY Fmask /usr/local/bin
+
+and the corresponding Folder:
+
+::
+
+  ~/ProcessorExample/Dockerfile
+                     processorDescriptor.xml
+		     Fmask/Fmask_3_2
+                     Fmask/run_Fmask.sh
 
 Starting from an empty directory all the user has to provide is:
 
@@ -106,18 +115,13 @@ Starting from an empty directory all the user has to provide is:
 - Folder/Files/Archives containing the software to copy/install
 - processorDescriptor File specifing how to call this user processor and how to make it available via WPS
 
-::
-
-  ~/ProcessorExample/Dockerfile
-		     myUserProcessor
-                     processorDescriptor.xml
 
 A tool supports the automatic building of the image, reading the instructions from the Dockerfile. It will automatically download any base images which are not currently available on the development machine and cache them for later use.  
 ::
 
   urbantep-build <docker-dir> <Identifier>
   e.g.
-  urbantep-build ~/ProcessorExample/ myProcessorTest:0.1
+  urbantep-build ~/ProcessorExample/ bc~martin.boettcher~Fmask~3.2
   
 
                  
@@ -176,7 +180,7 @@ Example::
  
 The following information is contained in such a desriptor file:
 
-- identifying and descriptive information of the processor
+- identifying and descriptive information on the processor
 - processor type (required framework) and calling convention (executable script)
 - formal parameters and input product type
 - output product type, and optionally bands (for aggregation)
@@ -255,7 +259,7 @@ The interactive shell can be started via:
 
   urbantep-testrun <Identifier>
   e.g.
-  urbantep-testrun myProcessorTest:0.1
+  urbantep-testrun bc~martin.boettcher~Fmask~3.2
 
 Once the processor has been tested to run sucessfully in the local image and the descriptor file and a test wps request file have been created the provided tool urbantep-verification can be used to check that
 
@@ -268,9 +272,9 @@ The local verification step might look like the following:
 
 ::
 
-  urbantep-verification <descriptor-file> <wps-file>
+  urbantep-verification <descriptor-file> <request-file>
   e.g.
-  urbantep-testrun myProcessorTest:01-descriptor.xml myProcessorTest:01-test-wps.xml
+  urbantep-testrun fmask-3.2-descriptor.xml fmask-3.2-test-wps.xml
 
 
 Packaging and deployment
