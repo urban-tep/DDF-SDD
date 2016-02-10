@@ -15,7 +15,7 @@ Methodology
 This section describes the methods applied for the architectural design of the TEP platform. During project analysis and design phase, both structured and object oriented modelling and design methods are applied: 
 
 - The first levels of the system analysis and decomposition (:ref:`Static Architecture <architecture>`) are performed applying a structural decomposition of the platform into subsystems and using UML components diagrams for representation.
-- Then the identified components are further decomposed (:ref:`Dynamic Architecture <design>`) using object-oriented methods based on UML and their :ref:`Information Flows <Interfaces>` 
+- Then the identified components are further decomposed (:ref:`Dynamic Architecture <design>`) using object-oriented methods based on UML and their :ref:`Information Flows <interfaces>` 
 - The dynamical behaviour of the components is described using UML sequence and state diagrams.
 - The deployment of the platform on the infrastructure is descrbed using a deployment diagram.
   
