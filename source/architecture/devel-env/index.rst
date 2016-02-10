@@ -250,8 +250,9 @@ The following information is contained in such a request:
 
 Local test and verification
 ---------------------------
-A tool supports the local testing of the processor once it has been sucessfully built. This tools gives the developer shell access to his generated image. This allwos the developer to interactively run his processor in the deployable environment. 
-He can then interactivly test that this environment contains all the dependancies of his processsor and is set up correctly. If not he can iteratively go back and amend the Dockerfile with the necessary changes until his processor runs to his satisfaction
+
+A provided tool supports the local testing of the processor once it has been sucessfully built. This tools gives the developer shell access to his generated image, allowing the developer to interactively run/debug his processor in the deployable environment. 
+He can then interactivly test that this environment contains all the dependencies of his processor and is set up correctly. If not he can iteratively go back and amend the Dockerfile with the necessary changes until his processor runs to his satisfaction
 The tool also makes the Urban TEP deployment scripts, the testdata (in urbantep/eodata/) as well as the users home directory accessible from inside the docker container.
 The interactive shell can be started via:
 
@@ -264,7 +265,7 @@ The interactive shell can be started via:
 Once the processor has been tested to run sucessfully in the local image and the descriptor file and a test wps request file have been created the provided tool urbantep-verification can be used to check that
 
 - the descriptor file is a valid and well formed xml File
-- the tep urban sheduler can successfully call the processor inside the image
+- the tep urban scheduler can successfully call the processor inside the image
 - the processor correctly handles the input parameters as would be provided by a wps process
 - the processor delivers the expected output
 
