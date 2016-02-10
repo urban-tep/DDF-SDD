@@ -20,7 +20,7 @@ The following diagram describes the components interactions.
    
    Core <../../groups/group___core>
    Security <../../groups/group___security>
-   Tep <../../groups/group___tep>
-   Urban Site <../../groups/group___urban_site>
-   Web Services <../../groups/group___web_services>
+   TEP modules <../../groups/group___tep>
+   Urban site <../../groups/group___urban_site>
+   Web-services <../../groups/group___web_services>
    

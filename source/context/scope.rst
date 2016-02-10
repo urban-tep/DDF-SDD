@@ -1,6 +1,6 @@
 .. _rolesactionsandinteractions :
 
-Roles actions
+Roles Actions and Interactions
 -------------
 
 Roles on the Platform are complying to a community policy (e.g. the data access quota allocated to a Principal Investigator on-boarded on the Platform), and are defined as a set of actions and interactions (Behaviours), observable in the system through process steps involving two types of business objects: Actors (e.g. a user) and Resources (e.g. :term:`datasets <dataset>`, processing service).
@@ -36,7 +36,7 @@ Users dicovers the available dataset collection and their related
 * Process: collection discovery, catalogue query, data package creation, EO product download
 * Resource: :ref:`design_dataagency`, :ref:`design_portal`
 
-Processor integration and Service offering
+Processor integration and service offering
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Policy: Processor terms of use, ICT Provider terms of use
@@ -75,7 +75,7 @@ The platform is meant to allow users to perform data visualisation tasks:
 * still from the Web Portal Geobrowser: combine EO data footprints and EO-based products to support data processing decision making (selection of processing input data, discovery and analysis of data processing results)
 * from PUMA, apply advance WebGIS analysis
 
-Reproducible Science collaboration
+Reproducible science collaboration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Policy: applicable EO data access and sharing policies
@@ -88,12 +88,12 @@ The Urban TEP Platform is investigating on different collaborative eScience scen
 * Collaborative work on algorithm integration, Virtual Machines accessing Git repositories, like offered by social coding platforms such as GitHub).
 * Cloud bursting of Processing services to Commercial Clouds, in order to absorbe peaks in the processing and increase scalability for massive data processing campaigns.
 
-Capacity Building through Data Sharing
+Capacity building through data sharing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Urban TEP Web Portal is investigating on different work areas (or 'contexts') made available to users:
 
-EO Data exploitation
+EO data exploitation
 """"""""""""""""""""
 
 * Policy: applicable EO data access and sharing policies

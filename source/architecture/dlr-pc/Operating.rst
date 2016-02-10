@@ -1,6 +1,6 @@
 .. _dlrpc_part1 :
 
-DLR TEP Urban Operating
+DLR TEP Urban operating
 =======================
 
 .. req:: TS-FUN-750

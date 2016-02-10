@@ -1,11 +1,11 @@
-Data Agency Constraints
+Data agency constraints
 -----------------------
   
 The computing constraints are calculated on the basis of a number of 10000 indexes
 in the :ref:`design_catalogue` and with a number of entries from 1000 to 100.000.000 entries each.
 The :ref:`design_data_gateway` must be able to server 1000 users daily with an average of 1TB each.
 
-General Operating System Constraints
+General operating system constraints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 All system described hereafter are deployed on a similar baseline for the operating system
@@ -14,7 +14,7 @@ and the initial configuration:
 - Centos 6 x86_64 arch
 
 
-Catalogue Computing Constraints
+Catalogue computing constraints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Catalogue computing requirements is based on a cluster of 3 nodes to run :ref:`design_elasticsearch` is cluster mode
@@ -29,13 +29,13 @@ Each node has the following resources requirements:
 - double Gigabit Network interface (internal for clustering, external for load balancing)
 
 
-Sizing Options
+Sizing options
 ^^^^^^^^^^^^^^
 
 The catalogue may be upgraded in a very short term provisioning new nodes and installing them using the configuration server as described in :ref:`deploy_configmgmt` section.
 
 
-Network Security Constraints
+Network security constraints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default all ports of any protocol on every external network interface is closed for any inbound connection.

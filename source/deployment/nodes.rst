@@ -1,4 +1,4 @@
-Deployment nodes
+Deployment Nodes
 ================
 
 .. uml::

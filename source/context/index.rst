@@ -1,12 +1,12 @@
 .. _system_context:
 
-System context
+System Context
 ##############
 .. toctree::
    :maxdepth: 2
    
-   System approach <approach>
-   Roles actions and interactions <scope>
+   System Approach <approach>
+   Roles Actions and Interactions <scope>
    Policies <policies>
    
 

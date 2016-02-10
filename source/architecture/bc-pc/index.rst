@@ -50,13 +50,13 @@ Before describing the components the main functions with their initiation and wo
 .. toctree::
    :maxdepth: 1
    
-   Processing Gateway/WPS <ProcessingGatewayWPS>
-   HDFS EO Data and Processing Storage <HDFSEODataandProcessingStorage>
-   YARN Scheduling and Processing <YARNSchedulingandProcessing>
-   BC Online Data Access <BCOnlineDataAccess>
-   Urban TEP Operating <Operating>
-   Processing and Ingestion Control <ProcessingandIngestionControl>
-   Configuration and Processor Repository <ConfigurationandProcessorRepository>
-   BC User Management <BCUserManagement>
+   Processing gateway/WPS <ProcessingGatewayWPS>
+   HDFS EO data and processing storage <HDFSEODataandProcessingStorage>
+   YARN scheduling and processing <YARNSchedulingandProcessing>
+   BC online data access <BCOnlineDataAccess>
+   Urban TEP operating <Operating>
+   Processing and ingestion control <ProcessingandIngestionControl>
+   Configuration and processor repository <ConfigurationandProcessorRepository>
+   BC user management <BCUserManagement>
 
 

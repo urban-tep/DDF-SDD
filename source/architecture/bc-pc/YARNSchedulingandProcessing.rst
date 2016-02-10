@@ -71,7 +71,7 @@ In addition there is an operator interface:
  * Web GUI of Hadoop for monitoring
  * command line interface of Hadoop for monitoring and control
 
-Example Calvalus Request
+Example Calvalus request
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. literalinclude:: seasonality-test.xml

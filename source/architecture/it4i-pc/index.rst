@@ -49,9 +49,9 @@ Individual packages and their components are described in more detail in the fol
 .. toctree::
    :maxdepth: 1
    
-   WPS Provider <wps_provider>
+   WPS provider <wps_provider>
    HPC as a Service (HPCaaS) <hpc_as_a_service>
-	 Processing Infrastructure <processing_infrastructure>
-	 Sandbox Virtual Machines <sandbox_vm>
-   Service Support <service_support>
+	 Processing infrastructure <processing_infrastructure>
+	 Sandbox virtual machines <sandbox_vm>
+   Service support <service_support>
 

@@ -73,7 +73,7 @@ Periodically, it collects the usage records from the :ref:`Apel Server <group___
 	
 	
 
-Credit Authorization and Quota restrictions 
+Credit authorization and quota restrictions 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The quota restriction is implemented using the balance of the user or group account used to query the resource.

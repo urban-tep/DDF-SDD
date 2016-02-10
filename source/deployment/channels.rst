@@ -1,4 +1,4 @@
-Deployment channels
+Deployment Channels
 ===================
 
 Continuous integration 
@@ -16,7 +16,7 @@ According to the branch of build (developement or master), the RPM is placed in 
 
 .. _deploy_configmgmt :
 
-Deployment using Configuration Management
+Deployment using configuration management
 -----------------------------------------
 
 The deployment is ensured using a configuration management system, more specifically puppet tool. It enables the infrastructure as code paradigm, implementing a "desired state" enforcement strategy using declarative programming.

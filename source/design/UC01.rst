@@ -1,6 +1,6 @@
 .. _design_uc01_index :
 
-Query and access existing thematic content
+Query and Access Existing Thematic Content
 ==========================================
 
 
@@ -8,7 +8,7 @@ This use case aims at using TEP Urban for user exploration of the registered the
 
 .. _design_uc01_dds :
 
-Data Discovery and selection
+Data discovery and selection
 ----------------------------
 
 The first step for the user is to discover and search dataset in :ref:`class_terradue_1_1_tep_1_1_collection` within :ref:`class_terradue_1_1_tep_1_1_thematic_application`.
@@ -92,12 +92,12 @@ Next figure depicts the next step that consists of selecting and saving a datase
 .. _design_uc01_puma :
 
 
-Data Visualization using PUMA
+Data visualization using PUMA
 -----------------------------
 
 Next figure depicts the same use case but using PUMA for the data vizualisation and manipulation.
 
-Preparation of Data for PUMA
+Preparation of data for PUMA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The process of visualization of the data inside the PUMA consists of three parts. First part is uploading the data into

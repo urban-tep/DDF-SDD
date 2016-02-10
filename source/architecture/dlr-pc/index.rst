@@ -44,8 +44,8 @@ The following figure shows the decomposition into its components and the subsyst
 .. toctree::
    :maxdepth: 1
    
-   Processing Gateway/WPS <ProcessingGatewayWPS>
-   Mesos Scheduling and Processing System <MesosSchedulingandProcessing>
-   EO Data Storage <EODataandProcessingStorage>
+   Processing gateway/WPS <ProcessingGatewayWPS>
+   Mesos scheduling and processing system <MesosSchedulingandProcessing>
+   EO data storage <EODataandProcessingStorage>
    Operating <Operating>
 

@@ -1,10 +1,10 @@
-Portal Constraints
+Portal constraints
 ------------------
   
 The computing constraints are calculated on the basis of a number of 1000 registerd users
 visiting the platform daily and their insfrastructure needs.
 
-General Operating System Constraints
+General operating system constraints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 All system described hereafter are deployed on a similar baseline for the operating system
@@ -13,7 +13,7 @@ and the initial configuration:
 - Centos 6 x86_64 arch
 
 
-Computing Constraints
+Computing constraints
 ^^^^^^^^^^^^^^^^^^^^^
 
 The minimum computing requirements of the system on which the Web Portal are:
@@ -24,7 +24,7 @@ The minimum computing requirements of the system on which the Web Portal are:
 - Gigabit Network interface
 
 
-Sizing Options
+Sizing options
 ^^^^^^^^^^^^^^
 
 The portal may be scaled up horizontally by running multiples instances of the Web Server via
@@ -32,7 +32,7 @@ a load balancing mechanism.
 The data base mayalso be decoupled from the Web Server on several nodes with a replication mechanism
 
 
-Security Constraints
+Security constraints
 ^^^^^^^^^^^^^^^^^^^^
 
 By default all ports of any protocol on every external network interface is closed for any inbound connection.

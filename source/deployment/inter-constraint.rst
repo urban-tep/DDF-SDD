@@ -1,26 +1,26 @@
-Interaction Constraints
+Interaction constraints
 -----------------------
 
-The Interaction Constraints are an aggregate of the Peripheral
+The Interaction constraints are an aggregate of the peripheral
 Constraints, the Network Support Constraints, the Database
 Constraints, the Middleware Constraints, the COTS Package Constraints 
 and the Data Transport Constraints.
 
-Peripheral Constraints
+Peripheral constraints
 ^^^^^^^^^^^^^^^^^^^^^^
 
 - UM-SSO Identity Provider
 
 
-Network Support Constraints
+Network support constraints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Internal bandwidth to Catalogues and data stores
-- External bandwidth to users for GeoServer, Web Portal, and Data Stores
+- Internal bandwidth to catalogues and data stores
+- External bandwidth to users for GeoServer, Web portal, and data stores
 - External Bandwidth with data providers
 - External Bandwidth with ICT resource provider
 
-Database Constraints
+Database constraints
 ^^^^^^^^^^^^^^^^^^^^
 
 - MySql for Web Portal
@@ -28,7 +28,7 @@ Database Constraints
 
 .. _cots:
 
-COTS Package Constraints
+COTS package constraints
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Mysql
@@ -38,9 +38,9 @@ COTS Package Constraints
 - Mono
 - GDAL
 
-Data Transport Constraints
+Data transport constraints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Data and Metadata diagram between compoennts
+Data and metadata diagram between components
 
 

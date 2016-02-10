@@ -18,7 +18,7 @@ This component is in charge of all the data management in the platform.
 
 It implements the mechanism to search for Collection and Data Packages via an OpenSearchable interface.
 
-User Data Packages 
+User data packages 
 ^^^^^^^^^^^^^^^^^^^
 
 Each user of the platform may define a DataPackage to save a set of dataset that he preselected.
@@ -35,7 +35,7 @@ Persistence
 
 When a dataset is processed with a remote processing (e.g. WPS), the results of this data may be located in a temporary storage. The user would want to keep that result and its metadata. The :ref:`Data <group___tep_data>` components integrates the function to "copy" the results and its metadata to a persistent storage on one for the files and on a catalogue index for the metadata.
 
-Analysis and Visualization 
+Analysis and visualization 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When a dataset is processed with a remote processing (e.g. WPS), the results of this data may be located in a place where there is no other function than downloading the data directly on its local machine to visualize or analyze it. This component enables export capability to :ref:`GeoServer <namespace_geo_server>` with support to raster and vector files. If the results include standard vector files (e.g. shapefile, geojson, csv with WKT, ...) or raster files such as geolocated images (geotiff, png with world files...), the  components shall propose to the user to export them to geoserver that will resturn a new WMS layer that the web visualization widget shall display. It also integrates functions to "manipulate" the results and its metadata with an external tools such as GIS functions.

@@ -1,4 +1,4 @@
-Appendix A : Software packages
+Appendix A : Software Packages
 ==============================
 
 The set of software packages gathers the components and classes into logical entities.
@@ -12,7 +12,7 @@ If you are using your web browser to read this document, you can click individua
 
 .. include:: package_diagram.rst
 
-Packages list
+Packages List
 -------------
 
 .. toctree::

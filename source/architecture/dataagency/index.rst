@@ -16,6 +16,6 @@ and ingesting new datasets and their location in the catalogue.
    :maxdepth: 1
    
    Catalogue <catalogue>
-   Data Gateway <datagateway>
+   Data gateway <datagateway>
 
    

@@ -1,6 +1,6 @@
 .. _group___catalogue_editor:
 
-Catalogue Editor
+Catalogue editor
 ----------------
 
 

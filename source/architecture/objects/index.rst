@@ -1,6 +1,6 @@
 .. _objects:
 
-Business Objects Definition
+Business objects definition
 ===========================
 
 The information specification of Urban TEP is a model of the information that the business objects hold, the changes to that information, the association of those objects and the policies applicable.
@@ -11,7 +11,7 @@ The information specification of Urban TEP is a model of the information that th
    :maxdepth: 2
    :numbered:
    
-   Business Objects <objects>
-   Objects Association <association>
+   Business objects <objects>
+   Objects association <association>
 
 

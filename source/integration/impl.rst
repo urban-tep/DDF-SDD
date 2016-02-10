@@ -1,4 +1,4 @@
-Implementation choices
+Implementation Choices
 ======================
 
 .. req:: TS-DES-120
@@ -7,13 +7,13 @@ Implementation choices
   This section describes the implementation choices and the development framework to be infrastructure independent.
 
 
-Modular Software
+Modular software
 ----------------
 
 The TEP system is built with several building bricks developed as inter-dependent modules integrated together to provide with the complete platform. The WebServer provides with most of the basics functionalities. Such a division ensure the modularity and the flexibility of the whole system.
 
 
-Portable Programming Languages
+Portable programming languages
 ------------------------------
 
 Most of the software bricks of the TEP platform are developed using high-level (as opposed to machine-level) programming language that are platform independent.
@@ -23,13 +23,13 @@ The Web Server software high-level programming language uses the `mono framework
 Many other third party software are also developed using .Net or Java such as Elasticsearch or Hadoop.
 
 
-Long Lifetime Web Architecture
+Long lifetime Web architecture
 ------------------------------
 
 MVC computational model presents many advantages for maintaining the software in a long lifetime. User interface logic tends to change more frequently than business logic, especially in Web-based applications. For example, new user interfaces may be added, or existing interfaces may be shuffled around.
 
 
-Processors as Docker Containers
+Processors as Docker containers
 -------------------------------
 
 Wide usage of virtualization and possibility to start virtual environments within cloud services significantly simplifies creation of environments and provisioning of resources. However it still leaves a problem of portability of complete environments where applications are developed unresolved. Previous virtualization solutions are not light and flexible enough partially due to the size of the images. Docker fills this gap providing with a platform designated both for developers and system administrators. The main difference between a Docker container and a virtual machine lies in the fact that a virtual machine consists of, besides an application itself, also an operating system with binary files needed. Docker image works as an isolated process in a host’s operating system, which shares a kernel with other containers. Thereby, still using benefits of virtualization, it is more portable – an application uses less disk space – and more effective.

@@ -1,6 +1,6 @@
 .. _it4ipc_sandbox_vm :
 
-Sandbox Virtual Machines
+Sandbox virtual machines
 ========================
 Detailed information about Sandbox virtual machines is described in :ref:`develenv_processor_development_environment`.
 

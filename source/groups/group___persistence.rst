@@ -1,6 +1,6 @@
 .. _group___persistence:
 
-Persistence of Data
+Persistence of data
 -------------------
 
 

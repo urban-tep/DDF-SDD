@@ -3,19 +3,19 @@
 Appendix D : WPS Sample Requests/Responses
 ==========================================
 
-GetCapabilities response
+GetCapabilities Response
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. literalinclude:: urban-tep-wps-GetCapabilities-sample-response.xml
    :language: xml
    
-DescribeProcess response
+DescribeProcess Response
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. literalinclude:: urban-tep-wps-DescribeProcess-sample-response.xml
    :language: xml
    
-Execute request
+Execute Request
 ~~~~~~~~~~~~~~~
 
 .. literalinclude:: urban-tep-wps-sample-request.xml
@@ -24,13 +24,13 @@ Execute request
 .. warning::
 	The XML above does not represent a complete and valid Execute request to BC WPS. Some parts have been omitted for a better readability.
 
-Execute response
+Execute Response
 ~~~~~~~~~~~~~~~~
 
 .. literalinclude:: urban-tep-wps-Execute-response.xml
    :language: xml
 
-GetStatus response
+GetStatus Response
 ~~~~~~~~~~~~~~~~~~
 
 .. literalinclude:: urban-tep-wps-GetStatus-sample-response.xml

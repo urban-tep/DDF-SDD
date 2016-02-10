@@ -1,11 +1,11 @@
 .. _it4ipc_service_support :
 
-IT4I Service Support
+IT4I service support
 ====================
 The *IT4I Service Support* will provide support for all things related to the IT4I processing centre and will administrate all parts of the IT4I processing centre infrastructure. This requires mostly manual human-based processes that will be performed by *IT4I Service Support Operators*. Several software components described in the following subsections will be used to increase the effectiveness of these support and administration processes.
 
 
-IT4I Helpdesk
+IT4I helpdesk
 -------------
 The *IT4I Helpdesk* is a helpdesk solution that manages the issues and support requests related to the IT4I processing centre. This helpdesk will serve as a processing center specific third escalation level for *Urban TEP Service Desk* incident and problem management.
 

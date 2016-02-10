@@ -1,6 +1,6 @@
 .. _group___apel_reporting:
 
-Apel Reporting
+Apel reporting
 --------------
 
 
