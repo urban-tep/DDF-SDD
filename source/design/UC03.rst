@@ -1,6 +1,6 @@
 .. _design_uc03 :
 
-Develop and deploy a new service and/or new product
+Develop and Deploy a New Service and/or Product
 ===================================================
 
 This scenario aims at using TEP Urban for user development and integration of a new service within the platform to expose it as a processing service available in the thematic applications for its community or other users of the platform.
