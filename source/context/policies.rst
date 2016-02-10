@@ -1,6 +1,6 @@
 .. _policies:
 
-Policies governing the system design
+Policies Governing the System Design
 ------------------------------------
 
 The Policies governing the system design are defined in this section.
