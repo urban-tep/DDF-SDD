@@ -1,6 +1,6 @@
 .. _group___r_w_p_s:
 
-Remote Web Processing Services Interface
+Remote Web processing services interface
 ----------------------------------------
 
 
