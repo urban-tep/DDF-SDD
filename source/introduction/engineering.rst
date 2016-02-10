@@ -21,12 +21,12 @@ This section describes the methods applied for the architectural design of the T
   
 The UML uses several kinds of models for system description. For the scope of this document the following diagrams are considered: 
 
-Class Diagrams
+Class diagrams
 --------------
 
 The class diagram shows how the different entities (people, things, and data) relate to each other; in other words, it shows the static structures of the system. A class diagram can be used to display logical classes, which are typically the kinds of things the business people in an organization talk about — datasets, products, services; or WPS and providers. Class diagrams can also be used to show implementation classes, which are the things that programmers typically deal with. An implementation class diagram will probably show some of the same classes as the logical classes diagram. The implementation class diagram won't be drawn with the same attributes, however, because it will most likely have references to things to the programming language types like Vectors and HashMaps.
 
-Class Diagrams notation
+Class diagrams notation
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 The main item, the class that describes a business object, depicted in the class diagram is a rectangle with three horizontal sections, as shown in Figure 4. The upper section shows the object's name; the middle section contains the object's attributes; and the lower section contains the objects's operations (or "methods").
@@ -55,7 +55,7 @@ The aggregate relationship is more specific than association and is used to show
 The aggregate relationship is used for showing that the aggregate object is physically constructed from other objects or that it logically contains another object. The aggregate object has ownership of its parts
 
 
-Component Diagrams
+Component diagrams
 ------------------
 
 A component diagram provides a physical view of the system. Its purpose is to show the dependencies that the software has on the other software components (e.g., databases, interfaces) in the system. The diagram can be shown at a very high level, with just the large-grain components, or it can be shown at the component package level. 
@@ -80,24 +80,24 @@ The dependency relationship indicates that one entity in a component diagram use
 When no caption details the relationship, the default one is “uses” that denotes the usage of one or more functions of a component to another.
 
 
-Sequence Diagrams
+Sequence diagrams
 -----------------
 
 Sequence diagrams show a detailed flow for a specific use case or even just part of a specific use case. They are almost self-explanatory; they show the calls between the different objects in their sequence and can show, at a detailed level, different calls to different objects.
 
-Sequence Diagrams notation
+Sequence diagrams notation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A sequence diagram has two dimensions: The vertical dimension shows the sequence of messages/calls in the time order that they occur; the horizontal dimension shows the object instances to which the messages are sent.
 Across the top of the diagram there are the class instances (objects) inside a box. In the box, the class instance name and class name separated by a colon" : " (e.g., myService : Service). If a class instance sends a message to another class instance, a line with an open arrowhead points to the receiving class instance; the name of the message/method is placed above the line. Optionally, for important messages, there can be a dotted line with an arrowhead pointing back to the originating class instance; with return value labeled above the dotted line.
 
 
-Deployment Diagrams
+Deployment diagrams
 -------------------
 
 Deployment diagrams show the configuration of run-time processing elements and the software components, processes, and objects that live on them. Software component instances represent run-time manifestations of code units. Components that do not exist as run-time entities (because they have been compiled away) do not appear on these diagrams.
 
-Deployment Diagrams notation
+Deployment diagrams notation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The deployment diagram shows how a system will be physically deployed in the hardware environment. Its purpose is to show where the different components of the system will physically run and how they will communicate with each other. The notation in a deployment diagram includes the notation elements used in a component diagram, with a couple of additions, including the concept of a node. A node represents either a physical machine or a virtual machine node (e.g., virtualized server) with the naming convention used in sequence diagrams: [instance name] : [instance type] (e.g., "server.terradue.com : Web Server").
