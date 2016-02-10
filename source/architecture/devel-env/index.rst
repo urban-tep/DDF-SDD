@@ -5,14 +5,14 @@ Processor development environment
 
 Urban TEP supports the integration of thematic urban data processors
 with a development environment. The development environment shall
-support the local test and the procedure of packaging and deployment
+support the local test and the procedure of packaging and deploying
 to a processing centre. The principle is that the development
 environment as well as the target cluster infrastructure provide
-common tools and frameworks already. Users install only their delta in
+common tools and frameworks. Users install only their delta in
 the development environment. They test the processor in this
 environment, then package and deploy only their delta. The processing
 centre provides the same tools and frameworks on the cluster
-infrastructure and makes available the processor in the WPS.
+infrastructure and automatically integrates the processor into the WPS.
 
 The following figure depicts the approach.
 
@@ -26,7 +26,7 @@ As there are three processing centres with partially different input datasets an
 
 Virtual machine image for instantiation or download
 ---------------------------------------------------
-The processor development enviromnent (Sandbox) will be provided by the IT4I processing centre as a virtual machine, either as an VM image to be downloaded by the user for local development, or hosted on the IT4I processing infrastructure for remote development. When the user requests a creation of the Sandbox through the Portal, new instance of the virtual machine is created from the baseline running on a CentOS Linux 6 operating system and containing additional tools and data sets described in section :ref:`develenv_tools_datasets`.
+The processor development enviromnent (Sandbox) will be provided by the IT4I processing centre as a virtual machine, either as an VM image to be downloaded by the user for local development, or hosted on the IT4I processing infrastructure for remote development. When the user requests a creation of the Sandbox through the Portal, new instance of the virtual machine are created from the baseline running on a CentOS Linux 6 operating system and containing additional tools and data sets described in section :ref:`develenv_tools_datasets`.
 
 .. figure:: devel-env-provisioning.png
    :align: center
@@ -85,15 +85,42 @@ The data and tools will be provided in a directory structure within the VM such 
 
 (with PATH=/usr/local/bin:...; LD_LIBRARY_PATH=/usr/local/lib:...; EODATA=/urbantep/eodata)
 
-Note that the environment in the processing centres may actually be in a different structure but with the same runtime tools available in PATH/LD_LIBRARY_PATH. When using the Docker packaging of a processor either the Docker container will contain the tools and libraries, or a directory containing the tools will be mounted into the Docker container at runtime. 
+Note that the environment in the processing centres may actually be in a different structure but with the same runtime tools available in PATH/LD_LIBRARY_PATH. When using the Docker packaging of a processor either the Docker container will allready contain the tools and libraries, or a directory containing the tools will be mounted into the Docker container at runtime. 
 
 Also the input data will not be in /urbantep/eodata when running on a cluster of a processing centre. Instead, the respective input for each of the concurrent processes on the cluster is provided in a separate working directory that is mounted into the respective Docker container instance (in case of Docker packaging). The path is provided as parameter.
 
 Installation of a processor and its dependencies
 ------------------------------------------------
+The user processors will be tested and deployed as leightweight Docker Containers. A docker container is a stripped-to-basics version of a Linux operating system which only contains the libraries and programms necessary to run the user processor.
+The Urban TEP will provide the thematic urban data processor developers with base images that allready have the relevant toolboxes installed. Furthermore most open source frameworks (like e.g GDAL) allready provide up to date docker images for their community to built on. 
+The developer controls the creation of the container by specifying the steps necessary to "install" his processor on a fresh installation in the Form of a Dockerfile, a text file that contains all the commands, in order, needed to build a given image. Dockerfiles adhere to a specific format and use a specific set of instructions
+An example of a simple Dockerfile for a processor based on gdal::
 
-...
+  FROM geodata/gdal
+  MAINTAINER Demo User<demo@example.com>
+  COPY myUserProcessor /usr/local/bin
 
+Starting from an empty directory all the user has to provide is:
+
+- Dockerfile, which specifies what operating system/toolbox this processor is based on as well as what needs to copied or installed into the container.
+- Folder/Files/Archives containing the software to copy/install
+- processorDescriptor File specifing how to call this user processor and how to make it available via WPS
+
+::
+
+  ~/ProcessorExample/Dockerfile
+		     myUserProcessor
+                     processorDescriptor.xml
+
+A tool supports the automatic building of the image, reading the instructions from the Dockerfile. It will automatically download any base images which are not currently available on the development machine and cache them for later use.  
+::
+
+  urbantep-build <docker-dir> <Identifier>
+  e.g.
+  urbantep-build ~/ProcessorExample/ myProcessorTest:0.1
+  
+
+                 
 Descriptor file and request file templates
 ------------------------------------------
 
@@ -220,7 +247,7 @@ The following information is contained in such a request:
 Local Test and Verification
 ---------------------------
 
-...
+
 
 Packaging and deployment
 ------------------------
