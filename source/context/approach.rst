@@ -102,7 +102,7 @@ pre-installed will be provided. Individual processor runtimes and
 all other required dependencies can be added.
 
 
-Data Visualization
+Data visualization
 ------------------
 
 World Bank Group has developed with the expertise of GISAT its Platform for Urban Mapping and Analysis (PUMA),
