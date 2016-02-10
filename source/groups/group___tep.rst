@@ -1,6 +1,6 @@
 .. _group___tep:
 
-Tep Modules
+TEP Modules
 -----------
 
 
