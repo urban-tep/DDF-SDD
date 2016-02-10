@@ -1,6 +1,6 @@
 .. _develenv_processor_development_environment :
 
-Processor development environment
+Processor Development Environment
 =================================
 
 Urban TEP supports the integration of thematic urban data processors
@@ -217,7 +217,7 @@ The following information is contained in such a request:
 - input dataset specification including spatial and temporal subset
 - processing parameter
 
-Local Test and Verification
+Local test and verification
 ---------------------------
 
 ...
