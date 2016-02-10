@@ -1,6 +1,6 @@
 .. _group___web_pages:
 
-Web Pages
+Web pages
 ---------
 
 
