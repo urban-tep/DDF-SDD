@@ -18,9 +18,9 @@ functional operation of the Tep Exploitation Platform.
 .. toctree::
    :maxdepth: 1
 
-   Portal Constraints <portal-constraint>
-   Data Agency Constraints <dataagency-constraint>
-   Sandbox Contrainsts <sandbox-constraint>
-   Production Center Contrainsts <pc-constraint>
-   APEL Server Contrainsts <apel-constraint>
-   Interaction Constraints <inter-constraint>
+   Portal constraints <portal-constraint>
+   Data agency constraints <dataagency-constraint>
+   Sandbox contrainsts <sandbox-constraint>
+   Production center Contrainsts <pc-constraint>
+   APEL server contrainsts <apel-constraint>
+   Interaction constraints <inter-constraint>
