@@ -24,7 +24,7 @@ Geosquare is the software component developed over elasticsearch that enables th
 .. include:: elasticsearch.rst
 
 
-Data Access Policies enforcement
+Data access policies enforcement
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 See section :ref:`design_data_gateway_access` of Data Gateway that apply with the same rules.
