@@ -1,6 +1,6 @@
 .. _rolesactionsandinteractions :
 
-Roles actions and Interactions
+Roles Actions and Interactions
 -------------
 
 Roles on the Platform are complying to a community policy (e.g. the data access quota allocated to a Principal Investigator on-boarded on the Platform), and are defined as a set of actions and interactions (Behaviours), observable in the system through process steps involving two types of business objects: Actors (e.g. a user) and Resources (e.g. :term:`datasets <dataset>`, processing service).
