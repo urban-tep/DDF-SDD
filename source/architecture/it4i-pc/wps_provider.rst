@@ -1,6 +1,6 @@
 .. _it4ipc_wps_provider :
 
-IT4I WPS Provider
+IT4I WPS provider
 =================
 The WPS Provider package contains components that publish the processing functionality of the platform as WPS services to the Urban TEP Portal and execute workflows connected with these services. As the package contains several related web-based J2EE applications and tools, it will be deployed on one Linux-based virtual server in the IT4I virtualisation infrastructure and hosted in the Apache Tomcat webserver and servlet container. Individual components of the IT4I processing centre WPS Provider are described in the following subsections.
 
@@ -44,7 +44,7 @@ Whenever the *Urban TEP Portal* wants to discover, which services are available 
 
 
 
-Service Configuration Tool
+Service configuration tool
 --------------------------
 The *Service Configuration Tool* is an IT4I in-house J2EE solution that serves as an auxiliary tool for managing and updating configuration of supported services in the *GeoServer*. It is actually a web service-based adapter that synchronises the *HPC as a Service Middleware* and *GeoServer* service configurations to simplify the administration of both solutions. Whenever any change in the service configuration appears in *HPC as a Service* (either by a processing workflow or by administration intervention), the *Service Management Module* of the *HPC as a Service Middleware* synchronises the configuration changes with the *GeoServer* using the *Service Configuration Tool*.
 
