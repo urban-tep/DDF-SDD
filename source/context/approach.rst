@@ -110,6 +110,16 @@ which is complementary and can benefit from the Tep Urban infrastructure, produc
 It is a key element for the data analysis and visualization of the Urban thematic data.
 
 
+Authorization concept
+---------------------
+
+The U-TEP authorization concept is based on the logical relationships between a user and all the :ref:`objects` with which it can be associated. First and basic relationship is being the **owner** of the entities (e.g. User A owns data collection Y). The ownership of an entity can be transferred from the owner to any other user. Then, a user may *share* a business objet with another user, a group of user or via a share link. In both cases, user specifies the possible **permissions** on that object (e.g. service can be viewable, editable, executable). This mechanism is ensured by an general authorization scheme that combines
+
+- users and groups;
+- the user communities, also called domain (e.g. Terradue, World Bank, ESA...);
+- the role of users or groups of users in this community (e.g. end users, data provider, service provider...);
+- the user objects (e.g. data colllections, services, thematic applications...);
+- their associated permissions (can view, can edit, can execute, can search...).
 
 A complete system
 -----------------

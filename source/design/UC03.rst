@@ -55,11 +55,6 @@ The following sequence diagram describes the flow of the Sandbox instantiation a
   
     
 
-.. todo::
-
-  **IT4I** Complete the textual description
-
-
 Developing and integrating a new processing service
 ---------------------------------------------------
 

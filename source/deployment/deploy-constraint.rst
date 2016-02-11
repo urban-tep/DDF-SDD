@@ -20,7 +20,7 @@ functional operation of the Tep Exploitation Platform.
 
    Portal constraints <portal-constraint>
    Data agency constraints <dataagency-constraint>
-   Sandbox contrainsts <sandbox-constraint>
-   Production center Contrainsts <pc-constraint>
+.. Sandbox contrainsts <sandbox-constraint>
+.. Production center Contrainsts <pc-constraint>
    APEL server contrainsts <apel-constraint>
    Interaction constraints <inter-constraint>

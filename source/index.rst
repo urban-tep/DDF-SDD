@@ -1,8 +1,3 @@
-.. raw:: latex
-
-  \listoffigures
-  \listoftables
-  
 
 .. toctree::
    :caption: Table of Contents

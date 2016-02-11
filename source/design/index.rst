@@ -10,6 +10,6 @@ Dynamic Architecture
    Develop and Deploy a New Service and/or Product <UC03>
    Combine, Analyse and Visualise Data, Products and Results <UC04>
    Integrated Accounting, Credit and Quota  <accounting>
-   Authentication and Autorization Scheme <auth>
+..   Authentication and Autorization Scheme <auth>
    
    

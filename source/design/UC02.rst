@@ -25,6 +25,8 @@ Next figure depicts the sequence that consists of requesting a processing on dem
   participant "Web Processing Service" as WPS
 
   U -> P : Select processing service
+  P <-> PDB : Load service endpoint
+  ... see WPS Service Analysis Sequence Diagram - Describe Process ...
   P -> U : Processing service description (input, output...)
 
   alt direct remote WPS
@@ -65,12 +67,16 @@ Next figure depicts the sequence that consists of requesting a processing on dem
 
 
 
+The previous sequence does not list all interactions with the Web Processing Service. Its intent is to show how the portal handles a proxied services or not and how it manages the job history in the database. Next section describes exhaustively all the other intertactions to support, job monitoring and job completion.
+
+
+
 Processing execution in the processing centers
 ----------------------------------------------
 
 
 .. uml::
-  :caption: Processing execution in the processing centers
+  :caption: Processing execution in the processing centers - part 1
   :align: center
 
 
@@ -125,7 +131,15 @@ Processing execution in the processing centers
 	  WPS -> Portal : product URL(s)
 	  deactivate WPS
 
-  else asynchronous
+  end
+
+  
+
+.. uml::
+  :caption: Processing execution in the processing centers - part 2
+  :align: center
+
+  alt asynchronous
 
 	  Portal -> WPS : Execute request
 	  activate WPS

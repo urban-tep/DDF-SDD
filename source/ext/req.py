@@ -95,20 +95,20 @@ class ReqDirective(Directive):
         
         if len(ads) > 0 :
             ad = ads[0] 
-            pprint(ad)
+            #pprint(ad)
             para = ad.traverse(nodes.paragraph, descend=True)
             para[0] += nodes.Text(', ' + self.content[0])   
 #            pprint(para[0])
             includead = False
         else :
-            pprint(self.content)
+            #pprint(self.content)
             text = nodes.paragraph()
             text += nodes.Text("This section covers ")
             text += nodes.Text(self.content[0])
             ad = make_admonition(req, self.name, [_('Requirement coverage')], self.options,
                              text, self.lineno, self.content_offset,
                              self.block_text, self.state, self.state_machine)
-            pprint(ad)
+            #pprint(ad)
 
 
         if not hasattr(env, 'req_all_reqs'):
@@ -119,7 +119,7 @@ class ReqDirective(Directive):
         env.req_all_reqs.append({
             'docname': env.docname,
             'evidence': '\n'.join(self.content[-1:]),
-            'section' : find_parent_section_name(self.state),
+            'section' : sectionnode,
             'reqid' : self.content[0],
             'req': ad[0].deepcopy(),
             'target': targetnode,
@@ -131,7 +131,7 @@ class ReqDirective(Directive):
         if not 'show' in self.options:
             return [targetnode]
 
-        pprint("return all")
+        #pprint("return all")
         return [targetnode] + ad
 
 
@@ -211,6 +211,7 @@ def process_req_nodes(app, doctree, fromdocname):
                 newnode = nodes.reference('', '')
                 section = req_info['section']
                 section_name = ''
+                pprint(section)
                 if section.get('secnumber'):
                     section_name += (('%s' + self.secnumber_suffix) %
                              '.'.join(map(str, node['secnumber'])))

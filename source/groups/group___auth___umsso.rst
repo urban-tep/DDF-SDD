@@ -1,6 +1,6 @@
 .. _group___auth___umsso:
 
-EM-SSO plugin
+EO-SSO plugin
 -------------
 
 
