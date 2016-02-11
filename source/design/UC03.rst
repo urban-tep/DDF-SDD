@@ -5,7 +5,7 @@ Develop and Deploy a New Service and/or Product
 
 This scenario aims at using TEP Urban for user development and integration of a new service within the platform to expose it as a processing service available in the thematic applications for its community or other users of the platform.
 
-Data discorvery and selection have already described in the previous section :ref:`design_uc01_index`.
+Data discovery and selection have already described in the previous section :ref:`design_uc01_index`.
 
 
 Development environment instantiation
@@ -52,8 +52,8 @@ The following sequence diagram describes the flow of the Sandbox instantiation a
   I -> CC : SB ready
   deactivate I
   CC --> U : SB access information
-  
-    
+
+
 
 Developing and integrating a new processing service
 ---------------------------------------------------
@@ -86,7 +86,8 @@ Developing and integrating a new processing service
   
 This scenario is initiated by a user clicking an **upload** button on Sandbox. The Sandbox will then optionally request a feedback to Validator, to ensure the new Software complies to the required standard/specification.
 When the Validator returns "successful" code, the software is packaged by the Sandbox. The software will be packaged differently depending on where this software is going to be deployed (BC, DLR, or IT4I). 
-The packaged software is then sent to the selected Processing Center and is deployed there. A response is sent back  to indicate whether the software has been successfully deployed and is available for testing.
+The packaged software is then sent to the selected Processing Center and is deployed there. It is important that an authentication process must take place before the upload can be initiated. 
+A response is sent back  to indicate whether the software has been successfully deployed and is available for testing.
 
 .. _test_new_software :
 
@@ -146,7 +147,7 @@ Deploying a new service
 This scenario is possible only after the new software is tested against a certain test datasets. The test scenario can be found here :ref:`test_new_software`. 
 When a **publish** button is pressed in the Sandbox, a request is sent to Processing Centres to provide a list of all unpublished software for the given user. 
 From the returned list, the user can select the software to be published. When that happens, a request is sent to a Processing Centre where the selected software is located. 
-A response is returned to indicate whether the software is now available for all other users to use.
+A response is returned to indicate whether the software is now available for all other users to use. Similar to the software upload, an authentication procedure must take place before the publishing.
 
 
 Using the new service in the portal
