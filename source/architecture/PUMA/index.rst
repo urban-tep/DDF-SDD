@@ -80,7 +80,9 @@ System architecture
 
 The system has 3-tier architecture, which is typical for web applications. The following diagram shows communication between these 3 layers (database, application server, relatively fat client).
 
-.. image:: arch.png
+.. figure:: arch.png
+
+  PUMA system architecture
 
 The database layer of the system is represented by 2 databases: PostGIS enabled PostgreSQL database, which is part of the Geonode system and serves as the data store for Geonode, and MongoDB (“PUMA DB” in diagram), which serves as a store for the configurations. Data rows for geographical areas (regions, countries, roads, etc.) are all stored in PostGIS DB. 
 
