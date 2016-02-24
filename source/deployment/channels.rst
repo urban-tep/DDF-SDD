@@ -6,7 +6,9 @@ Continuous integration
 
 The deployment is the last step of a robust continuous integration cycle that starts with the implementation of features from development branches or resolution of bugs. Once commited, those development changes are integrated to the development branch. This branch is watched by the continuous system and build at every change. Developers are notified about the sucess or the failure of the build and must resolve broken builds accordingly. When a stable build is ready on development branch (tested on development environement), the release time can start where the development branch is merged to the master branch and a release build is performed from that latter.
 
-.. image:: gitflow.png
+.. figure:: gitflow.png
+
+  Gitflow flow diagram
 
 Packaging
 ---------

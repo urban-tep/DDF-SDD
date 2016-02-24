@@ -26,18 +26,24 @@ If we need to support additional formats we will need to decide how to integrate
 possible to support postGIS database by allowing access to a database, which will be mapped in the GeoServer upfront
 manually. For other formats there will be some development effort needed.
 
-.. image:: puma/insertDataToPuma.png
+.. figure:: puma/insertDataToPuma.png
+
+      Data insertion into PUMA sequence diagram
 
 For the second step we will need to expose the API, which allows the Portal to map the data to the visualization
 concepts used inside of the PUMA. This is currently done manually in the GUI. To allow this we need to expose API for
 this mapping. This needs to be done as a part of the development phase.
 
-.. image:: puma/integratePuma.png
+.. figure:: puma/integratePuma.png
+
+      Integration into PUMA sequence diagram
 
 For the third step we will need to prepare and document the URL structure, which will contain the information about the
 User Interface, its state and the visualizations which will be visible by default for the user.
 
-.. image:: puma/redirectToPuma.png
+.. figure:: puma/redirectToPuma.png
+
+      Redirection to PUMA sequence diagram
 
 Capabilities of PUMA with respect to visualization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

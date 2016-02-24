@@ -59,3 +59,5 @@ Change Log
 |         |            | user management and authentication [RID SP-75], examples shortened and moved to annex       |
 |         |            | [RID AM-57] [RID SP-76], automated reporting [RID SP-78]                                    |
 +---------+------------+---------------------------------------------------------------------------------------------+
+| 2.1     | 24/02/2016 | Some editorial corrections                                                                  |
++---------+------------+---------------------------------------------------------------------------------------------+

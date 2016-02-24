@@ -65,7 +65,7 @@ Developing and integrating a new processing service
   actor "User"
   participant "Sandbox"
   participant "Validator"
-  participant "Procesing Center" as PC
+  participant "Processing Center" as PC
   
   User -> Sandbox : send upload request
   activate Sandbox
@@ -99,7 +99,7 @@ A response is sent back  to indicate whether the software has been successfully 
   participant "Sandbox"
   participant "Catalogue"
   participant "WPS"
-  participant "Procesing Center" as PC
+  participant "Processing Center" as PC
   
   User -> Sandbox : test new software
   activate Sandbox
@@ -134,7 +134,7 @@ Deploying a new service
   
   actor "User"
   participant "Sandbox"
-  participant "Procesing Center" as PC
+  participant "Processing Center" as PC
   
   User -> Sandbox : publish the new software
   Sandbox -> PC : get all unpublished software for the given user
