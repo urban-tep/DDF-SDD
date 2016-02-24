@@ -38,7 +38,7 @@ The following figure shows the decomposition into its components and the subsyst
    :scale: 100
    :align: center
 
-   *DLR processing centre decomposition with Calvalus cluster, Geofarm cluster, other shared components*
+   DLR processing centre decomposition with Calvalus cluster, Geofarm cluster, other shared components
 
 
 .. toctree::

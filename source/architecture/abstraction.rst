@@ -1,4 +1,4 @@
-Level of abstraction
+Level of Abstraction
 ====================
 
 This section defines the architecture as the functional decomposition of the system into a set of components that interact at interfaces – enabling system distribution. It thus provides the basis for decisions on how to distribute the components to be handled by the system. It is unique to the system and therefore provides the reference model for ensuring consistency between different engineering and technology specifications (including programming languages and communication mechanisms). This is aiming at open interworking and portability of components in the resulting implementations. For example, this :ref:`static_architecture` specification is used as the baseline for the :ref:`dynamic_architecture`, the later defining the communications mechanisms supporting the behaviour at the interfaces of the system.

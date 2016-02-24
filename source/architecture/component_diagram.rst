@@ -1,5 +1,6 @@
 .. uml::
   :width: 16cm
+  :caption: General overview component diagram
 
    !include includes/skins.iuml
 

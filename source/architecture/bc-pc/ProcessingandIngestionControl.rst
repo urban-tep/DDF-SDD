@@ -52,7 +52,7 @@ BC Processing and ingestion control
    :scale: 100
    :align: center
 
-   *Processing and Ingestion Control component*
+   Processing and Ingestion Control component
 
 Implementation software and configuration
 -----------------------------------------

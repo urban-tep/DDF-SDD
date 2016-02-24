@@ -9,7 +9,7 @@ The Urban TEP subsystem of the BC processing centre consists of several function
    :scale: 65
    :align: center
 
-   *BC processing centre decomposition with Calvalus cluster, other shared components, and Urban TEP-specific components*
+   BC processing centre decomposition with Calvalus cluster, other shared components, and Urban TEP-specific components
 
 Before describing the components the main functions with their initiation and workflows may help to understand the role of each of the elements. These main functions are 
 

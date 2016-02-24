@@ -82,7 +82,7 @@ BC processing gateway/WPS
    :scale: 120
    :align: center
 
-   *Processing Gateway/WPS component*
+   Processing Gateway/WPS component
 
 Implementation software and configuration
 -----------------------------------------

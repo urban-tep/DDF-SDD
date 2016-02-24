@@ -90,7 +90,7 @@ Operating is considered as a component here in order to allocate functions to it
    :scale: 80
    :align: center
 
-   *Operating use cases*
+   Operating use cases
 
 Personnell
 ----------

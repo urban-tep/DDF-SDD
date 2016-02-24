@@ -22,7 +22,7 @@ BC YARN scheduling and processing component
    :scale: 120
    :align: center
 
-   *YARN Scheduling and Processing component*
+   YARN Scheduling and Processing component
 
 Implementation software and configuration
 -----------------------------------------

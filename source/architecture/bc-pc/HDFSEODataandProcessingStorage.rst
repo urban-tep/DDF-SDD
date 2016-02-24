@@ -57,7 +57,7 @@ BC HDFS EO data and processing storage
    :scale: 150
    :align: center
 
-   *HDFS EO Data and Processing Storage component*
+   HDFS EO Data and Processing Storage component
 
 Implementation software and configuration
 -----------------------------------------

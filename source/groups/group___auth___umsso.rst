@@ -57,7 +57,7 @@ Next diagram depicts the scenarios that applies when a user perform an HTTP requ
 
 
 .. uml::
-	:caption: EO-SSO protected HTTP request sequence diagram
+	:caption: EO-SSO protected HTTP request sequence diagram (1)
 	:align: center
 
 
@@ -104,6 +104,18 @@ Next diagram depicts the scenarios that applies when a user perform an HTTP requ
 	W -->> U: HTTP redirection\nto original resources
 	deactivate W
 	activate U
+
+
+
+.. uml::
+	:caption: EO-SSO protected HTTP request sequence diagram (2)
+	:align: center
+
+
+	actor "User" as U
+	participant "Service Provider\ncheckpoint" as W
+	participant "Portal" as C
+	entity "EO-SSO Identity Provider" as I
 	
 	== Web Server authentication ==
 	

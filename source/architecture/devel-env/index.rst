@@ -20,7 +20,7 @@ The following figure depicts the approach.
    :scale: 65
    :align: center
 
-   *Urban TEP development environment and processor deployment in a processing centre*
+   Urban TEP development environment and processor deployment in a processing centre
 
 As there are three processing centres with partially different input datasets and capacities the Urban TEP governance may decide for a user which processing centre to use for which type of application.
 
@@ -31,7 +31,7 @@ The processor development enviromnent (Sandbox) will be provided by the IT4I pro
 .. figure:: devel-env-provisioning.png
    :align: center
 
-   *User can download a VM image of the development environment (a) or request temporary hosting in the IT4I infrastructure (b)*
+   User can download a VM image of the development environment (a) or request temporary hosting in the IT4I infrastructure (b)
 
 
 If the user wants to develop his processor locally, he will be able to download the KVM or VirtualBox image of this VM and work with the same tools and frameworks as provided in the processing infrastructure of the processing centres.

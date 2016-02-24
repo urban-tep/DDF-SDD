@@ -8,7 +8,7 @@ The Urban TEP subsystem of the IT4I processing centre consists of several functi
 .. figure:: img/design_components.png
    :align: center
 
-   *IT4I processing centre with Anselm and Salomon clusters, other shared components, and Urban TEP-specific components*
+   IT4I processing centre with Anselm and Salomon clusters, other shared components, and Urban TEP-specific components
 
 Before describing the components the main functions with their initiation and workflows may help to understand the role of each of the elements. These main functions are:
 

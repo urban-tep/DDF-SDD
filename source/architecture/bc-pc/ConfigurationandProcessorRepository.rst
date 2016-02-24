@@ -37,7 +37,7 @@ BC Urban TEP configuration and processor repository
    :scale: 100
    :align: center
 
-   *Configuration and Processor Repository component*
+   Configuration and Processor Repository component
 
 Implementation software and configuration
 -----------------------------------------

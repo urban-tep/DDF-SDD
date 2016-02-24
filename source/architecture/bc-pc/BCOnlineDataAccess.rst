@@ -47,7 +47,7 @@ BC online data access component
    :scale: 120
    :align: center
 
-   *Online Data Access component*
+   Online Data Access component
 
 Implementation software and configuration
 -----------------------------------------
