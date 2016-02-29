@@ -68,7 +68,11 @@ TEP Urban will include a total of three distributed data and processing centers
 with individual infrastructural sub-systems: the virtualised environment of
 DLR’s Geofarm, but also including a Calvalus/Hadoop sub-system, another
 Calvalus/Hadoop environment provided by Brockmann Consult, and one HPC-based
-processing facility operated by IT4Innovation.
+processing facility operated by IT4Innovation. Each of the processing centres 
+maintain shared resources that are dynamically allocated to the requests of the 
+users by cluster schedulers. Details are described with the respective processing centres 
+in chapter :ref:`bcpc_components_list`, :ref:`it4ipc_components_list`, and 
+:ref:`dlrpc_components_list`.
 
 
 Processor development approach
@@ -110,8 +114,14 @@ which is complementary and can benefit from the Tep Urban infrastructure, produc
 It is a key element for the data analysis and visualization of the Urban thematic data.
 
 
-Authorization concept
----------------------
+Authentication and Authorization concept
+----------------------------------------
+
+User authentication on the Urban TEP platform ensure identity of users, concurrent use of the platform, and proper reporting. User authentication is based on ESA single-sign-on EO-SSO. 
+
+The Urban TEP portal is the interface to the user and the gateway to the other Urban TEP backend services, e.g. the processing centres. The portal implements authentication and ensures against the backend service the identity of the user. Example: A user accesses the portal to submit a processing request, e.g. by filling a form, and the portal forwards the request to the processing centre's machine-to-machine (WPS) interface in behalf of the user. The same holds for processing result access. The request is forwarded by the portal to the processing centre. Also this is authenticated by the portal. 
+
+For backend services that are separate subsystems like the processing centres the portal authenticates itself internally against the backend service in order to ensure that requests stem from the portal. The portal always provides the external user information in the requests, but no new external user authentication is required as this is already asserted by the portal.
 
 The U-TEP authorization concept is based on the logical relationships between a user and all the :ref:`objects` with which it can be associated. First and basic relationship is being the **owner** of the entities (e.g. User A owns data collection Y). The ownership of an entity can be transferred from the owner to any other user. Then, a user may *share* a business objet with another user, a group of user or via a share link. In both cases, user specifies the possible **permissions** on that object (e.g. service can be viewable, editable, executable). This mechanism is ensured by an general authorization scheme that combines
 

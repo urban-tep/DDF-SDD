@@ -121,7 +121,7 @@ Activities of the Operator comprise:
  * support of well-known users for the integration and upload of processors (and reference datasets if necessary)
  * communication with the Portal Operating and with Operating of the other processing centres, exchange of datasets and processors
  * initiation and configuration for bulk processing in case of the systematic generation of a new product in the Urban TEP
- * verification of reports
+ * optional verification of reports
  * data management, initiation of cleanup of old results
 
 Interfaces and interface items

@@ -57,13 +57,13 @@ BC Processing and ingestion control
 Implementation software and configuration
 -----------------------------------------
 
-The implementation of the Processing and Ingestion Control component is based on the Calvalus elements for bulk production, ingestion and systematic processing. It uses the Calvalus request submission and monitoring client. In addition, modules for catalogue entry generation and for processing report generation are either configurations of generic modules (e.g. for XSLT) or specific implementations.
+The implementation of the Processing and Ingestion Control component is based on the Calvalus elements for bulk production, ingestion and systematic processing. It uses the Calvalus request submission and monitoring client. In addition, automated modules for catalogue entry generation and for processing report generation are either configurations of generic modules (e.g. for XSLT) or specific implementations.
 
 The configuration specific to Urban TEP comprises:
 
  * an ingestion system instance ing-inst with one script for each data source (e.g. for systematic Sentinel 2 ingestion for the Urban TEP initial cities (mirroring), or for on-demand ingestion of a dataset (caching))
  * a processing system instance urban-inst with one script for each bulk production workflow (e.g. one for the statistics generation from MERIS data), and specific configurations for the spatio-temporal extent to be processed
- * scripts for catalogue entry generation and report generation and submission
+ * functions and scripts for catalogue entry generation and report generation and submission
 
 State representation and persistent data
 ----------------------------------------
@@ -85,7 +85,7 @@ The computational service of this component is:
  * to control bulk production, i.e. to submit all requests required to fulfil a larger processing task, with configured concurrency
  * to recover from errors and resume production, retrying the failed step
  * to publish results by placing them in the staging area of Online Data Access and by providing a catalogue entry to the Portal Catalogue.
- * to generate and upload processing reports with information on users and used resources, such as CPU hours, input data size, and storage capacity
+ * to automatically generate and upload processing reports with information on users and used resources, such as CPU hours, input data size, and storage capacity
 
 The processing itself is performed by YARN Scheduling and Processing.
 

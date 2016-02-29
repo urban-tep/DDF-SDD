@@ -61,3 +61,16 @@ Change Log
 +---------+------------+---------------------------------------------------------------------------------------------+
 | 2.1     | 24/02/2016 | Some editorial corrections                                                                  |
 +---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | Authentication concept explained in overview section 2.1.6 [RID SP-75]                      |
++---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | Automation explicitly mentioned for report generation and upload in section 3.6.6           |
+|         |            | [RID SP-78], as explanations to how the requirements are implemented had been removed from  |
+|         |            | the design sections on ESA request to improve readability of the document                   |
++---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | Bulk processing and systematic processing added as new subsection 4.2.4 in dynamic          |
+|         |            | architecture [RID SP-84]. Overview chapter 2.1.3 second paragraph of the processing concept |
+|         |            | introduces bulk processing already.                                                         |
++---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | Principles of dynamic resource allocation in processing centres added to dynamic            |
+|         |            | architecture section 4.2.2, sentence added to section 2.1.3 [RID SP-54].                    |
++---------+------------+---------------------------------------------------------------------------------------------+

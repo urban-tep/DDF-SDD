@@ -222,8 +222,15 @@ When the staging job has been completed, product URL(s) and metadata information
 The metadata is processed and sent to Catalogue. More details on the product registration to catalogue can be found here :ref:`product_to_catalogue`. It is worth mentioning that the WPS session is alive as long as the
 job is still ongoing. The session is killed after an indication from the Processor or Staging that the job has been completed (successfully or unsuccessfully) has been received.
 
-In **asynchronous** mode, the initial procedure is the same as the synchronous up to the job submission to the Scheduler. While nothing is returned back to the WPS in synchronous mode, a job ID is returned back to WPS and eventually to the Portal in asynchronous mode. The WPS session terminates right after this. What happens between Production Control, Scheduler, Processor, and Staging are identical to the one in synchronous mode, but the main difference is that Portal can now inquire the status of a job at anytime, given the job ID. Each call (GetStatus) is represented by a short session with an almost immediate response back to the Portal. As it is in the synchronous mode, product URL(s) is returned to the Portal once the job has been completed. In this mode, a single WPS client can submit as many job requests as possible regardless the status of the previous jobs are. That is not the case in the synchronous mode.
+In **asynchronous** mode, the initial procedure is the same as the synchronous up to the job submission to the Scheduler. While nothing is returned back to the WPS in synchronous mode, a job ID is returned back to WPS and eventually to the Portal in asynchronous mode. The WPS session terminates right after this. What happens between Production Control, Scheduler, Processor, and Staging are identical to the one in synchronous mode, but the main difference is that Portal can now inquire the status of a job at anytime, given the job ID. Each call (GetStatus) is represented by a short session with an almost immediate response back to the Portal. As it is in the synchronous mode, product URL(s) is returned to the Portal once the job has been completed. In this mode, a single WPS client can submit several concurrent job requests regardless the status of the previous jobs are. That is not the case in the synchronous mode.
 
+The scheduler shown in the diagrams above dynamically allocate resources to the jobs. Depending on the processing centre this may be done in a slightly different way but following common principles:
+
+- Concurrent processing is supported for a single request, limited by the available processing resources and within the limits configured for Urban TEP.
+- Different requests of the same user or different users may be processed concurrently, splitting the resources dynamically.
+- There is a scheduling strategy to ensure fairness. No request shall wait forever.
+- For cloud bursting, on request more than the configured resources can be made available for Urban TEP jobs.
+- Resources not used by Urban TEP at a certain time may be used by other non-Urban-TEP jobs.
 
 .. _product_to_catalogue:
 
@@ -252,4 +259,15 @@ Product registration to catalogue
 The registration of product(s) to Catalogue occurs after a process has been successfully performed and its product(s) has been successfully staged. 
 Production Control collects the metadata and formats it according to the Catalogue specification. A catalogue client is then instantiated to send the formatted metadata information to the Catalogue server. 
 A confirmation that metadata information has been successfully accepted is returned to the Production Control.
+
+Bulk processing and systematic processing
+-----------------------------------------
+
+Bulk processing is the processing of a larger set of input data with usually also a larger set of output data. This output data may serve as input to subsequent analysis, aggregation, or download. A user may pre-process a dataset at the platform and make it available as alternative to the publishing of the corresponding processing service to generate the same products on-demand. 
+
+Asynchronous requests as described above can be used for bulk processing. The concept of a dataset collection (instead of single product granules) as input and the optional restriction in space and time period well-support bulk processing. In the processing centre bulk processing is handled by parallel processing on the cluster infrastructures. The result of bulk processing will be registered in the catalogue as a new dataset.
+
+Systematic processing is the processing of any input product fulfilling a certain criterion, often in particular spatial coverage, and optionally including newly acquired products. This is relevant for datasets that are systematically ingested and where the processing result is of common interest to users. The decision on which products shall be generated systematically is a question of governance. 
+
+The production and ingestion control component of some processing centre(s) contain functions to set up systematic processing. For systematically generated datasets no user request is required. The ingestion of new input data triggers the generation of new products for the target dataset. Users can access them as an existing dataset in the Urban TEP. Processing centres extend the collection automatically and update the catalogue. Subscription and NRT services on this basis - while out of scope for this phase of the Urban TEP - are in principle possible with this architecture. 
 
