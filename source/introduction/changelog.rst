@@ -61,7 +61,7 @@ Change Log
 +---------+------------+---------------------------------------------------------------------------------------------+
 | 2.1     | 24/02/2016 | Some editorial corrections                                                                  |
 +---------+------------+---------------------------------------------------------------------------------------------+
-|         |            | Authentication concept explained in overview section 2.1.6 [RID SP-75]                      |
+| 2.2     | 02/03/2016 | Authentication concept explained in overview section 2.1.6 [RID SP-75]                      |
 +---------+------------+---------------------------------------------------------------------------------------------+
 |         |            | Automation explicitly mentioned for report generation and upload in section 3.6.6           |
 |         |            | [RID SP-78], as explanations to how the requirements are implemented had been removed from  |
