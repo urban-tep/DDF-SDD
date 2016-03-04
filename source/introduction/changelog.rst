@@ -72,5 +72,6 @@ Change Log
 |         |            | introduces bulk processing already.                                                         |
 +---------+------------+---------------------------------------------------------------------------------------------+
 |         |            | Principles of dynamic resource allocation in processing centres added to dynamic            |
-|         |            | architecture section 4.2.2, sentence added to section 2.1.3 [RID SP-54].                    |
+|         |            | architecture section 4.2.2, sentence added to section 2.1.3, paragraph on external          |
+|         |            | infrastructure demonstration case added to 2.1.3 [RID SP-54].                               |
 +---------+------------+---------------------------------------------------------------------------------------------+

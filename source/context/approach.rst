@@ -72,7 +72,13 @@ processing facility operated by IT4Innovation. Each of the processing centres
 maintain shared resources that are dynamically allocated to the requests of the 
 users by cluster schedulers. Details are described with the respective processing centres 
 in chapter :ref:`bcpc_components_list`, :ref:`it4ipc_components_list`, and 
-:ref:`dlrpc_components_list`.
+:ref:`dlrpc_components_list`. 
+
+In order to show infrastructure independence of the Urban TEP
+processors it is planned in addition to demonstrate the deployment of
+a processor in an external infrastructure (e.g. ITP if it is available
+for that). The interface provided by this infrastructure for
+installation and if available scheduling will be used.
 
 
 Processor development approach
