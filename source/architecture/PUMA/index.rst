@@ -90,6 +90,83 @@ The server layer is represented by Geonode system and by PUMA application server
 
 The end-user (administrator, data uploader or public user) has 3 entry points, 3 web clients, where he is able to interact with the application. Data uploader uses Geonode client to upload the data, fill-in metadata, upload styles, manage the layers, etc. Administrator uses Administration application to link existing Geonode layers to abstract structures (configurations of objects), which he also defines here. Everyone is then able to access Data Exploration site, where it is possible to browse the data in an interactive manner. The client for Data Exploration application is heavily communicating with PUMA application server, where it requests: tables and charts, map layers (these requests are forwarded to Geoserver at application server), configurations, areas (geographical units like regions, countries). This communication uses standard HTTP(S) protocol and in most cases AJAX calls are used.
 
+PUMA - External portal interface
+-----------------------
+
+The API for importing a dataset selected in the portal into PUMA and making it ready for viewing.
+
+Endpoint 1: Processing a dataset
+""""""""""""""""""""""""""""""""
+
+POST /tool/integration/process
+
+Expected payload:
+ {
+   "url": "{UrlOfTheGeotiffToProcess}"
+ }
+Expected header:
+ Content-Type: application/json; charset=utf-8
+
+Response (success):
+HTTP 200
+ {
+   "id": "Uuid"
+ }
+
+Response (error):
+HTTP 400
+ {
+   "message": "error message"
+ }
+
+The portal will use this endpoint to initiate the import. PUMA will return an unique identifier for Endpoint 2.
+PUMA downloads the specified file, prepares it for the platform, saves, connects it to predefined metadata and runs appropriate analyses and generates url to view it in PUMA. Once everything is done, the url is available from endpoint 2.
+
+Endpoint 2: Checking the status
+"""""""""""""""""""""""""""""""
+
+GET /tool/integration/status?id={Uuid}
+
+Response (process finished):
+HTTP 200
+ {
+   "status": "Finished",
+   "sourceUrl": "{UrlOfTheGeotiffToProcess}",
+   "url": "{UrlToTheDataInPUMA}"
+ }
+
+Response (process underway - downloading file):
+HTTP 200
+ {
+   "status": "Started",
+   "sourceUrl": "{UrlOfTheGeotiffToProcess}",
+   "message": "{status message}"
+ }
+
+Response (process underway - processing file):
+HTTP 200
+ {
+   "status": "Processing",
+   "sourceUrl": "{UrlOfTheGeotiffToProcess}",
+   "message": "{status message}"
+ }
+
+Response (process failed):
+HTTP 200
+ {
+   "status": "Error",
+   "sourceUrl": "{UrlOfTheGeotiffToProcess}",
+   "message": "{error message}"
+ }
+
+Response (request error):
+HTTP 400
+ {
+   "message": "{error message}"
+ }
+
+The portal will use this endpoint to check the status of processing in PUMA, using the identifier obtained from endpoint 1. Once the processing is finished, the portal will receive url to the data in PUMA and it will redirect the user to it / display PUMA using the url / display link to the url.
+
 Server side
 -----------
 
@@ -114,6 +191,9 @@ To enable TEP data visulization in PUMA, following steps are assumed:
 - PORTAL component / DATA PROVIDERs shall push the data (process results) using PUMA exposed GeoServer REST API into PUMA local storage (PostgreSQL, filesystem) - vector datasets shall be stored in the PostgreSQL (with PostGIS extension), raster datasets shall be stored in the file system
 - PUMA application provides API to define which data to be visualised and the type of visualisation (choropleth, disperse diagram, column chart, pie chart, …)
 - This API shall be called from PORTAL environment in a form of URI
+
+Version 0.1 of External API
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Common request workflow
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -148,6 +228,32 @@ Printing
 
 Printing and preparing resources for download is done using PhantomJS scripts. At first the URL address of the webpage which will contain just downloaded object is generated. This page would be under common circumstances accessible in the web browser, but it is not goal here. This URL is sent to PhantomJS script, which initialize this webpage in headless browser (virtual browser, without display output) and from this headless browser .PNG or .PDF file is generated. Such file is then returned to the Data Exploration application.
 
+PUMA UI
+-------
+
+PUMA Exploration interface allows examination of various spatial data. Multiple map layers can be displayed, both static from local or remote sources and dynamically created choropleths from corresponding attributes. Aside from the map, attribute data can be also displayed in multiple graphs and/or tables, including optional normalization.
+
+Top panel - dataset selection
+"""""""""""""""""""""""""""""
+
+Using the top panel, the user chooses which data they want to view. Data can be selected for a place, year and theme. Visualizations determine which map layers and graphs will be displayed.
+
+Map
+"""
+
+On the map, PUMA can display various background layers (e.g. OpenStreetMap, Google Earth), raster and vector layers both uploaded into PUMA or from remote sources, and area layers - boundaries and selections.
+
+Left panel - area and map layer selection
+"""""""""""""""""""""""""""""""""""""""""
+
+The left panel controls map layers and area selection. Under available layers, the user can select layers to display on the map. Under selected layers, they can configure the opacity and display additional information for each layer.
+The examination can be narrowed down by selecting areas of interest, either in the area list or using the selection tools. Selected areas are highlighted both on the map and in all graphs.
+
+
+Right panel - attributes visualizations
+"""""""""""""""""""""""""""""""""""""""
+
+The right panel contains all the configured tables or graphs. Any user can easily create their own, using any subset of available attributes. The attributes can be automatically normalized by area or other attributes.
 
 Client side
 -----------
