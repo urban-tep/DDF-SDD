@@ -22,8 +22,8 @@ Before describing the components the main functions with their initiation and wo
      - the *Supported Service Processors* stored in the *Shared Data Storage* of the selected HPC cluster used for processing,
      - the input EO data available in the *Shared Data Storage* of the selected HPC cluster,
      - the storage of intermediates and outputs in the *Shared Data Storage* of the selected HPC cluster,
-     - the staging of results through the *SCP/GridFTP* interface,
-     - the *HPCaaS HPC Data Storage Access Framework* to provide access to the staged results via SCP/GridFTP,
+     - the staging of results through the *HTTPS/SCP/GridFTP* interface,
+     - the *Result Staging* to provide access to the staged results via HTTPS or the *HPCaaS HPC Data Storage Access Framework* to provide access to the staged results via SCP/GridFTP,
      - the *HPCaaS Service Management Module* with the help of the *Service Configuration Tool* and *Geoserver* for catalogue entry generation.
  * To ingest input data
      - the *IT4I Service Support Operator* to monitor ingestion,

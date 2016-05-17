@@ -2,8 +2,6 @@
 
 Sandbox virtual machines
 ========================
-Detailed information about Sandbox virtual machines is described in :ref:`develenv_processor_development_environment`.
-
 .. req:: TS-FUN-750
   :show:
 
@@ -19,3 +17,4 @@ Detailed information about Sandbox virtual machines is described in :ref:`devele
 
   The *Sandbox Virtual Machines* will provide SSH and SCP connection to the virtualised experimental development environment.
 
+Detailed information about Sandbox virtual machines is described in :ref:`develenv_processor_development_environment`.
