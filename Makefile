@@ -79,7 +79,8 @@ latex:
 latex-mac:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	sed -i .bak 's/{\\hyperref\[\(.*\:req-[0-9]*\)\]{.*}}/{\\autoref{\1}}/g' $(BUILDDIR)/latex/*.tex
-	sed -i .bak 's/$\\begin{longtable}{|l|l|l|}/\begin{longtable}{|l|l|p{10cm}|}/g' $(BUILDDIR)/latex/*.tex
+	sed -i .bak 's/$\\begin{longtable}{|l|l|l|}/\begin{longtable}{|p{3cm}|p{3cm}|p{10cm}|}/g' $(BUILDDIR)/latex/*.tex
+	sed -i .bak 's/$\\begin{tabulary}{\\linewidth}{|L|L|L|}/\begin{tabulary}{\\linewidth}{|p{3cm}|p{3cm}|p{10cm}|}/g' $(BUILDDIR)/latex/*.tex
 	cp source/_templates/*.sty $(BUILDDIR)/latex
 	cp source/_static/* $(BUILDDIR)/latex
 	@echo
