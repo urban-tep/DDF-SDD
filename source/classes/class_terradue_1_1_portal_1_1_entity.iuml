@@ -4,6 +4,9 @@ class Entity {
  +Id:int
  +Identifier:string
  +Name:string
+ +CanCreate:bool
+ +CanChange:bool
+ +CanDelete:bool
  +Load()
  +Load()
  +Store()

@@ -14,15 +14,21 @@ The following properties define the object
 
 .. cssclass:: propertiestable
 
-+--------+------------+-----------------------------------------------------------------+
-| Type   | Name       | Summary                                                         |
-+========+============+=================================================================+
-| int    | Id         | The database ID, i.e. the numeric key value of an entity item.  |
-+--------+------------+-----------------------------------------------------------------+
-| string | Identifier | Unique identifier of an entity item.                            |
-+--------+------------+-----------------------------------------------------------------+
-| string | Name       | Human-readable name of an entity item item.                     |
-+--------+------------+-----------------------------------------------------------------+
++--------+------------+----------------------------------------------------------------------+
+| Type   | Name       | Summary                                                              |
++========+============+======================================================================+
+| int    | Id         | The database ID, i.e. the numeric key value of an entity item.       |
++--------+------------+----------------------------------------------------------------------+
+| string | Identifier | Unique identifier of an entity item.                                 |
++--------+------------+----------------------------------------------------------------------+
+| string | Name       | Human-readable name of an entity item item.                          |
++--------+------------+----------------------------------------------------------------------+
+| bool   | CanCreate  | Creation :ref:`Privilege <class_terradue_1_1_portal_1_1_privilege>`  |
++--------+------------+----------------------------------------------------------------------+
+| bool   | CanChange  | Creation :ref:`Privilege <class_terradue_1_1_portal_1_1_privilege>`  |
++--------+------------+----------------------------------------------------------------------+
+| bool   | CanDelete  | Creation :ref:`Privilege <class_terradue_1_1_portal_1_1_privilege>`  |
++--------+------------+----------------------------------------------------------------------+
 
 The following functions are applicable to the object
 
