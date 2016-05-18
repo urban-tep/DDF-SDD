@@ -10,7 +10,10 @@ Elasticsearch
 
 Software Page : `Elasticsearch <https://www.elastic.co/products/elasticsearch>`_
 
+Language : CSharp
+
 Version : 1.7.0
+
 
 
 License : `Apache 2 <https://github.com/elastic/elasticsearch/blob/master/LICENSE.txt>`_

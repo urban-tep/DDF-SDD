@@ -10,7 +10,10 @@ Terradue::Github
 
 Software Page : `Terradue.Github <https://git.terradue.com/sugar/terradue-github>`_
 
+Language : CSharp
+
 Version : 1.0.4
+
 
 
 License : `incubating <https://git.terradue.com/sugar/terradue-github>`_

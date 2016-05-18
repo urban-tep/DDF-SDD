@@ -10,9 +10,10 @@ Terradue::OpenSearch::RdfEO
 
 Software Page : ` <>`_
 
+Language : CSharp
+
 Version : 
 
-License : ` <>`_
 
 Nature : OSS
 

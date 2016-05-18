@@ -14,7 +14,10 @@ This package contains Wintellect's PowerCollections and references :ref:`GeoAPI 
 
 Software Page : `NetTopologySuite <https://github.com/NetTopologySuite/NetTopologySuite>`_
 
+Language : CSharp
+
 Version : 1.13.0
+
 
 
 License : `LGPL <http://www.gnu.org/licenses/lgpl.html>`_

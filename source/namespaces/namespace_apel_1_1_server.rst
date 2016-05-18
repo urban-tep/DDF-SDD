@@ -16,7 +16,10 @@ This package contians the server that processes data from all sites and sends it
 
 Software Page : `apel <http://apel.github.io/>`_
 
+Language : CSharp
+
 Version : 1.5.0
+
 
 
 License : `Apache-2 <https://github.com/apel/apel/blob/dev/LICENSE>`_

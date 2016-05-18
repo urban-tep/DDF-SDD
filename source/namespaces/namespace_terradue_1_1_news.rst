@@ -10,7 +10,10 @@ Terradue::News
 
 Software Page : `Terradue.New <https://git.terradue.com/sugar/terradue-news>`_
 
+Language : CSharp
+
 Version : 1.0.11
+
 
 
 License : `incubating <https://git.terradue.com/sugar/terradue-news>`_

@@ -12,7 +12,10 @@ GeoAPI.NET project provides a common framework based on OGC/ISO standards to imp
 
 Software Page : `GeoAPI <https://github.com/NetTopologySuite/GeoAPI>`_
 
+Language : CSharp
+
 Version : 1.7.0
+
 
 
 License : `LGPL <http://geoapi.codeplex.com/license>`_

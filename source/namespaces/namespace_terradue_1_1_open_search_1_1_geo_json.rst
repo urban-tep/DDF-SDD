@@ -10,7 +10,10 @@ DotNetOpenSearchGeoJson Software Package
 
 Software Page : `DotNetOpenSearchGeoJson <https://github.com/Terradue/DotNetOpenSearchGeoJson>`_
 
-Version : 1.3.3
+Language : CSharp
+
+Version : 1.3.5
+
 
 
 License : `GPLv3 <https://github.com/Terradue/DotNetOpenSearchGeoJson/blob/master/LICENSE.txt>`_

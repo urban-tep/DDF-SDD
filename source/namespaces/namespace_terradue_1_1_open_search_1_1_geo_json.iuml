@@ -1,6 +1,6 @@
 @startuml
   class "Terradue::OpenSearch::GeoJson" as namespace_terradue_1_1_open_search_1_1_geo_json << (L, #27556C) >> [[../namespaces/namespace_terradue_1_1_open_search_1_1_geo_json.html]] {
-     version : 1.3.3 
+     version : 1.3.5 
      lang : C#
      license : GPLv3
      nature : OSS

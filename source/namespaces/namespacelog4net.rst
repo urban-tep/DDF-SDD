@@ -12,7 +12,10 @@ log4net
 
 Software Page : `log4net <http://logging.apache.org/log4net/>`_
 
+Language : CSharp
+
 Version : 2.0.4
+
 
 
 License : `Apache v2 <http://logging.apache.org/log4net/license.html>`_

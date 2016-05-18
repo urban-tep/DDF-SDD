@@ -14,7 +14,10 @@ This package contains the :ref:`Shibboleth <namespace_shibboleth>` Service Provi
 
 Software Page : `Shibboleth <http://shibboleth.net/>`_
 
+Language : CSharp
+
 Version : 2.5.5
+
 
 
 License : `Apcahe v2 <http://www.apache.org/licenses/LICENSE-2.0>`_

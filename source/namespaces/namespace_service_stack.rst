@@ -12,7 +12,10 @@ Binaries for the :ref:`ServiceStack <namespace_service_stack>` web framework. A 
 
 Software Page : `ServiceStack <https://github.com/ServiceStack/ServiceStack>`_
 
+Language : CSharp
+
 Version : 3.9.71
+
 
 
 License : `terms <https://github.com/ServiceStack/ServiceStack/blob/v3/LICENSE>`_

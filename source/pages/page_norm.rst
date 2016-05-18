@@ -23,7 +23,7 @@ Normative References
 - :ref:`Atom <group___atom>`
 - :ref:`Syndication <group___syndication>`
 
-EO op UM-SSO Interface Control Document [SIE-EO-OP-UM-SSO-ICD-002] 
+EO op EO-SSO Interface Control Document [SIE-EO-OP-UM-SSO-ICD-002] 
 
 - :ref:`Auth_Umsso <group___auth___umsso>`
 

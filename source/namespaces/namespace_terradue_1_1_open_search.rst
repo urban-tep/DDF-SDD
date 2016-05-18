@@ -10,7 +10,10 @@ Terradue::OpenSearch
 
 Software Page : `DotNetOpenSearch <https://github.com/Terradue/DotNetOpenSearch>`_
 
-Version : 1.11.14
+Language : CSharp
+
+Version : 1.11.15
+
 
 
 License : `GPLv3 <https://github.com/DotNetOpenSearch/Terradue.OpenSearch/blob/master/LICENSE.txt>`_

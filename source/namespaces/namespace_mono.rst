@@ -10,7 +10,10 @@ Mono
 
 Software Page : `Mono <http://www.mono-project.com/>`_
 
+Language : CSharp
+
 Version : 4.0.0
+
 
 
 License : `Multiple <https://github.com/mono/mono/blob/master/LICENSE>`_

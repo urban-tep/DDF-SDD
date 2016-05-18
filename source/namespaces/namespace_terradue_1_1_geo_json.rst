@@ -10,7 +10,10 @@ Terradue::GeoJson
 
 Software Page : `DotNetGeoJson <https://github.com/Terradue/DotNetGeoJson>`_
 
-Version : 1.5.6
+Language : CSharp
+
+Version : 1.5.10
+
 
 
 License : `GPLv3 <https://github.com/Terradue/DotNetGeoJson/blob/master/LICENSE.txt>`_

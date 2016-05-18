@@ -10,7 +10,10 @@ Terradue::WebService::Model
 
 Software Page : `Terradue.WebService.Model <https://git.terradue.com/sugar/terradue-webservice-model>`_
 
+Language : CSharp
+
 Version : 1.1.3
+
 
 
 License : `incubating <https://git.terradue.com/sugar/terradue-webservice-model>`_

@@ -1,6 +1,6 @@
 @startuml
   class "Terradue::OpenSearch" as namespace_terradue_1_1_open_search << (L, #27556C) >> [[../namespaces/namespace_terradue_1_1_open_search.html]] {
-     version : 1.11.14 
+     version : 1.11.15 
      lang : C#
      license : GPLv3
      nature : OSS

@@ -10,7 +10,10 @@ Terradue::Tep
 
 Software Page : `Terradue.Portal <https://git.terradue.com/sugar/Terradue.Tep>`_
 
+Language : CSharp
+
 Version : 1.0.0
+
 
 
 License : `incubating <https://git.terradue.com/sugar/Terradue.Tep>`_

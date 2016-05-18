@@ -10,7 +10,10 @@ Terradue::Portal
 
 Software Page : `Terradue.Portal <https://git.terradue.com/sugar/terradue-portal>`_
 
+Language : CSharp
+
 Version : 2.6.42
+
 
 
 License : `incubating <https://git.terradue.com/sugar/terradue-portal>`_

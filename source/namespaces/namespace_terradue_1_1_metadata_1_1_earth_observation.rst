@@ -10,7 +10,10 @@ Terradue::Metadata::EarthObservation
 
 Software Page : `DotNetEarthObservation <https://github.com/Terradue/DotNetEarthObservation>`_
 
-Version : 1.3.4
+Language : CSharp
+
+Version : 1.3.12
+
 
 
 License : `GPLv3 <https://github.com/Terradue/Terradue.Metadata.EarthObservation/blob/master/LICENSE.txt>`_

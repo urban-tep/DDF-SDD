@@ -10,7 +10,10 @@ Terradue::Authentication::Umsso
 
 Software Page : `Terradue.Authentication.Umsso <https://git.terradue.com/sugar/terradue-authentication-umsso>`_
 
+Language : CSharp
+
 Version : 1.2.3
+
 
 
 License : `incubating <https://git.terradue.com/sugar/terradue-authentication-umsso/master/LICENSE.txt>`_

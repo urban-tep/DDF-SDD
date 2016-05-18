@@ -12,10 +12,11 @@ TweetSharp
 
 Software Page : `TweetSharp <http://github.com/danielcrenna/tweetsharp>`_
 
+Language : CSharp
+
 Version : 2.3.1
 
 
-License : ` <>`_
 
 Nature : .Net OSS
 
