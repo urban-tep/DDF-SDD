@@ -75,3 +75,6 @@ Change Log
 |         |            | architecture section 4.2.2, sentence added to section 2.1.3, paragraph on external          |
 |         |            | infrastructure demonstration case added to 2.1.3 [RID SP-54].                               |
 +---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | Explanation of the PUMA API in the section 3.10            |
+|         |            | Update of the information about client side usage of PUMA in the section 3.10                               |
++---------+------------+---------------------------------------------------------------------------------------------+
