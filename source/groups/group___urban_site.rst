@@ -1,6 +1,6 @@
 .. _group___urban_site:
 
-Urban site
+Urban Site
 ----------
 
 

@@ -20,7 +20,7 @@ This component is an helper for
 - providing with WPS process as processing offerings.
 
 Main Functions 
-^^^^^^^^^^^^^^^
+---------------
 
 
 
@@ -28,7 +28,7 @@ Main Functions
 - retrieves the DescribeProcess() of the previously discovered process to describe the process with input and ouput parameters and create a WpsProcessOffering;
 - submits, controls and monitors processing via the Execute() of the WPS server of a WpsProvider
 
-Below, the sequence diagrams describe the the previously listed functions.
+Below, the sequence diagrams describe the previously listed functions.
 
 
 
@@ -234,7 +234,7 @@ Below, the sequence diagrams describe the the previously listed functions.
 	
 
 Model and Representation 
-^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
 
 This components has also a function to represent a :ref:`Terradue.Portal.WpsProcessOffering <class_terradue_1_1_portal_1_1_wps_process_offering>` object as a :ref:`Terradue.ServiceModel.Ogc.OwsModel.OwcOffering <class_terradue_1_1_service_model_1_1_ogc_1_1_ows_model_1_1_owc_offering>` in the :ref:`OWS Context <group___o_w_s_context>` model. It implements the mechanism to search for :ref:`Terradue.Portal.WpsProvider <class_terradue_1_1_portal_1_1_wps_provider>` and the :ref:`Terradue.Portal.WpsProcessOffering <class_terradue_1_1_portal_1_1_wps_process_offering>` via an OpenSearchable interface.
 

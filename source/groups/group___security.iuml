@@ -1,7 +1,7 @@
 @startuml
 folder "Security" [[../groups/group___security.html]] {
 	!include group___auth___umsso.iuml
-	!include group___authentication.iuml
 	!include group___authorisation.iuml
+	!include group___authentication.iuml
 }
 @enduml

@@ -81,6 +81,10 @@ Change Log
 |         |            | to provide a simple interface for downloading the processing results for the initial        |
 |         |            | version of the portal.                                                                      |
 +---------+------------+---------------------------------------------------------------------------------------------+
-|         |            | Explanation of the PUMA API in the section 3.10            |
-|         |            | Update of the information about client side usage of PUMA in the section 3.10                               |
+|         |            | Explanation of the PUMA API in the section 3.10                                             |
+|         |            | Update of the information about client side usage of PUMA in the section 3.10               |
++---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | Development Languages in the :ref:`software_packages`                                       |
++---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | Authorization mechnism further described in section :ref:`group___authorisation`            |
 +---------+------------+---------------------------------------------------------------------------------------------+

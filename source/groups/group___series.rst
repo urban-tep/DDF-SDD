@@ -16,10 +16,10 @@ Series
 
 
 
-.. req:: TS-ICD-080
+.. req:: TS-ICD-090
 	:show:
 
-	:ref:`Apel <namespace_apel>` accounting interface details are described in this section
+	This component reads dataset series metadata using OWS conceptual model.
 
 This component manages all types of dataset series. It implements the mechanism to search for the dataset defined in the series via an :ref:`OpenSearch <group___open_search>` interface.
 

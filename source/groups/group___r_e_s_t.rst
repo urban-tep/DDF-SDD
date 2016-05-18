@@ -13,7 +13,7 @@ It depends on other components as
 
 - CRUD operations for user accounts managed :ref:`Accounting <group___tep_accounting>`
 
-- CRUD operations for thematic application managed by :ref:`Application <group___tep_application>`
+- CRUD operations for thematic application managed by :ref:`Thematic Application <group___tep_application>`
 
 - CRUD operations for user and groups managed by :ref:`Community <group___tep_community>`
 

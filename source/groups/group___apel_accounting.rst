@@ -1,6 +1,6 @@
 .. _group___apel_accounting:
 
-Apel accounting
+Apel Accounting
 ---------------
 
 

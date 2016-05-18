@@ -1,6 +1,6 @@
 .. _group___geo_browser:
 
-Geo browser
+GeoBrowser
 ----------
 
 

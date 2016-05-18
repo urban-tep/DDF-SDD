@@ -30,6 +30,6 @@ This component contains the sub-components described in the following sections.
   :maxdepth: 0
 
   group___auth___umsso
-  group___authentication
   group___authorisation
+  group___authentication
 

@@ -1,3 +1,5 @@
+.. _software_packages :
+
 Appendix A : Software Packages
 ==============================
 

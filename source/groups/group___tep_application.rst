@@ -1,7 +1,7 @@
 .. _group___tep_application:
 
-Application
------------
+Thematic Application
+--------------------
 
 
 
@@ -16,12 +16,12 @@ Application
 
 This component manages the TEP applications
 
-Thematic Application brings a simple way to define an application of a specific aspect of the thematic. It specifies togheter the form of the application, its features such as the map and the layers, its data and services.
+Thematic Application brings a simple way to define an application of a specific aspect of the thematic. It specifies together the form of the application, its features such as the map and the layers, its data and services.
 
-Thematic application over OWS data model 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Thematic Application over OWS data model 
+-----------------------------------------
 
-This component uses extensively :ref:`OWS Context <group___o_w_s_context>` model to represent the dataset collections, the services, maps, features layers and combine them together fefining therefore:
+This component uses extensively :ref:`OWS Context <group___o_w_s_context>` model to represent the dataset collections, the services, maps, features layers and combine them together defining therefore:
 
 
 

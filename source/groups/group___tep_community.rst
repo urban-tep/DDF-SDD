@@ -51,27 +51,27 @@ Community
 
 This component manages the TEP users and thematic groups along with the user roles.
 
-Thematic Group simplifies management of the user community and help focus the user objective for thematical business within those groups. It is an important concept in the Thematic Exploitation Platform to gather users around a specific aspect or an organization ot the thematic.
+Thematic Group simplifies management of the user community and help focus the user objective for thematical business within those groups. It is an important concept in the Thematic Exploitation Platform to gather users around a specific aspect or an organization of the thematic.
 
-For instance, an instituion may create its own thematic group with its selected members and experts. It may also have business relationship with a data or ICT provider that are representated as a role within the group.
+For instance, an institution may create its own thematic group with its selected members and experts. It may also have business relationship with a data or ICT provider that are representated as a role within the group.
 
 User notifications 
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 This component notifies users about status change for the following items:
 
 - The completion of a job in a service
 - The modification of dataset in a data package
-- The arrival in new dataset in a dynamic data package
+- The arrival of a new dataset in a dynamic data package
 
 The notification is configurable in the user profile and can be enabled as the following:
 
 - Email notification
-- Web notification (a box is deplayed during the navigation on the site)
+- Web notification (a box is displayed during the navigation on the site)
 
 It depends on other components as
 
-- uses :ref:`Authorisation <group___authorisation>` to manage the users in the groupswith their roles and their access accordingly.
+- uses :ref:`Authorisation <group___authorisation>` to manage the users in the groups with their roles and their access accordingly.
 
 
 

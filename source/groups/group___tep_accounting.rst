@@ -31,7 +31,7 @@ Accounting
 This component makes the integrated accounting of the TEP.
 
 Accounting to user/group accounts 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------
 
 Periodically, it collects the usage records from the :ref:`Apel Server <group___apel_server>` and use them to balance the user accounts with credits. The following figure describes this process.
 
@@ -73,8 +73,8 @@ Periodically, it collects the usage records from the :ref:`Apel Server <group___
 	
 	
 
-Credit authorization and quota restrictions 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Credit Authorization and Quota restrictions 
+--------------------------------------------
 
 The quota restriction is implemented using the balance of the user or group account used to query the resource.
 
