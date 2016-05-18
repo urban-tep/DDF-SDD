@@ -75,6 +75,12 @@ Change Log
 |         |            | architecture section 4.2.2, sentence added to section 2.1.3, paragraph on external          |
 |         |            | infrastructure demonstration case added to 2.1.3 [RID SP-54].                               |
 +---------+------------+---------------------------------------------------------------------------------------------+
+| 3.0     | 17/05/2016 | specifics of WPS interface defined in a table in section 3.11.2                             |
++---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | HTTP(S) result staging added to the IT4I Processing centre (sections 3.7 and 3.7.1)         |
+|         |            | to provide a simple interface for downloading the processing results for the initial        |
+|         |            | version of the portal.                                                                      |
++---------+------------+---------------------------------------------------------------------------------------------+
 |         |            | Explanation of the PUMA API in the section 3.10            |
 |         |            | Update of the information about client side usage of PUMA in the section 3.10                               |
 +---------+------------+---------------------------------------------------------------------------------------------+
