@@ -59,6 +59,7 @@ Next diagram depicts the scenarios that applies when a user perform an HTTP requ
 .. uml::
 	:caption: EO-SSO protected HTTP request sequence diagram
 	:align: center
+	:width: 13cm
 
 
 	actor "User" as U

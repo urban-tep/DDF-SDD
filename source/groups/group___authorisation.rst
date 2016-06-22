@@ -37,6 +37,7 @@ The following class diagram describes the base authorization scheme implemented 
 .. uml::
 	:caption: Authorisation scheme Class Diagram
 	:align: center
+	:width: 12cm
 
 
 	
