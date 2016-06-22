@@ -5,7 +5,7 @@ Interfaces
    :maxdepth: 1
    
    SQL connector <../groups/group___s_q_l_connector>
-   Web processing service <../groups/group___r_w_p_s>
+   Web processing service <wps_interface>
    OpenSearchable <../groups/group___open_searchable>
    Terradue API <../groups/group___t2_a_p_i>
    Geosquare API <../groups/group___geosquare_a_p_i>

@@ -43,6 +43,6 @@ EO op EO-SSO Interface Control Document [SIE-EO-OP-UM-SSO-ICD-002]
 
 `OGC Web Processing Service 1.0 <http://portal.opengeospatial.org/files/?artifact_id=24151>`_
 
-- :ref:`RWPS <group___r_w_p_s>`
+- :ref:`RWPS <wps_interface>`
 
 

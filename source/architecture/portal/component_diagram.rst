@@ -7,7 +7,7 @@
   skinparam backgroundColor #FFFFFF
   skinparam componentStyle uml2
 
-  !include source/groups/group___r_w_p_s.iuml
+  !include source/groups/wps_interface.iuml
   !include source/groups/group___open_search.iuml
   !include source/groups/group___s_q_l_connector.iuml
   !include source/groups/group___apel_reporting.iuml
@@ -49,7 +49,7 @@
   [group___context]  ..>  [group___authentication] : []
   [group___core_w_p_s]  ..>  [group___persistence] : []
   [group___core_w_p_s]  ..>  [group___authorisation] : []
-  [group___core_w_p_s]  --(  [group___r_w_p_s] : connects
+  [group___core_w_p_s]  --(  [wps_interface] : connects
   [group___geo_browser]  --(  [group___t2_a_p_i] : connects
   [group___persistence]  --(  [group___s_q_l_connector] : connects
   [group___r_e_s_t]  ..>  [group___tep_accounting] : CRUD

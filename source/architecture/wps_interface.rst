@@ -1,9 +1,9 @@
-.. _group___r_w_p_s:
+.. _wps_interface:
 
 Web Processing Services Interface
 ---------------------------------
 
-This is the interface of Web Processing Services. They are provided by Urban TEP processing centres or by third party systems external to the platform. They are used by the portal that offers processing servers to users through them.
+This is the interface of Web Processing Services. They are provided by Urban TEP processing centres or by third party systems external to the platform. They are used by the portal that offers processing services to users through them.
 
 The following normative references are applicable to this interface:
 
