@@ -13,4 +13,5 @@ The following normative references are applied to this component:
 
 - `OGC Web Processing Service 1.0 <http://portal.opengeospatial.org/files/?artifact_id=24151>`_
 
+WPS 2.0 will be considered for future evolution of the system. As soon as the open source implementations used will support functions like cancel it is intended to consider this also in the Urban TEP system.
 

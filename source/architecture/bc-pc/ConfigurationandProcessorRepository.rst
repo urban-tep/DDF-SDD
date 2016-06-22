@@ -77,6 +77,10 @@ Interfaces and interface items
 
 GitHub provides an ssh interface for interaction using the git tool. HDFS provides the HDFS file system interface. They are provided by this componnent and used by Operating for explicit versioning or for recovery of a previous version.
 
+Chapter :ref:`devenv_packaging_and_deployment` explains how the processor development interfaces are used from within the Urban TEP development environment. This includes the packaging of processor bundles, the main interface items for user processor deployment. The structure of processor bundles is described next.
+
+.. _bc_ps_processor_bundles:
+
 Processor Bundles
 ~~~~~~~~~~~~~~~~~
 

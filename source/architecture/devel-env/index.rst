@@ -278,6 +278,8 @@ The local verification step might look like the following:
   urbantep-testrun fmask-3.2-descriptor.xml fmask-3.2-test-wps.xml
 
 
+.. _devenv_packaging_and_deployment:
+
 Packaging and deployment
 ------------------------
 
