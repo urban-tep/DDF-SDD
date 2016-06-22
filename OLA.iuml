@@ -61,7 +61,7 @@
    
      interface "OpenNebula XML-RPC" as group___open_nebula_x_m_l_r_p_c <<API>>
      interface "Apel Accounting" as group___apel_accounting <<API>>
-     interface "Web Processing Service" as group___r_w_p_s <<API>>
+     interface "Web Processing Service" as wps_interface <<API>>
      interface "OpenSearch" as group___open_search <<API>>
    
      folder "Portal" <<T2>> {
@@ -85,7 +85,7 @@
      group___hydro_site -down-( group___t2_a_p_i : ajax
      group___web_services -up- group___t2_a_p_i : REST
      group___core -up-( group___open_search : query
-     group___core --( group___r_w_p_s : submit
+     group___core --( wps_interface : submit
      group___core -- group___security : auth/n - auth/z
      group___tep -down- group___core : use
      group___tep -right- group___cloud : search
@@ -160,10 +160,10 @@
 
      }
 
-     sandbox -up- group___r_w_p_s : execute
-     cluster -up- group___r_w_p_s : execute
-     coordinator -up- group___r_w_p_s : execute
-     coordinator -up-( group___r_w_p_s : submit
+     sandbox -up- wps_interface : execute
+     cluster -up- wps_interface : execute
+     coordinator -up- wps_interface : execute
+     coordinator -up-( wps_interface : submit
      cc -up- group___open_nebula_x_m_l_r_p_c : manage
      cc -- sandbox : provision
      cc -- cluster : provision
