@@ -96,3 +96,5 @@ Change Log
 |         |            | Reference to development environment packaging function added to processor bundle interface |
 |         |            | in section 3.6.7.4 [CDR RID SP-3]                                                           |
 +---------+------------+---------------------------------------------------------------------------------------------+
+|         |            | Package lists removed from annex A to avoid duplication with SRF [CDR RID SP-2]             |
++---------+------------+---------------------------------------------------------------------------------------------+
