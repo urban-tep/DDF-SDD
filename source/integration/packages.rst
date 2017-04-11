@@ -8,3 +8,5 @@ The set of software packages gathers the components and classes into logical ent
 The packages dependencies are represented as an UML component diagram.
 
 .. include:: package_diagram.rst
+
+.. include:: ../namespaces/packages.rst
