@@ -80,11 +80,40 @@ time.
       GIS -> U : Focus is moved to the Italy
       U -> GIS : Display another layer on top of current
       GIS -> U : Another layer displayed
-      U -> GIS : Play the timeline on these layers
-      GIS -> U : Playing the changes in the layers
       U -> GIS : Zooming in and on the map
       U -> GIS : Moving over the map
       deactivate GIS
 
+Simplified integration of the custom data sets into the PUMA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+The User Interface of the tool supports the option to integrate custom data set to the currently selected Scope. The
+data set must be in the form of zipped shapefile or geotiff, which may be either plain or zipped. In this way it is
+possible to integrate custom data sets from outside of the TEP Urban or from new processors deployed to the TEP Urban
+platform.
 
+This integration does three things with respect to the custom analysis in the PUMA. It makes the data set available for
+the visualisation with default style. If the user wants custom styles, it is necessary to go to the administration part
+of the tool and create them over there. It takes the analytical units in the current scope and run a zonal analysis for
+all the units available in given scope. All the attributes available in the data set are summed and averaged for the
+administrative units and make available as attributes for the usage in choropleths and charts.
+
+.. uml::
+      :caption: Simplified integration of data set in the PUMA.
+      :align: center
+
+      actor "User" as U
+      participant "PUMA" as P
+
+      autonumber
+
+      U -> P : Explore chosen thematic contents
+      activate P
+      U -> P : Upload and integrate new data set.
+      P -> U : Loading and integrating.
+      P -> U : Integration finished
+      U -> P : Display the new layer
+      P -> U : New layer displayed
+      U -> P : Create a chart showing the attributes
+      P -> U : New chart created and displayed
+      deactivate P
