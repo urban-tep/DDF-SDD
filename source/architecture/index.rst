@@ -11,7 +11,7 @@ The static architecture gives a static description of the whole system through t
    Level of Abstraction <abstraction>
    System Overview <overview>
    Portal <portal/index>
-   APEL <APEL/index>
+   Accounting <accounting/index>
    Data Agency <dataagency/index>
    Brockmann Consult Processing Centre Components <bc-pc/index>
    IT4Innovations Processing Centre Components <it4i-pc/index>

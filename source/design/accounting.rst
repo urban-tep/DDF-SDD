@@ -12,7 +12,7 @@ On the other hand, the providers must account for the usage of their resources. 
 
 
 .. uml::
-  :caption: Reporting of completed jobs to APEL server
+  :caption: Reporting of completed jobs to Accounting server
   :align: center
   
   box "Processing Center" #LightBlue
@@ -20,7 +20,7 @@ On the other hand, the providers must account for the usage of their resources. 
 	  participant "Production Control" as PC
 	  participant "Scheduler"
   end box
-  participant "APEL Server" as AS
+  participant "Accounting Server" as AS
   
   activate PC
   activate Scheduler
@@ -28,7 +28,6 @@ On the other hand, the providers must account for the usage of their resources. 
   PC -> Scheduler : collect counters for the job
   Scheduler -> PC : usage record
   PC -> PC : format usage record
-  PC -> PC : instantiate APEL client
   activate PC #Green
   PC -> AS : send usage record
   activate AS

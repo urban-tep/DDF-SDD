@@ -18,8 +18,8 @@
       borderColor<<OGC WPS>> DarkBlue
       backgroundColor<<reporting>> Yellow
       borderColor<<reporting>> DarkYellow
-      backgroundColor<<APEL>> Yellow
-      borderColor<<APEL>> DarkYellow
+      backgroundColor<<accounting>> Yellow
+      borderColor<<accounting>> DarkYellow
       backgroundColor<<ODATA>> Blue
       borderColor<<ODATA>> DarkBlue
       backgroundColor<<http/ftp>> Blue
@@ -60,9 +60,9 @@
       database "Tep database" as TEPDB
     }
 
-    node "APEL" {
+    node "Accounting" {
       interface "accounting report" as ACR <<reporting>>
-      interface "accounting" as AC <<APEL>>
+      interface "accounting" as AC <<accounting>>
     }
 
     node "Processing Centers" {
@@ -116,7 +116,7 @@
       [Web Server] -down-( gsapi : register dataset
     }
 
-    node "APEL" {
+    node "Accounting" {
       database "accounting" as ACC
       ACC -down- AC : store usage
       ACC -up- ACR : produce report
@@ -134,8 +134,8 @@
     node "Processing Centers" {
 
       node "Services" { 
-        [Apel Client] as APELClient
-        APELClient -up-( AC : record usage
+        [Accounting reporter] as AccClient
+        AccClient -up-( AC : record usage
         [WPS Server] as PCWPS
         PCWPS -up- WPS1
       }

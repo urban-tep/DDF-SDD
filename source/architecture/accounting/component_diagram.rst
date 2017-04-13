@@ -1,5 +1,5 @@
 .. uml::
-  :caption: APEL component diagram
+  :caption: Accounting component diagram
   :align: center
 
 
@@ -12,8 +12,8 @@
 
   !include source/groups/group___apel.iuml
 
-  folder "Apel" {
-      database "Accounting Storage" as AAS [[../../computational/APEL/accounting.html]]
+  folder "Accounting" {
+      database "Accounting Storage" as AAS [[../../architecture/accounting/accounting.html]]
       group___apel_server -down- AAS
   }
 

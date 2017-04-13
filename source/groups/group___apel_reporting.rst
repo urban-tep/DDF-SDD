@@ -1,10 +1,7 @@
 .. _group___apel_reporting:
 
-Apel Reporting
---------------
-
-
-
+Accounting Reporting API
+------------------------
 
 
 
@@ -12,12 +9,12 @@ Apel Reporting
 .. req:: TS-ICD-070
 	:show:
 
-	:ref:`Apel <namespace_apel>` reporting interface details are described in this section
+	Accounting Reporting interface details are described in this section
 
 This is the interface to retrieve the aggregated usage records.
 
 The following normative references are applied to this component:
 
-- `APEL <https://wiki.egi.eu/wiki/APEL/MessageFormat>`_
+- :ref:`Accounting report API in [RD8] <RD8>`
 
 

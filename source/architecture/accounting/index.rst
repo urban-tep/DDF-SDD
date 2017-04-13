@@ -1,7 +1,7 @@
-.. _design_apel :
+.. _design_accounting :
 
-APEL
-====
+Accounting
+==========
 
 
 

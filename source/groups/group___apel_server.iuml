@@ -1,3 +1,3 @@
 @startuml
-	[Apel Server] as group___apel_server [[../groups/group___apel_server.html]]
+	[Accounting Server] as group___apel_server [[../groups/group___apel_server.html]]
 @enduml

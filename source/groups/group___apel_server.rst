@@ -1,7 +1,7 @@
 .. _group___apel_server:
 
-Apel Server
------------
+Accounting Server
+-----------------
 
 
 
@@ -11,8 +11,8 @@ This component is in charge of recording the usage of all the resources for the 
 
 It interacts with interfaces as it
 
-- implements :ref:`Apel Accounting <group___apel_accounting>` interface
+- implements :ref:`Accounting recording <group___apel_accounting>` interface
 
-- implements :ref:`Apel Reporting <group___apel_reporting>` interface
+- implements :ref:`Accounting Reporting <group___apel_reporting>` interface
 
 
