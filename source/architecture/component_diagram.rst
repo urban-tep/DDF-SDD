@@ -4,9 +4,6 @@
 
    !include includes/skins.iuml
 
-   skinparam backgroundColor #FFFFFF
-   skinparam componentStyle uml2
-
   skinparam interface {
       backgroundColor<<UI>> Green
       borderColor<<UI>> DarkGreen

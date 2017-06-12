@@ -238,7 +238,7 @@ latex_elements = {
 
 # -- Options for plantuml output --------------------------------------------
 
-plantuml = 'java -Djava.awt.headless=true -jar includes/plantuml.jar'
+plantuml = 'java -Djava.awt.headless=true -Dplantuml.include.path=/Users/emathot/Workspace/Terradue/doc/esa-tep-urban-ddf -jar /Users/emathot/Workspace/Terradue/doc/esa-tep-urban-ddf/includes/plantuml.jar'
 plantuml_output_format = 'svg'
 
 # -- Options for PDF output --------------------------------------------------

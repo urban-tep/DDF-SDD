@@ -192,21 +192,21 @@ all the units available in given scope. All the attributes available in the data
 administrative units and make available as attributes for the usage in choropleths and charts.
 
 .. uml::
-:caption: Simplified integration of data set in the PUMA.
-        :align: center
+  :caption: Simplified integration of data set in the PUMA.
+  :align: center
 
-        actor "User" as U
-        participant "PUMA" as P
+  actor "User" as U
+  participant "PUMA" as P
 
-        autonumber
+  autonumber
 
-        U -> P : Explore chosen thematic contents
-        activate P
-        U -> P : Upload and integrate new data set.
-        P -> U : Loading and integrating.
-        P -> U : Integration finished
-        U -> P : Display the new layer
-        P -> U : New layer displayed
-        U -> P : Create a chart showing the attributes
-        P -> U : New chart created and displayed
-        deactivate P
+  U -> P : Explore chosen thematic contents
+  activate P
+  U -> P : Upload and integrate new data set.
+  P -> U : Loading and integrating.
+  P -> U : Integration finished
+  U -> P : Display the new layer
+  P -> U : New layer displayed
+  U -> P : Create a chart showing the attributes
+  P -> U : New chart created and displayed
+  deactivate P

@@ -31,16 +31,6 @@ Class diagrams notation
 
 The main item, the class that describes a business object, depicted in the class diagram is a rectangle with three horizontal sections, as shown in Figure 4. The upper section shows the object's name; the middle section contains the object's attributes; and the lower section contains the objects's operations (or "methods").
 
-.. uml::
-   :caption: Business Object Notation in a Class Diagram
-   :width: 3cm
-   :align: center
-
-   class Object {
-    +Property:type
-    +Method()
-   }
-
 
 Class diagrams contain icons representing classes, and their relationships. In particular, class diagrams may contain: 
 

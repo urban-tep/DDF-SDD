@@ -7,7 +7,7 @@
   skinparam backgroundColor #FFFFFF
   skinparam componentStyle uml2
 
-  !include source/groups/wps_interface.iuml
+  !include source/groups/group___r_w_p_s.iuml
   !include source/groups/group___open_search.iuml
   !include source/groups/group___s_q_l_connector.iuml
   !include source/groups/group___apel_reporting.iuml

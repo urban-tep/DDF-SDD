@@ -7,6 +7,5 @@ Deployment Plan
    :maxdepth: 2
 
    Deployment Constraints <deploy-constraint>
-   Deployment Nodes <nodes>
    Deployment Channels <channels>
 

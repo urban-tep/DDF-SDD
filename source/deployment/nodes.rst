@@ -3,33 +3,31 @@ Deployment Nodes
 
 .. uml::
 
-	:cpation: Portal and Data Agency deployment diagram
+	:caption: Portal and Data Agency deployment diagram
+	
+		cloud "Terradue Cloud Platform" {
 
-	skinparam component {
-	    BackgroundColor<<tep>> RosyBrown
-	    BorderColor<<tep>> black
-	}
-
-	cloud "Terradue Cloud Platform" {
-		
 		[Firewall] as t2fw
 
 		frame "Data Agency" {
 
 				node "Catalogue" << Cluster >> {
+
+					[Geosquare] -- ElasticSearch
 				  frame "ElasticSearch" {
+
 				  	database "Indexes"
+				  	
 				  }
-				  [Geosquare] -- ElasticSearch
 				}
-				}
+		}
 
 		t2fw -- [Geosquare] : HTTPS
 
-	}
+		}
 
-	cloud "IT4I" {
-		
+		cloud "IT4I" {
+
 		[Firewall] as it4ifw
 
 		frame "Virtual Hosts" {
@@ -45,10 +43,10 @@ Deployment Nodes
 		}
 
 		it4ifw -- [HTTP Web Portal Server] : HTTPS
-	}
+		}
 
-	() "https://urban-tep.eo.esa.int/" -- it4ifw : HTTPS
-	() "https://data.terradue.com/" -- t2fw : HTTPS
+		() "https://urban-tep.eo.esa.int/" -- it4ifw : HTTPS
+		() "https://data.terradue.com/" -- t2fw : HTTPS
 
 
 
