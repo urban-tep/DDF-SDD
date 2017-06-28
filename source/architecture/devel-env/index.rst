@@ -24,21 +24,17 @@ The following figure depicts the approach.
 
 As there are three processing centres with partially different input datasets and capacities the Urban TEP governance may decide for a user which processing centre to use for which type of application.
 
-Virtual machine image for instantiation or download
+Virtual machine image for download
 ---------------------------------------------------
-The processor development enviromnent (Sandbox) will be provided by the IT4I processing centre as a virtual machine, either as an VM image to be downloaded by the user for local development, or hosted on the IT4I processing infrastructure for remote development. When the user requests a creation of the Sandbox through the Portal, new instance of the virtual machine are created from the baseline running on a CentOS Linux 6 operating system and containing additional tools and data sets described in section :ref:`develenv_tools_datasets`.
+The processor development enviromnent (Sandbox) will be provided as a virtual machine image to be downloaded by the user for local development. The virtual machine runs a CentOS Linux 6 operating system and containing additional tools and allows download of test datasets described in section :ref:`_develenv_tools_datasets`.
 
 .. figure:: devel-env-provisioning.png
    :align: center
 
-   User can download a VM image of the development environment (a) or request temporary hosting in the IT4I infrastructure (b)
+   User can download a VM image of the development environment
 
 
-If the user wants to develop his processor locally, he will be able to download the KVM or VirtualBox image of this VM and work with the same tools and frameworks as provided in the processing infrastructure of the processing centres.
-
-In the case that user does not want to download the VM image, he can request for a temporary hosting of the VM in the IT4I infrastructure and remote access to this hosted VM. This will start a job in the infrastructure that will run a hypervisor with the created Sandbox VM. The user will be able to access this VM by SSH and SCP interfaces specified by the IT4I HPC as a Service Middleware and provided to the user by the Portal. When the user finishes his work in the hosted VM instance or a pre-defined time limit is reached (user will be notified several times before the time limit is reached to save his work), the VM will be stopped and destroyed to reduce the load on the infrastructure. Next time the user wants to use the Sandbox, a new instance of the Sandbox VM will be created.
-
-To ensure continuity of the user's development effort in the hosted infrastructure, the content of his Sandbox working directory will be automatically stored in the IT4I infrastructure and made available in all future Sandbox VM instances created by this user. This content will also be available in the downloadable VM image requested by this user, but any changes done in this disconnected VM image will not be synchronized to the IT4I infrastructure and will have to be manually uploaded by the user if he wants to continue his work in the hosted VM.
+If the user wants to develop his processor locally, he will be able to download the KVM or VirtualBox image of this VM and work with the same tools and frameworks as provided in the processing infrastructure of the processing centres. After development and local test the user can upload the processor package to one of the processing centres for larger scale tests and application of the processor. There are tools for packaging and upload provided in the development VM.
 
 
 Pre-installed tools, frameworks, and test datasets
